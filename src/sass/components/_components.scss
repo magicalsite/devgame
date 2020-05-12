@@ -46,6 +46,10 @@
     align-items: center;
     justify-content: space-between;
     // padding: 0 4.3rem 0 0;
+
+    @include media("<mob") {
+      display: none;
+    }
   }
 }
 
