@@ -2579,7 +2579,7 @@ form .success + .select-arrow + .error-feedback + .success-feedback {
       align-items: flex-start;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  padding: 2.9rem 0 0;
+  padding: 0 4.9rem 0 0;
   line-height: 1;
 }
 
@@ -2675,8 +2675,8 @@ form .success + .select-arrow + .error-feedback + .success-feedback {
   pointer-events: none;
   background-repeat: no-repeat;
   background-size: contain;
-  will-change: transform;
-  transition: transform 0.8s;
+  will-change: opacity;
+  transition: opacity 0.8s;
 }
 
 .logo .logo_dark {
@@ -2685,21 +2685,26 @@ form .success + .select-arrow + .error-feedback + .success-feedback {
 
 .logo .logo_light {
   background-image: url(../img/logo-alt.svg);
-  -ms-transform: translate(0, 102%);
-      transform: translate(0, 102%);
-  transform: translate3d(0, 102%, 0);
+  opacity: 0;
 }
 
 .logo-theme-light .logo .logo_dark {
-  -ms-transform: translate(0, -102%);
-      transform: translate(0, -102%);
-  transform: translate3d(0, -102%, 0);
+  opacity: 0;
 }
 
 .logo-theme-light .logo .logo_light {
-  -ms-transform: translate(0, 0);
-      transform: translate(0, 0);
-  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.header-container__right .jsNav__item {
+  background: transparent;
+  border-radius: 6px;
+}
+
+.logo-theme-dark .header-container__right .jsNav__item {
+  background: #fff;
+  border-radius: 6px;
+  transition: background 0.8s;
 }
 
 /* logo end */
@@ -2716,7 +2721,8 @@ form .success + .select-arrow + .error-feedback + .success-feedback {
 
 @media (max-width: 639px) {
   .lang {
-    display: none;
+    font-size: 5.455rem;
+    line-height: 8.182rem;
   }
 }
 
@@ -2747,6 +2753,20 @@ form .success + .select-arrow + .error-feedback + .success-feedback {
   transition: opacity 0.35s, transform 0.35s, background-color 0.35s;
   transform: translateZ(0) scale3d(0.5, 0.5, 1);
   z-index: -1;
+}
+
+@media (max-width: 639px) {
+  .lang__inner::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 11rem;
+    width: 11rem;
+    border-radius: 10rem;
+    margin: -3.2rem 0 0 -3rem;
+  }
 }
 
 .lang__inner:hover::before {
@@ -3466,8 +3486,7 @@ html.no-js
 
 @media (max-width: 639px) {
   .main-section_bg {
-    background: url(../img/Bitmap.svg) no-repeat -147% center;
-    background-size: 130% 110%;
+    background: url(../img/bg_main.svg) no-repeat center center;
   }
 }
 
@@ -3955,6 +3974,7 @@ html.no-js
 @media (max-width: 639px) {
   .case-section__align {
     display: block;
+    margin-top: 50rem;
   }
 }
 
@@ -4050,6 +4070,14 @@ html.no-js
   margin-top: 1.632rem;
 }
 
+@media (max-width: 639px) {
+  .case-section__description {
+    -ms-flex: 1 0 100%;
+        flex: 1 0 100%;
+    max-width: 100%;
+  }
+}
+
 .case-section__description_gray {
   color: #919191;
 }
@@ -4062,6 +4090,13 @@ html.no-js
   line-height: 2.203rem;
 }
 
+@media (max-width: 639px) {
+  .case-section__numberGame {
+    font-size: 7.013rem;
+    line-height: 10.519rem;
+  }
+}
+
 .case-section__sub-title {
   margin: 0 0 0.4rem;
   font-family: "gilroy-bold", Helvetica, Arial, sans-serif;
@@ -4072,9 +4107,8 @@ html.no-js
 
 @media (max-width: 639px) {
   .case-section__sub-title {
-    font-size: 7.013rem;
-    line-height: 9.351rem;
-    margin-right: 7.403rem;
+    font-size: 14.026rem;
+    line-height: 17.922rem;
   }
 }
 
@@ -4094,7 +4128,7 @@ html.no-js
 
 @media (max-width: 639px) {
   .case-section__more {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -4177,7 +4211,7 @@ html.no-js
   .case-section__figure-img_social1 {
     -ms-flex-align: end;
         align-items: flex-end;
-    top: 43%;
+    top: 35%;
     left: 48%;
   }
 }
@@ -4198,9 +4232,25 @@ html.no-js
       justify-content: flex-end;
 }
 
+@media (max-width: 639px) {
+  .case-section__figure-img_social2 {
+    -ms-flex-align: center;
+        align-items: center;
+    left: 50%;
+    top: 55%;
+  }
+}
+
 .case-section__figure-img_social2 img {
   width: 46.589rem;
   height: 46.589rem;
+}
+
+@media (max-width: 639px) {
+  .case-section__figure-img_social2 img {
+    width: 112.013rem;
+    height: 105.779rem;
+  }
 }
 
 .case-section__rectangle {
@@ -4288,6 +4338,13 @@ html.no-js
   height: 3.753rem;
 }
 
+@media (max-width: 639px) {
+  .download {
+    position: absolute;
+    bottom: 11%;
+  }
+}
+
 .wbg {
   overflow: hidden;
   position: fixed;
@@ -4300,6 +4357,13 @@ html.no-js
 .first_bg {
   position: absolute;
   right: 25%;
+}
+
+@media (max-width: 639px) {
+  .first_bg {
+    right: 35%;
+    top: -3%;
+  }
 }
 
 .second_bg {

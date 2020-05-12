@@ -22,7 +22,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 2.9rem 0 0;
+  padding: 0 4.9rem 0 0;
   line-height: 1;
 
   @include media("<mob") {
@@ -94,10 +94,9 @@
     width: 100%;
     pointer-events: none;
     background-repeat: no-repeat;
-    //background-position: 50%;
     background-size: contain;
-    will-change: transform;
-    transition: transform 0.8s;
+    will-change: opacity;
+    transition: opacity 0.8s;
   }
 
   .logo_dark {
@@ -106,24 +105,27 @@
 
   .logo_light {
     background-image: url(../../img/logo-alt.svg);
-    $translate: 0, 102%;
-    transform: translate($translate);
-    transform: translate3d($translate, 0);
+    opacity: 0;
   }
 
   .logo-theme-light & {
     .logo_dark {
-      $translate: 0, -102%;
-      transform: translate($translate);
-      transform: translate3d($translate, 0);
+      opacity: 0;
     }
 
     .logo_light {
-      $translate: 0, 0;
-      transform: translate($translate);
-      transform: translate3d($translate, 0);
+      opacity: 1;
     }
   }
+}
+.header-container__right .jsNav__item {
+  background: transparent;
+  border-radius: 6px;
+}
+.logo-theme-dark .header-container__right .jsNav__item {
+  background: #fff;
+  border-radius: 6px;
+  transition: background 0.8s;
 }
 
 /* logo end */
@@ -139,7 +141,8 @@
   // margin: 0 0 0 auto;
 
   @include media('<mob') {
-    display: none;
+    font-size: 5.455rem;
+    line-height: 8.182rem;
   }
 
   &__inner {
@@ -169,6 +172,18 @@
       transition: opacity 0.35s, transform 0.35s, background-color 0.35s;
       transform: translateZ(0) scale3d(0.5, 0.5, 1);
       z-index: -1;
+      
+      @include media('<mob') {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 11rem;
+        width: 11rem;
+        border-radius: 10rem;
+        margin: -3.2rem 0 0 -3rem;
+      }
     }
 
     &:hover {
@@ -947,11 +962,10 @@
 
   &_bg {
     background: url(../../img/bg_main.svg) no-repeat center right/cover;
-    // background-size: 40% 108%;
 
     @include media("<mob") {
-      background: url(../img/Bitmap.svg) no-repeat -147% center;
-      background-size: 130% 110%;
+      background: url(../img/bg_main.svg) no-repeat center center;
+      
     }
   }
 
@@ -1429,6 +1443,7 @@
 
     @include media("<mob") {
       display: block;
+      margin-top: 50rem;
     }
   }
 
@@ -1519,7 +1534,9 @@
     margin-top: 1.632rem;
 
     @include media("<mob") {
-    
+      $width: 100%;
+      flex: 1 0 $width;
+      max-width: $width;
     }
 
     &_gray {
@@ -1533,6 +1550,11 @@
     color: #fff;
     font-size: 1.469rem;
     line-height: 2.203rem;
+
+    @include media("<mob") {
+      font-size: 7.013rem;
+      line-height: 10.519rem;
+    }
   }
 
   &__sub-title {
@@ -1543,9 +1565,8 @@
     color: white;
 
     @include media("<mob") {
-      font-size: 7.013rem;
-      line-height: 9.351rem;
-      margin-right: 7.403rem;
+      font-size: 14.026rem;
+      line-height: 17.922rem;
     }
 
     &_gray {
@@ -1563,7 +1584,7 @@
     opacity: 0.7;
 
     @include media("<mob") {
-      display: none;
+      display: none !important;
     }
   }
 
@@ -1637,7 +1658,7 @@
         align-items: center;
         @include media("<mob") {
           align-items: flex-end;
-          top: 43%;
+          top: 35%;
           left: 48%;
         }
       }
@@ -1653,12 +1674,19 @@
         top: 50%;
         align-items: flex-start;
         justify-content: flex-end;
+
+        @include media("<mob") {
+          align-items: center;
+          left: 50%;
+          top: 55%;
+        }
       }
       &_social2 img {
         width: 46.589rem;
         height: 46.589rem;
         @include media("<mob") {
-          
+          width: 112.013rem;
+          height: 105.779rem;
         }
       }
     }
@@ -1734,18 +1762,14 @@
     width: 11.831rem;
     height: 3.753rem;
     margin-right: 1.469rem;
-
-    & img {
-      
-    }
   }
   &__app-store {
     width: 11.831rem;
     height: 3.753rem;
-    
-    & img {
-      
-    }
+  }
+  @include media("<mob") {
+    position: absolute;
+    bottom: 11%;
   }
 }
 
@@ -1764,6 +1788,10 @@
 .first_bg {
   position: absolute;
   right: 25%;
+  @include media("<mob") {
+    right: 35%;
+    top: -3%;
+  }
 }
 .second_bg {
   position: absolute;

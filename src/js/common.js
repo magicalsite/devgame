@@ -2,6 +2,7 @@ var $WINDOW = $(window),
     $HTML = $('html'),
     $BODY = $('body');
 
+$BODY.addClass('logo-theme-dark');
   /**
   * Change font size on resize
   */
@@ -91,9 +92,12 @@ function fullPageInitial() {
       var $section = $(destination.item);
 
       $HTML.removeClass('logo-theme-light');
+      $BODY.addClass('logo-theme-dark');
+
 
       if (!$HTML.hasClass('logo-theme-light') && $section.attr('data-logo-theme') === "light") {
         $HTML.addClass('logo-theme-light');
+        $BODY.removeClass('logo-theme-dark');
       }
 
     }
@@ -106,6 +110,7 @@ function fullPageInitial() {
       recordHistory: false,
       scrollingSpeed: duration,
       sectionSelector: fpSectionSelector,
+      
       // responsiveWidth: breakpointWidth, // and add css rule .fp-enabled
       // responsiveHeight: breakpointHeight, // and add css rule .fp-enabled
       navigation: false,
