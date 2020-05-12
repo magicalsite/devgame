@@ -24,7 +24,9 @@
   justify-content: space-between;
   padding: 2rem 4.9rem 0 0;
   line-height: 1;
-
+  @include media("<tab") {
+    padding-top: 5rem;
+  }
   @include media("<mob") {
     padding-top: 8.571rem;
   }
@@ -47,7 +49,7 @@
     justify-content: space-between;
     // padding: 0 4.3rem 0 0;
 
-    @include media("<mob") {
+    @include media("<tab") {
       display: none;
     }
   }
@@ -61,7 +63,9 @@
   width: 23.8rem;
   flex-shrink: 0;
   z-index: 5;
-
+  @include media("<tab") {
+    width: 38.8rem;
+  }
   @include media("<mob") {
     width: 63.506rem;
     height: 19.48rem;
@@ -143,7 +147,9 @@
   text-align: center;
   text-transform: uppercase;
   // margin: 0 0 0 auto;
-
+  @include media("<tab") {
+    font-size: 2.7rem;
+  }
   @include media('<mob') {
     font-size: 5.455rem;
     line-height: 8.182rem;
@@ -176,7 +182,12 @@
       transition: opacity 0.35s, transform 0.35s, background-color 0.35s;
       transform: translateZ(0) scale3d(0.5, 0.5, 1);
       z-index: -1;
-      
+      @include media("<tab") {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 6rem;
+        margin: -3.2rem 0 0 -2.4rem;
+      }
       @include media('<mob') {
         content: "";
         display: block;
@@ -926,7 +937,9 @@
       letter-spacing: 0.256rem;
       text-transform: uppercase;
       
-      
+      @include media("<tab") {
+        font-size: 1.816rem;
+      }
       @include media("<mob") {
         font-size: 3.896rem;
         line-height: 5.844rem;
@@ -965,12 +978,7 @@
   color: #131313;
 
   &_bg {
-    background: url(../../img/bg_main.svg) no-repeat center right/cover;
-
-    @include media("<mob") {
-      background: url(../img/bg_main.svg) no-repeat center center;
-      
-    }
+    background: url(../../img/bg_main_dop.svg) no-repeat center center/cover;
   }
 
   .layout-page {
@@ -1161,10 +1169,13 @@
       pointer-events: none;
       color: #1D3743;
 
+      @include media("<tab") {
+        font-size: 11rem;
+        line-height: 11rem;
+      }
       @include media("<mob") {
         font-size: 18.701rem;
         line-height: 18.701rem;
-        background-color: #fff;
         padding: 30.571rem 10.13rem 30.571rem 0;
       }
 
@@ -1207,13 +1218,20 @@
         line-height: 2.121rem;
         padding: 3.019rem 1.632rem;
         margin-top: -2.2rem;
-        background: #fff;
 
+        @include media("<tab") {
+          font-size: 2.6rem;
+          line-height: 4.121rem;
+        }
         @include media("<mob") {
           display: none;
         }
       }
-
+      @include media("<tab") {
+        $width: 48%;
+        flex: 1 0 $width;
+        max-width: $width;
+      }
       @include media("<mob") {
         max-width: 97.013rem;
       }
@@ -1231,6 +1249,10 @@
       align-self: center;
       margin-left: auto;
     
+      @include media("<tab") {
+        width: 0.53rem;
+        height: 31.9rem;
+      }
       @include media("<mob") {
         display: none;
       }
@@ -1298,6 +1320,32 @@
       }
     }
   }
+}
+
+// white border
+
+.logo-theme-dark .menu-el__full-description p {
+  background: #fff;
+  transition: background 1.3s;
+}
+.logo-theme-light .menu-el__full-description p {
+  background-color: transparent;
+}
+
+.logo-theme-dark .wbg {
+  opacity: 0;
+}
+.logo-theme-light .wbg {
+  transition: opacity 3s;
+  opacity: 1;
+}
+
+.logo-theme-dark .menu-el__full-title {
+  transition: background-color 2s;
+  background-color: #fff;
+}
+.logo-theme-light .menu-el__full-title {
+  background-color: transparent;
 }
 
 .st {
@@ -1458,10 +1506,10 @@
     max-width: $width;
     padding: 0 2rem 0.8rem 0;
     margin: 0 0 0 -0.2rem;
-  
-    @include media("<mob") {
+
+    @include media("<tab") {
       $width: 100%;
-      flex: 1 0 $width;
+      flex: 1 0 width;
       max-width: $width;
     }
   }
@@ -1516,6 +1564,10 @@
     line-height: 7.5rem;
     color: white;
 
+    @include media("<tab") {
+      font-size: 11.3rem;
+    line-height: 11.5rem;
+    }
     @include media("<mob") {
       display: none;
     }
@@ -1536,7 +1588,11 @@
     max-width: $width;
     padding: 0 2rem 0 0;
     margin-top: 1.632rem;
-
+    @include media("<tab") {
+      $width: 28.4%;
+      flex: 1 0 $width;
+      max-width: $width;
+    }
     @include media("<mob") {
       $width: 100%;
       flex: 1 0 $width;
@@ -1555,6 +1611,10 @@
     font-size: 1.469rem;
     line-height: 2.203rem;
 
+    @include media("<tab") {
+      font-size: 3.469rem;
+      line-height: 5.203rem;
+    }
     @include media("<mob") {
       font-size: 7.013rem;
       line-height: 10.519rem;
@@ -1567,7 +1627,10 @@
     font-size: 3rem;
     line-height: 3.75rem;
     color: white;
-
+    @include media("<tab") {
+      font-size: 5rem;
+      line-height: 6.75rem;
+    }
     @include media("<mob") {
       font-size: 14.026rem;
       line-height: 17.922rem;
@@ -1587,6 +1650,11 @@
     color: #fff;
     opacity: 0.7;
 
+    @include media("<tab") {
+      width: 30.48rem;
+      font-size: 2.05rem;
+      line-height: 2.2rem;
+    }
     @include media("<mob") {
       display: none !important;
     }
@@ -1671,6 +1739,10 @@
           width: 134.026rem;
           height: 126.234rem;
         }
+        @include media("<mob-xxs") {
+          width: 104.026rem;
+          height: 96.234rem;
+        }
       }
 
       &_social2 {
@@ -1679,6 +1751,9 @@
         align-items: flex-start;
         justify-content: flex-end;
 
+        @include media("<tab") {
+          align-items: center;
+        }
         @include media("<mob") {
           align-items: center;
           left: 50%;
@@ -1691,6 +1766,10 @@
         @include media("<mob") {
           width: 112.013rem;
           height: 105.779rem;
+        }
+        @include media("<mob-xxs") {
+          width: 92.013rem;
+          height: 85.779rem;
         }
       }
     }
@@ -1763,17 +1842,24 @@
   align-self: flex-end;
 
   &__google {
-    width: 11.831rem;
-    height: 3.753rem;
+    // width: 11.831rem;
+    // height: 3.753rem;
     margin-right: 1.469rem;
   }
-  &__app-store {
-    width: 11.831rem;
-    height: 3.753rem;
+  @include media("<tab") {
+    display: flex;
+    right: 22%;
   }
   @include media("<mob") {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     position: absolute;
     bottom: 11%;
+    right: 0;
+  }
+  @include media("<mob-xxs") {
+    bottom: 13%;
   }
 }
 
