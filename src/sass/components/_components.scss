@@ -908,7 +908,19 @@
       text-transform: uppercase;
       
       
+      @include media("<mob") {
+        font-size: 3.896rem;
+        line-height: 5.844rem;
+        letter-spacing: 1.224rem;
+        margin-bottom: 3.506rem;
+      }
       
+    }
+    &-privacy {
+      @include media("<mob") {
+        order: 3;
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -933,6 +945,16 @@
   padding: 0;
   color: #131313;
 
+  &_bg {
+    background: url(../../img/bg_main.svg) no-repeat center right/cover;
+    // background-size: 40% 108%;
+
+    @include media("<mob") {
+      background: url(../img/Bitmap.svg) no-repeat -147% center;
+      background-size: 130% 110%;
+    }
+  }
+
   .layout-page {
     height: 100%;
   }
@@ -947,8 +969,7 @@
     align-items: center;
     position: relative;
     height: 100%;
-    background: url(../../img/Bitmap.svg) no-repeat right center/cover;
-    background-size: 47% 110%;
+    
     @include media("<mob") {
       // height: auto;
       // margin-top: 36.234rem;
@@ -972,11 +993,12 @@
     }
 
     @include media("<mob") {
-      display: none;
+      flex-wrap: wrap;
+      bottom: 15px;
     }
   }
   @include media("<mob") {
-    padding: 17rem 0 0 0;
+    padding: 0;
   }
 }
 
@@ -1094,7 +1116,7 @@
     }
 
     &-caption {
-      $width: 52.7%;
+      $width: 48.5%;
       flex: 1 0 $width;
       max-width: $width;
       // padding-right: 2rem;
@@ -1122,9 +1144,10 @@
       color: #1D3743;
 
       @include media("<mob") {
-        font-size: 21.195rem;
-        line-height: 21.818rem;
-        margin-bottom: 8.182rem;
+        font-size: 18.701rem;
+        line-height: 18.701rem;
+        background-color: #fff;
+        padding: 30.571rem 10.13rem 30.571rem 0;
       }
 
       .m-active & {
@@ -1169,8 +1192,7 @@
         background: #fff;
 
         @include media("<mob") {
-          font-size: 5.455rem;
-          line-height: 7.792rem;
+          display: none;
         }
       }
 
@@ -1378,7 +1400,6 @@
 
   @include media("<mob") {
     align-items: flex-start;
-    padding: 45rem 0 0 0;
     overflow: hidden;
   }
 
@@ -1465,7 +1486,7 @@
     }
 
     .s-ready & {
-      opacity: 1;
+      opacity: 0.3;
     }
   }
 
@@ -1477,8 +1498,7 @@
     color: white;
 
     @include media("<mob") {
-      font-size: 18.701rem;
-      line-height: 18.701rem;
+      display: none;
     }
 
     &_dark-gray {
@@ -1499,24 +1519,7 @@
     margin-top: 1.632rem;
 
     @include media("<mob") {
-      margin-left: -19px;
-    padding: 0;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex: 1 0 100%;
-    flex: 1 0 100%;
-    max-width: 100%;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    align-items: center;
-    z-index: 10;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: url(../img/shadow.svg) no-repeat center bottom/cover;
-    height: 133px;
-    line-height: 133px;
+    
     }
 
     &_gray {
@@ -1528,7 +1531,6 @@
     @include font-alt-normal;
     margin-bottom: 1.305rem;
     color: #fff;
-    opacity: 0.3;
     font-size: 1.469rem;
     line-height: 2.203rem;
   }
@@ -1561,14 +1563,8 @@
     opacity: 0.7;
 
     @include media("<mob") {
-      // width: 52.208rem;
-      // height: 17.143rem;
+      display: none;
     }
-  }
-
-  
-  &__numberGame {
-    opacity: 0.3;
   }
 
   &__figure {
@@ -1639,7 +1635,19 @@
       &_social1 {
         width: 100%;
         align-items: center;
+        @include media("<mob") {
+          align-items: flex-end;
+          top: 43%;
+          left: 48%;
+        }
       }
+      &_social1 img {
+        @include media("<mob") {
+          width: 134.026rem;
+          height: 126.234rem;
+        }
+      }
+
       &_social2 {
         left: 55%;
         top: 50%;
@@ -1723,11 +1731,21 @@
   align-self: flex-end;
 
   &__google {
+    width: 11.831rem;
+    height: 3.753rem;
     margin-right: 1.469rem;
+
+    & img {
+      
+    }
   }
   &__app-store {
-    width: 100%;
-    height: 100%;   
+    width: 11.831rem;
+    height: 3.753rem;
+    
+    & img {
+      
+    }
   }
 }
 
@@ -1751,9 +1769,15 @@
   position: absolute;
   bottom: 0;
   left: 2.6%;
+  @include media("<mob") {
+    display: none;
+  }
 }
 .third_bg {
   position: absolute;
   bottom: 0;
   right: 0;
+  @include media("<mob") {
+    bottom: -25%;
+  }
 }

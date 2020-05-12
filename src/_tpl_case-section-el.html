@@ -14,15 +14,15 @@
       </div>
       
       <div class="case-section__description">
-        <div class=" case-section__numberGame">@@count</div>
+        <div class="case-section__count case-section__numberGame">@@count</div>
         @@if(context.subTitle) {
         <h3 class="case-section__sub-title">
           @@for (var i = 0; i < subTitle.length; i++) { <span class="ct">
-            <span class="cst">`+subTitle[i]+`</span>
+            <span class="mst">`+subTitle[i]+`</span>
             </span>
             }
         </h3>
-        <div class="ct case-section__more">
+        <div class="cst case-section__more">
           — это многопользовательский мультиплеерный top-down PVP-шутер. В качестве оружия выступают мультяшные танки, которые игроки могут создать и кастомизировать под себя. 
 
         </div>
@@ -34,7 +34,7 @@
             <img src="@@imgSrc1" alt="image description" />
         </div>
         }
-        <div class="case-section__download download">
+        <div class="mst case-section__download download">
           <a href="#" class="download__google">
             <img src="./img/google_play.png" alt="download with google play">
           </a>

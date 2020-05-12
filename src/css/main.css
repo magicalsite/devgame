@@ -3422,6 +3422,23 @@ html.no-js
   text-transform: uppercase;
 }
 
+@media (max-width: 639px) {
+  .main__footer-site {
+    font-size: 3.896rem;
+    line-height: 5.844rem;
+    letter-spacing: 1.224rem;
+    margin-bottom: 3.506rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .main__footer-privacy {
+    -ms-flex-order: 3;
+        order: 3;
+    margin-bottom: 0;
+  }
+}
+
 .h-main {
   overflow: hidden;
 }
@@ -3443,6 +3460,17 @@ html.no-js
   color: #131313;
 }
 
+.main-section_bg {
+  background: url(../img/bg_main.svg) no-repeat center right/cover;
+}
+
+@media (max-width: 639px) {
+  .main-section_bg {
+    background: url(../img/Bitmap.svg) no-repeat -147% center;
+    background-size: 130% 110%;
+  }
+}
+
 .main-section .layout-page {
   height: 100%;
 }
@@ -3459,8 +3487,6 @@ html.no-js
       align-items: center;
   position: relative;
   height: 100%;
-  background: url(../img/Bitmap.svg) no-repeat right center/cover;
-  background-size: 47% 110%;
 }
 
 .main-section__footer {
@@ -3484,13 +3510,15 @@ html.no-js
 
 @media (max-width: 639px) {
   .main-section__footer {
-    display: none;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    bottom: 15px;
   }
 }
 
 @media (max-width: 639px) {
   .main-section {
-    padding: 17rem 0 0 0;
+    padding: 0;
   }
 }
 
@@ -3614,9 +3642,9 @@ html.no-js
 }
 
 .menu-el__full-caption {
-  -ms-flex: 1 0 52.7%;
-      flex: 1 0 52.7%;
-  max-width: 52.7%;
+  -ms-flex: 1 0 48.5%;
+      flex: 1 0 48.5%;
+  max-width: 48.5%;
 }
 
 @media (max-width: 639px) {
@@ -3644,9 +3672,10 @@ html.no-js
 
 @media (max-width: 639px) {
   .menu-el__full-title {
-    font-size: 21.195rem;
-    line-height: 21.818rem;
-    margin-bottom: 8.182rem;
+    font-size: 18.701rem;
+    line-height: 18.701rem;
+    background-color: #fff;
+    padding: 30.571rem 10.13rem 30.571rem 0;
   }
 }
 
@@ -3694,8 +3723,7 @@ html.no-js
 
 @media (max-width: 639px) {
   .menu-el__full-description p {
-    font-size: 5.455rem;
-    line-height: 7.792rem;
+    display: none;
   }
 }
 
@@ -3890,7 +3918,6 @@ html.no-js
   .case-section {
     -ms-flex-align: start;
         align-items: flex-start;
-    padding: 45rem 0 0 0;
     overflow: hidden;
   }
 }
@@ -3990,7 +4017,7 @@ html.no-js
 }
 
 .s-ready .case-section__count {
-  opacity: 1;
+  opacity: 0.3;
 }
 
 .case-section__title {
@@ -4002,8 +4029,7 @@ html.no-js
 
 @media (max-width: 639px) {
   .case-section__title {
-    font-size: 18.701rem;
-    line-height: 18.701rem;
+    display: none;
   }
 }
 
@@ -4024,29 +4050,6 @@ html.no-js
   margin-top: 1.632rem;
 }
 
-@media (max-width: 639px) {
-  .case-section__description {
-    margin-left: -19px;
-    padding: 0;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex: 1 0 100%;
-    flex: 1 0 100%;
-    max-width: 100%;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    align-items: center;
-    z-index: 10;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: url(../img/shadow.svg) no-repeat center bottom/cover;
-    height: 133px;
-    line-height: 133px;
-  }
-}
-
 .case-section__description_gray {
   color: #919191;
 }
@@ -4055,7 +4058,6 @@ html.no-js
   font-family: "circe-regular", Helvetica, Arial, sans-serif;
   margin-bottom: 1.305rem;
   color: #fff;
-  opacity: 0.3;
   font-size: 1.469rem;
   line-height: 2.203rem;
 }
@@ -4090,8 +4092,10 @@ html.no-js
   opacity: 0.7;
 }
 
-.case-section__numberGame {
-  opacity: 0.3;
+@media (max-width: 639px) {
+  .case-section__more {
+    display: none;
+  }
 }
 
 .case-section__figure {
@@ -4167,6 +4171,22 @@ html.no-js
   width: 100%;
   -ms-flex-align: center;
       align-items: center;
+}
+
+@media (max-width: 639px) {
+  .case-section__figure-img_social1 {
+    -ms-flex-align: end;
+        align-items: flex-end;
+    top: 43%;
+    left: 48%;
+  }
+}
+
+@media (max-width: 639px) {
+  .case-section__figure-img_social1 img {
+    width: 134.026rem;
+    height: 126.234rem;
+  }
 }
 
 .case-section__figure-img_social2 {
@@ -4258,12 +4278,14 @@ html.no-js
 }
 
 .download__google {
+  width: 11.831rem;
+  height: 3.753rem;
   margin-right: 1.469rem;
 }
 
 .download__app-store {
-  width: 100%;
-  height: 100%;
+  width: 11.831rem;
+  height: 3.753rem;
 }
 
 .wbg {
@@ -4286,10 +4308,22 @@ html.no-js
   left: 2.6%;
 }
 
+@media (max-width: 639px) {
+  .second_bg {
+    display: none;
+  }
+}
+
 .third_bg {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+@media (max-width: 639px) {
+  .third_bg {
+    bottom: -25%;
+  }
 }
 
 @media print {
