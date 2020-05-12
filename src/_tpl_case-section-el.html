@@ -1,0 +1,61 @@
+
+<div class="case-section__layout">
+  <div class="layout-page layout-page-spaces">
+    <div class="case-section__align">
+      <div class="case-section__caption">
+        @@if(context.title) {
+        <h2 class="case-section__title@@if(context.titleMod){ case-section__title_@@titleMod}">
+          @@for (var i = 0; i < title.length; i++) { <span class="ct">
+            <span class="cst">`+title[i]+`</span>
+            </span>
+            }
+        </h2>
+        }
+      </div>
+      
+      <div class="case-section__description">
+        <div class=" case-section__numberGame">@@count</div>
+        @@if(context.subTitle) {
+        <h3 class="case-section__sub-title">
+          @@for (var i = 0; i < subTitle.length; i++) { <span class="ct">
+            <span class="cst">`+subTitle[i]+`</span>
+            </span>
+            }
+        </h3>
+        <div class="ct case-section__more">
+          — это многопользовательский мультиплеерный top-down PVP-шутер. В качестве оружия выступают мультяшные танки, которые игроки могут создать и кастомизировать под себя. 
+
+        </div>
+        }
+      </div>
+      <div class="case-section__figure">
+        @@if(context.imgSrc1) {
+          <div class="case-section__figure-img@@if(context.social1){ case-section__figure-img_social1 }@@if(context.social2){ case-section__figure-img_social2 }@@if(context.social3){ case-section__figure-img_social3 }@@if(context.social4){ case-section__figure-img_social4 }@@if(context.social5){ case-section__figure-img_social5 }@@if(context.social6){ case-section__figure-img_social6 }@@if(context.social7){ case-section__figure-img_social7 }@@if(context.social8){ case-section__figure-img_social8 }@@if(context.social9){ case-section__figure-img_social9 }@@if(context.social10){ case-section__figure-img_social10 }@@if(context.social11){ case-section__figure-img_social11 }@@if(context.social12){ case-section__figure-img_social12 }">
+            <img src="@@imgSrc1" alt="image description" />
+        </div>
+        }
+        <div class="case-section__download download">
+          <a href="#" class="download__google">
+            <img src="./img/google_play.png" alt="download with google play">
+          </a>
+          <a href="#" class="download__app-store">
+            <img src="./img/app_store.png" alt="download with app store">
+          </a>
+        </div>
+      </div>
+      <div class="case-section__rectangle"></div>
+    </div>
+
+    <div class="main-section__footer @@if(context.editColor){ editColorFooter }">
+      <div class="main__footer-site">
+        © HIGH CORE GAMES  2019
+      </div>
+      <div class="main__footer-site main__footer-privacy">
+        PRIVACY POLICE
+      </div>
+      <div class="main__footer-site main__footer-clover">
+        Clover.by
+      </div>
+    </div>
+  </div>
+</div>

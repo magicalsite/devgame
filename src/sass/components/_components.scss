@@ -1,0 +1,1759 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+@import "../../libs/include-media/dist/include-media";
+
+/* ==================================== */
+/* ============== HEADER ============== */
+/* ==================================== */
+.header {
+  position: relative;
+  z-index: 50;
+
+  &_fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-width: $layout-page-min-width;
+  }
+}
+
+.header-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 2.9rem 0 0;
+  line-height: 1;
+
+  @include media("<mob") {
+    padding-top: 8.571rem;
+  }
+
+  &__left {
+    position: relative;
+    // $width: 56.6%;
+    // flex: 1 0 $width;
+    // max-width: $width;
+    // padding-right: 2rem;
+  }
+
+  &__right {
+    position: relative;
+    // $width: 32%;
+    // flex: 1 0 $width;
+    // max-width: $width;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // padding: 0 4.3rem 0 0;
+  }
+}
+
+/* logo */
+.logo {
+  overflow: hidden;
+  position: relative;
+  margin: 0.7rem 0 0;
+  width: 23.8rem;
+  flex-shrink: 0;
+  z-index: 5;
+
+  @include media("<mob") {
+    width: 63.506rem;
+    height: 19.48rem;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    @include ratio(238, 60)
+  }
+
+  a,
+  &>span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
+    &>span {
+      @include hide-text;
+    }
+  }
+
+  .logo_dark,
+  .logo_light {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    //background-position: 50%;
+    background-size: contain;
+    will-change: transform;
+    transition: transform 0.8s;
+  }
+
+  .logo_dark {
+    background-image: url(../../img/logo.svg);
+  }
+
+  .logo_light {
+    background-image: url(../../img/logo-alt.svg);
+    $translate: 0, 102%;
+    transform: translate($translate);
+    transform: translate3d($translate, 0);
+  }
+
+  .logo-theme-light & {
+    .logo_dark {
+      $translate: 0, -102%;
+      transform: translate($translate);
+      transform: translate3d($translate, 0);
+    }
+
+    .logo_light {
+      $translate: 0, 0;
+      transform: translate($translate);
+      transform: translate3d($translate, 0);
+    }
+  }
+}
+
+/* logo end */
+
+/* lang */
+.lang {
+  @include font-alt-extra-bold;
+  color: $text-color;
+  font-size: 1.4rem;
+  line-height: 2.6rem;
+  text-align: center;
+  text-transform: uppercase;
+  // margin: 0 0 0 auto;
+
+  @include media('<mob') {
+    display: none;
+  }
+
+  &__inner {
+    height: 2.6rem;
+    width: 2.6rem;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.35s;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      $size: 4rem;
+      height: $size;
+      width: $size;
+      border-radius: $size;
+      margin: -#{$size / 2 + 0.1} 0 0 -#{$size / 2};
+      opacity: 0;
+      background-color: black;
+      transition: opacity 0.35s, transform 0.35s, background-color 0.35s;
+      transform: translateZ(0) scale3d(0.5, 0.5, 1);
+      z-index: -1;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 0.35;
+        transform: translateZ(0) scale3d(1, 1, 1);
+      }
+    }
+
+    .logo-theme-light & {
+      color: white;
+
+      &::before {
+        background-color: white;
+      }
+    }
+  }
+}
+
+/* lang end */
+
+/* ==================================== */
+/* ============ NAVIGATION ============ */
+/* ==================================== */
+.nav-wrap {
+  position: relative;
+  flex: 1 0 auto;
+  text-align: center;
+  // Поднять над контентом
+  z-index: 50;
+
+  // ------ бутерброд -----------------------------------------
+  @include media("<tab") {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 48rem;
+    max-width: 100%;
+    text-align: left;
+    background-color: rgba($base-color, 0.9);
+    z-index: 999;
+
+    transition: {
+      property: opacity, visibility, transform;
+      duration: $animation-speed;
+    }
+
+    ;
+
+    // hide
+    opacity: 0;
+    $translate: -100%,
+    0;
+    transform: translate($translate);
+    transform: translate3d($translate, 0);
+  }
+
+  @include media('<tab-s') {
+    width: 32rem;
+  }
+
+  @include media('<mob') {
+    width: 100%;
+  }
+
+  &.is-open {
+
+    // ------ бутерброд -----------------------------------------
+    @include media("<tab") {
+      opacity: 1;
+      $translate: 0, 0;
+      transform: translate($translate);
+      transform: translate3d($translate, 0);
+    }
+  }
+}
+
+// Overlay
+.nav-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(#000, 0.8);
+  z-index: 998;
+  transition: opacity $animation-speed;
+
+  opacity: 0;
+  pointer-events: none;
+
+  display: none;
+
+  // ------ бутерброд -----------------------------------------
+  @include media("<tab") {
+    display: block;
+  }
+}
+
+.nav-wrap.is-open~.nav-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+// Navigation opener
+.nav-opener {
+  display: block;
+  position: relative;
+  $size: 4rem;
+  height: $size;
+  width: $size;
+  font-size: 0;
+  line-height: 0;
+  cursor: pointer;
+
+  display: none;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+
+  &::before {
+    height: 1.7rem;
+    width: 2.6rem;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB3aWR0aD0iMjYiIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAyNiAxNyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjYiIGhlaWdodD0iMyIgcng9IjEuNSI+PC9yZWN0PjxyZWN0IHk9IjciIHdpZHRoPSIyNiIgaGVpZ2h0PSIzIiByeD0iMS41Ij48L3JlY3Q+PHJlY3QgeT0iMTQiIHdpZHRoPSIyNiIgaGVpZ2h0PSIzIiByeD0iMS41Ij48L3JlY3Q+PC9zdmc+);
+  }
+
+  &::after {
+    height: 2.5rem;
+    width: 2.7rem;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB3aWR0aD0iMjciIGhlaWdodD0iMjUiIHZpZXdCb3g9IjAgMCAyNyAyNSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB4PSIwLjQ0NjUzMyIgeT0iMTIuNCIgd2lkdGg9IjE3IiBoZWlnaHQ9IjMiIHJ4PSIxLjUiIHRyYW5zZm9ybT0icm90YXRlKC00NCAwLjQ0NjUzMyAxMi40KSI+PC9yZWN0PjxyZWN0IHg9IjEiIHk9IjExIiB3aWR0aD0iMjYiIGhlaWdodD0iMyIgcng9IjEuNSI+PC9yZWN0PjxyZWN0IHg9IjIuNTgwMzIiIHk9IjEwLjQyODUiIHdpZHRoPSIxNyIgaGVpZ2h0PSIzIiByeD0iMS41IiB0cmFuc2Zvcm09InJvdGF0ZSg0NSAyLjU4MDMyIDEwLjQyODUpIj48L3JlY3Q+PC9zdmc+);
+    display: none;
+  }
+
+  @include media('<tab') {
+    display: block;
+  }
+
+  &.is-open {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: block;
+    }
+  }
+}
+
+// Navigation header (for mobile)
+.nav-header {
+  position: relative;
+  //display: flex;
+  align-items: center;
+  justify-content: space-between;
+  //padding: 0 0 0 1.5rem;
+  border-bottom: 0.1rem solid rgba(white, 0.5);
+
+  display: none;
+
+  @include media('<tab') {
+    display: flex;
+  }
+}
+
+// Logo in nav
+.logo-nav {
+  display: block;
+  position: relative;
+  height: 4rem;
+  width: 16rem;
+  font-size: 0;
+  line-height: 0;
+  background-image: url(../../img/logo-alt.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 85%;
+}
+
+// Navigation close button
+.nav-close-btn {
+  position: relative;
+  display: block;
+  $size: 4rem;
+  height: $size;
+  width: $size;
+  margin-left: auto;
+  overflow: hidden;
+  text-indent: -999rem;
+
+  &::before {
+    content: "";
+    display: block;
+    $size: 1.8rem;
+    height: $size;
+    width: $size;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjZmZmIj48cGF0aCBkPSJNMjMuOTU0IDIxLjAzbC05LjE4NC05LjA5NSA5LjA5Mi05LjE3NC0yLjgzMi0yLjgwNy05LjA5IDkuMTc5LTkuMTc2LTkuMDg4LTIuODEgMi44MSA5LjE4NiA5LjEwNS05LjA5NSA5LjE4NCAyLjgxIDIuODEgOS4xMTItOS4xOTIgOS4xOCA5LjF6Ii8+PC9zdmc+);
+    background-size: contain;
+  }
+}
+
+// Navigation
+.nav {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+
+  // ------ бутерброд -----------------------------------------
+  @include media("<tab") {
+    display: block;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.nav__list {
+  $nav-inner-space: 1.5rem 2rem;
+  $nav-arrow-size: 4rem;
+  $nav-item-space: 1em 1.5rem;
+  $nav-item-indent: 0.4;
+
+  display: flex;
+  flex-wrap: wrap;
+  cursor: default;
+  @include font-roboto-normal;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: $text-color;
+  text-align: left;
+  transition: color 0.7s;
+
+  .logo-theme-light & {
+    color: #fff;
+  }
+
+  @include media('<net') {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  @include media('<tab') {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  // Все ul
+  &,
+  & ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  // ------ бутерброд -----------------------------------------
+  @include media("<tab") {
+    display: block;
+  }
+
+  // Все li,
+  // кроме li первого уровня (для них стили ниже)
+  li {
+    position: relative;
+
+    // ------ бутерброд -----------------------------------------
+    @include media("<tab") {
+      // Слева текст, справа стрелка
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  // Все "a" и "span"
+  // "a" заменять на "span" в пункте текущей страницы
+  a,
+  li>span {
+    //display: block;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    overflow: hidden;
+    padding: 0.5rem;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+
+    // ------ бутерброд -----------------------------------------
+    @include media("<tab") {
+      padding: 0 1rem 0 0;
+      overflow: visible;
+    }
+  }
+
+  // Все "a"
+  a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+
+    // ------ бутерброд -----------------------------------------
+    @include media('<tab') {
+      $width: calc(100% - #{$nav-arrow-size});
+      max-width: $width;
+    }
+  }
+
+  // Пункты, в которых есть подменю
+  li.has-sub {
+
+    &>a,
+    &>span {
+      padding-right: $nav-arrow-size;
+
+      // ------ бутерброд -----------------------------------------
+      @include media("<tab") {
+        padding-right: 1rem;
+
+        // Если в пункте есть стрелка,
+        // то нужно ограничить максимальную ширину "a"
+        max-width: calc(100% - #{$nav-arrow-size});
+      }
+    }
+  }
+
+  // Вложенные ul (sub menu)
+  ul {
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    flex-basis: 100%;
+    display: none;
+
+    // transition
+    transition: opacity $animation-speed, visibility $animation-speed;
+
+    // Important!
+    // Для разрешений выше планшетных
+    @include media(">=tab") {
+      display: block !important; // Важно! Перебить инлайновые стили установленные скпиптом
+      position: absolute;
+      right: 0;
+      top: 100%;
+      width: 28rem;
+      padding: 1.5rem 0;
+      opacity: 0;
+      visibility: hidden; // При переводе фокуса табом, элементы внутри скрытого дропа игнорируются
+      pointer-events: none; // На это ствойство не добавлять анимацию
+    }
+
+    &::before {
+      $intend: 1rem -0.5rem;
+      content: "";
+      display: block;
+      position: absolute;
+      top: #{nth($intend, 1)};
+      left: #{nth($intend, 2)};
+      height: calc(100% - #{nth($intend, 1)} * 2);
+      width: calc(100% - #{nth($intend, 2)} * 2);
+      background-color: $bg-color-alt;
+      //@include linear-gradient(180deg, #3c3c3c 0%, #6a6a6a 100%);
+      //box-shadow: 0 0.2rem 3.3rem rgba(0, 0, 0, 0.5);
+      border-radius: 0.2rem;
+      z-index: -1;
+
+      // ------ бутерброд -----------------------------------------
+      @include media("<tab") {
+        content: none;
+      }
+    }
+
+    // Позицирование подменю
+    // ВТОРОГО и глубже уровней
+    ul {
+      left: 100%;
+      top: -0.5rem;
+      text-transform: none;
+
+      // ------ бутерброд -----------------------------------------
+      @include media("<tab") {
+        left: auto;
+        top: auto;
+      }
+    }
+
+    // Пункты ВТОРГО уровня и глубще
+    li {
+      margin: 0.5rem 0 0;
+
+      // ------ бутерброд -----------------------------------------
+      @include media("<tab") {
+        margin: 0;
+        padding: #{nth($nav-item-space, 1)} 0 0 #{nth($nav-item-space, 2)};
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    a {
+      display: block;
+      transition: color $animation-speed;
+    }
+
+    // Hover
+    li {
+
+      // Класс .hover добавляется скриптом
+      &.hover,
+      .no-js &:hover {
+
+        &>a,
+        &>span {
+          color: $highlight-color;
+        }
+      }
+    }
+
+    // Current
+    li.current {
+
+      &>a,
+      &>span {
+        color: $highlight-color;
+
+        @include media('<tab') {
+          color: $text-color-muted;
+        }
+      }
+    }
+
+    // Current Hover
+    li.current.hover {
+      &>a {
+        color: white;
+      }
+    }
+  }
+
+  // Для текущей страницы
+  li.current>ul {
+    display: block;
+  }
+
+  // Показать подменю.
+  // Класс .hover добавляется скриптом.
+  // Если отключены скрипты, Показывать через :hover.
+  li.hover>ul,
+  .no-js & li:hover>ul {
+
+    // Для разрешений выше планшетных
+    @include media(">=tab") {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      z-index: 5;
+    }
+  }
+
+  // Стрелка для разворачивания подменю.
+  li>em {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0;
+    line-height: 0;
+    height: $nav-arrow-size;
+    width: $nav-arrow-size;
+    margin-top: -#{round-float($nav-arrow-size / 2, 1)};
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+    color: $text-color;
+    transform: rotate(-90deg);
+    transition: color $animation-speed;
+    -webkit-tap-highlight-color: transparent;
+    pointer-events: none;
+    user-select: none;
+    outline: none;
+
+    &.jsNav__arrow_on {
+      pointer-events: auto;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      $size: 1.2rem;
+      height: $size;
+      width: $size;
+      margin: -#{round-float($size / 2, 1)} 0 0 -#{round-float($size / 2, 1)};
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxNyAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMSAxLjIyMjY2TDguMjA5OTYgOC42MjEwOUwxNS40MTk5IDEuMjIyNjYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L3N2Zz4=);
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: contain;
+    }
+
+    &:hover {
+      &::after {
+        @include linear-gradient(to bottom, lighten($base-color, 10%) 0%, $base-color 100%)
+      }
+    }
+
+    @at-root {
+      @include media("<tab") {
+        li.is-open>em {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    // ------ бутерброд -----------------------------------------
+    @include media("<tab") {
+      position: relative;
+      top: auto;
+      right: auto;
+      margin: -1rem -1.5rem -1rem 0;
+      transform: rotate(0);
+      pointer-events: auto;
+    }
+
+    // Open, Hover
+    @at-root {
+      li.hover>em {
+        transform: rotate(90deg);
+      }
+
+      @include media("<tab") {
+        li.is-open>em {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  // li ПЕРВОГО уровня
+  &>li {
+    margin: 0 0.6rem;
+    //@include font-bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    // ------ бутерброд -----------------------------------------
+    @include media("<tab") {
+      padding: $nav-item-space;
+      border-top: 1px solid rgba($text-color, 0.5);
+      margin: 0;
+    }
+
+    &:first-child {
+
+      // ------ бутерброд -----------------------------------------
+      @include media("<tab") {
+        border-top: none;
+      }
+    }
+
+    &:last-child {
+      //margin-right: 0;
+
+      // ------ бутерброд -----------------------------------------
+      @include media("<tab") {
+        // no styles
+      }
+    }
+
+    // Все "a" и "span" первого уровня
+    // "a" заменять на "span" в пункте текущей страницы
+    &>a,
+    &>span {
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0.4rem;
+        width: calc(100% - 0.8rem);
+        height: 0.2rem;
+        //border-radius: 50%;
+        background-color: currentColor;
+        transform-origin: 100% 100%;
+        $scale: 0, 1;
+        transform: scale($scale);
+        transform: scale3d($scale, 1);
+
+        // transition
+        backface-visibility: hidden;
+        $prop: transform, opacity;
+        will-change: $prop;
+
+        transition: {
+          property: $prop;
+          duration: $animation-speed;
+          //timing-function: ease-in-out;
+          timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+        }
+
+        // ------ бутерброд -----------------------------------------
+        @include media("<tab") {
+          content: none;
+        }
+      }
+    }
+
+    // Стрелка для разворачивания подменю
+    &>em {
+      // Если стили стрелок первого уровня навигаци отличаются, от остальных
+      display: none;
+
+      // ------ бутерброд -----------------------------------------
+      @include media("<tab") {
+        display: block;
+      }
+    }
+
+    // Hover
+    // Класс .hover добавляется скриптом
+    &.hover,
+    .no-js &:hover {
+      &>a {
+        &::before {
+          transform-origin: 0 100%;
+
+          $scale: 1, 1;
+          transform: scale($scale);
+          transform: scale3d($scale, 1);
+        }
+      }
+    }
+
+    // Пункт для текущей страницы
+    // Current
+    &.current {
+
+      &>a,
+      &>span {
+        //@include font-bold;
+        position: relative;
+        z-index: 1;
+        overflow: visible;
+        cursor: default;
+        color: $text-color-muted;
+
+        // ------ бутерброд -----------------------------------------
+        @include media("<tab") {
+          color: $text-color-muted;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: -2.1rem;
+          left: 0.5rem;
+          right: 0.5rem;
+          height: 0.5rem;
+          background-color: $highlight-color;
+
+          will-change: transform, opacity;
+          transition: transform $animation-speed * 1.5;
+          transform-origin: 3rem center;
+
+          $scale: 0, 1;
+          transform: scale($scale);
+          transform: scale3d($scale, 1);
+
+          z-index: -1;
+
+          html.ready &,
+          html.no-js & {
+            opacity: 1;
+            $scale: 1, 1;
+            transform: scale($scale);
+            transform: scale3d($scale, 1);
+          }
+
+          // ------ бутерброд -----------------------------------------
+          @include media("<tab") {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+/* ==================================== */
+/* ============== MAIN ================ */
+/* ==================================== */
+.main {
+  position: relative;
+  padding: 3.9rem 0 6rem;
+
+  &__layout {
+    height: 100%;
+  }
+
+  &__contacts {
+    height: 100%;
+    padding: 0 0 3.4rem;
+  }
+
+  &__footer {
+    
+    &-site {
+      @include font-alt-normal;
+      font-size: 0.816rem;
+      line-height: 1.224rem;
+      
+      letter-spacing: 0.256rem;
+      text-transform: uppercase;
+      
+      
+      
+    }
+  }
+}
+
+.h-main {
+  overflow: hidden;
+
+  &__footer {
+    background-color: white;
+    border-top: 1px solid $border-color;
+  }
+}
+
+.content {
+  background-color: rgba(whitesmoke, 0.8);
+}
+
+/* main section */
+.main-section {
+  position: relative;
+  min-height: 100%;
+  padding: 0;
+  color: #131313;
+
+  .layout-page {
+    height: 100%;
+  }
+
+  &__layout {
+    position: relative;
+    height: 100%;
+  }
+
+  &__align {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    background: url(../../img/Bitmap.svg) no-repeat right center/cover;
+    background-size: 47% 110%;
+    @include media("<mob") {
+      // height: auto;
+      // margin-top: 36.234rem;
+    }
+  }
+
+  &__footer {
+    width: 89.7%;
+    position: absolute;
+    bottom: 28px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+
+    & div {
+      color: #BBBBBB;
+    }
+    
+    & a {
+      margin-right: 10px;
+    }
+
+    @include media("<mob") {
+      display: none;
+    }
+  }
+  @include media("<mob") {
+    padding: 17rem 0 0 0;
+  }
+}
+
+.editColorFooter div {
+  color: rgba(255, 255, 255, 0.312773);;
+}
+
+/* main section end */
+
+/* menu */
+.menu {
+  
+  &__item {
+    position: static;
+    $width: 19.2rem;
+    flex: 1 0 $width;
+    max-width: $width;
+    height: 100%;
+    pointer-events: none;
+
+    .m-active & {
+      pointer-events: auto;
+    }
+  }
+}
+
+/* menu end */
+
+/* menu element */
+.menu-el {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5.2rem 2rem 4.5rem 0;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+
+  // Full view
+  &__full {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-grow: 1;
+    width: 100%;
+    padding: 5rem 0;
+
+    &-align {
+      position: absolute;
+      left: 0;
+      width: 100%;
+    }
+
+    &-count {
+      display: block;
+      overflow: hidden;
+      //pointer-events: none;
+      margin: 0 0 0.83rem 0.6rem;
+      @include font-norm-reg;
+      font-size: 2.3rem;
+      line-height: 1;
+      will-change: opacity;
+      transition: opacity 0.7s;
+      opacity: 0;
+      pointer-events: none;
+
+      @include media("<mob") {
+        font-size: 6.678rem;
+        line-height: 8.961rem;
+        margin: 0 0 10.091rem 0;
+      }
+
+      &::before {
+        content: "01";
+        display: block;
+        position: relative;
+        @include antialiased;
+        $prop: transform;
+        will-change: $prop;
+
+        transition: {
+          property: $prop;
+          duration: 0.8s;
+          delay: 1.6s;
+          timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+        }
+
+        $translate: 0,
+        120%;
+        transform: translate($translate);
+        transform: translate3d($translate, 0);
+      }
+
+      .s-ready & {
+        &::before {
+          $translate: 0, 0;
+          transform: translate($translate);
+          transform: translate3d($translate, 0);
+        }
+      }
+
+      .m-active & {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+
+    &-content {
+      display: flex;
+      align-items: flex-start;
+
+      @include media("<mob") {
+        display: block;
+      }
+    }
+
+    &-caption {
+      $width: 52.7%;
+      flex: 1 0 $width;
+      max-width: $width;
+      // padding-right: 2rem;
+      // padding-left: 3rem;
+
+      @include media("<mob") {
+        $width: 100%;
+        flex: 1 0 $width;
+        max-width: $width;
+        padding-right: 0rem;
+        padding-left: 0px;
+      }
+    }
+
+    &-title {
+      @include font-gilroy-bold;
+      font-size: 7.119rem;
+      line-height: 7.119rem;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      will-change: opacity;
+      transition: opacity 0.7s;
+      opacity: 0;
+      pointer-events: none;
+      color: #1D3743;
+
+      @include media("<mob") {
+        font-size: 21.195rem;
+        line-height: 21.818rem;
+        margin-bottom: 8.182rem;
+      }
+
+      .m-active & {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+
+    &-more {
+      position: relative;
+      will-change: opacity;
+      transition: opacity 0.7s;
+      opacity: 0;
+      pointer-events: none;
+
+      .m-active & {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+
+    &-description {
+      $width: 35%;
+      flex: 1 0 $width;
+      max-width: $width;
+      margin: 0;
+      transition: opacity 0.7s;
+      opacity: 0;
+      color: #4B6977;
+
+      p {
+        @include font-normal;
+        font-size: 1.6rem;
+        line-height: 2.121rem;
+        padding: 3.019rem 1.632rem;
+        margin-top: -2.2rem;
+        background: #fff;
+
+        @include media("<mob") {
+          font-size: 5.455rem;
+          line-height: 7.792rem;
+        }
+      }
+
+      @include media("<mob") {
+        max-width: 97.013rem;
+      }
+      
+      .s-ready .m-active & {
+        opacity: 1;
+      }
+    }
+
+    &-rect {
+      width: 0.33rem;
+      height: 16.9rem;
+      background-color: #D8D8D8;
+      border-radius: 5px;
+      align-self: center;
+      margin-left: auto;
+    
+      @include media("<mob") {
+        display: none;
+      }
+    }
+  }
+
+  // Short view
+  &__short {
+    &-count {
+      display: block;
+      overflow: hidden;
+      @include font-important-semi-bold;
+      font-size: 1.5rem;
+      line-height: 1;
+      margin-bottom: 0.7rem;
+      transition: opacity 0.35s;
+
+      &::before {
+        display: block;
+        content: "0"counter(item);
+        @include antialiased;
+        $prop: transform;
+        will-change: $prop;
+
+        transition: {
+          property: $prop;
+          duration: 0.8s;
+          delay: 1.5s;
+          timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+        }
+
+        $translate: 0,
+        120%;
+        transform: translate($translate);
+        transform: translate3d($translate, 0);
+      }
+
+      .s-ready & {
+        &::before {
+          $translate: 0, 0;
+          transform: translate($translate);
+          transform: translate3d($translate, 0);
+        }
+      }
+    }
+
+    &-title {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 1.9rem;
+      $line-height: 2.2 / 1.9;
+      line-height: $line-height;
+    }
+
+    &-inner {
+      display: block;
+      $prop: transform;
+      will-change: $prop;
+
+      transition: {
+        property: $prop;
+        duration: 0.5s;
+        timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+      }
+    }
+  }
+}
+
+.st {
+  display: block;
+  overflow: hidden;
+}
+
+.sst {
+  display: block;
+  position: relative;
+  @include antialiased;
+  $prop: transform;
+  will-change: $prop;
+
+  transition: {
+    property: $prop;
+    duration: 1.0s;
+    delay: 1.2s;
+    timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+
+  $translate: 0,
+  102%;
+  transform: translate($translate);
+  transform: translate3d($translate, 0);
+
+  .s-ready & {
+    $translate: 0, 0;
+    transform: translate($translate);
+    transform: translate3d($translate, 0);
+  }
+}
+
+.menu-el__short-line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.7s 1.2s;
+
+  .s-ready & {
+    opacity: 1;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    $height: 0.5rem;
+    height: $height;
+    margin-top: -#{$height / 2};
+    background-color: currentColor;
+    $prop: transform;
+    will-change: $prop;
+
+    transition: {
+      property: $prop;
+      duration: 0.5s;
+      timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+    }
+
+    $translate: -102%,
+    0;
+    transform: translate($translate);
+    transform: translate3d($translate, 0);
+  }
+}
+
+.menu-el__short {
+  display: block;
+  position: relative;
+  margin-top: auto;
+  cursor: default;
+  color: inherit;
+  text-decoration: none;
+  pointer-events: auto;
+
+  // Hover & current
+  .no-touchevents &:hover,
+  .m-active & {
+    .menu-el__short-count {
+      opacity: 0;
+    }
+
+    .menu-el__short-inner {
+      $translate: 0, -60%;
+      $scale: 1, 1;
+      transform: translate($translate);
+      transform: translate3d($translate, 0);
+    }
+
+    .menu-el__short-line {
+      &::before {
+        transition-delay: 0.3s;
+        $translate: 0, 0;
+        transform: translate($translate);
+        transform: translate3d($translate, 0);
+      }
+    }
+  }
+}
+
+/* menu element end */
+
+/* case section */
+.case-section {
+  display: flex;
+  align-items: center;
+  min-height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s;
+
+  @include media("<mob") {
+    align-items: flex-start;
+    padding: 45rem 0 0 0;
+    overflow: hidden;
+  }
+
+  &.s-visible {
+    opacity: 1;
+  }
+
+  &__layout {
+    flex: 1 0 100%;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+
+    @include media("<mob") {
+      height: auto;
+    }
+
+    .layout-page {
+      height: 100%;
+    }
+  }
+
+  &__align {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    @include media("<mob") {
+      display: block;
+    }
+  }
+
+  &__caption {
+    position: relative;
+    $width: 30.8%;
+    flex: 1 0 $width;
+    max-width: $width;
+    padding: 0 2rem 0.8rem 0;
+    margin: 0 0 0 -0.2rem;
+  
+    @include media("<mob") {
+      $width: 100%;
+      flex: 1 0 $width;
+      max-width: $width;
+    }
+  }
+
+  &__count {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    margin: 0 0 1.4rem 0.9rem;
+    @include font-alt-normal;
+    font-size: 2.3rem;
+    line-height: 2.7rem;
+    color: white;
+    cursor: default;
+    transition: opacity 0.6s 1.5s;
+    opacity: 0;
+
+    @include media("<mob") {
+      font-size: 4.675rem;
+      line-height: 7.013rem;
+      // margin: 37.013rem 0 0 0.779rem;
+    }
+
+    &_dark-gray {
+      color: #333;
+    }
+
+    &_gray {
+      color: #919191;
+    }
+
+    &_whiteone {
+      color: rgba(255, 255, 255, 0.3);
+    }
+    &_whitetwo {
+      color: rgba(255, 255, 255, 0.44);
+    }
+
+    &_light-gray {
+      color: #d8d8d8;
+    }
+
+    .s-ready & {
+      opacity: 1;
+    }
+  }
+
+
+  &__title {
+    @include font-gilroy-bold;
+    font-size: 7.3rem;
+    line-height: 7.5rem;
+    color: white;
+
+    @include media("<mob") {
+      font-size: 18.701rem;
+      line-height: 18.701rem;
+    }
+
+    &_dark-gray {
+      color: #333;
+    }
+
+    &_gray {
+      color: #919191;
+    }
+  }
+
+  &__description {
+    position: relative;
+    $width: 26.3%;
+    flex: 1 0 $width;
+    max-width: $width;
+    padding: 0 2rem 0 0;
+    margin-top: 1.632rem;
+
+    @include media("<mob") {
+      margin-left: -19px;
+    padding: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    max-width: 100%;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: url(../img/shadow.svg) no-repeat center bottom/cover;
+    height: 133px;
+    line-height: 133px;
+    }
+
+    &_gray {
+      color: #919191;
+    }
+  }
+
+  &__numberGame {
+    @include font-alt-normal;
+    margin-bottom: 1.305rem;
+    color: #fff;
+    opacity: 0.3;
+    font-size: 1.469rem;
+    line-height: 2.203rem;
+  }
+
+  &__sub-title {
+    margin: 0 0 0.4rem;
+    @include font-gilroy-bold;
+    font-size: 3rem;
+    line-height: 3.75rem;
+    color: white;
+
+    @include media("<mob") {
+      font-size: 7.013rem;
+      line-height: 9.351rem;
+      margin-right: 7.403rem;
+    }
+
+    &_gray {
+      color: #919191;
+    }
+  }
+
+  &__more {
+    width: 20.48rem;
+    max-width: 100%;
+    position: relative;
+    font-size: 1.305rem;
+    line-height: 2.2rem;
+    color: #fff;
+    opacity: 0.7;
+
+    @include media("<mob") {
+      // width: 52.208rem;
+      // height: 17.143rem;
+    }
+  }
+
+  
+  &__numberGame {
+    opacity: 0.3;
+  }
+
+  &__figure {
+    position: relative;
+    $width: 42.9%;
+    flex: 1 0 $width;
+    max-width: $width;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 1;
+
+    @include media("<mob") {
+      height: auto;
+      $width: 100%;
+      flex: 1 0 $width;
+      max-width: $width;
+
+      position: static;
+    }
+
+    &-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      height: 100%;
+      width: 120%;
+      opacity: 0;
+      $prop: transform, opacity;
+      will-change: $prop;
+
+      transition: {
+        property: $prop;
+        duration: 0.7s;
+        delay: 1.3s;
+        timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+      }
+      
+      $translate: -50%,
+      -50%;
+      $scale: 0.85,
+      0.85;
+      transform: translate($translate) scale($scale);
+      transform: translate3d($translate, 0) scale3d($scale, 1);
+
+      @include media("<mob") {
+        left: 50%;
+        width: 100%;
+        align-items: flex-end;
+      }
+
+      .s-ready & {
+        opacity: 1;
+        $translate: -50%, -50%;
+        $scale: 1, 1;
+        transform: translate($translate) scale($scale);
+        transform: translate3d($translate, 0) scale3d($scale, 1);
+      }
+
+      img {
+        max-height: 100%;
+        max-width: 100%;
+      }
+      &_social1 {
+        width: 100%;
+        align-items: center;
+      }
+      &_social2 {
+        left: 55%;
+        top: 50%;
+        align-items: flex-start;
+        justify-content: flex-end;
+      }
+      &_social2 img {
+        width: 46.589rem;
+        height: 46.589rem;
+        @include media("<mob") {
+          
+        }
+      }
+    }
+  }
+
+  &__rectangle {
+    width: 0.33rem;
+    height: 17rem;
+    background: #D8D8D8;
+    border-radius: 0.41rem;
+    position: relative;
+    left: 14px;
+
+    @include media("<mob") {
+      display: none;
+    }
+  }
+}
+
+.ct,
+.mt {
+  display: block;
+  overflow: hidden;
+  padding: 0 0 0.7rem;
+  margin: 0 0 -1rem;
+
+  @include media("<mob") {
+    display: inline;
+  }
+}
+
+.cst,
+.mst {
+  display: block;
+  position: relative;
+  @include antialiased;
+  $prop: transform, opacity;
+  will-change: $prop;
+
+  transition: {
+    property: $prop;
+    duration: 1.0s;
+    delay: 0.8s;
+    timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+
+  $translate: 0,
+  120%;
+  transform: translate($translate);
+  transform: translate3d($translate, 0);
+
+  .no-js &,
+  .s-ready &,
+  .article-ready & {
+    $translate: 0, 0;
+    transform: translate($translate);
+    transform: translate3d($translate, 0);
+  }
+}
+
+/* case section end */
+
+// download button
+
+.download {
+  position: relative;
+  bottom: 14%;
+  right: 6%;
+  z-index: 10;
+  align-self: flex-end;
+
+  &__google {
+    margin-right: 1.469rem;
+  }
+  &__app-store {
+    width: 100%;
+    height: 100%;   
+  }
+}
+
+
+// wbg
+
+.wbg {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  visibility: visible; // fix for safari
+  z-index: -1;
+  // opacity: 0.5;
+}
+.first_bg {
+  position: absolute;
+  right: 25%;
+}
+.second_bg {
+  position: absolute;
+  bottom: 0;
+  left: 2.6%;
+}
+.third_bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
