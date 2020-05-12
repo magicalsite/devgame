@@ -2603,6 +2603,12 @@ form .success + .select-arrow + .error-feedback + .success-feedback {
       justify-content: space-between;
 }
 
+@media (max-width: 639px) {
+  .header-container__right {
+    display: none;
+  }
+}
+
 /* logo */
 .logo {
   overflow: hidden;
@@ -4321,7 +4327,7 @@ html.no-js
 .download {
   position: relative;
   bottom: 14%;
-  right: 6%;
+  right: 8%;
   z-index: 10;
   -ms-flex-item-align: end;
       align-self: flex-end;
