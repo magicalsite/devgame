@@ -1499,6 +1499,11 @@ html.no-js
   }
 }
 
+.main__footer-clover {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.312773);
+}
+
 .h-main {
   overflow: hidden;
 }
@@ -1554,6 +1559,10 @@ html.no-js
 }
 
 .main-section__footer div {
+  color: #BBBBBB;
+}
+
+.main-section__footer .dop_col {
   color: #BBBBBB;
 }
 
