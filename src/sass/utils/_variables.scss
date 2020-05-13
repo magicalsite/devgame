@@ -119,6 +119,7 @@ $font-important-bold: $font-important-normal !default;
 $font-girloy-bold: "gilroy-bold", Helvetica, Arial, sans-serif !default;
 @mixin font-gilroy-bold {
   font-family: $font-girloy-bold;
+  font-weight: normal;
 }
 
 // Base font size
