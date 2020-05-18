@@ -21,17 +21,6 @@ var NO_HIDDEN_SCROLL = !HIDDEN_SCROLL;
 var TOUCHEVENTS = ("ontouchstart" in document.documentElement);
 
 /**
- * Mobile detect
- */
-var md = new MobileDetect(window.navigator.userAgent);
-var DEVICE = !!md.mobile() || !!md.tablet();
-if (DEVICE) {
-  
-  $HTML.addClass('mobile-device');
-  
-}
-
-/**
  * !Add touchscreen classes
  * */
 function addTouchClasses() {
@@ -184,55 +173,6 @@ function placeholderInit() {
 }
 
 /**
- * !Add classes to form elements
- * if they has a value or they are in focus
- * */
-// function formElementState() {
-//   var $elem = $('.field-js');
-  
-//   if ($elem.length) {
-//     function toggleStateClass(mod, cond) {
-//       var $this = $(this);
-//       $this.add($this.prev('label')).toggleClass(mod, cond);
-//     }
-
-//     // Focus
-//     $elem.on('focus blur', function (e) {
-//       toggleStateClass.call(this, 'focused', e.handleObj.origType === "focus");
-//     });
-
-//     // Has value
-//     $.each($elem, function () {
-//       toggleStateClass.call(this, 'filled', $(this).val().length !== 0);
-//     });
-
-//     $elem.on('keyup change', function () {
-//       toggleStateClass.call(this, 'filled', $(this).val().length !== 0);
-//     });
-//   }
-// }
-
-/**
- * !Initial custom select for cross-browser styling
- * */
-// function customSelect() {
-//   var $select = $('select.cselect');
-
-//   if ($select.length) {
-//     $.each($select, function () {
-//       var $thisSelect = $(this);
-//       $thisSelect.select2({
-//         theme: 'custom',
-//         language: 'ru',
-//         width: '100%',
-//         containerCssClass: 'cselect-head',
-//         dropdownCssClass: 'cselect-drop'
-//       });
-//     })
-//   }
-// }
-
-/**
  * !Main navigation
  */
 function mainNavigation() {
@@ -276,43 +216,6 @@ $HTML.keyup(function (event) {
   }
 });
 
-/**
- * !Main menu toggle active class
- */
-// function toggleActiveMenuItem() {
-//   var $menu = $('.js-menu');
-//   var $menuItem = $('.js-menu-item');
-//   var $wordBg = $('.js-word-bg');
-//   var activeClass = 'm-active';
-
-//   if ($menu.length) {
-//     if (!$menu.has('.' + activeClass).length) {
-//       $menuItem.eq(0).addClass(activeClass);
-//     }
-
-//     $menu.on('mouseenter touchend', '.js-menu-anchor', function (e) {
-//       // if (window.innerWidth < 992) return;
-
-//       var $curAnchor = $(this);
-//       var $curItem = $curAnchor.closest($menuItem);
-
-//       if (e.handleObj.origType === 'touchend') {
-//         if (!$curItem.hasClass(activeClass)) {
-//           e.preventDefault();
-//         }
-//       }
-
-//       if ($curItem.hasClass(activeClass)) return;
-
-//       var $allItems = $curAnchor.closest($menu).find($menuItem);
-//       var index = $curItem.index();
-//       var $curWordBg = $wordBg.eq(index);
-
-//       $allItems.add($wordBg).removeClass(activeClass);
-//       $curItem.add($curWordBg).addClass(activeClass);
-//     });
-//   }
-// }
 
 /**
  * !Form validation
@@ -374,12 +277,10 @@ $(document).ready(function () {
   addTouchClasses();
   fullPageInitial();
   placeholderInit();
-  // formElementState();
-  // customSelect();
   objectFitImages(); // object-fit-images initial
   // Common
-  mainNavigation();
-  toggleActiveMenuItem();
+  // mainNavigation();
+  // toggleActiveMenuItem();
 
-  formValidation();
+  // formValidation();
 });

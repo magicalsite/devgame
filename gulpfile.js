@@ -164,11 +164,7 @@ gulp.task('copyJqueryToJs', function () {
 gulp.task('copyLibsScriptsToJs', ['copyJqueryToJs'], function () {
   return gulp.src([
     'src/libs/jquery-smartresize/jquery.debouncedresize.js' // "умный" ресайз
-    , 'src/libs/jquery-placeholder/jquery.placeholder.min.js' // поддержка плейсхолдера в старых браузерах
     , 'src/libs/fullpage.js/dist/fullpage.min.js' // постраничный скролл
-    , 'src/libs/jquery-validation/dist/jquery.validate.min.js' // валидация форм
-    , 'src/_temp/jquery.nav.js' // nav and switch class
-    , 'node_modules/mobile-detect/mobile-detect.min.js' // mobile detect
   ])
       .pipe(concat('libs.js'))
       .pipe(gulp.dest('src/js'))
