@@ -22,13 +22,15 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 2rem 4.9rem 0 0;
+  padding: 2rem 0 0 0;
   line-height: 1;
   @include media("<tab") {
     padding-top: 5rem;
+    padding-right: 4.9rem;
   }
   @include media("<mob") {
     padding-top: 8.571rem;
+    padding-right: 4.9rem;
   }
 
   &__left {
@@ -1021,7 +1023,7 @@
       color: #BBBBBB;
     }
     & a {
-      margin-right: 10px;
+      margin-right: 0;
     }
 
     @include media("<mob") {
@@ -1354,6 +1356,11 @@
 }
 .logo-theme-light .menu-el__full-title {
   background-color: transparent;
+}
+
+// паттерн исчезновение
+.logo-theme-light .main-section_bg {
+  background: none;
 }
 
 .st {

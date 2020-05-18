@@ -580,19 +580,21 @@ body {
       align-items: flex-start;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  padding: 2rem 4.9rem 0 0;
+  padding: 2rem 0 0 0;
   line-height: 1;
 }
 
 @media (max-width: 991px) {
   .header-container {
     padding-top: 5rem;
+    padding-right: 4.9rem;
   }
 }
 
 @media (max-width: 639px) {
   .header-container {
     padding-top: 8.571rem;
+    padding-right: 4.9rem;
   }
 }
 
@@ -1567,7 +1569,7 @@ html.no-js
 }
 
 .main-section__footer a {
-  margin-right: 10px;
+  margin-right: 0;
 }
 
 @media (max-width: 639px) {
@@ -1929,6 +1931,10 @@ html.no-js
 
 .logo-theme-light .menu-el__full-title {
   background-color: transparent;
+}
+
+.logo-theme-light .main-section_bg {
+  background: none;
 }
 
 .st {
