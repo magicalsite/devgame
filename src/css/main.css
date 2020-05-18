@@ -1,11 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Roboto&display=swap");
-@font-face {
-  font-family: "avenir-next-cyr-regular";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/AvenirNextCyr/AvenirNextCyr-Regular.eot?") format("eot"), url("../fonts/AvenirNextCyr/AvenirNextCyr-Regular.ttf") format("truetype"), url("../fonts/AvenirNextCyr/AvenirNextCyr-Regular.woff") format("woff");
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
 @font-face {
   font-family: "avenir-next-cyr-medium";
   font-style: normal;
@@ -14,24 +7,10 @@
 }
 
 @font-face {
-  font-family: "avenir-next-cyr-bold";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/AvenirNextCyr/AvenirNextCyr-Bold.eot?") format("eot"), url("../fonts/AvenirNextCyr/AvenirNextCyr-Bold.ttf") format("truetype"), url("../fonts/AvenirNextCyr/AvenirNextCyr-Bold.woff") format("woff");
-}
-
-@font-face {
   font-family: "circe-regular";
   font-style: normal;
   font-weight: normal;
   src: url("../fonts/Circe/Circe-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "circe-bold";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Circe/Circe-Bold.ttf") format("truetype");
 }
 
 @font-face {
