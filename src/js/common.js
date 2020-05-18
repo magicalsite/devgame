@@ -2,7 +2,6 @@ var $WINDOW = $(window),
     $HTML = $('html'),
     $BODY = $('body');
 
-// $BODY.addClass('logo-theme-dark');
   /**
   * Change font size on resize
   */
@@ -360,25 +359,6 @@ function formValidation() {
   }
 }
 
-/**
- * !Parallax
- * */
-function scrollBanner() {
-  $(document).scroll(function(){
-      var scrollPos = $(this).scrollTop();
-      var transY = scrollPos / 2 + 'px';
-      $('.bg-title').css({'transform':'translateY(' + transY + ') rotate(90deg) '});
-  });
-}
-function scrollBannerUX() {
-  $(document).scroll(function(){
-      var scrollPos = $(this).scrollTop();
-      var transY = scrollPos / 3 + 'px';
-      $('.bg-title-ux').css({'transform':'translateY(' + transY + ') rotate(90deg) '});
-  });
-}
-
-
 $WINDOW.on('resize', function () {
   changeFontSize();
 });
@@ -386,9 +366,6 @@ $WINDOW.on('resize', function () {
 $WINDOW.on('load', function () {
   changeFontSize();
   $HTML.addClass('page-loaded');
-  $('.js-p-preloader').addClass('p-preloader_hide');
-  $('.js-article').addClass('article-ready');
-  $('.wrapper-hurkou').addClass('s-ready');
 });
 
 $(document).ready(function () {
@@ -406,8 +383,4 @@ $(document).ready(function () {
   toggleActiveMenuItem();
 
   formValidation();
-
-  //Parallax
-  scrollBanner();
-  scrollBannerUX();
 });

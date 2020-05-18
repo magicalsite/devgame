@@ -1604,7 +1604,7 @@ html.no-js
 
 .third_item .third_footer {
   opacity: 1;
-  transition: opacity 0.5s 1s;
+  transition: opacity 0.5s 0.6s;
 }
 
 /* menu */
