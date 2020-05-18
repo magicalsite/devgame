@@ -1558,6 +1558,7 @@ html.no-js
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  opacity: 0;
 }
 
 .main-section__footer div {
@@ -1591,6 +1592,21 @@ html.no-js
 }
 
 /* main section end */
+.logo-theme-dark .first_footer {
+  opacity: 1;
+  transition: opacity 0.5s 0.6s;
+}
+
+.second_item .second_footer {
+  opacity: 1;
+  transition: opacity 0.5s 0.6s;
+}
+
+.third_item .third_footer {
+  opacity: 1;
+  transition: opacity 0.5s 1s;
+}
+
 /* menu */
 .menu__item {
   position: static;
@@ -2496,6 +2512,10 @@ html.no-js
   z-index: 10;
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+.download a {
+  text-decoration: none;
 }
 
 .download__google {

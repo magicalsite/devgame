@@ -2,7 +2,7 @@ var $WINDOW = $(window),
     $HTML = $('html'),
     $BODY = $('body');
 
-$BODY.addClass('logo-theme-dark');
+// $BODY.addClass('logo-theme-dark');
   /**
   * Change font size on resize
   */
@@ -93,11 +93,21 @@ function fullPageInitial() {
 
       $HTML.removeClass('logo-theme-light');
       $BODY.addClass('logo-theme-dark');
+      $BODY.removeClass('second_item');
 
 
       if (!$HTML.hasClass('logo-theme-light') && $section.attr('data-logo-theme') === "light") {
         $HTML.addClass('logo-theme-light');
         $BODY.removeClass('logo-theme-dark');
+      }
+
+      if($section.attr('data-item') === "second") {
+        $BODY.removeClass('third_item');
+        $BODY.addClass('second_item');
+      }
+      if($section.attr('data-item') === "third") {
+        $BODY.removeClass('second_item');
+        $BODY.addClass('third_item');
       }
 
     }
@@ -382,6 +392,7 @@ $WINDOW.on('load', function () {
 });
 
 $(document).ready(function () {
+  $BODY.addClass('logo-theme-dark');
   changeFontSize();
   // Base
   addTouchClasses();
