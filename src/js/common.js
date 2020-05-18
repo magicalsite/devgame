@@ -187,50 +187,50 @@ function placeholderInit() {
  * !Add classes to form elements
  * if they has a value or they are in focus
  * */
-function formElementState() {
-  var $elem = $('.field-js');
+// function formElementState() {
+//   var $elem = $('.field-js');
   
-  if ($elem.length) {
-    function toggleStateClass(mod, cond) {
-      var $this = $(this);
-      $this.add($this.prev('label')).toggleClass(mod, cond);
-    }
+//   if ($elem.length) {
+//     function toggleStateClass(mod, cond) {
+//       var $this = $(this);
+//       $this.add($this.prev('label')).toggleClass(mod, cond);
+//     }
 
-    // Focus
-    $elem.on('focus blur', function (e) {
-      toggleStateClass.call(this, 'focused', e.handleObj.origType === "focus");
-    });
+//     // Focus
+//     $elem.on('focus blur', function (e) {
+//       toggleStateClass.call(this, 'focused', e.handleObj.origType === "focus");
+//     });
 
-    // Has value
-    $.each($elem, function () {
-      toggleStateClass.call(this, 'filled', $(this).val().length !== 0);
-    });
+//     // Has value
+//     $.each($elem, function () {
+//       toggleStateClass.call(this, 'filled', $(this).val().length !== 0);
+//     });
 
-    $elem.on('keyup change', function () {
-      toggleStateClass.call(this, 'filled', $(this).val().length !== 0);
-    });
-  }
-}
+//     $elem.on('keyup change', function () {
+//       toggleStateClass.call(this, 'filled', $(this).val().length !== 0);
+//     });
+//   }
+// }
 
 /**
  * !Initial custom select for cross-browser styling
  * */
-function customSelect() {
-  var $select = $('select.cselect');
+// function customSelect() {
+//   var $select = $('select.cselect');
 
-  if ($select.length) {
-    $.each($select, function () {
-      var $thisSelect = $(this);
-      $thisSelect.select2({
-        theme: 'custom',
-        language: 'ru',
-        width: '100%',
-        containerCssClass: 'cselect-head',
-        dropdownCssClass: 'cselect-drop'
-      });
-    })
-  }
-}
+//   if ($select.length) {
+//     $.each($select, function () {
+//       var $thisSelect = $(this);
+//       $thisSelect.select2({
+//         theme: 'custom',
+//         language: 'ru',
+//         width: '100%',
+//         containerCssClass: 'cselect-head',
+//         dropdownCssClass: 'cselect-drop'
+//       });
+//     })
+//   }
+// }
 
 /**
  * !Main navigation
@@ -365,7 +365,6 @@ $WINDOW.on('resize', function () {
 
 $WINDOW.on('load', function () {
   changeFontSize();
-  $HTML.addClass('page-loaded');
 });
 
 $(document).ready(function () {
@@ -375,8 +374,8 @@ $(document).ready(function () {
   addTouchClasses();
   fullPageInitial();
   placeholderInit();
-  formElementState();
-  customSelect();
+  // formElementState();
+  // customSelect();
   objectFitImages(); // object-fit-images initial
   // Common
   mainNavigation();
