@@ -128,6 +128,8 @@ gulp.task('mergeCssLibs', function () {
   return gulp.src([
     'src/css/temp/*.css'
     , 'src/libs/fullpage.js/dist/fullpage.min.css'
+    , 'src/libs/slick-carousel/slick/slick.css'
+    , 'src/libs/slick-carousel/slick/slick-theme.css'
   ])
       .pipe(concatCss("src/css/libs.css", {
         rebaseUrls: false
@@ -165,6 +167,7 @@ gulp.task('copyLibsScriptsToJs', ['copyJqueryToJs'], function () {
   return gulp.src([
     'src/libs/jquery-smartresize/jquery.debouncedresize.js' // "умный" ресайз
     , 'src/libs/fullpage.js/dist/fullpage.min.js' // постраничный скролл
+    , 'src/libs/slick-carousel/slick/slick.min.js' // slick slider
   ])
       .pipe(concat('libs.js'))
       .pipe(gulp.dest('src/js'))

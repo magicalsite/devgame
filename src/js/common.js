@@ -97,7 +97,7 @@ function fullPageInitial() {
         $BODY.removeClass('second_item');
         $BODY.addClass('third_item');
       }
-
+      
     }
 
     $fpSections.fullpage({
@@ -262,6 +262,8 @@ function formValidation() {
   }
 }
 
+
+
 $WINDOW.on('resize', function () {
   changeFontSize();
 });
@@ -273,6 +275,15 @@ $WINDOW.on('load', function () {
 $(document).ready(function () {
   $BODY.addClass('logo-theme-dark');
   changeFontSize();
+  $('.tanks-slider__video').slick({
+    centerMode: true,
+    slidesToShow: 1,
+    dots: true,
+    infinite: true,
+    variableWidth: true,
+    slidesToShow: 1,
+    arrows: false
+  });
   // Base
   addTouchClasses();
   fullPageInitial();

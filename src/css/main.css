@@ -27,6 +27,13 @@
   src: url("../fonts/Gilroy/gilroy-bold.eot?") format("eot"), url("../fonts/Gilroy/gilroy-bold.ttf") format("truetype"), url("../fonts/Gilroy/gilroy-bold.woff") format("woff");
 }
 
+@font-face {
+  font-family: "gilroy-medium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Gilroy/gilroy-medium.eot?") format("eot"), url("../fonts/Gilroy/gilroy-medium.ttf") format("truetype"), url("../fonts/Gilroy/gilroy-medium.woff") format("woff");
+}
+
 /* ==================================== */
 /* ==================================== *
 /* ======== NORMALIZE AND RESET ======= */
@@ -2424,8 +2431,6 @@ html.no-js
   height: 17rem;
   background: #D8D8D8;
   border-radius: 0.41rem;
-  position: relative;
-  left: 14px;
 }
 
 @media (max-width: 639px) {
@@ -2571,6 +2576,329 @@ html.no-js
   .third_bg {
     bottom: -25%;
   }
+}
+
+/* ==================================== */
+/* ============== Tanks a lot ============== */
+/* ==================================== */
+.tanks {
+  background-color: #7250EC;
+}
+
+.tanks_rectangle {
+  opacity: 0.3;
+}
+
+.tanks_download {
+  height: 3.753rem;
+  line-height: 3.753rem;
+}
+
+.tanks_download:first-child {
+  margin-bottom: 1.224rem;
+}
+
+.tanks__header {
+  background-image: url(../img/pentagon_bg.png) no-repeat center center;
+}
+
+.wbg-tanks {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  visibility: visible;
+  z-index: -1;
+}
+
+.wbg-tanks__title {
+  position: absolute;
+  margin-top: 28rem;
+  font-family: "circe-extra-bold", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 27.742rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.067936);
+}
+
+.first_part {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  height: 100%;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.first_part__block {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  max-width: 29.129rem;
+  width: 29.129rem;
+}
+
+.first_part__block img {
+  height: 0.734rem;
+  width: 2.203rem;
+}
+
+.first_part__left {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: end;
+      align-items: flex-end;
+}
+
+.first_part__left_number {
+  font-family: "circe-regular", Helvetica, Arial, sans-serif;
+  font-size: 1.469rem;
+  line-height: 2.203rem;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+
+.first_part__left h2 {
+  font-family: "gilroy-bold", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 5.875rem;
+  line-height: 5.222rem;
+  color: #FFFFFF;
+  margin-bottom: 5.222rem;
+  margin-top: 2.448rem;
+}
+
+.first_part__left_button {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.second_part {
+  margin: 0 auto;
+  margin-bottom: -6.5rem;
+  width: 38.267rem;
+  position: relative;
+  top: -6.5rem;
+}
+
+.second_part__title {
+  font-family: "avenir-next-cyr-bold", Helvetica, Arial, sans-serif;
+  font-weight: 750;
+  font-size: 2.774rem;
+  line-height: 1.795rem;
+  color: #FFFFFF;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 1.224rem;
+}
+
+.second_part__paragraph {
+  font-size: 1.305rem;
+  line-height: 1.795rem;
+  color: #BCACF6;
+  width: 38.607rem;
+}
+
+.tanks__video {
+  background: url(../img/tanks_bg.png) no-repeat center center/cover;
+  padding-top: 16.482rem;
+}
+
+.slider__video_item {
+  outline: none;
+  border: 8px solid white;
+  box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.25);
+  border-radius: 0.408rem;
+  margin: 16.482rem 2.856rem 4.732rem 2.856rem;
+}
+
+.slider__video_item img {
+  width: 64.213rem;
+  height: 36.227rem;
+}
+
+.tanks__location {
+  background: url(../img/location_bg.png) no-repeat center center/cover;
+  padding: 7.833rem 0 7.507rem 0;
+}
+
+.tanks__location_title {
+  font-family: "avenir-next-cyr-medium", Helvetica, Arial, sans-serif;
+  text-align: center;
+  margin-top: 1.142rem;
+}
+
+.location_block_top {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+
+.location_block_top img {
+  margin-right: 6.875rem;
+}
+
+.location_block_center {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  margin-top: 2.611rem;
+  margin-bottom: 5.793rem;
+}
+
+.location_block_bottom {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+
+.location_block_more {
+  margin-right: 3.6rem;
+}
+
+.location_block_more h4 {
+  font-size: 2.937rem;
+  line-height: 1.795rem;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.location_block_more p {
+  color: #DDD3FF;
+  width: 40.062rem;
+  font-size: 1.305rem;
+  line-height: 1.795rem;
+}
+
+.location_block_more p span {
+  font-family: "avenir-next-cyr-bold", Helvetica, Arial, sans-serif;
+  font-weight: 750;
+  color: #fff;
+}
+
+.location_block_info {
+  margin-right: 6.527rem;
+}
+
+.location_block_info h4 {
+  font-size: 1.469rem;
+  line-height: 1.795rem;
+  color: #FFFFFF;
+  margin: 0;
+  margin-bottom: 1.7rem;
+}
+
+.location_block_info p {
+  font-size: 1.305rem;
+  line-height: 1.795rem;
+  color: #fff;
+  opacity: 0.7;
+  width: 18.93rem;
+}
+
+.location_block_card {
+  margin-right: 3.8rem;
+}
+
+.location_block_card .first_card {
+  text-align: center;
+  width: 13.136rem;
+  padding: 3.427rem 2.529rem;
+  border-top: 4px solid #F35D58;
+  background: #7B58F7;
+  margin-bottom: 1.958rem;
+}
+
+.location_block_card .first_card_number {
+  font-family: "gilroy-bold", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 7.833rem;
+  line-height: 5rem;
+  color: #fff;
+}
+
+.location_block_card .first_card p {
+  text-align: center;
+  font-size: 1.061rem;
+  line-height: 1.469rem;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+
+.location_block_card .second_card {
+  text-align: center;
+  width: 13.136rem;
+  padding: 3.427rem 2.529rem;
+  border-top: 4px solid #F35D58;
+  background: #7B58F7;
+}
+
+.location_block_card .second_card span {
+  font-family: "gilroy-bold", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 3.101rem;
+  line-height: 2.693rem;
+  color: #fff;
+}
+
+.location_block_card .second_card p {
+  text-align: center;
+  font-size: 1.061rem;
+  line-height: 1.469rem;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+
+.tanks__footer {
+  background: url(../img/tanks_footer_bg.png) no-repeat center center/cover;
+  padding: 23.825rem 0 11.423rem 0;
+}
+
+.tanks__footer_flex {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.tanks__footer_blk {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.tanks__footer_inscription {
+  font-family: "gilroy-bold", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 5.875rem;
+  line-height: 5.222rem;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.51);
+}
+
+.tanks__footer_download {
+  margin-left: 14rem;
+  margin-bottom: 22.846rem;
+}
+
+.tanks__footer_dop {
+  position: relative;
+  bottom: -8.159rem;
+  width: 100%;
 }
 
 @media print {

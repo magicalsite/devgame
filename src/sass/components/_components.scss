@@ -1811,8 +1811,6 @@
     height: 17rem;
     background: #D8D8D8;
     border-radius: 0.41rem;
-    position: relative;
-    left: 14px;
 
     @include media("<mob") {
       display: none;
@@ -1933,5 +1931,296 @@
   right: 0;
   @include media("<mob") {
     bottom: -25%;
+  }
+}
+
+/* ==================================== */
+/* ============== Tanks a lot ============== */
+/* ==================================== */
+
+.tanks {
+  background-color: #7250EC;
+
+  &_rectangle {
+    opacity: 0.3;
+  }
+  &_download {
+    height: 3.753rem;
+    line-height: 3.753rem;
+    &:first-child {
+      margin-bottom: 1.224rem;
+    }
+  }
+}
+.tanks__header {
+  background-image: url(../../img/pentagon_bg.png) no-repeat center center;
+}
+
+.wbg-tanks {
+  overflow: hidden;
+  // position: absolute;
+  height: 100%;
+  width: 100%;
+  visibility: visible;
+  z-index: -1;
+
+  &__title {
+    position: absolute;
+    
+    margin-top: 28rem;
+    
+    @include font-alt-extra-bold;
+    font-size: 27.742rem;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.067936);
+  }
+}
+
+.first_part {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 29.129rem;
+    width: 29.129rem;
+    
+    & img {
+      height: 0.734rem;
+      width: 2.203rem;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &_number {
+      @include font-alt-normal;
+      font-size: 1.469rem;
+      line-height: 2.203rem;
+      color: #FFFFFF;
+      mix-blend-mode: normal;
+      opacity: 0.3;
+    }
+    & h2 {
+      @include font-gilroy-bold;
+      font-size: 5.875rem;
+      line-height: 5.222rem;
+      color: #FFFFFF;
+      margin-bottom: 5.222rem;
+      margin-top: 2.448rem;
+    }
+    &_button {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.second_part {
+  margin: 0 auto;
+  margin-bottom: -6.5rem;
+  width: 38.267rem;
+  position: relative;
+  top: -6.5rem;
+
+  &__title {
+    @include font-bold;
+    font-size: 2.774rem;
+    line-height: 1.795rem;
+    color: #FFFFFF;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 1.224rem;
+  }
+  &__paragraph {
+    font-size: 1.305rem;
+    line-height: 1.795rem;
+    color: #BCACF6;
+    width: 38.607rem;
+  }
+}
+
+.tanks__video {
+  background: url(../../img/tanks_bg.png) no-repeat center center/cover;
+  // opacity: 0.7;
+  padding-top: 16.482rem;
+}
+
+.slider__video_item {
+  outline: none;
+  border: 8px solid rgb(255,255,255);
+  box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.25);
+  border-radius: 0.408rem;
+  margin: 16.482rem 2.856rem 4.732rem 2.856rem;
+  
+
+  & img {
+    width: 64.213rem;
+    height: 36.227rem;
+  }
+}
+
+.tanks__location {
+  background: url(../../img/location_bg.png) no-repeat center center/cover;
+  padding: 7.833rem 0 7.507rem 0;
+
+  &_title {
+    @include font-normal;
+    text-align: center;
+    margin-top: 1.142rem;
+  }
+}
+
+.location_block {
+  &_top {
+    display: flex;
+    justify-content: flex-end;
+    & img {
+      margin-right: 6.875rem;
+    }
+  }
+  &_center {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2.611rem;
+    margin-bottom: 5.793rem;
+  }
+  &_bottom {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+    &_more {
+      margin-right: 3.6rem;
+
+      & h4 {
+        font-size: 2.937rem;
+        line-height: 1.795rem;
+        color: #FFFFFF;
+        margin: 0;
+      }
+      & p {
+        color: #DDD3FF;
+        width: 40.062rem;
+        font-size: 1.305rem;
+        line-height: 1.795rem;
+         & span {
+          @include font-bold;
+          color: #fff;
+        }
+      }
+    }
+
+    &_info {
+    margin-right: 6.527rem;
+    & h4 {
+      font-size: 1.469rem;
+      line-height: 1.795rem;
+      color: #FFFFFF;
+      margin: 0;
+      margin-bottom: 1.7rem;
+    }
+    & p {
+      font-size: 1.305rem;
+      line-height: 1.795rem;
+      color: #fff;
+      opacity: 0.7;
+      width: 18.93rem;
+    }
+  }
+
+  &_card {
+    margin-right: 3.8rem;
+
+    & .first_card {
+      text-align: center;
+      width: 13.136rem;
+      padding: 3.427rem 2.529rem;
+      border-top: 4px solid #F35D58;
+      background: #7B58F7;
+      margin-bottom: 1.958rem;
+
+      &_number {
+        @include font-gilroy-bold;
+        font-size: 7.833rem;
+        line-height: 5rem;
+        color: #fff;
+      }
+      & p {
+        // @include font-gilroy-medium;
+        text-align: center;
+        font-size: 1.061rem;
+        line-height: 1.469rem;
+        color: #FFFFFF;
+        opacity: 0.6;
+        
+        // width: 9.628rem;
+        // margin: 0 auto;
+      }
+    }
+    & .second_card {
+      text-align: center;
+      width: 13.136rem;
+      padding: 3.427rem 2.529rem;
+      border-top: 4px solid #F35D58;
+      background: #7B58F7;
+
+      & span {
+        @include font-gilroy-bold;
+        font-size: 3.101rem;
+        line-height: 2.693rem;
+        color: #fff;
+      }
+      & p {
+        // @include font-gilroy-medium;
+        text-align: center;
+        font-size: 1.061rem;
+        line-height: 1.469rem;
+        color: #FFFFFF;
+        opacity: 0.6;
+        
+        // width: 9.628rem;
+        // margin: 0 auto;
+      }
+    }
+  }
+}
+
+.tanks__footer {
+  background: url(../../img/tanks_footer_bg.png) no-repeat center center/cover;
+  
+  padding: 23.825rem 0 11.423rem 0;
+
+  &_flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &_blk {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_inscription {
+    @include font-gilroy-bold;
+    font-size: 5.875rem;
+    line-height: 5.222rem;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.51);
+  }
+  &_download {
+    margin-left: 14rem;
+    margin-bottom: 22.846rem;
+  }
+  &_dop {
+    position: relative;
+    bottom: -8.159rem;
+    width: 100%;
   }
 }

@@ -42,7 +42,7 @@ $font-demi: "avenir-next-cyr-demi", Helvetica, Arial, sans-serif !default;
 
 @mixin font-bold {
   font-family: $font-bold;
-  font-weight: normal;
+  font-weight: 750;
 }
 
 @mixin font-italic {
@@ -117,8 +117,13 @@ $font-important-bold: $font-important-normal !default;
 // Additional font
 // ----------------------------------------------------
 $font-girloy-bold: "gilroy-bold", Helvetica, Arial, sans-serif !default;
+$font-girloy-medium: "gilroy-medium", Helvetica, Arial, sans-serif !default;
 @mixin font-gilroy-bold {
   font-family: $font-girloy-bold;
+  font-weight: normal;
+}
+@mixin font-gilroy-medium {
+  font-family: $font-girloy-medium;
   font-weight: normal;
 }
 

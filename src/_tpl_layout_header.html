@@ -1,6 +1,6 @@
 
 <!--HEADER-->
-<header class="header@@if(context.currentItem == 'Home'){ header_fixed}">
+<header class="header header_fixed">
   <div class="layout-page layout-page-spaces">
     <div class="header-container">
       <div class="header-container__left">
@@ -8,7 +8,7 @@
           <div class="logo_dark"></div>
           <div class="logo_light"></div>
           @@if(context.currentItem === "Home"){<span class="logo-js"><span>HIGH CORE games</span></span>}
-          @@if(context.currentItem !== "Home"){<a href="index.html" title="Go home">HIGH CORE games</a>}
+          @@if(context.currentItem !== "Home"){<a href="index.html" title="Go home"></a>}
           <!--logo for a print version-->
           <img style="display: none;" src="img/logo.svg" alt="Print version logotype">
         </div>
