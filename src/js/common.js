@@ -262,7 +262,7 @@ function formValidation() {
   }
 }
 
-
+new WOW().init();
 
 $WINDOW.on('resize', function () {
   changeFontSize();

@@ -39,9 +39,11 @@
     "modernizr": "^3.7.1"
   },
   "dependencies": {
+    "animate.css": "^4.1.0",
     "bower": "^1.8.8",
     "mobile-detect": "^1.4.4",
     "object-fit-images": "^3.2.3",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "wowjs": "^1.1.3"
   }
 }

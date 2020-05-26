@@ -1942,6 +1942,7 @@
   background-color: #7250EC;
 
   &_rectangle {
+    visibility: hidden;
     opacity: 0.3;
   }
   &_download {
@@ -1953,14 +1954,17 @@
   }
 
   &__menu {
+    visibility: hidden;
+    position: absolute;
+    position: sticky;
+    top: 8rem;
+    left: -3.04rem;
     background: #FFFFFF;
     box-shadow: 0px 4px 30px #4B2DB9;
     border-radius: 1.224rem;
     width: 14.605rem;
     height: 14.034rem;
     padding: 0.816rem;
-    position: sticky;
-    top: 8rem;
     z-index: 10;
 
     &_item {
@@ -1991,13 +1995,17 @@
   position: relative;
 
   &_figurine {
+    visibility: hidden;
+
     & img:first-child {
+
       position: absolute;
       top:0;
       right: 10%;
       z-index: 2;
     }
     & img:last-child {
+      
       position: absolute;
       bottom: 23%;
       right: 20%;
@@ -2006,6 +2014,7 @@
   }
 
   &_wbg {
+    visibility: hidden;
     @include font-alt-extra-bold;
     font-size: 27.742rem;
     line-height: 100%;
@@ -2046,6 +2055,9 @@
   position: relative;
   z-index: 3;
 
+  &__center {
+    visibility: hidden;
+  }
   &__block {
     display: flex;
     justify-content: space-between;
@@ -2056,6 +2068,7 @@
     & img {
       height: 0.734rem;
       width: 2.203rem;
+      visibility: hidden;
     }
   }
 
@@ -2065,6 +2078,7 @@
     align-items: flex-end;
 
     &_number {
+      visibility: hidden;
       @include font-alt-normal;
       font-size: 1.469rem;
       line-height: 2.203rem;
@@ -2072,7 +2086,9 @@
       mix-blend-mode: normal;
       opacity: 0.3;
     }
+    
     & h2 {
+      visibility: hidden;
       @include font-gilroy-bold;
       font-size: 5.875rem;
       line-height: 5.222rem;
@@ -2083,6 +2099,10 @@
     &_button {
       display: flex;
       flex-direction: column;
+
+      & a {
+        visibility: hidden;
+      }
     }
   }
 }
@@ -2100,6 +2120,7 @@
     margin-left: 3.04rem;
   }
   &__title {
+    visibility: hidden;
     @include font-bold;
     font-size: 2.774rem;
     line-height: 1.795rem;
@@ -2109,6 +2130,7 @@
     margin-bottom: 1.224rem;
   }
   &__paragraph {
+    visibility: hidden;
     font-size: 1.305rem;
     line-height: 1.795rem;
     color: #BCACF6;
@@ -2123,6 +2145,7 @@
 }
 
 .slider__video_item {
+  visibility: hidden;
   outline: none;
   border: 8px solid rgb(255,255,255);
   box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.25);
@@ -2147,6 +2170,7 @@
   }
 
   &_figurine {
+    visibility: hidden;    
     & img:nth-child(1) {
       position: absolute;
       top: 7%;
@@ -2180,6 +2204,7 @@
     display: flex;
     justify-content: flex-end;
     & img {
+      visibility: hidden;
       margin-right: 6.875rem;
     }
   }
@@ -2188,6 +2213,9 @@
     justify-content: flex-end;
     margin-top: 2.611rem;
     margin-bottom: 5.793rem;
+    & img {
+      visibility: hidden;
+    }
   }
   &_bottom {
     display: flex;
@@ -2198,6 +2226,7 @@
       margin-right: 3.6rem;
 
       & h4 {
+        visibility: hidden;
         @include font-bold;
         font-size: 2.937rem;
         line-height: 1.795rem;
@@ -2205,6 +2234,7 @@
         margin: 0;
       }
       & p {
+        visibility: hidden;
         color: #DDD3FF;
         width: 40.062rem;
         font-size: 1.305rem;
@@ -2218,12 +2248,14 @@
 
     &_info {
     margin-right: 6.527rem;
+
     & h4 {
       font-size: 1.469rem;
       line-height: 1.795rem;
       color: #FFFFFF;
       margin: 0;
       margin-bottom: 1.7rem;
+      
     }
     & p {
       font-size: 1.305rem;
@@ -2238,6 +2270,7 @@
     margin-right: 3.8rem;
 
     & .first_card {
+      visibility: hidden;
       text-align: center;
       width: 13.136rem;
       padding: 3.427rem 2.529rem;
@@ -2264,6 +2297,7 @@
       }
     }
     & .second_card {
+      visibility: hidden;
       text-align: center;
       width: 13.136rem;
       padding: 3.427rem 2.529rem;
@@ -2304,8 +2338,12 @@
   &_blk {
     display: flex;
     justify-content: space-between;
+    & img {
+      visibility: hidden;
+    }
   }
   &_inscription {
+    visibility: hidden;
     @include font-gilroy-bold;
     font-size: 5.875rem;
     line-height: 5.222rem;
@@ -2317,6 +2355,7 @@
     margin-bottom: 22.846rem;
   }
   &_dop {
+    visibility: hidden;
     position: relative;
     bottom: -8.159rem;
     width: 100%;

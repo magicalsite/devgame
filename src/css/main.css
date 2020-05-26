@@ -464,6 +464,7 @@ body {
   font-size: 1.8rem;
   line-height: 2.6rem;
   color: #3f3f3f;
+  overflow-x: hidden;
   background: #fff url(../img/empty.png) no-repeat left top fixed;
   transition: color 0.7s, background-color 0.7s;
 }
@@ -2586,6 +2587,7 @@ html.no-js
 }
 
 .tanks_rectangle {
+  visibility: hidden;
   opacity: 0.3;
 }
 
@@ -2599,15 +2601,18 @@ html.no-js
 }
 
 .tanks__menu {
+  visibility: hidden;
+  position: absolute;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 8rem;
+  left: -3.04rem;
   background: #FFFFFF;
   box-shadow: 0px 4px 30px #4B2DB9;
   border-radius: 1.224rem;
   width: 14.605rem;
   height: 14.034rem;
   padding: 0.816rem;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 8rem;
   z-index: 10;
 }
 
@@ -2640,6 +2645,10 @@ html.no-js
   position: relative;
 }
 
+.tanks__header_figurine {
+  visibility: hidden;
+}
+
 .tanks__header_figurine img:first-child {
   position: absolute;
   top: 0;
@@ -2655,6 +2664,7 @@ html.no-js
 }
 
 .tanks__header_wbg {
+  visibility: hidden;
   font-family: "circe-extra-bold", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 27.742rem;
@@ -2697,6 +2707,10 @@ html.no-js
   z-index: 3;
 }
 
+.first_part__center {
+  visibility: hidden;
+}
+
 .first_part__block {
   display: -ms-flexbox;
   display: flex;
@@ -2711,6 +2725,7 @@ html.no-js
 .first_part__block img {
   height: 0.734rem;
   width: 2.203rem;
+  visibility: hidden;
 }
 
 .first_part__left {
@@ -2723,6 +2738,7 @@ html.no-js
 }
 
 .first_part__left_number {
+  visibility: hidden;
   font-family: "circe-regular", Helvetica, Arial, sans-serif;
   font-size: 1.469rem;
   line-height: 2.203rem;
@@ -2732,6 +2748,7 @@ html.no-js
 }
 
 .first_part__left h2 {
+  visibility: hidden;
   font-family: "gilroy-bold", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 5.875rem;
@@ -2746,6 +2763,10 @@ html.no-js
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
+}
+
+.first_part__left_button a {
+  visibility: hidden;
 }
 
 .second_part {
@@ -2764,6 +2785,7 @@ html.no-js
 }
 
 .second_part__title {
+  visibility: hidden;
   font-family: "avenir-next-cyr-bold", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 2.774rem;
@@ -2775,6 +2797,7 @@ html.no-js
 }
 
 .second_part__paragraph {
+  visibility: hidden;
   font-size: 1.305rem;
   line-height: 1.795rem;
   color: #BCACF6;
@@ -2787,6 +2810,7 @@ html.no-js
 }
 
 .slider__video_item {
+  visibility: hidden;
   outline: none;
   border: 8px solid white;
   box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.25);
@@ -2807,6 +2831,10 @@ html.no-js
 .tanks__locacion_title {
   text-align: center;
   margin-top: 1.142rem;
+}
+
+.tanks__locacion_figurine {
+  visibility: hidden;
 }
 
 .tanks__locacion_figurine img:nth-child(1) {
@@ -2847,6 +2875,7 @@ html.no-js
 }
 
 .locacion_block_top img {
+  visibility: hidden;
   margin-right: 6.875rem;
 }
 
@@ -2857,6 +2886,10 @@ html.no-js
       justify-content: flex-end;
   margin-top: 2.611rem;
   margin-bottom: 5.793rem;
+}
+
+.locacion_block_center img {
+  visibility: hidden;
 }
 
 .locacion_block_bottom {
@@ -2871,6 +2904,7 @@ html.no-js
 }
 
 .locacion_block_more h4 {
+  visibility: hidden;
   font-family: "avenir-next-cyr-bold", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 2.937rem;
@@ -2880,6 +2914,7 @@ html.no-js
 }
 
 .locacion_block_more p {
+  visibility: hidden;
   color: #DDD3FF;
   width: 40.062rem;
   font-size: 1.305rem;
@@ -2917,6 +2952,7 @@ html.no-js
 }
 
 .locacion_block_card .first_card {
+  visibility: hidden;
   text-align: center;
   width: 13.136rem;
   padding: 3.427rem 2.529rem;
@@ -2942,6 +2978,7 @@ html.no-js
 }
 
 .locacion_block_card .second_card {
+  visibility: hidden;
   text-align: center;
   width: 13.136rem;
   padding: 3.427rem 2.529rem;
@@ -2986,7 +3023,12 @@ html.no-js
       justify-content: space-between;
 }
 
+.tanks__footer_blk img {
+  visibility: hidden;
+}
+
 .tanks__footer_inscription {
+  visibility: hidden;
   font-family: "gilroy-bold", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 5.875rem;
@@ -3001,6 +3043,7 @@ html.no-js
 }
 
 .tanks__footer_dop {
+  visibility: hidden;
   position: relative;
   bottom: -8.159rem;
   width: 100%;
