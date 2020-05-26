@@ -359,6 +359,11 @@ html.fp-enabled {
 
 .slick-initialized .slick-slide {
   display: block;
+  opacity: 0.8;
+}
+
+.slick-list .slick-track .slider__video_item.slick-center {
+  opacity: 1;
 }
 
 .slick-loading .slick-slide {
