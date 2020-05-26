@@ -483,6 +483,7 @@ html.fp-enabled {
   text-align: center;
   align-items: center;
   justify-content: center;
+  z-index: 9;
 }
 
 .slick-dots li {
