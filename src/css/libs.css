@@ -515,7 +515,7 @@ html.fp-enabled {
   outline: none;
 }
 
-.slick-dots li.slick-active button {
+.slick-dots li:first-child button {
   width: 2.448rem;
   height: 2.448rem;
   opacity: 0.8;

@@ -262,6 +262,11 @@ function formValidation() {
   }
 }
 
+// Parallax
+var rellax = new Rellax('.rellax');
+
+
+// WOW + animate
 new WOW().init();
 
 $WINDOW.on('resize', function () {

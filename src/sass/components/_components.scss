@@ -1955,9 +1955,9 @@
 
   &__menu {
     visibility: hidden;
-    position: absolute;
-    position: sticky;
-    top: 8rem;
+    position: relative;
+    // position: sticky;
+    // top: 8rem;
     left: -3.04rem;
     background: #FFFFFF;
     box-shadow: 0px 4px 30px #4B2DB9;
@@ -2021,8 +2021,9 @@
     text-transform: uppercase;
     color:rgba(255, 255, 255, 0.067936);;
     position: absolute;
-    top: calc(50% - 15.871rem);
-    margin-left: calc(50% - 55.401rem);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1;
   }
 }
@@ -2114,10 +2115,12 @@
   width: 38.267rem;
   position: relative;
   top: -6.5rem;
+  left: -3rem;
   z-index: 4;
 
   &_info {
-    margin-left: 3.04rem;
+    // flex-basis: 25%;
+    // margin-right: 3.04rem;
   }
   &__title {
     visibility: hidden;
@@ -2152,7 +2155,6 @@
   border-radius: 0.408rem;
   margin: 16.482rem 2.856rem 4.732rem 2.856rem;
   
-
   & img {
     width: 64.213rem;
     height: 36.227rem;
@@ -2170,29 +2172,46 @@
   }
 
   &_figurine {
-    visibility: hidden;    
+    visibility: hidden;
+
+    
     & img:nth-child(1) {
+      // position: absolute;
+      // top: 7%;
+      // left: 35%;
+      // z-index: 1;
       position: absolute;
-      top: 7%;
+      top: -33%;
       left: 35%;
       z-index: 1;
     }
     & img:nth-child(2) {
+      // position: absolute;
+      // top: 14%;
+      // right: 0%;
+      // z-index: 1;
       position: absolute;
-      top: 14%;
+      top: -30%;
       right: 0%;
       z-index: 1;
     }
     & img:nth-child(3) {
-      transform: rotate(180deg);
+      // position: absolute;
+      // top: 44%;
+      // left: 0;
+      // z-index: 1;
       position: absolute;
-      top: 44%;
+      top: 0%;
       left: 0;
       z-index: 1;
     }
     & img:nth-child(4) {
+      // position: absolute;
+      // bottom: 0;
+      // left: 11%;
+      // z-index: 1;
       position: absolute;
-      bottom: 0;
+      bottom: 59%;
       left: 11%;
       z-index: 1;
     }
@@ -2205,7 +2224,8 @@
     justify-content: flex-end;
     & img {
       visibility: hidden;
-      margin-right: 6.875rem;
+      // margin-right: 6.875rem;
+      flex-basis: 32.229rem;
     }
   }
   &_center {
@@ -2215,6 +2235,7 @@
     margin-bottom: 5.793rem;
     & img {
       visibility: hidden;
+      flex-basis: 32.229rem;
     }
   }
   &_bottom {
@@ -2223,7 +2244,8 @@
   }
 
     &_more {
-      margin-right: 3.6rem;
+      margin-right: 4.427rem;
+      flex-basis: 40.062rem;
 
       & h4 {
         visibility: hidden;
@@ -2247,7 +2269,9 @@
     }
 
     &_info {
-    margin-right: 6.527rem;
+    padding-left: 5.875rem;
+    flex-basis: 32.229rem;
+    align-self: center;
 
     & h4 {
       font-size: 1.469rem;
@@ -2267,7 +2291,8 @@
   }
 
   &_card {
-    margin-right: 3.8rem;
+    flex-basis: 13.136rem;
+    margin-right: 3.427rem;
 
     & .first_card {
       visibility: hidden;

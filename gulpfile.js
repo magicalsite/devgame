@@ -170,6 +170,7 @@ gulp.task('copyLibsScriptsToJs', ['copyJqueryToJs'], function () {
     , 'src/libs/fullpage.js/dist/fullpage.min.js' // постраничный скролл
     , 'src/libs/slick-carousel/slick/slick.min.js' // slick slider
     , 'src/libs/wowjs/dist/wow.min.js' // wow animation
+    , 'src/libs/rellax/rellax.min.js' // parallax animation
   ])
       .pipe(concat('libs.js'))
       .pipe(gulp.dest('src/js'))

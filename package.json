@@ -43,6 +43,7 @@
     "bower": "^1.8.8",
     "mobile-detect": "^1.4.4",
     "object-fit-images": "^3.2.3",
+    "rellax": "^1.12.1",
     "slick-carousel": "^1.8.1",
     "wowjs": "^1.1.3"
   }

@@ -2602,10 +2602,7 @@ html.no-js
 
 .tanks__menu {
   visibility: hidden;
-  position: absolute;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 8rem;
+  position: relative;
   left: -3.04rem;
   background: #FFFFFF;
   box-shadow: 0px 4px 30px #4B2DB9;
@@ -2672,8 +2669,10 @@ html.no-js
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.067936);
   position: absolute;
-  top: calc(50% - 15.871rem);
-  margin-left: calc(50% - 55.401rem);
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
   z-index: 1;
 }
 
@@ -2777,11 +2776,8 @@ html.no-js
   width: 38.267rem;
   position: relative;
   top: -6.5rem;
+  left: -3rem;
   z-index: 4;
-}
-
-.second_part_info {
-  margin-left: 3.04rem;
 }
 
 .second_part__title {
@@ -2839,30 +2835,28 @@ html.no-js
 
 .tanks__locacion_figurine img:nth-child(1) {
   position: absolute;
-  top: 7%;
+  top: -33%;
   left: 35%;
   z-index: 1;
 }
 
 .tanks__locacion_figurine img:nth-child(2) {
   position: absolute;
-  top: 14%;
+  top: -30%;
   right: 0%;
   z-index: 1;
 }
 
 .tanks__locacion_figurine img:nth-child(3) {
-  -ms-transform: rotate(180deg);
-      transform: rotate(180deg);
   position: absolute;
-  top: 44%;
+  top: 0%;
   left: 0;
   z-index: 1;
 }
 
 .tanks__locacion_figurine img:nth-child(4) {
   position: absolute;
-  bottom: 0;
+  bottom: 59%;
   left: 11%;
   z-index: 1;
 }
@@ -2876,7 +2870,8 @@ html.no-js
 
 .locacion_block_top img {
   visibility: hidden;
-  margin-right: 6.875rem;
+  -ms-flex-preferred-size: 32.229rem;
+      flex-basis: 32.229rem;
 }
 
 .locacion_block_center {
@@ -2890,6 +2885,8 @@ html.no-js
 
 .locacion_block_center img {
   visibility: hidden;
+  -ms-flex-preferred-size: 32.229rem;
+      flex-basis: 32.229rem;
 }
 
 .locacion_block_bottom {
@@ -2900,7 +2897,9 @@ html.no-js
 }
 
 .locacion_block_more {
-  margin-right: 3.6rem;
+  margin-right: 4.427rem;
+  -ms-flex-preferred-size: 40.062rem;
+      flex-basis: 40.062rem;
 }
 
 .locacion_block_more h4 {
@@ -2928,7 +2927,12 @@ html.no-js
 }
 
 .locacion_block_info {
-  margin-right: 6.527rem;
+  padding-left: 5.875rem;
+  -ms-flex-preferred-size: 32.229rem;
+      flex-basis: 32.229rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .locacion_block_info h4 {
@@ -2948,7 +2952,9 @@ html.no-js
 }
 
 .locacion_block_card {
-  margin-right: 3.8rem;
+  -ms-flex-preferred-size: 13.136rem;
+      flex-basis: 13.136rem;
+  margin-right: 3.427rem;
 }
 
 .locacion_block_card .first_card {
