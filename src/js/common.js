@@ -284,9 +284,8 @@ $(document).ready(function () {
     centerMode: true,
     slidesToShow: 1,
     dots: true,
-    infinite: true,
+    infinite: false,
     variableWidth: true,
-    slidesToShow: 1,
     arrows: false
   });
   // Base
