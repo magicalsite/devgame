@@ -1951,9 +1951,71 @@
       margin-bottom: 1.224rem;
     }
   }
+
+  &__menu {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px #4B2DB9;
+    border-radius: 1.224rem;
+    width: 14.605rem;
+    height: 14.034rem;
+    padding: 0.816rem;
+    position: sticky;
+    top: 8rem;
+    z-index: 10;
+
+    &_item {
+      @include font-bold;
+      text-transform: uppercase;
+      font-size: 0.979rem;
+      line-height: 1.895rem;
+      color: #0E0E0E;
+      margin-bottom: 6.3px;
+      opacity: 0.4;
+      padding: 0.408rem 5.385rem 0.408rem 1.387rem;
+      cursor: pointer;
+      border-radius: 0.816rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:hover {
+        color: #0E0E0E;
+        opacity: 1;
+        background: #3AFF98;
+      }
+    }
+  }
 }
 .tanks__header {
   background-image: url(../../img/pentagon_bg.png) no-repeat center center;
+  position: relative;
+
+  &_figurine {
+    & img:first-child {
+      position: absolute;
+      top:0;
+      right: 10%;
+      z-index: 2;
+    }
+    & img:last-child {
+      position: absolute;
+      bottom: 23%;
+      right: 20%;
+      z-index: 2;
+    }
+  }
+
+  &_wbg {
+    @include font-alt-extra-bold;
+    font-size: 27.742rem;
+    line-height: 100%;
+    text-transform: uppercase;
+    color:rgba(255, 255, 255, 0.067936);;
+    position: absolute;
+    top: calc(50% - 15.871rem);
+    margin-left: calc(50% - 55.401rem);
+    z-index: 1;
+  }
 }
 
 .wbg-tanks {
@@ -1981,6 +2043,8 @@
   justify-content: space-between;
   height: 100%;
   align-items: center;
+  position: relative;
+  z-index: 3;
 
   &__block {
     display: flex;
@@ -2026,10 +2090,15 @@
 .second_part {
   margin: 0 auto;
   margin-bottom: -6.5rem;
+  display: flex;
   width: 38.267rem;
   position: relative;
   top: -6.5rem;
+  z-index: 4;
 
+  &_info {
+    margin-left: 3.04rem;
+  }
   &__title {
     @include font-bold;
     font-size: 2.774rem;
@@ -2067,18 +2136,46 @@
   }
 }
 
-.tanks__location {
-  background: url(../../img/location_bg.png) no-repeat center center/cover;
-  padding: 7.833rem 0 7.507rem 0;
+.tanks__locacion {
+  padding-top: 7.833rem;
+  position: relative;
 
   &_title {
-    @include font-normal;
+    // @include font-normal;
     text-align: center;
     margin-top: 1.142rem;
   }
+
+  &_figurine {
+    & img:nth-child(1) {
+      position: absolute;
+      top: 7%;
+      left: 35%;
+      z-index: 1;
+    }
+    & img:nth-child(2) {
+      position: absolute;
+      top: 14%;
+      right: 0%;
+      z-index: 1;
+    }
+    & img:nth-child(3) {
+      transform: rotate(180deg);
+      position: absolute;
+      top: 44%;
+      left: 0;
+      z-index: 1;
+    }
+    & img:nth-child(4) {
+      position: absolute;
+      bottom: 0;
+      left: 11%;
+      z-index: 1;
+    }
+  }
 }
 
-.location_block {
+.locacion_block {
   &_top {
     display: flex;
     justify-content: flex-end;
@@ -2101,6 +2198,7 @@
       margin-right: 3.6rem;
 
       & h4 {
+        @include font-bold;
         font-size: 2.937rem;
         line-height: 1.795rem;
         color: #FFFFFF;
@@ -2222,5 +2320,9 @@
     position: relative;
     bottom: -8.159rem;
     width: 100%;
+    
+    & div, .tnk_footer {
+      color: rgba(255, 255, 255, 0.312773);
+    }
   }
 }

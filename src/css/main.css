@@ -2598,8 +2598,73 @@ html.no-js
   margin-bottom: 1.224rem;
 }
 
+.tanks__menu {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 30px #4B2DB9;
+  border-radius: 1.224rem;
+  width: 14.605rem;
+  height: 14.034rem;
+  padding: 0.816rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 8rem;
+  z-index: 10;
+}
+
+.tanks__menu_item {
+  font-family: "avenir-next-cyr-bold", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.979rem;
+  line-height: 1.895rem;
+  color: #0E0E0E;
+  margin-bottom: 6.3px;
+  opacity: 0.4;
+  padding: 0.408rem 5.385rem 0.408rem 1.387rem;
+  cursor: pointer;
+  border-radius: 0.816rem;
+}
+
+.tanks__menu_item:last-child {
+  margin-bottom: 0;
+}
+
+.tanks__menu_item:hover {
+  color: #0E0E0E;
+  opacity: 1;
+  background: #3AFF98;
+}
+
 .tanks__header {
   background-image: url(../img/pentagon_bg.png) no-repeat center center;
+  position: relative;
+}
+
+.tanks__header_figurine img:first-child {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  z-index: 2;
+}
+
+.tanks__header_figurine img:last-child {
+  position: absolute;
+  bottom: 23%;
+  right: 20%;
+  z-index: 2;
+}
+
+.tanks__header_wbg {
+  font-family: "circe-extra-bold", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 27.742rem;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.067936);
+  position: absolute;
+  top: calc(50% - 15.871rem);
+  margin-left: calc(50% - 55.401rem);
+  z-index: 1;
 }
 
 .wbg-tanks {
@@ -2628,6 +2693,8 @@ html.no-js
   height: 100%;
   -ms-flex-align: center;
       align-items: center;
+  position: relative;
+  z-index: 3;
 }
 
 .first_part__block {
@@ -2684,14 +2751,21 @@ html.no-js
 .second_part {
   margin: 0 auto;
   margin-bottom: -6.5rem;
+  display: -ms-flexbox;
+  display: flex;
   width: 38.267rem;
   position: relative;
   top: -6.5rem;
+  z-index: 4;
+}
+
+.second_part_info {
+  margin-left: 3.04rem;
 }
 
 .second_part__title {
   font-family: "avenir-next-cyr-bold", Helvetica, Arial, sans-serif;
-  font-weight: 750;
+  font-weight: 700;
   font-size: 2.774rem;
   line-height: 1.795rem;
   color: #FFFFFF;
@@ -2725,29 +2799,58 @@ html.no-js
   height: 36.227rem;
 }
 
-.tanks__location {
-  background: url(../img/location_bg.png) no-repeat center center/cover;
-  padding: 7.833rem 0 7.507rem 0;
+.tanks__locacion {
+  padding-top: 7.833rem;
+  position: relative;
 }
 
-.tanks__location_title {
-  font-family: "avenir-next-cyr-medium", Helvetica, Arial, sans-serif;
+.tanks__locacion_title {
   text-align: center;
   margin-top: 1.142rem;
 }
 
-.location_block_top {
+.tanks__locacion_figurine img:nth-child(1) {
+  position: absolute;
+  top: 7%;
+  left: 35%;
+  z-index: 1;
+}
+
+.tanks__locacion_figurine img:nth-child(2) {
+  position: absolute;
+  top: 14%;
+  right: 0%;
+  z-index: 1;
+}
+
+.tanks__locacion_figurine img:nth-child(3) {
+  -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+  position: absolute;
+  top: 44%;
+  left: 0;
+  z-index: 1;
+}
+
+.tanks__locacion_figurine img:nth-child(4) {
+  position: absolute;
+  bottom: 0;
+  left: 11%;
+  z-index: 1;
+}
+
+.locacion_block_top {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: end;
       justify-content: flex-end;
 }
 
-.location_block_top img {
+.locacion_block_top img {
   margin-right: 6.875rem;
 }
 
-.location_block_center {
+.locacion_block_center {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: end;
@@ -2756,42 +2859,44 @@ html.no-js
   margin-bottom: 5.793rem;
 }
 
-.location_block_bottom {
+.locacion_block_bottom {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: end;
       justify-content: flex-end;
 }
 
-.location_block_more {
+.locacion_block_more {
   margin-right: 3.6rem;
 }
 
-.location_block_more h4 {
+.locacion_block_more h4 {
+  font-family: "avenir-next-cyr-bold", Helvetica, Arial, sans-serif;
+  font-weight: 700;
   font-size: 2.937rem;
   line-height: 1.795rem;
   color: #FFFFFF;
   margin: 0;
 }
 
-.location_block_more p {
+.locacion_block_more p {
   color: #DDD3FF;
   width: 40.062rem;
   font-size: 1.305rem;
   line-height: 1.795rem;
 }
 
-.location_block_more p span {
+.locacion_block_more p span {
   font-family: "avenir-next-cyr-bold", Helvetica, Arial, sans-serif;
-  font-weight: 750;
+  font-weight: 700;
   color: #fff;
 }
 
-.location_block_info {
+.locacion_block_info {
   margin-right: 6.527rem;
 }
 
-.location_block_info h4 {
+.locacion_block_info h4 {
   font-size: 1.469rem;
   line-height: 1.795rem;
   color: #FFFFFF;
@@ -2799,7 +2904,7 @@ html.no-js
   margin-bottom: 1.7rem;
 }
 
-.location_block_info p {
+.locacion_block_info p {
   font-size: 1.305rem;
   line-height: 1.795rem;
   color: #fff;
@@ -2807,11 +2912,11 @@ html.no-js
   width: 18.93rem;
 }
 
-.location_block_card {
+.locacion_block_card {
   margin-right: 3.8rem;
 }
 
-.location_block_card .first_card {
+.locacion_block_card .first_card {
   text-align: center;
   width: 13.136rem;
   padding: 3.427rem 2.529rem;
@@ -2820,7 +2925,7 @@ html.no-js
   margin-bottom: 1.958rem;
 }
 
-.location_block_card .first_card_number {
+.locacion_block_card .first_card_number {
   font-family: "gilroy-bold", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 7.833rem;
@@ -2828,7 +2933,7 @@ html.no-js
   color: #fff;
 }
 
-.location_block_card .first_card p {
+.locacion_block_card .first_card p {
   text-align: center;
   font-size: 1.061rem;
   line-height: 1.469rem;
@@ -2836,7 +2941,7 @@ html.no-js
   opacity: 0.6;
 }
 
-.location_block_card .second_card {
+.locacion_block_card .second_card {
   text-align: center;
   width: 13.136rem;
   padding: 3.427rem 2.529rem;
@@ -2844,7 +2949,7 @@ html.no-js
   background: #7B58F7;
 }
 
-.location_block_card .second_card span {
+.locacion_block_card .second_card span {
   font-family: "gilroy-bold", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 3.101rem;
@@ -2852,7 +2957,7 @@ html.no-js
   color: #fff;
 }
 
-.location_block_card .second_card p {
+.locacion_block_card .second_card p {
   text-align: center;
   font-size: 1.061rem;
   line-height: 1.469rem;
@@ -2899,6 +3004,10 @@ html.no-js
   position: relative;
   bottom: -8.159rem;
   width: 100%;
+}
+
+.tanks__footer_dop div, .tanks__footer_dop .tnk_footer {
+  color: rgba(255, 255, 255, 0.312773);
 }
 
 @media print {
