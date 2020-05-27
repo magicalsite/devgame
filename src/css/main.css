@@ -1450,6 +1450,7 @@ html.no-js
 
 .main__layout {
   height: 100%;
+  max-width: 93.016rem;
 }
 
 .main__contacts {
@@ -2589,6 +2590,13 @@ html.no-js
 .tanks_rectangle {
   visibility: hidden;
   opacity: 0.3;
+  width: 0.326rem;
+  height: 16.563rem;
+  background: #D8D8D8;
+  border-radius: 0.408rem;
+  position: relative;
+  right: 0;
+  top: 1.142rem;
 }
 
 .tanks_download {
@@ -2655,7 +2663,7 @@ html.no-js
 
 .tanks__header_figurine img:last-child {
   position: absolute;
-  bottom: 23%;
+  bottom: 18%;
   right: 20%;
   z-index: 2;
 }
@@ -2669,8 +2677,8 @@ html.no-js
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.067936);
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 48%;
+  left: 48%;
   -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
   z-index: 1;
@@ -2708,6 +2716,8 @@ html.no-js
 
 .first_part__center {
   visibility: hidden;
+  position: relative;
+  left: -4.5rem;
 }
 
 .first_part__block {
@@ -2753,7 +2763,7 @@ html.no-js
   font-size: 5.875rem;
   line-height: 5.222rem;
   color: #FFFFFF;
-  margin-bottom: 5.222rem;
+  margin-bottom: 4.808rem;
   margin-top: 2.448rem;
 }
 
@@ -2768,16 +2778,34 @@ html.no-js
   visibility: hidden;
 }
 
-.second_part {
-  margin: 0 auto;
-  margin-bottom: -6.5rem;
+.wrapper_second_title {
   display: -ms-flexbox;
   display: flex;
-  width: 38.267rem;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  margin-bottom: 1.142rem;
+}
+
+.wrapper_second_title h3 {
+  -ms-flex-preferred-size: 60.52rem;
+      flex-basis: 60.52rem;
+  text-align: left;
+}
+
+.second_part {
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
-  top: -6.5rem;
-  left: -3rem;
+  margin-bottom: -6rem;
+  top: -6rem;
   z-index: 4;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+
+.second_part_info {
+  -ms-flex-preferred-size: 60.52rem;
+      flex-basis: 60.52rem;
 }
 
 .second_part__title {
@@ -2797,7 +2825,7 @@ html.no-js
   font-size: 1.305rem;
   line-height: 1.795rem;
   color: #BCACF6;
-  width: 38.607rem;
+  width: 38.267rem;
 }
 
 .tanks__video {
@@ -2836,13 +2864,13 @@ html.no-js
 .tanks__locacion_figurine img:nth-child(1) {
   position: absolute;
   top: -33%;
-  left: 35%;
+  left: 29%;
   z-index: 1;
 }
 
 .tanks__locacion_figurine img:nth-child(2) {
   position: absolute;
-  top: -30%;
+  top: -14%;
   right: 0%;
   z-index: 1;
 }
@@ -2870,8 +2898,8 @@ html.no-js
 
 .locacion_block_top img {
   visibility: hidden;
-  -ms-flex-preferred-size: 32.229rem;
-      flex-basis: 32.229rem;
+  -ms-flex-preferred-size: 32.148rem;
+      flex-basis: 32.148rem;
 }
 
 .locacion_block_center {
@@ -2885,8 +2913,8 @@ html.no-js
 
 .locacion_block_center img {
   visibility: hidden;
-  -ms-flex-preferred-size: 32.229rem;
-      flex-basis: 32.229rem;
+  -ms-flex-preferred-size: 32.148rem;
+      flex-basis: 32.148rem;
 }
 
 .locacion_block_bottom {
@@ -2897,7 +2925,7 @@ html.no-js
 }
 
 .locacion_block_more {
-  margin-right: 4.427rem;
+  margin-right: 3.727rem;
   -ms-flex-preferred-size: 40.062rem;
       flex-basis: 40.062rem;
 }
@@ -2928,8 +2956,8 @@ html.no-js
 
 .locacion_block_info {
   padding-left: 5.875rem;
-  -ms-flex-preferred-size: 32.229rem;
-      flex-basis: 32.229rem;
+  -ms-flex-preferred-size: 32.148rem;
+      flex-basis: 32.148rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -2954,7 +2982,7 @@ html.no-js
 .locacion_block_card {
   -ms-flex-preferred-size: 13.136rem;
       flex-basis: 13.136rem;
-  margin-right: 3.427rem;
+  margin-right: 3.727rem;
 }
 
 .locacion_block_card .first_card {
@@ -3051,7 +3079,7 @@ html.no-js
 .tanks__footer_dop {
   visibility: hidden;
   position: relative;
-  bottom: -8.159rem;
+  bottom: -9.159rem;
   width: 100%;
 }
 
