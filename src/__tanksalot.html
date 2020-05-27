@@ -8,7 +8,7 @@
 
 
 <!--MAIN-->
-<main>
+<main class="main__games">
     <section class="tanks__header">
         <div class="tanks__header_figurine animate__animated wow animate__fadeIn">
             <img src="./img/pentagon_tank_bg.png" alt="">
@@ -21,7 +21,7 @@
             <div class="first_part" >
                 <div class="first_part__left">
                     <div class="first_part__block">
-                        <div class="first_part__left_number animate__animated wow animate__fadeInDop"  data-wow-delay="1s"  data-wow-duration="1s">
+                        <div id="about" class="lol first_part__left_number animate__animated wow animate__fadeInDop"  data-wow-delay="1s"  data-wow-duration="1s">
                             01
                         </div>
                         <img src="./img/wave_bg.svg" alt="" class="animate__animated wow animate__fadeIn"  data-wow-delay="1s" data-wow-duration="1s">
@@ -41,12 +41,12 @@
             </div>
             <div class="second_part">
                 <div class="tanks__menu animate__animated wow animate__fadeIn" data-wow-delay="1s" data-wow-duration="1s">
-                    <ul>
-                        <li class="tanks__menu_item">about</li>
-                        <li class="tanks__menu_item">locacion</li>
-                        <li class="tanks__menu_item">video</li>
-                        <li class="tanks__menu_item">caracter</li>
-                    </ul>
+                    <nav>
+                        <a class="tanks__menu_item" href="#about">about</a>
+                        <a class="tanks__menu_item" href="#locacion">locacion</a>
+                        <a class="tanks__menu_item" href="#video">video</a>
+                        <a class="tanks__menu_item" href="#caracter">caracter</a>
+                    </nav>
                 </div>
                 <div class="second_part_info">
                     <h3 class="second_part__title animate__animated wow animate__fadeInUp" data-wow-delay="1s" data-wow-duration="1s">
@@ -62,8 +62,8 @@
             </div>
         </div>
     </section>
-    <section class="tanks__video">
-        <div class="tanks-slider__video ">
+    <section  class="tanks__video">
+        <div id="video" class="lol tanks-slider__video ">
             <div class="slider__video_item animate__animated wow animate__fadeIn">
                 <img src="./img/slider-game.png" alt="">
             </div>
@@ -78,7 +78,7 @@
             </div>
         </div>
     </section>
-    <section class="tanks__locacion">
+    <section id="locacion" class="lol tanks__locacion">
         <div class="tanks__locacion_figurine animate__animated wow animate__fadeIn">
             <img class="rellax" data-rellax-speed="-2" src="./img/wave_locacions_bg.png" alt="">
             <img class="rellax" data-rellax-speed="-2" src="./img/triangle_locacions_bg.png" alt="">
@@ -107,7 +107,7 @@
             </div>
         </div>
     </section>
-    <section class="tanks__awards">
+    <section id="caracter" class="lol tanks__awards">
         <div class="layout-page layout-page-spaces main__layout">
             <div class="locacion_block">
                 <div class="locacion_block_bottom">
