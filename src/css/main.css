@@ -2900,6 +2900,7 @@ html.no-js
   visibility: hidden;
   -ms-flex-preferred-size: 32.148rem;
       flex-basis: 32.148rem;
+  width: 32.148rem;
 }
 
 .locacion_block_center {
@@ -2915,6 +2916,7 @@ html.no-js
   visibility: hidden;
   -ms-flex-preferred-size: 32.148rem;
       flex-basis: 32.148rem;
+  width: 32.148rem;
 }
 
 .locacion_block_bottom {
