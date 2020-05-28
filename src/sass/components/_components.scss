@@ -1975,7 +1975,7 @@
     height: 14.034rem;
     padding: 0.816rem;
     z-index: 10;
-    transition: opacity 0.1s;
+    // transition: opacity 0.1s;
     & nav {
       display: flex;
       flex-direction: column;
@@ -2016,7 +2016,7 @@
 }
 
 .f-menu {
-  transition: opacity 0.1s;
+  // transition: opacity 0.1s;
   position: fixed;
   top: 100px;
 }
@@ -2081,7 +2081,7 @@
 .first_part {
   display: flex;
   justify-content: space-between;
-  height: 100%;
+  height: 46.834rem;
   align-items: center;
   position: relative;
   z-index: 3;
@@ -2514,8 +2514,13 @@
   margin-bottom: -23rem;
   top: 0;
 }
-
 .hoopstars__img {
-  left: 23rem;
-  z-index: 10;
+  visibility: hidden;
+
+  & img {
+    position: absolute;
+    right: 0;
+    top: 2%;
+    z-index: 20;
+  }
 }

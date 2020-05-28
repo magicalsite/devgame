@@ -2619,7 +2619,6 @@ html.no-js
   height: 14.034rem;
   padding: 0.816rem;
   z-index: 10;
-  transition: opacity 0.1s;
 }
 
 .tanks__menu nav {
@@ -2665,7 +2664,6 @@ html.no-js
 }
 
 .f-menu {
-  transition: opacity 0.1s;
   position: fixed;
   top: 100px;
 }
@@ -2732,7 +2730,7 @@ html.no-js
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  height: 100%;
+  height: 46.834rem;
   -ms-flex-align: center;
       align-items: center;
   position: relative;
@@ -3203,8 +3201,14 @@ html.no-js
 }
 
 .hoopstars__img {
-  left: 23rem;
-  z-index: 10;
+  visibility: hidden;
+}
+
+.hoopstars__img img {
+  position: absolute;
+  right: 0;
+  top: 2%;
+  z-index: 20;
 }
 
 @media print {

@@ -285,10 +285,10 @@ $WINDOW.on('load', function () {
     var l_m = menu.offset().left;
     var h_video = $('.tanks__video').offset().top - menu.outerHeight();
     var b_video = $('.tanks__video').offset().top + $('.tanks__header').outerHeight();
-    var h_footer = $('.main__games').innerHeight() - $('.tanks__footer').outerHeight() - 2400;
+    var h_footer = $('.main__games').innerHeight() - $('.tanks__footer').outerHeight() - 2100;
   }
   
-    // game sticky menu
+    //game sticky menu
     $(window).scroll(function () {
       if ($(this).scrollTop() > t_m) {
         menu.addClass("f-menu");
