@@ -2730,7 +2730,7 @@ html.no-js
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  height: 46.834rem;
+  height: 100%;
   -ms-flex-align: center;
       align-items: center;
   position: relative;
@@ -3209,6 +3209,10 @@ html.no-js
   right: 0;
   top: 2%;
   z-index: 20;
+}
+
+.first_part_hoop {
+  height: 46.834rem;
 }
 
 @media print {

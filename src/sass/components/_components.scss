@@ -2081,7 +2081,7 @@
 .first_part {
   display: flex;
   justify-content: space-between;
-  height: 46.834rem;
+  height: 100%;
   align-items: center;
   position: relative;
   z-index: 3;
@@ -2523,4 +2523,7 @@
     top: 2%;
     z-index: 20;
   }
+}
+.first_part_hoop {
+  height: 46.834rem;
 }
