@@ -277,71 +277,72 @@ $WINDOW.on('load', function () {
   changeFontSize();
 });
 
+  // game sticky const
+  if ($BODY.hasClass('hoopstars') || $BODY.hasClass('tanks')) {
+    var menu = $('.tanks__menu');
+    var t_m = menu.offset().top - 100;
+    var t_n_m = menu.offset().top;
+    var l_m = menu.offset().left;
+    var h_video = $('.tanks__video').offset().top - menu.outerHeight();
+    var b_video = $('.tanks__video').offset().top + $('.tanks__header').outerHeight();
+    var h_footer = $('.main__games').innerHeight() - $('.tanks__footer').outerHeight() - 2400;
+  }
+  
+    // game sticky menu
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > t_m) {
+        menu.addClass("f-menu");
+        $('.f-menu').css("left", l_m);
+      } else if ($(this).scrollTop() < t_n_m) {
+        menu.removeClass("f-menu");
+        menu.css("left", "-3.04rem");
+      } 
+      
+      if ($(this).scrollTop() > h_video) {
+        menu.css("opacity", "0");
+      } 
+      if ($(this).scrollTop() > b_video) {
+        menu.css("opacity", "1");
+      } 
+  
+      if($(this).scrollTop() > h_footer) {
+        menu.css("opacity", "0");
+      }
+      if($(this).scrollTop() < h_footer) {
+        menu.css("opacity", "1");
+      }
+  
+      if($(this).scrollTop() < b_video) {
+        menu.css("opacity", "0");
+      }
+      if($(this).scrollTop() < h_video) {
+        menu.css("opacity", "1");
+      }
+      
+    });
+    
+    $("a[href^='#']").click(function(){
+      var _href = $(this).attr("href");
+      $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 800);
+      return false;
+    });
+    $(window).scroll(function() {
+      var $sections = $('.lol');
+      $sections.each(function(i,el){
+          var top  = $(el).offset().top-100;
+          var bottom = top +$(el).height();
+          var scroll = $(window).scrollTop();
+          var id = $(el).attr('id');
+        if( scroll > top && scroll < bottom){
+              $('a.active_game').removeClass('active_game');
+        $('a[href="#'+id+'"]').addClass('active_game');
+        }
+      })
+    });
+
 $(document).ready(function () {
   $BODY.addClass('logo-theme-dark');
   changeFontSize();
-
-  // game sticky const
-    let menu = $('.tanks__menu');
-    let t_m = menu.offset().top - 100;
-    let t_n_m = menu.offset().top;
-    let l_m = menu.offset().left;
-    let h_video = $('.tanks__video').offset().top - menu.outerHeight();
-    let b_video = $('.tanks__video').offset().top + $('.tanks__header').outerHeight();
-    //let h_footer = $('.tanks__footer').offset().top - menu.outerHeight();
-    let h_footer = $('.main__games').innerHeight() - $('.tanks__footer').outerHeight() - 2400;
-    console.log($('.tanks__video').height())
-  // game sticky menu
-  $(window).scroll(function () {
-		if ($(this).scrollTop() > t_m) {
-      menu.addClass("f-menu");
-      $('.f-menu').css("left", l_m);
-    } else if ($(this).scrollTop() < t_n_m) {
-      menu.removeClass("f-menu");
-      menu.css("left", "-3.04rem");
-    } 
-    
-    if ($(this).scrollTop() > h_video) {
-      menu.css("opacity", "0");
-    } 
-    if ($(this).scrollTop() > b_video) {
-      menu.css("opacity", "1");
-    } 
-
-    if($(this).scrollTop() > h_footer) {
-      menu.css("opacity", "0");
-    }
-    if($(this).scrollTop() < h_footer) {
-      menu.css("opacity", "1");
-    }
-
-    if($(this).scrollTop() < b_video) {
-      menu.css("opacity", "0");
-    }
-    if($(this).scrollTop() < h_video) {
-      menu.css("opacity", "1");
-    }
-    
-  });
-  
-  $("a[href^='#']").click(function(){
-    var _href = $(this).attr("href");
-    $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 800);
-    return false;
-  });
-  $(window).scroll(function() {
-    var $sections = $('.lol');
-	  $sections.each(function(i,el){
-        var top  = $(el).offset().top-100;
-        var bottom = top +$(el).height();
-        var scroll = $(window).scrollTop();
-        var id = $(el).attr('id');
-    	if( scroll > top && scroll < bottom){
-            $('a.active_game').removeClass('active_game');
-			$('a[href="#'+id+'"]').addClass('active_game');
-      }
-    })
-  });
 
   // slider
   $('.tanks-slider__video').slick({
