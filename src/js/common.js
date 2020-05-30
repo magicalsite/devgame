@@ -299,24 +299,24 @@ $WINDOW.on('load', function () {
       } 
       
       if ($(this).scrollTop() > h_video) {
-        menu.css("opacity", "0");
+        menu.css({"opacity": "0", "-khtml-opacity": "0"});
       } 
       if ($(this).scrollTop() > b_video) {
-        menu.css("opacity", "1");
+        menu.css({"opacity": "1", "-khtml-opacity": "1"});
       } 
   
       if($(this).scrollTop() > h_footer) {
-        menu.css("opacity", "0");
+        menu.css({"opacity": "0", "-khtml-opacity": "0"});
       }
       if($(this).scrollTop() < h_footer) {
-        menu.css("opacity", "1");
+        menu.css({"opacity": "1", "-khtml-opacity": "1"});
       }
   
       if($(this).scrollTop() < b_video) {
-        menu.css("opacity", "0");
+        menu.css({"opacity": "0", "-khtml-opacity": "0"});
       }
       if($(this).scrollTop() < h_video) {
-        menu.css("opacity", "1");
+        menu.css({"opacity": "1", "-khtml-opacity": "1"});
       }
       
     });
