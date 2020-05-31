@@ -51,8 +51,8 @@
       <div class="header-container">
         <div class="header-container__left">
           <div class="logo">
-            <div class="logo_dark"></div>
-            <div class="logo_light"></div>
+            <div class="logo_dark"><img src="img/logo.svg" alt=""></div>
+            <div class="logo_light"><img src="img/logo-alt.svg" alt=""></div>
             <a href="index.html" title="Go home"></a>
             <!--logo for a print version-->
             <img style="display: none;" src="img/logo.svg" alt="Print version logotype">
@@ -134,8 +134,14 @@
     </section>
     <section class="tanks__video  hoopstars_videoBg ">
       <div id="video" class="lol tanks-slider__video ">
-        <div class="slider__video_item animate__animated wow animate__fadeIn">
-          <img src="./img/slider-game.png" alt="">
+        <div class="slider__video_item tanks_video_blk animate__animated wow animate__fadeIn">
+          <!-- <img src="./img/slider-game.png" alt=""> -->
+          <video class="tanks_video">
+            <source src="./video/videoplayback.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+            <source src="./video/videoplayback.webm" type='video/webm; codecs="vp8, vorbis"' />
+            Элемент video не поддерживается вашим браузером.
+          </video>
+          <button class="play_button"></button>
         </div>
         <div class="slider__video_item animate__animated wow animate__fadeIn">
           <img src="./img/slider-game.png" alt="">

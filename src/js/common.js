@@ -340,6 +340,27 @@ $WINDOW.on('load', function () {
       })
     });
 
+    let overlay = document.querySelector('.play_button');
+    let vid = document.querySelector('.tanks_video');
+    let vid_blk = document.querySelector('.tanks_video_blk');
+
+    if(overlay.addEventListener){
+        overlay.addEventListener("click", play, false)
+      } else if(vid_blk.attachEvent){
+        vid_blk.attachEvent("onclick", play)
+      }
+
+    function play() { 
+        if (vid.paused){
+            vid.play(); 
+            overlay.className = "play_button o";
+        } else {
+            vid.pause(); 
+            overlay.className = "play_button";
+        }
+    } 
+
+
 $(document).ready(function () {
   $BODY.addClass('logo-theme-dark');
   changeFontSize();
