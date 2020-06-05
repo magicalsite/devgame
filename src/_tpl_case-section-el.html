@@ -4,10 +4,9 @@
     <div class="case-section__align">
       <div class="case-section__caption">
         @@if(context.title) {
-        <h2 class="case-section__title@@if(context.titleMod){ case-section__title_@@titleMod}">
-          @@for (var i = 0; i < title.length; i++) { <span class="ct">
-            <span class="cst">`+title[i]+`</span>
-            </span>
+        <h2 class="case-section__title@@if(context.titleMod){ case-section__title_@@titleMod} cst">
+          @@for (var i = 0; i < title.length; i++) { 
+            `+title[i]+`
             }
         </h2>
         }
@@ -16,14 +15,16 @@
       <div class="case-section__description">
         <div class="case-section__count case-section__numberGame">@@count</div>
         @@if(context.subTitle) {
-        <h3 class="case-section__sub-title">
-          @@for (var i = 0; i < subTitle.length; i++) { <span class="ct">
-            <span class="mst">`+subTitle[i]+`</span>
-            </span>
+        <h3 class="case-section__sub-title cst">
+          @@for (var i = 0; i < subTitle.length; i++) {
+            `+subTitle[i]+`
             }
         </h3>
-        <div class="cst case-section__more">
+        <div class="case-section__more cst">
           @@gameText
+        </div>
+        <div class="animate_button">
+          <a href="#" class="case-section__button">ABOUT</a>
         </div>
         }
       </div>
@@ -49,10 +50,10 @@
       <div class="main__footer-site">
         © HIGH CORE GAMES  2020
       </div>
-      <div class="main__footer-site main__footer-privacy">
+      <a href="#" class="main__footer-clover main__footer-site main__footer-privacy">
         PRIVACY POLICE
-      </div>
-      <a href="http://clover.by/" class="main__footer-site main__footer-clover" rel="noopener" target="_blank">
+      </a>
+      <a href="https://clover.by/" class="main__footer-site main__footer-clover" rel="noopener" target="_blank">
         Clover.by
       </a>
     </div>

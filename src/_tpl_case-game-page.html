@@ -11,9 +11,9 @@
             </div>
         }
         <div class="layout-page layout-page-spaces main__layout">
-            <div  class="tanks__header_wbg animate__animated wow animate__fadeIn" data-wow-delay="1s" data-wow-duration="2s">
+            <!-- <div  class="tanks__header_wbg animate__animated wow animate__fadeIn" data-wow-delay="1s" data-wow-duration="2s">
                 games
-            </div>
+            </div> -->
             <div class="first_part @@if(context.game === 'hoopstars') {first_part_hoop}">
                 <div class="first_part__left">
                     <div class="first_part__block">
@@ -58,26 +58,49 @@
         </div>
     </section>
     <section  class="tanks__video @@if(context.game === 'hoopstars'){ hoopstars_videoBg }">
+        @@if(context.game === 'tanks'){
         <div id="video" class="lol tanks-slider__video ">
             <div class="slider__video_item tanks_video_blk animate__animated wow animate__fadeIn">
-                <!-- <img src="./img/slider-game.png" alt=""> -->
-                <video class="tanks_video">
+                <video class="tanks_video" muted playsinline>
                     <source src="./video/videoplayback.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-                    <source src="./video/videoplayback.webm" type='video/webm; codecs="vp8, vorbis"' />
                     Элемент video не поддерживается вашим браузером. 
                 </video>
                 <button class="play_button"></button>
             </div>
             <div class="slider__video_item animate__animated wow animate__fadeIn">
-                <img src="./img/slider-game.png" alt="">
+                <img src="@@srcSliderImg" alt="">
             </div>
             <div class="slider__video_item animate__animated wow animate__fadeIn">
-                <img src="./img/slider-game.png" alt="">
+                <img src="@@srcSliderImg" alt="">
             </div>
             <div class="slider__video_item animate__animated wow animate__fadeIn">
-                <img src="./img/slider-game.png" alt="">
+                <img src="@@srcSliderImg" alt="">
             </div>
         </div>
+        }
+        @@if(context.game === 'hoopstars'){
+            <div id="video" class="lol hoop-slider__video">
+                <div class="hoop__video_item tanks_video_blk animate__animated wow animate__fadeIn">
+                    <video class="tanks_video hoop_video" muted playsinline="playsinline" loop>
+                        <source src="./video/hoopstars.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+                        Элемент video не поддерживается вашим браузером. 
+                    </video>
+                    <button class="play_button_hoop"></button>
+                </div>
+                <div class="hoop__video_item animate__animated wow animate__fadeIn">
+                    <img src="@@srcSliderImg" alt="">
+                </div>
+                <div class="hoop__video_item animate__animated wow animate__fadeIn">
+                    <img src="@@srcSliderImg" alt="">
+                </div>
+                <div class="hoop__video_item animate__animated wow animate__fadeIn">
+                    <img src="@@srcSliderImg" alt="">
+                </div>
+                <div class="hoop__video_item animate__animated wow animate__fadeIn">
+                    <img src="@@srcSliderImg" alt="">
+                </div>
+            </div>
+            }
     </section>
     <section id="locacion" class="lol tanks__locacion">
         <div class="tanks__locacion_figurine animate__animated wow animate__fadeIn">
@@ -103,6 +126,11 @@
                 <div class="locacion_block_center @@if(context.game === 'hoopstars'){ hoopstars_loc_center }">
                     <img src="@@srcLocImg2" alt="" class="@@if(context.game === 'hoopstars'){ hoopstars_loc_img } animate__animated wow animate__fadeIn" data-wow-duration="2s">
                     <img src="@@srcLocImg3" alt="" class="@@if(context.game === 'hoopstars'){ hoopstars_loc_img } animate__animated wow animate__fadeIn" data-wow-duration="2s">
+                </div>
+                <div class="locacion_block_slider">
+                    <div><img src="@@srcLocImg1" alt=""></div>
+                    <div><img src="@@srcLocImg2" alt=""></div>
+                    <div><img src="@@srcLocImg3" alt=""></div>
                 </div>
             </div>
         </div>

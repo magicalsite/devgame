@@ -954,10 +954,10 @@
       @include font-alt-normal;
       font-size: 0.816rem;
       line-height: 1.224rem;
-      
+      text-decoration: none;
       letter-spacing: 0.256rem;
       text-transform: uppercase;
-      
+      color: #BBBBBB;
       @include media("<tab") {
         font-size: 1.816rem;
       }
@@ -1211,6 +1211,7 @@
       will-change: opacity;
       transition: opacity 0.7s;
       opacity: 0;
+      visibility: hidden;
       pointer-events: none;
       color: #1D3743;
 
@@ -1562,6 +1563,9 @@
       flex: 1 0 width;
       max-width: $width;
     }
+    @include media("<mob") {
+      display: none;
+    }
   }
 
   &__count {
@@ -1653,6 +1657,20 @@
       color: #919191;
     }
   }
+  &__button {
+    @include font-gilroy-bold;
+    text-decoration: none;
+    font-size: 13px;
+    color: #1F1F1F;
+    line-height: 46px;
+    padding: 1.224rem 5.467rem;
+    background: #39FF98;
+    border-radius: 0.245rem;
+    
+    @include media("<mob") {
+      display: none;
+    }
+  }
 
   &__numberGame {
     @include font-alt-normal;
@@ -1696,6 +1714,7 @@
     max-width: 100%;
     position: relative;
     font-size: 1.305rem;
+    margin-bottom: 1.224rem;
     line-height: 2.2rem;
     color: #fff;
     opacity: 0.7;
@@ -1780,7 +1799,7 @@
         align-items: center;
         @include media("<mob") {
           align-items: flex-end;
-          top: 35%;
+          top: 33%;
           left: 48%;
         }
       }
@@ -1957,8 +1976,6 @@
 /* ============== Tanks a lot ============== */
 /* ==================================== */
 
-
-
 .tanks {
   background-color: #7250EC;
 
@@ -1971,20 +1988,31 @@
     border-radius: 0.408rem;
     position: relative;
     right: 0;
-    top: 1.142rem
+    top: 1.142rem;
+
+      @include media("<tab") {
+        display: none;
+      }    
   }
   &_download {
     height: 3.753rem;
     line-height: 3.753rem;
     &:first-child {
       margin-bottom: 1.224rem;
+
+      @include media("<tab") {
+        margin-bottom: 0;
+        margin-right: 2.353rem;
+      }
+    }
+
+    @include media("<tab") {
+      height: 100%;
     }
   }
   &__menu {
     visibility: hidden;
     position: relative;
-    // position: sticky;
-    // top: 8rem;
     left: -3.04rem;
     background: #FFFFFF;
     box-shadow: 0px 4px 30px #4B2DB9;
@@ -1993,13 +2021,11 @@
     height: 14.034rem;
     padding: 0.816rem;
     z-index: 10;
-    // transition: opacity 0.1s;
     & nav {
       display: flex;
       flex-direction: column;
     }
     &_item {
-      
         @include font-bold;
         text-transform: uppercase;
         font-size: 0.979rem;
@@ -2008,7 +2034,6 @@
         opacity: 0.4;
         color: #0E0E0E;
         text-decoration: none;
-        // height: 2.774rem;
         margin-bottom: 0.514rem;
         cursor: pointer;
         border-radius: 0.816rem;
@@ -2026,6 +2051,10 @@
         opacity: 1;
         background: #3AFF98;
       }
+    }
+
+    @include media("<tab") {
+      display: none;
     }
   }
   &__awards {
@@ -2046,11 +2075,15 @@
     visibility: hidden;
 
     & img:first-child {
-
       position: absolute;
       top:0;
       right: 10%;
       z-index: 2;
+
+      @include media("<tab") {
+        width: 32.745rem;
+        right: 28%;
+      }
     }
     & img:last-child {
       
@@ -2058,6 +2091,9 @@
       bottom: 18%;
       right: 20%;
       z-index: 2;
+      @include media("<tab") {
+        display: none;
+      }
     }
   }
 
@@ -2073,6 +2109,12 @@
     left: 48%;
     transform: translate(-50%, -50%);
     z-index: 1;
+
+    @include media("<mob") {
+      font-size: 58.441rem;
+      top: 57%;
+      left: 81%;
+    }
   }
 }
 
@@ -2108,6 +2150,29 @@
     visibility: hidden;
     position: relative;
     left: -4.5rem;
+
+    img {
+      width: 49.282rem;
+      height: 55.809rem;
+
+      @include media("<tab") {
+        width: 65.529rem;
+        height: 69.02rem;
+      }
+      @include media("<mob") {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    @include media("<tab") {
+      left: 0;
+      top: -17rem;
+    }
+    @include media("<mob") {
+      left: 0;
+top: -29rem;
+    }
   }
   &__block {
     display: flex;
@@ -2120,6 +2185,10 @@
       height: 0.734rem;
       width: 2.203rem;
       visibility: hidden;
+
+      @include media("<tab") {
+        display: none;
+      }
     }
   }
 
@@ -2136,6 +2205,15 @@
       color: #FFFFFF;
       mix-blend-mode: normal;
       opacity: 0.3;
+
+      @include media("<tab") {
+        font-size: 3.529rem;
+        line-height: 5.294rem;
+      }
+      @include media("<tab") {
+        font-size: 7.013rem;
+        line-height: 10.519rem;
+      }
     }
     
     & h2 {
@@ -2146,6 +2224,15 @@
       color: #FFFFFF;
       margin-bottom: 4.808rem;
       margin-top: 2.448rem;
+
+      @include media("<tab") {
+        font-size: 14.118rem;
+        line-height: 12.549rem;
+      }
+      @include media("<tab") {
+        font-size: 28.052rem;
+        line-height: 24.935rem;
+      }
     }
     &_button {
       display: flex;
@@ -2154,7 +2241,29 @@
       & a {
         visibility: hidden;
       }
+
+      @include media("<tab") {
+        flex-direction: row;
+        position: relative;
+        top: 57rem;
+        z-index: 10;
+      }
+      @include media("<mob") {
+        top: 89rem;
+      }
     }
+
+    @include media("<tab") {
+      align-items: flex-start;
+      margin-top: 24.118rem;
+    }
+    @include media("<mob") {
+      margin-top: 38.818rem;
+    }
+  }
+
+  @include media("<tab") {
+    flex-wrap: wrap;
   }
 }
 .wrapper_second_title {
@@ -2166,9 +2275,13 @@
     flex-basis: 60.52rem;
     text-align: left;
   }
+
+  @include media("<tab") {
+    justify-content: flex-start;
+    margin-bottom: 3.137rem;
+  }
 }
 .second_part {
-  
   display: flex;
   // left: -3rem;
   position: relative;
@@ -2179,7 +2292,10 @@
 
   &_info {
     flex-basis: 60.52rem;
-    // margin-right: 3.04rem;
+    
+    @include media("<tab") {
+      flex-basis: 100%;
+    }
   }
   &__title {
     visibility: hidden;
@@ -2190,6 +2306,11 @@
     text-align: left;
     margin: 0;
     margin-bottom: 1.224rem;
+
+    @include media("<tab") {
+      font-size: 7.059rem;
+      line-height: 6.275rem;
+    }
   }
   &__paragraph {
     visibility: hidden;
@@ -2197,13 +2318,22 @@
     line-height: 1.795rem;
     color: #BCACF6;
     width: 38.267rem;
+
+    @include media("<tab") {
+      font-size: 3.137rem;
+      line-height: 4.314rem;
+      width: 100%;
+    }
   }
 }
 
 .tanks__video {
   background: url(../../img/tanks_bg.png) no-repeat center center/cover;
-  // opacity: 0.7;
   padding-top: 16.482rem;
+
+  @include media("<tab") {
+    padding-top: 0;
+  }
 }
 
 .slider__video_item {
@@ -2218,6 +2348,12 @@
     border: 8px solid rgb(255,255,255);
     box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.25);
     border-radius: 0.408rem;
+
+    @include media("<tab") {
+      width: 65.098rem;
+      height: 36.275rem;
+      border: 3px solid rgb(255,255,255);
+    }
   }
   & .tanks_video {
     outline: none;
@@ -2228,10 +2364,63 @@
     box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.25);
     border-radius: 0.408rem;
     object-fit: cover;
+
+    @include media("<tab") {
+      width: 65.098rem;
+      height: 36.275rem;
+      border: 3px solid rgb(255,255,255);
+    }
   }
-  // &:last-child {
-  //   opacity: 0;
-  // }
+
+  @include media("<tab") {
+    margin-top: 28.482rem;
+  }
+}
+
+.hoop__video_item {
+  visibility: hidden;
+  outline: none;
+  
+
+  & img {
+    width: 21.051rem;
+    height: 45.61rem;
+    margin-top: 28rem;
+    margin-bottom: 4.488rem;
+    border: 5px solid rgb(255,255,255);
+    box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.25);
+    border-radius: 1.224rem;
+  }
+  & .hoop_video {
+    outline: none;
+    display: block;
+    width: 21.051rem;
+    height: 45.61rem;
+    margin-top: 28rem;
+    margin-bottom: 4.488rem;
+    border: 5px solid rgb(255,255,255);
+    box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.25);
+    border-radius: 1.224rem;
+    object-fit: cover;
+  }
+}
+
+.play_button_hoop {
+  margin-top: 28rem;
+  position: absolute;
+  width: 21.051rem;
+  height: 45.61rem;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 1;
+  background: url(../../img/play_video_on_slider.svg) no-repeat center center;
+  outline: none;
+  border: none;
+
+  &.o {
+    opacity: 0;
+  }
 }
 
 .tanks__locacion {
@@ -2249,44 +2438,41 @@
 
     
     & img:nth-child(1) {
-      // position: absolute;
-      // top: 7%;
-      // left: 35%;
-      // z-index: 1;
-      position: absolute;
+    position: absolute;
     top: -33%;
     left: 29%;
     z-index: 1;
+    @include media("<tab") {
+      display: none;
+    }
     }
     & img:nth-child(2) {
-      // position: absolute;
-      // top: 14%;
-      // right: 0%;
-      // z-index: 1;
       position: absolute;
       top: -14%;
       right: 0%;
       z-index: 1;
+      @include media("<tab") {
+        width: 4.765rem;
+        height: 14.725rem;
+      }
     }
     & img:nth-child(3) {
-      // position: absolute;
-      // top: 44%;
-      // left: 0;
-      // z-index: 1;
       position: absolute;
       top: 0%;
       left: 0;
       z-index: 1;
+      @include media("<tab") {
+        display: none;
+      }
     }
     & img:nth-child(4) {
-      // position: absolute;
-      // bottom: 0;
-      // left: 11%;
-      // z-index: 1;
       position: absolute;
       bottom: 59%;
       left: 11%;
       z-index: 1;
+      @include media("<tab") {
+        display: none;
+      }
     }
   }
 }
@@ -2302,6 +2488,10 @@
       width: 32.148rem;
       height: 28.068rem;
     }
+
+    @include media("<tab") {
+      display: none;
+    }
   }
   &_center {
     display: flex;
@@ -2314,10 +2504,41 @@
       width: 32.148rem;
       height: 28.068rem;
     }
+
+    @include media("<tab") {
+      display: none;
+    }
+  }
+  &_slider {
+    display: none;
+    
+    @include media("<tab") {
+      position: relative;
+      display: block;
+    }
+    & .slick-list {
+      overflow: visible;
+
+      & .slick-slide  {
+        width: 70.196rem !important;
+        height: 61.176rem;
+        margin: 0 4.902rem;
+        opacity: 1;
+      }
+      & img  {
+        width: 70.196rem;
+        height: 61.176rem;
+      }
+    }
   }
   &_bottom {
     display: flex;
     justify-content: flex-end;
+
+    @include media("<tab") {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
     &_more {
@@ -2331,6 +2552,12 @@
         line-height: 1.795rem;
         color: #FFFFFF;
         margin: 0;
+
+        @include media("<tab") {
+          margin-top: 4.902rem;
+          font-size: 7.059rem;
+          line-height: 4.314rem;
+        }
       }
       & p {
         visibility: hidden;
@@ -2342,6 +2569,18 @@
           @include font-bold;
           color: #fff;
         }
+
+        @include media("<tab") {
+          margin-top: 2.902rem;
+          font-size: 3.137rem;
+          line-height: 4.314rem;
+          width: auto;
+        }
+      }
+
+      @include media("<tab") {
+        margin-right: 0;
+        flex-basis: auto;
       }
     }
 
@@ -2385,6 +2624,11 @@
         font-size: 7.833rem;
         line-height: 5rem;
         color: #fff;
+
+        @include media("<tab") {
+          font-size: 18.824rem;
+          line-height: 16.667rem;
+        }
       }
       & p {
         // @include font-gilroy-medium;
@@ -2394,8 +2638,17 @@
         color: #FFFFFF;
         opacity: 0.6;
         
-        // width: 9.628rem;
-        // margin: 0 auto;
+        @include media("<tab") {
+          font-size: 2.549rem;
+          line-height: 3.529rem;
+        }
+      }
+      @include media("<tab") {
+        width: 30.98rem;
+        height: 46.667rem;
+        padding: 8.235rem 5.882rem;
+        margin: 0;
+        margin-right: 1px;
       }
     }
     & .second_card {
@@ -2411,25 +2664,41 @@
         font-size: 3.101rem;
         line-height: 2.693rem;
         color: #fff;
+
+        @include media("<tab") {
+          font-size: 7.647rem;
+          line-height: 6.471rem;
+        }
       }
       & p {
-        // @include font-gilroy-medium;
         text-align: center;
         font-size: 1.061rem;
         line-height: 1.469rem;
         color: #FFFFFF;
         opacity: 0.6;
-        
-        // width: 9.628rem;
-        // margin: 0 auto;
+
+        @include media("<tab") {
+          font-size: 2.549rem;
+          line-height: 3.529rem;
+        }
       }
+
+      @include media("<tab") {
+        width: 30.98rem;
+        height: 46.667rem;
+        padding: 6.235rem 5.882rem;
+      }
+    }
+
+    @include media("<tab") {
+      display: flex;
+      margin: 6.667rem 0 12.745rem 0;
     }
   }
 }
 
 .tanks__footer {
-  background: url(../../img/tanks_footer_bg.png) no-repeat center center/cover;
-  
+  background: url(../../img/tanks_footer_bg.png) no-repeat center center/cover; 
   padding: 23.825rem 0 11.423rem 0;
 
   &_flex {
@@ -2442,6 +2711,10 @@
     justify-content: space-between;
     & img {
       visibility: hidden;
+        @include media("<tab") {
+          width: 16.078rem;
+          height: 14.706rem;
+        }
     }
   }
   &_inscription {
@@ -2451,10 +2724,21 @@
     line-height: 5.222rem;
     color: #FFFFFF;
     text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.51);
+
+    @include media("<tab") {
+      font-size: 8.627rem;
+      line-height: 7.647rem;
+    }
   }
   &_download {
     margin-left: 14rem;
     margin-bottom: 22.846rem;
+
+    @include media("<tab") {
+      margin: 0 auto;
+      margin-bottom: 28.846rem;
+      top: 56rem;
+    }
   }
   &_dop {
     visibility: hidden;
@@ -2465,6 +2749,13 @@
     & div, .tnk_footer {
       color: rgba(255, 255, 255, 0.312773);
     }
+    @include media("<tab") {
+      display: none;
+    }
+  }
+
+  @include media("<tab") {
+    padding: 24.825rem 0 15.423rem 0;
   }
 }
 
@@ -2481,7 +2772,7 @@
   }
   &_videoBg {
     background: url(../img/hoop_stars_bg.png) no-repeat center center/100% 100%;
-    padding-top: 16.482rem;
+    padding-top: 5rem;
   }
   .locacion_block_top &_loc_img {
     flex-basis: 28.557rem;
@@ -2555,4 +2846,251 @@
 }
 .first_part_hoop {
   height: 46.834rem;
+}
+
+
+// privacy page
+
+.privacy {
+  background-color: #FFFFFF;
+  padding-bottom: 2.04rem;
+
+  &_title {
+    @include font-bold;
+    font-size: 5.956rem;
+    line-height: 6.119rem;
+    color: #1D3743;
+    margin: 0;
+
+    @include media("<mob") {
+      font-size: 10.956rem;
+      line-height: 12.119rem;
+    }
+  }
+  &_first {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 11.831rem;
+
+    @include media("<tab") {
+      margin-top: 21rem;;
+    }
+    @include media("<mob") {
+      margin-top: 34rem;;
+    }
+
+    & .case-section__rectangle {
+      margin-top: 11.831rem;
+    }
+  }
+
+  &_block {
+    display: flex;
+    // justify-content: flex-start;
+    justify-content: center;
+    margin-top: -11rem;
+    
+    @include media("<mob") {
+      margin-top: 3rem;
+    }
+
+    & .privacy_content {
+      max-width: 63.724rem;
+      background: #FFFFFF;
+      padding: 4.488rem;
+      position: relative;
+      z-index: 19;
+      box-shadow: 0px 2.448rem 5.711rem rgba(164, 164, 164, 0.25);
+
+        & p {
+          @include font-normal;
+          font-size: 1.469rem;
+          line-height: 2.121rem;
+          color: #3F3F3F;
+          @include media("<tab") {
+            font-size: 2.469rem;
+            line-height: 4.121rem;
+          }
+          @include media("<mob") {
+            font-size: 6.469rem;
+            line-height: 7.427rem;
+          }
+        }
+        & h1, & h2, & h3, & h4, & h5, & h6 {
+          @include font-bold;
+          color: #3F3F3F;
+          word-wrap: break-word;
+        }
+        & h1 {
+          @include media("<tab") {
+            font-size: 6rem;
+            line-height: 9.6rem;
+          }
+          @include media("<mob") {
+            font-size: 13rem;
+            line-height: 13.6rem;
+          }
+        }
+        
+        & h2 {
+          @include media("<tab") {
+            font-size: 5.5rem;
+            line-height: 8.6rem;
+          }
+          @include media("<mob") {
+            font-size: 12.5rem;
+            line-height: 12.6rem;
+          }
+        }
+        
+        & h3 {
+          @include media("<tab") {
+            font-size: 5rem;
+            line-height: 7.6rem;
+          }
+          @include media("<mob") {
+            font-size: 11rem;
+            line-height: 11.6rem;
+          }
+        }
+        
+        & h4 {
+          @include media("<tab") {
+            font-size: 4.5rem;
+            line-height: 7rem;
+          }
+          @include media("<mob") {
+            font-size: 9rem;
+             line-height: 9.6rem;
+          }
+        }
+        
+        & h5 {
+          @include media("<tab") {
+            font-size: 4.2rem;
+            line-height: 7.3rem;
+          }
+          @include media("<mob") {
+            font-size: 7rem;
+            line-height: 7.6rem;
+          }
+        }
+        
+        & h6 {
+          @include media("<tab") {
+            font-size: 4rem;
+            line-height: 6.8rem;
+          }
+          @include media("<mob") {
+            font-size: 5rem;
+            line-height: 5.6rem;
+          }
+        }
+      
+      
+
+      @include media("<tab") {
+        max-width: 87.7rem;
+      }
+      @include media("<mob") {
+        max-width: 100%;
+      }
+    }
+  }
+  &_footer {
+    z-index: 9;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6.446rem;
+    flex-wrap: wrap;
+
+    & div {
+      color: #BBBBBB;
+    }
+    & a {
+      color: #BBBBBB;
+    }
+  }
+}
+
+.about__menu {
+  display: none;
+  position: absolute;
+  position: sticky;
+  top: 10rem;
+  background-color: #fff;
+  width: 14.367rem;
+  height: 11rem;
+  margin-right: 0rem;    
+
+  & ul a:hover {
+    background-color: black;
+    color: #fff;
+  }
+  & ul a {
+    @include font-important-bold;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    font-size: 0.98rem;
+    line-height: 3.673rem;
+    padding-left: 1.714rem;
+    cursor: pointer;
+  }
+
+  // @include media("<tab") {
+  //   display: none;
+  // }
+}
+
+.privacy_bg {
+  &__first {
+    display: block;
+    width: 1px;
+    height: 582px;
+    opacity: 0.1;
+    background: #979797;
+    position: absolute;
+    left: 24%;
+    top: 24%;
+  }
+  &__second {
+    display: block;
+    width: 1px;
+    height: 582px;
+    opacity: 0.1;
+    background: #979797;
+    position: absolute;
+    left: 40%;
+    top: 0%;
+  }
+  &__third {
+    display: block;
+    width: 1px;
+    height: 582px;
+    opacity: 0.1;
+    background: #979797;
+    position: absolute;
+    right: 24%;
+    top: 24%;
+  }
+  &__fourth {
+    display: block;
+    width: 1px;
+    height: 582px;
+    opacity: 0.4;
+    background: #979797;
+    position: absolute;
+    right: 40%;
+    top: 0%;
+  }
+}
+.animate_button {
+  opacity: 0;
+}
+.s-ready .animate_button {
+  opacity: 1;
+  will-change: opacity;
+  transition: opacity 0.5s 1.8s;
 }

@@ -1,6 +1,7 @@
 var $WINDOW = $(window),
     $HTML = $('html'),
     $BODY = $('body');
+    
 
   /**
   * Change font size on resize
@@ -9,32 +10,33 @@ var $WINDOW = $(window),
     var step = 0.0499;
     var fontSize = Math.round(window.innerWidth * step * 10) / 10;
     $HTML.css('font-size', fontSize + '%');
+    console.log(`Ресайз:  ${fontSize}`)
   }
   changeFontSize();
 
-/**
- * !Detects overlay scrollbars (when scrollbars on overflowed blocks are visible).
- * This is found most commonly on mobile and OS X.
- * */
-var HIDDEN_SCROLL = Modernizr.hiddenscroll;
-var NO_HIDDEN_SCROLL = !HIDDEN_SCROLL;
-var TOUCHEVENTS = ("ontouchstart" in document.documentElement);
+  /**
+   * !Detects overlay scrollbars (when scrollbars on overflowed blocks are visible).
+   * This is found most commonly on mobile and OS X.
+   * */
+  var HIDDEN_SCROLL = Modernizr.hiddenscroll;
+  var NO_HIDDEN_SCROLL = !HIDDEN_SCROLL;
+  var TOUCHEVENTS = ("ontouchstart" in document.documentElement);
 
-/**
- * !Add touchscreen classes
- * */
-function addTouchClasses() {
-  if (TOUCHEVENTS) {
-    document.documentElement.className += " touchevents";
-  } else {
-    document.documentElement.className += " no-touchevents";
+  /**
+   * !Add touchscreen classes
+   * */
+  function addTouchClasses() {
+    if (TOUCHEVENTS) {
+      document.documentElement.className += " touchevents";
+    } else {
+      document.documentElement.className += " no-touchevents";
+    }
   }
-}
 
-/**
- * !Initial full page scroll plugin
- * */
-function fullPageInitial() {
+  /**
+   * !Initial full page scroll plugin
+   * */
+  function fullPageInitial() {
   var $fpSections = $('.fp-sections-js');
 
   // if (!DEVICE && window.innerWidth >= 992) {
@@ -262,20 +264,20 @@ function formValidation() {
   }
 }
 
-// Parallax
-var rellax = new Rellax('.rellax');
+  // Parallax
+  var rellax = new Rellax('.rellax');
 
 
-// WOW + animate
-new WOW().init();
+  // WOW + animate
+  new WOW().init();
 
-$WINDOW.on('resize', function () {
-  changeFontSize();
-});
+  $WINDOW.on('resize', function () {
+    changeFontSize();
+  });
 
-$WINDOW.on('load', function () {
-  changeFontSize();
-});
+  $WINDOW.on('load', function () {
+    changeFontSize();
+  });
 
   // game sticky const
   if ($BODY.hasClass('hoopstars') || $BODY.hasClass('tanks')) {
@@ -286,6 +288,66 @@ $WINDOW.on('load', function () {
     var h_video = $('.tanks__video').offset().top - menu.outerHeight();
     var b_video = $('.tanks__video').offset().top + $('.tanks__header').outerHeight();
     var h_footer = $('.main__games').innerHeight() - $('.tanks__footer').outerHeight() - 2100;
+
+      $('.locacion_block_slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        infinite: true,
+        centerMode: true,
+        variableWidth: true,
+        arrows: false
+      });
+    }
+
+    // button play video
+    if ($BODY.hasClass('tanks')) {
+        let overlay = document.querySelector('.play_button');
+        let vid = document.querySelector('.tanks_video');
+        let vid_blk = document.querySelector('.tanks_video_blk');
+
+        if(overlay.addEventListener){
+          overlay.addEventListener("click", play)
+        } else if(vid_blk.attachEvent){
+          vid_blk.attachEvent("onclick", play)
+        }
+
+        function play() { 
+            if (vid.paused){
+                vid.play(); 
+                overlay.className = "play_button o";
+            } else {
+                vid.pause(); 
+                overlay.className = "play_button";
+            }
+        }
+      }
+      // button play video
+    if ($BODY.hasClass('hoopstars')) {
+      let overlay = document.querySelector('.play_button_hoop');
+      let vid = document.querySelector('.hoop_video');
+      let vid_blk = document.querySelector('.tanks_video_blk');
+
+      if(overlay.addEventListener){
+        overlay.addEventListener("click", play)
+      } else if(vid_blk.attachEvent){
+        vid_blk.attachEvent("onclick", play)
+      }
+
+      function play() { 
+          if (vid.paused){
+              vid.play(); 
+              overlay.className = "play_button_hoop o";
+          } else {
+              vid.pause(); 
+              overlay.className = "play_button_hoop";
+          }
+      }
+    }
+
+  // delete home item with menu on home page
+  if ($BODY.hasClass('index_page')) {
+    $('.menu-item-home').css('display', 'none');
   }
   
     //game sticky menu
@@ -318,15 +380,8 @@ $WINDOW.on('load', function () {
       if($(this).scrollTop() < h_video) {
         menu.css({"opacity": "1", "-khtml-opacity": "1"});
       }
-      
-    });
-    
-    $("a[href^='#']").click(function(){
-      var _href = $(this).attr("href");
-      $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 800);
-      return false;
-    });
-    $(window).scroll(function() {
+
+      // menu active
       var $sections = $('.lol');
       $sections.each(function(i,el){
           var top  = $(el).offset().top-100;
@@ -339,49 +394,46 @@ $WINDOW.on('load', function () {
         }
       })
     });
+    
+    $("a[href^='#']").click(function(){
+      var _href = $(this).attr("href");
+      $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 800);
+      return false;
+    });
 
-    let overlay = document.querySelector('.play_button');
-    let vid = document.querySelector('.tanks_video');
-    let vid_blk = document.querySelector('.tanks_video_blk');
+    // game slider
+    if ($BODY.hasClass('tanks')) {
+      $('.tanks-slider__video').slick({
+        centerMode: true,
+        slidesToShow: 1,
+        dots: true,
+        infinite: false,
+        variableWidth: true,
+        arrows: false
+      });
+    }
+    if($BODY.hasClass('hoopstars')) {
+      $('.hoop-slider__video').slick({
+        centerMode: true,
+        slidesToShow: 3,
+        dots: true,
+        infinite: false,
+        variableWidth: true,
+        arrows: false
+      });
+    }
 
-    if(overlay.addEventListener){
-        overlay.addEventListener("click", play, false)
-      } else if(vid_blk.attachEvent){
-        vid_blk.attachEvent("onclick", play)
-      }
+  $(document).ready(function () {
+    $BODY.addClass('logo-theme-dark');
+    changeFontSize();
+    // Base
+    addTouchClasses();
+    fullPageInitial();
+    placeholderInit();
+    objectFitImages(); // object-fit-images initial
+    // Common
+    // mainNavigation();
+    // toggleActiveMenuItem();
 
-    function play() { 
-        if (vid.paused){
-            vid.play(); 
-            overlay.className = "play_button o";
-        } else {
-            vid.pause(); 
-            overlay.className = "play_button";
-        }
-    } 
-
-
-$(document).ready(function () {
-  $BODY.addClass('logo-theme-dark');
-  changeFontSize();
-
-  // slider
-  $('.tanks-slider__video').slick({
-    centerMode: true,
-    slidesToShow: 1,
-    dots: true,
-    infinite: false,
-    variableWidth: true,
-    arrows: false
+    // formValidation();
   });
-  // Base
-  addTouchClasses();
-  fullPageInitial();
-  placeholderInit();
-  objectFitImages(); // object-fit-images initial
-  // Common
-  // mainNavigation();
-  // toggleActiveMenuItem();
-
-  // formValidation();
-});

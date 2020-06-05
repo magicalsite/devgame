@@ -39,7 +39,7 @@
   <script src="js/modernizr.min.js"></script>
 </head>
 
-<body class=" hoopstars   logo-theme-light">
+<body class="  hoopstars   logo-theme-light">
   <noscript>
     <div class="no-js-warning">Для корректной работы сайта <b>включите JavaScript</b> в браузере</div>
   </noscript>
@@ -93,9 +93,9 @@
         <img src="./img/image_game_ver2.png" alt="">
       </div>
       <div class="layout-page layout-page-spaces main__layout">
-        <div class="tanks__header_wbg animate__animated wow animate__fadeIn" data-wow-delay="1s" data-wow-duration="2s">
-          games
-        </div>
+        <!-- <div  class="tanks__header_wbg animate__animated wow animate__fadeIn" data-wow-delay="1s" data-wow-duration="2s">
+                games
+            </div> -->
         <div class="first_part first_part_hoop">
           <div class="first_part__left">
             <div class="first_part__block">
@@ -133,24 +133,25 @@
       </div>
     </section>
     <section class="tanks__video  hoopstars_videoBg ">
-      <div id="video" class="lol tanks-slider__video ">
-        <div class="slider__video_item tanks_video_blk animate__animated wow animate__fadeIn">
-          <!-- <img src="./img/slider-game.png" alt=""> -->
-          <video class="tanks_video">
-            <source src="./video/videoplayback.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-            <source src="./video/videoplayback.webm" type='video/webm; codecs="vp8, vorbis"' />
+      <div id="video" class="lol hoop-slider__video">
+        <div class="hoop__video_item tanks_video_blk animate__animated wow animate__fadeIn">
+          <video class="tanks_video hoop_video" muted playsinline="playsinline" loop>
+            <source src="./video/hoopstars.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
             Элемент video не поддерживается вашим браузером.
           </video>
-          <button class="play_button"></button>
+          <button class="play_button_hoop"></button>
         </div>
-        <div class="slider__video_item animate__animated wow animate__fadeIn">
-          <img src="./img/slider-game.png" alt="">
+        <div class="hoop__video_item animate__animated wow animate__fadeIn">
+          <img src="./img/slider-game-hoop.png" alt="">
         </div>
-        <div class="slider__video_item animate__animated wow animate__fadeIn">
-          <img src="./img/slider-game.png" alt="">
+        <div class="hoop__video_item animate__animated wow animate__fadeIn">
+          <img src="./img/slider-game-hoop.png" alt="">
         </div>
-        <div class="slider__video_item animate__animated wow animate__fadeIn">
-          <img src="./img/slider-game.png" alt="">
+        <div class="hoop__video_item animate__animated wow animate__fadeIn">
+          <img src="./img/slider-game-hoop.png" alt="">
+        </div>
+        <div class="hoop__video_item animate__animated wow animate__fadeIn">
+          <img src="./img/slider-game-hoop.png" alt="">
         </div>
       </div>
     </section>
@@ -178,6 +179,11 @@
           <div class="locacion_block_center  hoopstars_loc_center ">
             <img src="./img/Hoop_Tire.png" alt="" class=" hoopstars_loc_img  animate__animated wow animate__fadeIn" data-wow-duration="2s">
             <img src="./img/Hoop_Rare.png" alt="" class=" hoopstars_loc_img  animate__animated wow animate__fadeIn" data-wow-duration="2s">
+          </div>
+          <div class="locacion_block_slider">
+            <div><img src="./img/Hoop_Donut.png" alt=""></div>
+            <div><img src="./img/Hoop_Tire.png" alt=""></div>
+            <div><img src="./img/Hoop_Rare.png" alt=""></div>
           </div>
         </div>
       </div>
