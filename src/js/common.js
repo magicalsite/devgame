@@ -322,6 +322,8 @@ function formValidation() {
     //         }
     //     }
     //   }
+
+
       // button play video
     // if ($BODY.hasClass('hoopstars')) {
     //   let overlay = document.querySelector('.play_button_hoop');
