@@ -1998,7 +1998,7 @@
     height: 3.753rem;
     line-height: 3.753rem;
     &:first-child {
-      margin-bottom: 1.224rem;
+      // margin-bottom: 1.224rem;
 
       @include media("<tab") {
         margin-bottom: 0;
@@ -2108,11 +2108,11 @@
     top: 48%;
     left: 48%;
     transform: translate(-50%, -50%);
-    z-index: 1;
+    z-index: -2;
 
     @include media("<mob") {
       font-size: 58.441rem;
-      top: 57%;
+      top: 43%;
       left: 81%;
     }
   }
@@ -2210,9 +2210,9 @@ top: -29rem;
         font-size: 3.529rem;
         line-height: 5.294rem;
       }
-      @include media("<tab") {
-        font-size: 7.013rem;
-        line-height: 10.519rem;
+      @include media("<mob") {
+        font-size: 6.243rem;
+        line-height: 9.365rem;
       }
     }
     
@@ -2226,12 +2226,12 @@ top: -29rem;
       margin-top: 2.448rem;
 
       @include media("<tab") {
-        font-size: 14.118rem;
-        line-height: 12.549rem;
+        font-size: 9.536rem;
+        line-height: 8.477rem;
       }
-      @include media("<tab") {
-        font-size: 28.052rem;
-        line-height: 24.935rem;
+      @include media("<mob") {
+        font-size: 24.974rem;
+        line-height: 22.199rem;
       }
     }
     &_button {
@@ -2240,6 +2240,19 @@ top: -29rem;
 
       & a {
         visibility: hidden;
+        margin-top: 1.324rem;
+
+        &:last-child {
+          @include media("<net") {
+            margin-top: 2.3rem;
+          }
+          @include media("<tab") {
+            margin-top: 0;
+          }
+        }
+        @include media("<tab") {
+          margin-top: 0;
+        }
       }
 
       @include media("<tab") {
@@ -2264,6 +2277,7 @@ top: -29rem;
 
   @include media("<tab") {
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 .wrapper_second_title {
@@ -2311,6 +2325,10 @@ top: -29rem;
       font-size: 7.059rem;
       line-height: 6.275rem;
     }
+    @include media("<mob") {
+      font-size: 11.793rem;
+      line-height: 10.583rem;
+    }
   }
   &__paragraph {
     visibility: hidden;
@@ -2323,6 +2341,10 @@ top: -29rem;
       font-size: 3.137rem;
       line-height: 4.314rem;
       width: 100%;
+    }
+    @include media("<mob") {
+      font-size: 5.55rem;
+      line-height: 7.631rem;
     }
   }
 }
@@ -2354,6 +2376,10 @@ top: -29rem;
       height: 36.275rem;
       border: 3px solid rgb(255,255,255);
     }
+    @include media("<mob") {
+      width: 115.158rem;
+      height: 64.169rem;
+    }
   }
   & .tanks_video {
     outline: none;
@@ -2369,6 +2395,10 @@ top: -29rem;
       width: 65.098rem;
       height: 36.275rem;
       border: 3px solid rgb(255,255,255);
+    }
+    @include media("<mob") {
+      width: 115.158rem;
+      height: 64.169rem;
     }
   }
 
@@ -2390,6 +2420,15 @@ top: -29rem;
     border: 5px solid rgb(255,255,255);
     box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.25);
     border-radius: 1.224rem;
+
+    @include media("<tab") {
+      width: 45.62rem;
+      height: 98.723rem;
+    }
+    @include media("<mob") {
+      width: 62.5rem;
+      height: 135.25rem;
+    }
   }
   & .hoop_video {
     outline: none;
@@ -2402,6 +2441,15 @@ top: -29rem;
     box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.25);
     border-radius: 1.224rem;
     object-fit: cover;
+
+    @include media("<tab") {
+      width: 45.62rem;
+      height: 98.723rem;
+    }
+    @include media("<mob") {
+      width: 62.5rem;
+      height: 135.25rem;
+    }
   }
 }
 
@@ -2417,9 +2465,18 @@ top: -29rem;
   background: url(../../img/play_video_on_slider.svg) no-repeat center center;
   outline: none;
   border: none;
-
+  
   &.o {
     opacity: 0;
+  }
+
+  @include media("<tab") {
+    width: 45.62rem;
+    height: 98.723rem;
+  }
+  @include media("<mob") {
+    width: 62.5rem;
+    height: 135.25rem;
   }
 }
 
@@ -2520,14 +2577,24 @@ top: -29rem;
       overflow: visible;
 
       & .slick-slide  {
-        width: 70.196rem !important;
-        height: 61.176rem;
+        width: 47.417rem !important;
+        height: 41.325rem;
         margin: 0 4.902rem;
         opacity: 1;
+
+        @include media("<mob") {
+          width: 124.176rem !important;
+          height: 108.221rem;
+        }
       }
       & img  {
-        width: 70.196rem;
-        height: 61.176rem;
+        width: 47.417rem;
+        height: 41.325rem;
+
+        @include media("<mob") {
+          width: 124.176rem;
+          height: 108.221rem;
+        }
       }
     }
   }
@@ -2558,6 +2625,10 @@ top: -29rem;
           font-size: 7.059rem;
           line-height: 4.314rem;
         }
+        @include media("<tab") {
+          font-size: 11.487rem;
+          line-height: 10.314rem;
+        }
       }
       & p {
         visibility: hidden;
@@ -2575,6 +2646,10 @@ top: -29rem;
           font-size: 3.137rem;
           line-height: 4.314rem;
           width: auto;
+        }
+        @include media("<mob") {
+          font-size: 5.55rem;
+          line-height: 7.631rem;
         }
       }
 
@@ -2629,6 +2704,10 @@ top: -29rem;
           font-size: 18.824rem;
           line-height: 16.667rem;
         }
+        @include media("<mob") {
+          font-size: 33.299rem;
+          line-height: 31rem;
+        }
       }
       & p {
         // @include font-gilroy-medium;
@@ -2642,6 +2721,10 @@ top: -29rem;
           font-size: 2.549rem;
           line-height: 3.529rem;
         }
+        @include media("<mob") {
+          font-size: 4.509rem;
+          line-height: 6.243rem;
+        }
       }
       @include media("<tab") {
         width: 30.98rem;
@@ -2649,6 +2732,11 @@ top: -29rem;
         padding: 8.235rem 5.882rem;
         margin: 0;
         margin-right: 1px;
+      }
+      @include media("<mob") {
+        width: 55.151rem;
+        height: 82.553rem;
+        padding: 11rem 11.568rem;
       }
     }
     & .second_card {
@@ -2669,6 +2757,10 @@ top: -29rem;
           font-size: 7.647rem;
           line-height: 6.471rem;
         }
+        @include media("<mob") {
+          font-size: 13.528rem;
+          line-height: 11.446rem;
+        }
       }
       & p {
         text-align: center;
@@ -2681,12 +2773,21 @@ top: -29rem;
           font-size: 2.549rem;
           line-height: 3.529rem;
         }
+        @include media("<mob") {
+          font-size: 4.509rem;
+          line-height: 6.243rem;
+        }
       }
 
       @include media("<tab") {
         width: 30.98rem;
         height: 46.667rem;
         padding: 6.235rem 5.882rem;
+      }
+      @include media("<mob") {
+        width: 55.151rem;
+        height: 82.553rem;
+        padding: 11rem 11.568rem;
       }
     }
 
@@ -2715,6 +2816,10 @@ top: -29rem;
           width: 16.078rem;
           height: 14.706rem;
         }
+        @include media("<mob") {
+          width: 28.443rem;
+          height: 26.015rem;
+        }
     }
   }
   &_inscription {
@@ -2729,15 +2834,17 @@ top: -29rem;
       font-size: 8.627rem;
       line-height: 7.647rem;
     }
+    @include media("<mob") {
+      font-size: 15.262rem;
+      line-height: 13.528rem;
+    }
   }
   &_download {
     margin-left: 14rem;
     margin-bottom: 22.846rem;
 
     @include media("<tab") {
-      margin: 0 auto;
-      margin-bottom: 28.846rem;
-      top: 56rem;
+      display: none;
     }
   }
   &_dop {
@@ -2755,10 +2862,20 @@ top: -29rem;
   }
 
   @include media("<tab") {
-    padding: 24.825rem 0 15.423rem 0;
+    padding: 2.781rem 0 80.623rem 0;
+  }
+  // @include media("<mob") {
+  //   margin-bottom: 10rem;
+  // }
+}
+.mobile_footer_btn {
+  margin: 1.662rem 0 0.7rem 0;
+  display: none;
+  justify-content: center;
+  @include media("<tab") {
+    display: flex;
   }
 }
-
 // hoopstars
 
 .hoopstars {
@@ -2814,11 +2931,43 @@ top: -29rem;
   z-index: 10;
 }
 
+.hoopstars_slide_img .slick-list .slick-slide {
+  width: 97rem !important;
+  height: 97rem;
+  margin: 0 4.4rem;
+
+  @include media("<tab") {
+    width: 67rem !important;
+    height: 67rem;
+  }
+}
+.hoopstars_slide_img .slick-list img  {
+  width: 97rem;
+  height: 97rem;
+
+  @include media("<tab") {
+    width: 67rem;
+    height: 67rem;
+  }
+}
+
 .hoopstars_footer {
   background: url(../../img/hoop_footer_bg.png) no-repeat center center/100% 100%;
   padding: 30.825rem 0 11.423rem 0;
   margin-top: -13.711rem;
   position: relative;
+
+  .tanks__footer_blk img {
+    
+    @include media("<mob") {
+      width: 33.778rem;
+      height: 22.444rem;
+    }
+  }
+
+  @include media("<tab") {
+    padding: 12.825rem 0 63.423rem 0;
+  }
 }
 
 .hoopstars_footer_title {
@@ -2828,11 +2977,24 @@ top: -29rem;
   position: absolute;
   top: -37%;
   left: 45%;
+
+  @include media("<tab") {
+    display: none;
+  }
 }
 
 .hoopstars__info {
   margin-bottom: -23rem;
   top: 0;
+
+  @include media("<tab") {
+    top: 30rem;
+    margin-bottom: 7rem;
+  }
+  @include media("<mob") {
+    top: 47rem;
+    margin-bottom: 27rem;
+  }
 }
 .hoopstars__img {
   visibility: hidden;
@@ -2842,10 +3004,35 @@ top: -29rem;
     right: 0;
     top: 2%;
     z-index: 20;
+    width: 48.711rem;
+
+    @include media("<tab") {
+      width: 61rem;
+      top: 13%;
+    }
+    @include media("<mob") {
+      width: 76rem;
+      top: 26%;
+    }
   }
 }
 .first_part_hoop {
   height: 46.834rem;
+
+  @include media("<tab") {
+    height: auto;
+  }
+}
+
+.hoop_button_download {
+  
+  @include media("<tab") {
+    top: 26rem;
+    z-index: 67;
+  }
+  @include media("<mob") {
+    top: 40rem;
+  }
 }
 
 

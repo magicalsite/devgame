@@ -522,6 +522,13 @@ html.fp-enabled {
   }
 }
 
+@media (max-width: 640px) {
+  .slick-dots li button {
+    width: 3.122rem;
+    height: 3.122rem;
+  }
+}
+
 .slick-dots li button:hover,
 .slick-dots li button:focus {
   outline: none;
@@ -550,6 +557,13 @@ html.fp-enabled {
     padding: 0;
     width: 1.765rem;
     height: 1.765rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .slick-dots li:first-child button {
+    width: 3.122rem;
+    height: 3.122rem;
   }
 }
 

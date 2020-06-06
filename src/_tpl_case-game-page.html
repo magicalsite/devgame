@@ -11,9 +11,9 @@
             </div>
         }
         <div class="layout-page layout-page-spaces main__layout">
-            <!-- <div  class="tanks__header_wbg animate__animated wow animate__fadeIn" data-wow-delay="1s" data-wow-duration="2s">
+            <div  class="tanks__header_wbg animate__animated wow animate__fadeIn" data-wow-delay="1s" data-wow-duration="2s">
                 games
-            </div> -->
+            </div>
             <div class="first_part @@if(context.game === 'hoopstars') {first_part_hoop}">
                 <div class="first_part__left">
                     <div class="first_part__block">
@@ -23,7 +23,7 @@
                         <img src="./img/wave_bg.svg" alt="" class="animate__animated wow animate__fadeIn"  data-wow-delay="1s" data-wow-duration="1s">
                     </div>
                     <h2 class="animate__animated wow animate__fadeInUp" data-wow-delay="1s" data-wow-duration="1s">@@titleGame</h2>
-                    <div class="first_part__left_button">
+                    <div class="first_part__left_button  @@if(context.game === 'hoopstars') {hoop_button_download}">
                         <a href="#" class="tanks_download animate__animated wow animate__fadeInUp" data-wow-delay="1s" data-wow-duration="1s"><img src="./img/google_play.png"
                                 alt="download with google play"></a>
                         <a href="#" class="tanks_download animate__animated wow animate__fadeInUp" data-wow-delay="1s" data-wow-duration="1s"><img src="./img/app_store.png"
@@ -127,7 +127,7 @@
                     <img src="@@srcLocImg2" alt="" class="@@if(context.game === 'hoopstars'){ hoopstars_loc_img } animate__animated wow animate__fadeIn" data-wow-duration="2s">
                     <img src="@@srcLocImg3" alt="" class="@@if(context.game === 'hoopstars'){ hoopstars_loc_img } animate__animated wow animate__fadeIn" data-wow-duration="2s">
                 </div>
-                <div class="locacion_block_slider">
+                <div class="locacion_block_slider @@if(context.game === 'hoopstars'){hoopstars_slide_img}">
                     <div><img src="@@srcLocImg1" alt=""></div>
                     <div><img src="@@srcLocImg2" alt=""></div>
                     <div><img src="@@srcLocImg3" alt=""></div>
@@ -198,4 +198,8 @@
             </div>
         </div>
     </section>
+    <div class="tanks__footer_download mobile_footer_btn">
+        <a href="#" class="tanks_download animate__animated wow animate__fadeInUp" data-wow-delay="1s"><img src="./img/google_play.png" alt="download with google play"></a>
+        <a href="#" class="tanks_download animate__animated wow animate__fadeInUp" data-wow-delay="1s"><img src="./img/app_store.png" alt="download with app store"></a>
+    </div>
 </main>

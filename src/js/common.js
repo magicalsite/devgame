@@ -269,7 +269,9 @@ function formValidation() {
 
 
   // WOW + animate
-  new WOW().init();
+  new WOW({
+    mobile: false
+  }).init();
 
   $WINDOW.on('resize', function () {
     changeFontSize();
