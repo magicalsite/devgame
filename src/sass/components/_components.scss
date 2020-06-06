@@ -2805,6 +2805,7 @@ top: -29rem;
 .tanks__footer {
   background: url(../../img/tanks_footer_bg.png) no-repeat center center/cover; 
   padding: 23.825rem 0 11.423rem 0;
+  overflow-wrap: hidden;
 
   &_flex {
     display: flex;
@@ -2846,7 +2847,8 @@ top: -29rem;
   &_download {
     margin-left: 14rem;
     margin-bottom: 22.846rem;
-
+    z-index: 99;
+    
     @include media("<tab") {
       display: none;
     }

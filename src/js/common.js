@@ -269,9 +269,7 @@ function formValidation() {
 
 
   // WOW + animate
-  new WOW({
-    mobile: false
-  }).init();
+  new WOW().init();
 
   $WINDOW.on('resize', function () {
     changeFontSize();
@@ -303,49 +301,49 @@ function formValidation() {
     }
 
     // button play video
-    if ($BODY.hasClass('tanks')) {
-        let overlay = document.querySelector('.play_button');
-        let vid = document.querySelector('.tanks_video');
-        let vid_blk = document.querySelector('.tanks_video_blk');
+    // if ($BODY.hasClass('tanks')) {
+    //     let overlay = document.querySelector('.play_button');
+    //     let vid = document.querySelector('.tanks_video');
+    //     let vid_blk = document.querySelector('.tanks_video_blk');
 
-        if(overlay.addEventListener){
-          overlay.addEventListener("click", play)
-        } else if(vid_blk.attachEvent){
-          vid_blk.attachEvent("onclick", play)
-        }
+    //     if(overlay.addEventListener){
+    //       overlay.addEventListener("click", play)
+    //     } else if(vid_blk.attachEvent){
+    //       vid_blk.attachEvent("onclick", play)
+    //     }
 
-        function play() { 
-            if (vid.paused){
-                vid.play(); 
-                overlay.className = "play_button o";
-            } else {
-                vid.pause(); 
-                overlay.className = "play_button";
-            }
-        }
-      }
+    //     function play() { 
+    //         if (vid.paused){
+    //             vid.play(); 
+    //             overlay.className = "play_button o";
+    //         } else {
+    //             vid.pause(); 
+    //             overlay.className = "play_button";
+    //         }
+    //     }
+    //   }
       // button play video
-    if ($BODY.hasClass('hoopstars')) {
-      let overlay = document.querySelector('.play_button_hoop');
-      let vid = document.querySelector('.hoop_video');
-      let vid_blk = document.querySelector('.tanks_video_blk');
+    // if ($BODY.hasClass('hoopstars')) {
+    //   let overlay = document.querySelector('.play_button_hoop');
+    //   let vid = document.querySelector('.hoop_video');
+    //   let vid_blk = document.querySelector('.tanks_video_blk');
 
-      if(overlay.addEventListener){
-        overlay.addEventListener("click", play)
-      } else if(vid_blk.attachEvent){
-        vid_blk.attachEvent("onclick", play)
-      }
+    //   if(overlay.addEventListener){
+    //     overlay.addEventListener("click", play)
+    //   } else if(vid_blk.attachEvent){
+    //     vid_blk.attachEvent("onclick", play)
+    //   }
 
-      function play() { 
-          if (vid.paused){
-              vid.play(); 
-              overlay.className = "play_button_hoop o";
-          } else {
-              vid.pause(); 
-              overlay.className = "play_button_hoop";
-          }
-      }
-    }
+    //   function play() { 
+    //       if (vid.paused){
+    //           vid.play(); 
+    //           overlay.className = "play_button_hoop o";
+    //       } else {
+    //           vid.pause(); 
+    //           overlay.className = "play_button_hoop";
+    //       }
+    //   }
+    // }
 
   // delete home item with menu on home page
   if ($BODY.hasClass('index_page')) {

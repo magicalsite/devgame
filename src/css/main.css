@@ -464,7 +464,7 @@ body {
   font-size: 1.8rem;
   line-height: 2.6rem;
   color: #3f3f3f;
-  overflow-x: hidden;
+  overflow: hidden;
   background: #fff url(../img/empty.png) no-repeat left top fixed;
   transition: color 0.7s, background-color 0.7s;
 }
@@ -3692,6 +3692,7 @@ html.no-js
 .tanks__footer {
   background: url(../img/tanks_footer_bg.png) no-repeat center center/cover;
   padding: 23.825rem 0 11.423rem 0;
+  overflow-wrap: hidden;
 }
 
 .tanks__footer_flex {
@@ -3755,6 +3756,7 @@ html.no-js
 .tanks__footer_download {
   margin-left: 14rem;
   margin-bottom: 22.846rem;
+  z-index: 99;
 }
 
 @media (max-width: 991px) {

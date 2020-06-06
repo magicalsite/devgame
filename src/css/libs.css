@@ -577,6 +577,12 @@ html.fp-enabled {
   opacity: 1;
   margin-right: 1.061rem;
 }
+
+@media (max-width: 991px) {
+  .hoop-slider__video .slick-list .slick-slide {
+    margin-right: 5.061rem;
+  }
+}
 /*! * animate.css - https://animate.style/ * Version - 4.1.0 * Licensed under the MIT license - http://opensource.org/licenses/MIT * * Copyright (c) 2020 Animate.css */
 
 :root {
