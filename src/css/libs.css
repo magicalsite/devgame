@@ -491,6 +491,12 @@ html.fp-enabled {
   z-index: 9;
 }
 
+@media (max-width: 991px) {
+  .slick-dots {
+    bottom: -6.488rem;
+  }
+}
+
 .slick-dots li {
   position: relative;
   display: inline-block;

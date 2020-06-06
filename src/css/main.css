@@ -3027,6 +3027,13 @@ html.no-js
     -ms-flex-pack: start;
         justify-content: flex-start;
     margin-bottom: 3.137rem;
+    margin-top: 2.142rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .wrapper_second_title {
+    margin-top: 6.142rem;
   }
 }
 
@@ -3075,7 +3082,7 @@ html.no-js
 @media (max-width: 639px) {
   .second_part__title {
     font-size: 11.793rem;
-    line-height: 10.583rem;
+    line-height: 15.583rem;
   }
 }
 
@@ -3456,10 +3463,11 @@ html.no-js
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 639px) {
   .locacion_block_more h4 {
     font-size: 11.487rem;
-    line-height: 10.314rem;
+    line-height: 16.314rem;
+    margin-top: 10.142rem;
   }
 }
 
@@ -3809,6 +3817,12 @@ html.no-js
   padding-top: 5rem;
 }
 
+@media (max-width: 991px) {
+  .hoopstars_videoBg {
+    background-size: cover;
+  }
+}
+
 .locacion_block_top .hoopstars_loc_img {
   -ms-flex-preferred-size: 28.557rem;
       flex-basis: 28.557rem;
@@ -3849,6 +3863,12 @@ html.no-js
 .locacion_block_more .hoopstars_prg {
   color: #FFFFFF;
   margin-top: 0;
+}
+
+@media (max-width: 991px) {
+  .locacion_block_more .hoopstars_prg {
+    margin-top: 9rem;
+  }
 }
 
 .locacion_block_card .hoopstars_card {
@@ -3953,6 +3973,7 @@ html.no-js
   .hoopstars__img img {
     width: 61rem;
     top: 13%;
+    z-index: 1;
   }
 }
 
@@ -3960,6 +3981,7 @@ html.no-js
   .hoopstars__img img {
     width: 76rem;
     top: 26%;
+    z-index: 1;
   }
 }
 
