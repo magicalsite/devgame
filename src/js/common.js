@@ -347,6 +347,24 @@ function formValidation() {
     //   }
     // }
 
+    $('.play_button').on('click', function (e) {
+      let video = $('.tanks_video');
+      if (video.get(0).paused === true) {
+        video.get(0).play();
+        $('.play_button').css('display', 'none');
+      }
+      return false;
+    });
+    $('.tanks_video').on('click', function (e) {
+      let video = $('.tanks_video');
+      if (video.get(0).paused === false) {
+          video.get(0).pause();
+          $('.play_button').css('display', 'block');
+      }
+      return false;
+    });
+
+
   // delete home item with menu on home page
   if ($BODY.hasClass('index_page')) {
     $('.menu-item-home').css('display', 'none');
