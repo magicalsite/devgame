@@ -1668,7 +1668,7 @@
     border-radius: 0.245rem;
     
     @include media("<mob") {
-      display: none;
+      border-radius: 1.33rem;
     }
   }
 
@@ -1802,15 +1802,22 @@
           top: 33%;
           left: 48%;
         }
+        @include media("<mob-xs") {
+          top: 31%;
+        }
       }
       &_social1 img {
         @include media("<mob") {
           width: 114.026rem;
           height: 106.234rem;
         }
-        @include media("<mob-xxs") {
+        @include media("<mob-s") {
           width: 104.026rem;
           height: 96.234rem;
+        }
+        @include media("<mob-xs") {
+          width: 76.026rem;
+          height: 72.234rem;
         }
       }
 
@@ -2355,6 +2362,7 @@ top: -29rem;
 .tanks__video {
   background: url(../../img/tanks_bg.png) no-repeat center center/cover;
   padding-top: 16.482rem;
+  overflow: hidden;
 
   @include media("<tab") {
     padding-top: 0;
@@ -2409,11 +2417,6 @@ top: -29rem;
     margin-top: 28.482rem;
   }
 }
-
-
-// video::-webkit-media-controls-panel {
-//   width: calc(100% + 30px); /* Adjust as needed */
-// }
 
 .hoop__video_item {
   visibility: hidden;
@@ -3296,6 +3299,8 @@ top: -29rem;
 }
 .animate_button {
   opacity: 0;
+  position: relative;
+  z-index: 30;
 }
 .s-ready .animate_button {
   opacity: 1;

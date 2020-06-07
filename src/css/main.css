@@ -2248,7 +2248,7 @@ html.no-js
 
 @media (max-width: 639px) {
   .case-section__button {
-    display: none;
+    border-radius: 1.33rem;
   }
 }
 
@@ -2410,6 +2410,12 @@ html.no-js
   }
 }
 
+@media (max-width: 374px) {
+  .case-section__figure-img_social1 {
+    top: 31%;
+  }
+}
+
 @media (max-width: 639px) {
   .case-section__figure-img_social1 img {
     width: 114.026rem;
@@ -2417,10 +2423,17 @@ html.no-js
   }
 }
 
-@media (max-width: 359px) {
+@media (max-width: 479px) {
   .case-section__figure-img_social1 img {
     width: 104.026rem;
     height: 96.234rem;
+  }
+}
+
+@media (max-width: 374px) {
+  .case-section__figure-img_social1 img {
+    width: 76.026rem;
+    height: 72.234rem;
   }
 }
 
@@ -3112,6 +3125,7 @@ html.no-js
 .tanks__video {
   background: url(../img/tanks_bg.png) no-repeat center center/cover;
   padding-top: 16.482rem;
+  overflow: hidden;
 }
 
 @media (max-width: 991px) {
@@ -4299,6 +4313,8 @@ html.no-js
 
 .animate_button {
   opacity: 0;
+  position: relative;
+  z-index: 30;
 }
 
 .s-ready .animate_button {

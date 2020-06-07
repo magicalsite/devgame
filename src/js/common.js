@@ -10,7 +10,6 @@ var $WINDOW = $(window),
     var step = 0.0499;
     var fontSize = Math.round(window.innerWidth * step * 10) / 10;
     $HTML.css('font-size', fontSize + '%');
-    console.log(`Ресайз:  ${fontSize}`)
   }
   changeFontSize();
 
@@ -286,10 +285,13 @@ function formValidation() {
     var t_n_m = menu.offset().top;
     var l_m = menu.offset().left;
     var h_video = $('.tanks__video').offset().top - menu.outerHeight();
-    var b_video = $('.tanks__video').offset().top + $('.tanks__header').outerHeight();
-    var h_footer = $('.main__games').innerHeight() - $('.tanks__footer').outerHeight() - 2100;
+    var b_video = $('.tanks__video').offset().top + 905;
+    
+    var h_footer = b_video + $('.tanks__locacion').outerHeight() + $('.tanks__awards').outerHeight();
+    console.log($('.tanks__awards').outerHeight());
+    // var h_footer = $('.main__games').innerHeight() - $('.tanks__footer').outerHeight() - 2100;
 
-      $('.locacion_block_slider').slick({
+    $('.locacion_block_slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: true,
@@ -297,59 +299,13 @@ function formValidation() {
         centerMode: true,
         variableWidth: true,
         arrows: false
-      });
+    });
     }
-
     // button play video
-    // if ($BODY.hasClass('tanks')) {
-    //     let overlay = document.querySelector('.play_button');
-    //     let vid = document.querySelector('.tanks_video');
-    //     let vid_blk = document.querySelector('.tanks_video_blk');
-
-    //     if(overlay.addEventListener){
-    //       overlay.addEventListener("click", play)
-    //     } else if(vid_blk.attachEvent){
-    //       vid_blk.attachEvent("onclick", play)
-    //     }
-
-    //     function play() { 
-    //         if (vid.paused){
-    //             vid.play(); 
-    //             overlay.className = "play_button o";
-    //         } else {
-    //             vid.pause(); 
-    //             overlay.className = "play_button";
-    //         }
-    //     }
-    //   }
-
-
-      // button play video
-    // if ($BODY.hasClass('hoopstars')) {
-    //   let overlay = document.querySelector('.play_button_hoop');
-    //   let vid = document.querySelector('.hoop_video');
-    //   let vid_blk = document.querySelector('.tanks_video_blk');
-
-    //   if(overlay.addEventListener){
-    //     overlay.addEventListener("click", play)
-    //   } else if(vid_blk.attachEvent){
-    //     vid_blk.attachEvent("onclick", play)
-    //   }
-
-    //   function play() { 
-    //       if (vid.paused){
-    //           vid.play(); 
-    //           overlay.className = "play_button_hoop o";
-    //       } else {
-    //           vid.pause(); 
-    //           overlay.className = "play_button_hoop";
-    //       }
-    //   }
-    // }
-
     $('.play_button').on('click', function (e) {
       let video = $('.tanks_video');
       if (video.get(0).paused === true) {
+        video.get(0).volume = 0.3;
         video.get(0).play();
         $('.play_button').css('display', 'none');
       }
@@ -363,13 +319,10 @@ function formValidation() {
       }
       return false;
     });
-
-
-  // delete home item with menu on home page
-  if ($BODY.hasClass('index_page')) {
-    $('.menu-item-home').css('display', 'none');
-  }
-  
+    // delete home item with menu on home page
+    if ($BODY.hasClass('index_page')) {
+      $('.menu-item-home').css('display', 'none');
+    }
     //game sticky menu
     $(window).scroll(function () {
       if ($(this).scrollTop() > t_m) {
@@ -381,24 +334,24 @@ function formValidation() {
       } 
       
       if ($(this).scrollTop() > h_video) {
-        menu.css({"opacity": "0", "-khtml-opacity": "0"});
+        menu.css({"display": "none"});
       } 
       if ($(this).scrollTop() > b_video) {
-        menu.css({"opacity": "1", "-khtml-opacity": "1"});
+        menu.css({"display": "block"});
       } 
   
       if($(this).scrollTop() > h_footer) {
-        menu.css({"opacity": "0", "-khtml-opacity": "0"});
+        menu.css({"display": "none"});
       }
       if($(this).scrollTop() < h_footer) {
-        menu.css({"opacity": "1", "-khtml-opacity": "1"});
+        menu.css({"display": "block"});
       }
   
       if($(this).scrollTop() < b_video) {
-        menu.css({"opacity": "0", "-khtml-opacity": "0"});
+        menu.css({"display": "none"});
       }
       if($(this).scrollTop() < h_video) {
-        menu.css({"opacity": "1", "-khtml-opacity": "1"});
+        menu.css({"display": "block"});
       }
 
       // menu active
