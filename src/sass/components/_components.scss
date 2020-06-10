@@ -2,6 +2,63 @@
 @import "../utils/mixins";
 @import "../../libs/include-media/dist/include-media";
 
+body {
+  // scrollbar-color: #458245 #714826 !important;     /* «цвет ползунка» «цвет полосы скроллбара» */
+  // scrollbar-width: thin !important;  /* толщина */
+  // auto | thin |
+}
+
+/* полоса прокрутки (скроллбар) */
+// ::-webkit-scrollbar {
+//   width: 4px; /* ширина для вертикального скролла */
+//   height: 203px; /* высота для горизонтального скролла */
+//   background-color: transparent;
+// }
+
+/* ползунок скроллбара */
+// ::-webkit-scrollbar-thumb {
+//   background-color: #D8D8D8;
+//   border-radius: 5px;
+  // box-shadow: inset 1px 1px 10px #f3faf7;
+//}
+
+// ::-webkit-scrollbar-thumb:hover {
+//   background-color: #fff;
+// }
+
+/* Стрелки */
+
+// ::-webkit-scrollbar-button:vertical:start:decrement {
+//   background: linear-gradient(120deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+//   linear-gradient(240deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+//   linear-gradient(0deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+//   background-color: #f6f8f4;
+// }
+
+// ::-webkit-scrollbar-button:vertical:end:increment {
+//   background:
+//       linear-gradient(300deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+//       linear-gradient(60deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+//       linear-gradient(180deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+//   background-color: #f6f8f4;
+// }
+
+// ::-webkit-scrollbar-button:horizontal:start:decrement {
+//   background:
+//       linear-gradient(30deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+//       linear-gradient(150deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+//       linear-gradient(270deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+//   background-color: #f6f8f4;
+// }
+
+// ::-webkit-scrollbar-button:horizontal:end:increment {
+//   background:
+//       linear-gradient(210deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+//       linear-gradient(330deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+//       linear-gradient(90deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+//   background-color: #f6f8f4;
+// }
+
 /* ==================================== */
 /* ============== HEADER ============== */
 /* ==================================== */
@@ -2061,7 +2118,7 @@
     }
 
     @include media("<tab") {
-      display: none;
+      display: none !important;
     }
   }
   &__awards {
@@ -2362,7 +2419,6 @@ top: -29rem;
 .tanks__video {
   background: url(../../img/tanks_bg.png) no-repeat center center/cover;
   padding-top: 16.482rem;
-  overflow: hidden;
 
   @include media("<tab") {
     padding-top: 0;
@@ -3099,7 +3155,7 @@ top: -29rem;
     display: flex;
     // justify-content: flex-start;
     justify-content: center;
-    margin-top: -11rem;
+    margin-top: 6.527rem;
     
     @include media("<mob") {
       margin-top: 3rem;

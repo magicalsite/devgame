@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
 @font-face {
   font-family: "avenir-next-cyr-medium";
@@ -544,6 +545,22 @@ body {
 /* ==================================== */
 /* ============ COMPONENTS ============ */
 /* ==================================== */
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+  width: 4px;
+  /* ширина для вертикального скролла */
+  height: 203px;
+  /* высота для горизонтального скролла */
+  background-color: transparent;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: #D8D8D8;
+  border-radius: 5px;
+}
+
+/* Стрелки */
 /* ==================================== */
 /* ============== HEADER ============== */
 /* ==================================== */
@@ -2729,7 +2746,7 @@ html.no-js
 
 @media (max-width: 991px) {
   .tanks__menu {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -3125,7 +3142,6 @@ html.no-js
 .tanks__video {
   background: url(../img/tanks_bg.png) no-repeat center center/cover;
   padding-top: 16.482rem;
-  overflow: hidden;
 }
 
 @media (max-width: 991px) {
@@ -4074,7 +4090,7 @@ html.no-js
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
-  margin-top: -11rem;
+  margin-top: 6.527rem;
 }
 
 @media (max-width: 639px) {

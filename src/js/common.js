@@ -169,53 +169,53 @@ var $WINDOW = $(window),
 /**
  * !Add placeholder for old browsers
  * */
-function placeholderInit() {
-  $('[placeholder]').placeholder();
-}
+// function placeholderInit() {
+//   $('[placeholder]').placeholder();
+// }
 
 /**
  * !Main navigation
  */
-function mainNavigation() {
-  var $nav = $('.nav-js');
-  if ($nav.length) {
+// function mainNavigation() {
+//   var $nav = $('.nav-js');
+//   if ($nav.length) {
 
-    $nav.nav({
-      submenuPosition: false,
-    });
-  }
-}
+//     $nav.nav({
+//       submenuPosition: false,
+//     });
+//   }
+// }
 
-$('.nav-opener-js').on('click', function (e) {
-  var $curBtn = $(this);
+// $('.nav-opener-js').on('click', function (e) {
+//   var $curBtn = $(this);
 
-  $curBtn.add($($curBtn.attr('href'))).addClass('is-open');
+//   $curBtn.add($($curBtn.attr('href'))).addClass('is-open');
 
-  $HTML.addClass('css-scroll-fixed open-only-mob');
+//   $HTML.addClass('css-scroll-fixed open-only-mob');
 
-  e.preventDefault();
-});
+//   e.preventDefault();
+// });
 
-function hideNav() {
-  $('.is-open').removeClass('is-open');
-  $HTML.removeClass('css-scroll-fixed open-only-mob');
-}
+// function hideNav() {
+//   $('.is-open').removeClass('is-open');
+//   $HTML.removeClass('css-scroll-fixed open-only-mob');
+// }
 
-$('.nav-close-btn-js').on('click', function (e) {
-  hideNav();
+// $('.nav-close-btn-js').on('click', function (e) {
+//   hideNav();
 
-  e.preventDefault();
-});
+//   e.preventDefault();
+// });
 
-$('.nav-overlay').on('click', function () {
-  hideNav();
-});
+// $('.nav-overlay').on('click', function () {
+//   hideNav();
+// });
 
-$HTML.keyup(function (event) {
-  if (event.keyCode === 27) {
-    hideNav();
-  }
-});
+// $HTML.keyup(function (event) {
+//   if (event.keyCode === 27) {
+//     hideNav();
+//   }
+// });
 
 
 /**
@@ -266,7 +266,6 @@ function formValidation() {
   // Parallax
   var rellax = new Rellax('.rellax');
 
-
   // WOW + animate
   new WOW().init();
 
@@ -279,102 +278,110 @@ function formValidation() {
   });
 
   // game sticky const
-  if ($BODY.hasClass('hoopstars') || $BODY.hasClass('tanks')) {
+    if ($BODY.hasClass('hoopstars') || $BODY.hasClass('tanks')) {
     var menu = $('.tanks__menu');
     var t_m = menu.offset().top - 100;
     var t_n_m = menu.offset().top;
     var l_m = menu.offset().left;
     var h_video = $('.tanks__video').offset().top - menu.outerHeight();
     var b_video = $('.tanks__video').offset().top + 905;
-    
     var h_footer = b_video + $('.tanks__locacion').outerHeight() + $('.tanks__awards').outerHeight();
-    console.log($('.tanks__awards').outerHeight());
-    // var h_footer = $('.main__games').innerHeight() - $('.tanks__footer').outerHeight() - 2100;
 
-    $('.locacion_block_slider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        infinite: true,
-        centerMode: true,
-        variableWidth: true,
-        arrows: false
-    });
+        $('.locacion_block_slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            infinite: true,
+            centerMode: true,
+            variableWidth: true,
+            arrows: false
+        });
+
+        //game sticky menu
+        $(window).scroll(function () {
+        if ($(this).scrollTop() > t_m) {
+          menu.addClass("f-menu");
+          $('.f-menu').css("left", l_m);
+        } else if ($(this).scrollTop() < t_n_m) {
+          menu.removeClass("f-menu");
+          menu.css("left", "-3.04rem");
+        } 
+        if ($(this).scrollTop() > h_video) {
+          menu.css({"display": "none"});
+        } 
+        if ($(this).scrollTop() > b_video) {
+          menu.css({"display": "block"});
+        }
+        if($(this).scrollTop() > h_footer) {
+          menu.css({"display": "none"});
+        }
+        if($(this).scrollTop() < h_footer) {
+          menu.css({"display": "block"});
+        }
+        if($(this).scrollTop() < b_video) {
+          menu.css({"display": "none"});
+        }
+        if($(this).scrollTop() < h_video) {
+          menu.css({"display": "block"});
+        }
+
+        // menu active
+        var $sections = $('.anchor_game');
+        $sections.each(function(i,el){
+            var top  = $(el).offset().top-100;
+            var bottom = top +$(el).height();
+            var scroll = $(window).scrollTop();
+            var id = $(el).attr('id');
+          if( scroll > top && scroll < bottom){
+                $('a.active_game').removeClass('active_game');
+          $('a[href="#'+id+'"]').addClass('active_game');
+            }
+          })
+        });
+
+        $("a[href^='#']").click(function(){
+          var _href = $(this).attr("href");
+          $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 800);
+          return false;
+        });
+
+        // button play video
+        $('.play_button').on('click', function (e) {
+          let video = $('.tanks_video');
+          if (video.get(0).paused === true) {
+            video.get(0).volume = 0.3;
+            video.get(0).play();
+            $('.play_button').css('display', 'none');
+          }
+          return false;
+        });
+        $('.tanks_video').on('click', function (e) {
+          let video = $('.tanks_video');
+          if (video.get(0).paused === false) {
+              video.get(0).pause();
+              $('.play_button').css('display', 'block');
+          }
+          return false;
+        });        
     }
-    // button play video
-    $('.play_button').on('click', function (e) {
-      let video = $('.tanks_video');
-      if (video.get(0).paused === true) {
-        video.get(0).volume = 0.3;
-        video.get(0).play();
-        $('.play_button').css('display', 'none');
-      }
-      return false;
-    });
-    $('.tanks_video').on('click', function (e) {
-      let video = $('.tanks_video');
-      if (video.get(0).paused === false) {
-          video.get(0).pause();
-          $('.play_button').css('display', 'block');
-      }
-      return false;
-    });
+
+    if($BODY.hasClass('privacy')) {
+      // custom scroll for privacy page
+      $(".privacy-scroll").niceScroll({
+        cursorcolor:"#D8D8D8",
+        cursorwidth:"4px",
+        cursorminheight: 203,
+        cursormaxheight: false,
+        cursorborder: 0,
+        cursorborderradius:'5px'
+      });
+    }
     // delete home item with menu on home page
     if ($BODY.hasClass('index_page')) {
       $('.menu-item-home').css('display', 'none');
     }
-    //game sticky menu
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > t_m) {
-        menu.addClass("f-menu");
-        $('.f-menu').css("left", l_m);
-      } else if ($(this).scrollTop() < t_n_m) {
-        menu.removeClass("f-menu");
-        menu.css("left", "-3.04rem");
-      } 
-      
-      if ($(this).scrollTop() > h_video) {
-        menu.css({"display": "none"});
-      } 
-      if ($(this).scrollTop() > b_video) {
-        menu.css({"display": "block"});
-      } 
-  
-      if($(this).scrollTop() > h_footer) {
-        menu.css({"display": "none"});
-      }
-      if($(this).scrollTop() < h_footer) {
-        menu.css({"display": "block"});
-      }
-  
-      if($(this).scrollTop() < b_video) {
-        menu.css({"display": "none"});
-      }
-      if($(this).scrollTop() < h_video) {
-        menu.css({"display": "block"});
-      }
 
-      // menu active
-      var $sections = $('.lol');
-      $sections.each(function(i,el){
-          var top  = $(el).offset().top-100;
-          var bottom = top +$(el).height();
-          var scroll = $(window).scrollTop();
-          var id = $(el).attr('id');
-        if( scroll > top && scroll < bottom){
-              $('a.active_game').removeClass('active_game');
-        $('a[href="#'+id+'"]').addClass('active_game');
-        }
-      })
-    });
-    
-    $("a[href^='#']").click(function(){
-      var _href = $(this).attr("href");
-      $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 800);
-      return false;
-    });
-
-    // game slider
+    // game slider and custom scroll
     if ($BODY.hasClass('tanks')) {
       $('.tanks-slider__video').slick({
         centerMode: true,
@@ -383,6 +390,13 @@ function formValidation() {
         infinite: false,
         variableWidth: true,
         arrows: false
+      });
+      $(".tanks-scroll").niceScroll({
+        cursorcolor:"#9179e6",
+        cursorwidth:"4px",
+        cursorminheight: 203,
+        cursorborder: 0,
+        cursorborderradius:'5px'
       });
     }
     if($BODY.hasClass('hoopstars')) {
@@ -394,16 +408,23 @@ function formValidation() {
         variableWidth: true,
         arrows: false
       });
+      $(".hoopstars-scroll").niceScroll({
+        cursorcolor:"#f1a083",
+        cursorwidth:"4px",
+        cursorminheight: 203,
+        cursorborder: 0,
+        cursorborderradius:'5px'
+      });
     }
 
   $(document).ready(function () {
+    fullPageInitial();
     $BODY.addClass('logo-theme-dark');
     changeFontSize();
     // Base
     addTouchClasses();
-    fullPageInitial();
-    placeholderInit();
-    objectFitImages(); // object-fit-images initial
+    //placeholderInit();
+    //objectFitImages(); // object-fit-images initial
     // Common
     // mainNavigation();
     // toggleActiveMenuItem();
