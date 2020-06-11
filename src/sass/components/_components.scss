@@ -2,63 +2,6 @@
 @import "../utils/mixins";
 @import "../../libs/include-media/dist/include-media";
 
-body {
-  // scrollbar-color: #458245 #714826 !important;     /* «цвет ползунка» «цвет полосы скроллбара» */
-  // scrollbar-width: thin !important;  /* толщина */
-  // auto | thin |
-}
-
-/* полоса прокрутки (скроллбар) */
-// ::-webkit-scrollbar {
-//   width: 4px; /* ширина для вертикального скролла */
-//   height: 203px; /* высота для горизонтального скролла */
-//   background-color: transparent;
-// }
-
-/* ползунок скроллбара */
-// ::-webkit-scrollbar-thumb {
-//   background-color: #D8D8D8;
-//   border-radius: 5px;
-  // box-shadow: inset 1px 1px 10px #f3faf7;
-//}
-
-// ::-webkit-scrollbar-thumb:hover {
-//   background-color: #fff;
-// }
-
-/* Стрелки */
-
-// ::-webkit-scrollbar-button:vertical:start:decrement {
-//   background: linear-gradient(120deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
-//   linear-gradient(240deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
-//   linear-gradient(0deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
-//   background-color: #f6f8f4;
-// }
-
-// ::-webkit-scrollbar-button:vertical:end:increment {
-//   background:
-//       linear-gradient(300deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
-//       linear-gradient(60deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
-//       linear-gradient(180deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
-//   background-color: #f6f8f4;
-// }
-
-// ::-webkit-scrollbar-button:horizontal:start:decrement {
-//   background:
-//       linear-gradient(30deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
-//       linear-gradient(150deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
-//       linear-gradient(270deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
-//   background-color: #f6f8f4;
-// }
-
-// ::-webkit-scrollbar-button:horizontal:end:increment {
-//   background:
-//       linear-gradient(210deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
-//       linear-gradient(330deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
-//       linear-gradient(90deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
-//   background-color: #f6f8f4;
-// }
-
 /* ==================================== */
 /* ============== HEADER ============== */
 /* ==================================== */
@@ -92,21 +35,13 @@ body {
 
   &__left {
     position: relative;
-    // $width: 56.6%;
-    // flex: 1 0 $width;
-    // max-width: $width;
-    // padding-right: 2rem;
   }
 
   &__right {
     position: relative;
-    // $width: 32%;
-    // flex: 1 0 $width;
-    // max-width: $width;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // padding: 0 4.3rem 0 0;
 
     @include media("<tab") {
       display: none;
@@ -3121,48 +3056,35 @@ top: -29rem;
 .privacy {
   background-color: #FFFFFF;
   padding-bottom: 2.04rem;
+  overflow: visible;
 
   &_title {
     @include font-bold;
     font-size: 5.956rem;
     line-height: 6.119rem;
     color: #1D3743;
-    margin: 0;
+    margin: 11.831rem 0 6.527rem 0;
+    position: relative;
+    z-index: 20;
 
+    @include media("<tab") {
+      margin-bottom: 5.711rem;
+      margin-top: 21rem;
+    }
     @include media("<mob") {
       font-size: 10.956rem;
       line-height: 12.119rem;
+      margin-top: 40rem;
+      margin-bottom: 10rem;
     }
   }
-  &_first {
+ 
+  &_center {
     display: flex;
-    justify-content: space-between;
-    margin-top: 11.831rem;
-
-    @include media("<tab") {
-      margin-top: 21rem;;
-    }
-    @include media("<mob") {
-      margin-top: 34rem;;
-    }
-
-    & .case-section__rectangle {
-      margin-top: 11.831rem;
-    }
-  }
-
-  &_block {
-    display: flex;
-    // justify-content: flex-start;
-    justify-content: center;
-    margin-top: 6.527rem;
+    justify-content: flex-start;
     
-    @include media("<mob") {
-      margin-top: 3rem;
-    }
-
-    & .privacy_content {
-      max-width: 63.724rem;
+    .privacy_content {
+      max-width: 83.6rem;
       background: #FFFFFF;
       padding: 4.488rem;
       position: relative;
@@ -3197,8 +3119,7 @@ top: -29rem;
             font-size: 13rem;
             line-height: 13.6rem;
           }
-        }
-        
+        }     
         & h2 {
           @include media("<tab") {
             font-size: 5.5rem;
@@ -3208,8 +3129,7 @@ top: -29rem;
             font-size: 12.5rem;
             line-height: 12.6rem;
           }
-        }
-        
+        }      
         & h3 {
           @include media("<tab") {
             font-size: 5rem;
@@ -3219,8 +3139,7 @@ top: -29rem;
             font-size: 11rem;
             line-height: 11.6rem;
           }
-        }
-        
+        }       
         & h4 {
           @include media("<tab") {
             font-size: 4.5rem;
@@ -3230,8 +3149,7 @@ top: -29rem;
             font-size: 9rem;
              line-height: 9.6rem;
           }
-        }
-        
+        }     
         & h5 {
           @include media("<tab") {
             font-size: 4.2rem;
@@ -3241,8 +3159,7 @@ top: -29rem;
             font-size: 7rem;
             line-height: 7.6rem;
           }
-        }
-        
+        }    
         & h6 {
           @include media("<tab") {
             font-size: 4rem;
@@ -3254,14 +3171,16 @@ top: -29rem;
           }
         }
       
-      
-
       @include media("<tab") {
         max-width: 87.7rem;
       }
       @include media("<mob") {
         max-width: 100%;
       }
+    }
+
+    @include media("<tab") {
+      justify-content: center;
     }
   }
   &_footer {
@@ -3281,13 +3200,13 @@ top: -29rem;
 }
 
 .about__menu {
-  display: none;
   position: absolute;
   position: sticky;
   top: 10rem;
+  height: 3.753rem;
   background-color: #fff;
   width: 14.367rem;
-  height: 11rem;
+  z-index: 22;
   margin-right: 0rem;    
 
   & ul a:hover {
@@ -3306,9 +3225,9 @@ top: -29rem;
     cursor: pointer;
   }
 
-  // @include media("<tab") {
-  //   display: none;
-  // }
+  @include media("<tab") {
+    display: none;
+  }
 }
 
 .privacy_bg {
@@ -3319,8 +3238,16 @@ top: -29rem;
     opacity: 0.1;
     background: #979797;
     position: absolute;
-    left: 24%;
+    left: 16.5%;
     top: 24%;
+
+    @include media("<tab") {
+      left: 14.8%;
+      top: 15%;
+    }
+    @include media("<mob") {
+      left: 4.5%;
+    }
   }
   &__second {
     display: block;
@@ -3329,7 +3256,7 @@ top: -29rem;
     opacity: 0.1;
     background: #979797;
     position: absolute;
-    left: 40%;
+    left: 29%;
     top: 0%;
   }
   &__third {
@@ -3339,8 +3266,16 @@ top: -29rem;
     opacity: 0.1;
     background: #979797;
     position: absolute;
-    right: 24%;
+    right: 16.5%;
     top: 24%;
+
+    @include media("<tab") {
+      right: 14.8%;
+      top: 15%;
+    }
+    @include media("<mob") {
+      right: 4.5%;
+    }
   }
   &__fourth {
     display: block;
@@ -3349,7 +3284,7 @@ top: -29rem;
     opacity: 0.4;
     background: #979797;
     position: absolute;
-    right: 40%;
+    right: 29%;
     top: 0%;
   }
 }

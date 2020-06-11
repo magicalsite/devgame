@@ -367,11 +367,11 @@ function formValidation() {
 
     if($BODY.hasClass('privacy')) {
       // custom scroll for privacy page
-      $(".privacy-scroll").niceScroll({
+      $("html").niceScroll({
         cursorcolor:"#D8D8D8",
         cursorwidth:"4px",
+        cursormaxheight: 203,
         cursorminheight: 203,
-        cursormaxheight: false,
         cursorborder: 0,
         cursorborderradius:'5px'
       });
