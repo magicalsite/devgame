@@ -3588,29 +3588,44 @@
 
 .vacancies-point {
   &__info {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     // max-width: 12.5833rem;
     @include font-bold;
     font-size: 1.1667rem;
     line-height: 1.8333rem;
     margin-right: 9rem;
+    margin-top: 1rem;
     // display: flex;
     // flex-direction: column;
 
-    span {
-      color: #cdd0d1;
-      text-align: right;
-      margin-right: 10px;
-    }
 
-    h3 {
+
+    &-title {
+      // display: inline-block;
       font-size: 2.8333rem;
       line-height: 2.0833rem;
       color: #1d3743;
       text-transform: capitalize;
       margin-bottom: 1.8333rem;
       position: relative;
+
+      span {
+        font-size: 1.1667rem;
+        line-height: 1.8333rem;
+        color: #cdd0d1;
+        vertical-align: 100%;
+
+        @include media('<tab') {
+          font-size: 2.67rem;
+          line-height: 3.833rem;
+        }
+
+        @include media('<mob') {
+          font-size: 6rem;
+          line-height: 7.833rem;
+        }
+      }
 
       &:after {
         content: '';
@@ -3646,13 +3661,13 @@
     }
 
     p {
-      width: 12.5833rem;
+      width: 13.5833rem;
       @include font-normal;
       color: #3f3f3f;
       opacity: 0.4;
 
       @include media('<tab') {
-        width: 41.583rem;
+        min-width: 45.583rem;
       }
 
       @include media('<mob') {

@@ -4672,8 +4672,8 @@ html.no-js
 }
 
 .vacancies-point__info {
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
   font-family: "avenir-next-cyr-bold", Helvetica, Arial, sans-serif;
@@ -4681,15 +4681,10 @@ html.no-js
   font-size: 1.1667rem;
   line-height: 1.8333rem;
   margin-right: 9rem;
+  margin-top: 1rem;
 }
 
-.vacancies-point__info span {
-  color: #cdd0d1;
-  text-align: right;
-  margin-right: 10px;
-}
-
-.vacancies-point__info h3 {
+.vacancies-point__info-title {
   font-size: 2.8333rem;
   line-height: 2.0833rem;
   color: #1d3743;
@@ -4698,7 +4693,28 @@ html.no-js
   position: relative;
 }
 
-.vacancies-point__info h3:after {
+.vacancies-point__info-title span {
+  font-size: 1.1667rem;
+  line-height: 1.8333rem;
+  color: #cdd0d1;
+  vertical-align: 100%;
+}
+
+@media (max-width: 991px) {
+  .vacancies-point__info-title span {
+    font-size: 2.67rem;
+    line-height: 3.833rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .vacancies-point__info-title span {
+    font-size: 6rem;
+    line-height: 7.833rem;
+  }
+}
+
+.vacancies-point__info-title:after {
   content: '';
   display: block;
   background: #000000;
@@ -4710,20 +4726,20 @@ html.no-js
 }
 
 @media (max-width: 991px) {
-  .vacancies-point__info h3:after {
+  .vacancies-point__info-title:after {
     width: 15.75rem;
     right: -17rem;
   }
 }
 
 @media (max-width: 639px) {
-  .vacancies-point__info h3:after {
+  .vacancies-point__info-title:after {
     display: none;
   }
 }
 
 @media (max-width: 991px) {
-  .vacancies-point__info h3 {
+  .vacancies-point__info-title {
     font-size: 4.833rem;
     line-height: 4.083rem;
     margin-right: 20rem;
@@ -4731,7 +4747,7 @@ html.no-js
 }
 
 @media (max-width: 639px) {
-  .vacancies-point__info h3 {
+  .vacancies-point__info-title {
     font-size: 9.833rem;
     line-height: 10.083rem;
     margin-right: 0;
@@ -4739,7 +4755,7 @@ html.no-js
 }
 
 .vacancies-point__info p {
-  width: 12.5833rem;
+  width: 13.5833rem;
   font-family: "avenir-next-cyr-medium", Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #3f3f3f;
@@ -4748,7 +4764,7 @@ html.no-js
 
 @media (max-width: 991px) {
   .vacancies-point__info p {
-    width: 41.583rem;
+    min-width: 45.583rem;
   }
 }
 
