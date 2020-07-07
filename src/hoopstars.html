@@ -87,7 +87,7 @@
   <!--HEADER end-->
   <!--MAIN-->
   <main class="main__games">
-    <section id="about" class="tanks__header anchor_game">
+    <section class="tanks__header anchor_game">
       <div class="tanks__header_figurine animate__animated wow animate__fadeIn">
         <img src="./img/pentagon_tank_bg.png" alt="">
         <img src="./img/circle_blur_bg.png" alt="">
@@ -107,7 +107,8 @@
               </div>
               <img src="./img/wave_bg.svg" alt="" class="animate__animated wow animate__fadeIn" data-wow-delay="1s" data-wow-duration="1s">
             </div>
-            <h2 class="animate__animated wow animate__fadeInUp" data-wow-delay="1s" data-wow-duration="1s">Hoop Stars</h2>
+            <h2 class="animate__animated wow animate__fadeInUp" data-wow-delay="1s" data-wow-duration="1s">
+              Hoop Stars</h2>
             <div class="first_part__left_button  hoop_button_download">
               <a href="#" rel="noreferrer noopener" target="_blank" class="tanks_download animate__animated wow animate__fadeInUp" data-wow-delay="1s" data-wow-duration="1s"><img src="./img/google_play.svg" alt="download with google play"></a>
               <a href="#" rel="noreferrer noopener" target="_blank" class="tanks_download animate__animated wow animate__fadeInUp" data-wow-delay="1s" data-wow-duration="1s"><img src="./img/app_store.svg" alt="download with app store"></a>
@@ -115,14 +116,34 @@
           </div>
           <!-- <div class="tanks_rectangle animate__animated wow animate__fadeInDop" data-wow-delay="1s" data-wow-duration="1s"></div> -->
         </div>
+        <!-- animate__animated wow animate__fadeIn -->
         <div class="second_part hoopstars__info">
-          <div class="tanks__menu  hoopstars_menu  animate__animated wow animate__fadeIn" data-wow-delay="1s" data-wow-duration="1s">
-            <nav>
-              <a class="tanks__menu_item" href="#about">about</a>
-              <a class="tanks__menu_item" href="#locacion">locacion</a>
-              <a class="tanks__menu_item" href="#video">video</a>
-              <a class="tanks__menu_item" href="#caracter">caracter</a>
-            </nav>
+          <div class="tanks__menu" data-wow-delay="1s" data-wow-duration="1s">
+            <div class="tanks__icon social-icon">
+              <a href="#" title="Share facebook">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.5">
+                    <path d="M24 12C24 5.37188 18.6281 0 12 0C5.37188 0 0 5.37188 0 12C0 17.9906 4.3875 22.9547 10.125 23.8547V15.4688H7.07812V12H10.125V9.35625C10.125 6.34922 11.9156 4.6875 14.6578 4.6875C15.9703 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8297C14.3391 7.875 13.875 8.80078 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8547C19.6125 22.9547 24 17.9906 24 12Z" fill="#F2F2F2" />
+                  </g>
+                </svg>
+              </a>
+              <a href="#" title="Share instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.5">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM9.36154 5.63866C10.0442 5.60759 10.2624 5.59999 12.0005 5.59999H11.9985C13.7372 5.59999 13.9545 5.60759 14.6372 5.63866C15.3185 5.66986 15.7839 5.77773 16.1919 5.936C16.6132 6.09933 16.9692 6.318 17.3252 6.67401C17.6812 7.02974 17.8999 7.38681 18.0639 7.80775C18.2212 8.21469 18.3292 8.67976 18.3612 9.3611C18.3919 10.0438 18.3999 10.2619 18.3999 12.0001C18.3999 13.7382 18.3919 13.9558 18.3612 14.6385C18.3292 15.3196 18.2212 15.7848 18.0639 16.1918C17.8999 16.6126 17.6812 16.9697 17.3252 17.3254C16.9696 17.6815 16.6131 17.9007 16.1923 18.0641C15.7851 18.2224 15.3195 18.3303 14.6381 18.3615C13.9555 18.3925 13.738 18.4001 11.9997 18.4001C10.2617 18.4001 10.0437 18.3925 9.36101 18.3615C8.6798 18.3303 8.2146 18.2224 7.80739 18.0641C7.38672 17.9007 7.02965 17.6815 6.67405 17.3254C6.31818 16.9697 6.09951 16.6126 5.93591 16.1917C5.77777 15.7848 5.6699 15.3197 5.63857 14.6384C5.60764 13.9557 5.5999 13.7382 5.5999 12.0001C5.5999 10.2619 5.6079 10.0436 5.63844 9.36097C5.6691 8.67989 5.7771 8.21469 5.93577 7.80762C6.09977 7.38681 6.31844 7.02974 6.67445 6.67401C7.03018 6.31813 7.38725 6.09947 7.80819 5.936C8.21513 5.77773 8.6802 5.66986 9.36154 5.63866Z" fill="#F2F2F2" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4265 6.75337C11.538 6.7532 11.6579 6.75325 11.7873 6.75331L12.0006 6.75337C13.7094 6.75337 13.912 6.7595 14.5868 6.79017C15.2108 6.8187 15.5495 6.92297 15.7751 7.01057C16.0737 7.12657 16.2867 7.26524 16.5105 7.48924C16.7345 7.71325 16.8732 7.92658 16.9895 8.22525C17.0771 8.45059 17.1815 8.78926 17.2099 9.41326C17.2405 10.0879 17.2472 10.2906 17.2472 11.9986C17.2472 13.7066 17.2405 13.9093 17.2099 14.584C17.1813 15.208 17.0771 15.5467 16.9895 15.772C16.8735 16.0707 16.7345 16.2833 16.5105 16.5072C16.2865 16.7312 16.0739 16.8699 15.7751 16.9859C15.5497 17.0739 15.2108 17.1779 14.5868 17.2064C13.9121 17.2371 13.7094 17.2437 12.0006 17.2437C10.2917 17.2437 10.0891 17.2371 9.41447 17.2064C8.79046 17.1776 8.45179 17.0733 8.22605 16.9857C7.92739 16.8697 7.71405 16.7311 7.49005 16.5071C7.26604 16.2831 7.12738 16.0703 7.01111 15.7715C6.92351 15.5461 6.81911 15.2075 6.79071 14.5835C6.76004 13.9088 6.75391 13.7061 6.75391 11.997C6.75391 10.2879 6.76004 10.0863 6.79071 9.41166C6.81924 8.78766 6.92351 8.44899 7.01111 8.22339C7.12711 7.92472 7.26604 7.71138 7.49005 7.48738C7.71405 7.26338 7.92739 7.12471 8.22605 7.00844C8.45166 6.92044 8.79046 6.81644 9.41447 6.78777C10.0049 6.7611 10.2337 6.7531 11.4265 6.75177V6.75337ZM15.4169 7.81603C14.9929 7.81603 14.6489 8.15964 14.6489 8.58377C14.6489 9.00778 14.9929 9.35178 15.4169 9.35178C15.8409 9.35178 16.1849 9.00778 16.1849 8.58377C16.1849 8.15977 15.8409 7.81577 15.4169 7.81577V7.81603ZM8.71399 12.0001C8.71399 10.1851 10.1855 8.71347 12.0006 8.7134C13.8156 8.7134 15.2869 10.185 15.2869 12.0001C15.2869 13.8152 13.8158 15.2861 12.0007 15.2861C10.1856 15.2861 8.71399 13.8152 8.71399 12.0001Z" fill="#F2F2F2" />
+                    <path d="M12.0007 9.86673C13.1788 9.86673 14.134 10.8218 14.134 12.0001C14.134 13.1782 13.1788 14.1334 12.0007 14.1334C10.8224 14.1334 9.86731 13.1782 9.86731 12.0001C9.86731 10.8218 10.8224 9.86673 12.0007 9.86673Z" fill="#F2F2F2" />
+                  </g>
+                </svg>
+              </a>
+              <a href="#" title="Share telegram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.5">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12ZM8.03558 10.9008C6.83349 11.4256 5.59835 11.9649 4.46894 12.587L4.46886 12.5871C3.87912 13.0189 4.66301 13.3243 5.39834 13.6107C5.51525 13.6563 5.63093 13.7014 5.73966 13.7464C5.83015 13.7742 5.92217 13.8035 6.01541 13.8332C6.83324 14.0938 7.74519 14.3843 8.53916 13.9472C9.84344 13.198 11.0743 12.3318 12.3042 11.4662C12.7072 11.1827 13.1101 10.8991 13.5154 10.6198C13.5343 10.6077 13.5558 10.5938 13.5792 10.5786C13.9245 10.3548 14.701 9.85146 14.4138 10.545C13.7345 11.2878 13.007 11.9454 12.2755 12.6065C11.7826 13.052 11.2878 13.4992 10.8048 13.9752C10.3841 14.317 9.94728 15.0044 10.4183 15.483C11.5033 16.2426 12.6052 16.9837 13.7065 17.7244C14.0648 17.9654 14.4231 18.2064 14.7807 18.4479C15.3868 18.9318 16.3341 18.5404 16.4673 17.7842C16.5266 17.4364 16.5861 17.0886 16.6456 16.7408C16.9744 14.8184 17.3033 12.8954 17.5938 10.9667C17.6333 10.6642 17.6781 10.3617 17.7229 10.059C17.8314 9.32549 17.9401 8.59104 17.974 7.85354C17.8865 7.11757 16.9942 7.27939 16.4975 7.44488C13.9449 8.41618 11.4178 9.45948 8.90074 10.5212C8.6156 10.6475 8.32656 10.7737 8.03558 10.9008Z" fill="#F2F2F2" />
+                  </g>
+                </svg>
+              </a>
+            </div>
           </div>
           <div class="second_part_info">
             <h3 class="second_part__title animate__animated wow animate__fadeInUp" data-wow-delay="1s" data-wow-duration="1s">
@@ -136,7 +157,7 @@
       </div>
     </section>
     <section class="tanks__video  hoopstars_videoBg ">
-      <div id="video" class="anchor_game hoop-slider__video">
+      <div class="anchor_game hoop-slider__video">
         <div class="hoop__video_item tanks_video_blk animate__animated wow animate__fadeIn">
           <video class="tanks_video hoop_video" playsinline controlsList="nodownload">
             <source src="./video/hoopstars.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
@@ -158,7 +179,7 @@
         </div>
       </div>
     </section>
-    <section id="locacion" class="anchor_game tanks__locacion">
+    <section class="anchor_game tanks__locacion">
       <div class="tanks__locacion_figurine animate__animated wow animate__fadeIn">
         <img class="rellax" data-rellax-speed="-2" src="./img/wave_locacions_bg.png" alt="">
         <img class="rellax" data-rellax-speed="-2" src="./img/triangle_locacions_bg.png" alt="">
@@ -191,7 +212,7 @@
         </div>
       </div>
     </section>
-    <section id="caracter" class="anchor_game tanks__awards">
+    <section class="anchor_game tanks__awards">
       <div class="layout-page layout-page-spaces main__layout">
         <div class="locacion_block">
           <div class="locacion_block_bottom">

@@ -1,9 +1,9 @@
-@import "../utils/variables";
-@import "../utils/mixins";
-@import "../../libs/include-media/dist/include-media";
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../../libs/include-media/dist/include-media';
 
 .nicescroll-rails {
-  @include media("<tab") {
+  @include media('<tab') {
     display: none !important;
   }
 }
@@ -36,14 +36,14 @@
   padding: 2rem 0 2rem 0;
   line-height: 1;
 
-  @include media("<tab") {
+  @include media('<tab') {
     padding-top: 3rem;
     padding-bottom: 3rem;
     // padding-right: 4.9rem;
     align-items: stretch;
   }
 
-  @include media("<mob") {
+  @include media('<mob') {
     padding-top: 7.571rem;
     padding-bottom: 7.571rem;
     // padding-right: 4.9rem;
@@ -59,7 +59,7 @@
     align-items: center;
     justify-content: space-between;
 
-    @include media("<tab") {
+    @include media('<tab') {
       // display: none;
     }
   }
@@ -69,7 +69,7 @@
     display: flex;
     justify-content: space-between;
 
-    @include media("<tab") {
+    @include media('<tab') {
       flex-basis: auto;
       // flex-wrap: wrap;
       flex-direction: column;
@@ -77,7 +77,6 @@
       align-items: end;
     }
   }
-
 }
 
 /* logo */
@@ -89,20 +88,20 @@
   flex-shrink: 0;
   z-index: 5;
 
-  @include media("<tab") {
+  @include media('<tab') {
     width: 13.8rem;
     height: 10.48rem;
   }
 
-  @include media("<mob") {
+  @include media('<mob') {
     width: 26.506rem;
     height: 19.48rem;
   }
 
   &::before {
-    content: "";
+    content: '';
     display: block;
-    @include ratio(238, 60)
+    @include ratio(238, 60);
   }
 
   a,
@@ -178,7 +177,7 @@
   text-transform: uppercase;
 
   // margin: 0 0 0 auto;
-  @include media("<tab") {
+  @include media('<tab') {
     font-size: 2.7rem;
     order: -1;
   }
@@ -200,7 +199,7 @@
     z-index: 1;
 
     &::before {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       left: 50%;
@@ -216,7 +215,7 @@
       transform: translateZ(0) scale3d(0.5, 0.5, 1);
       z-index: -1;
 
-      @include media("<tab") {
+      @include media('<tab') {
         height: 6rem;
         width: 6rem;
         border-radius: 6rem;
@@ -224,7 +223,7 @@
       }
 
       @include media('<mob') {
-        content: "";
+        content: '';
         display: block;
         position: absolute;
         left: 50%;
@@ -251,11 +250,11 @@
       }
     }
 
-    @include media("<tab") {
+    @include media('<tab') {
       width: 4.6rem;
     }
 
-    @include media("<mob") {
+    @include media('<mob') {
       width: 6.6rem;
     }
   }
@@ -293,7 +292,7 @@
   z-index: 50;
 
   // ------ бутерброд -----------------------------------------
-  @include media("<tab") {
+  @include media('<tab') {
     position: fixed;
     left: 0;
     top: 0;
@@ -309,8 +308,6 @@
       property: opacity, visibility, transform;
       duration: $animation-speed;
     }
-
-    ;
 
     // hide
     opacity: 0;
@@ -331,7 +328,7 @@
   &.is-open {
 
     // ------ бутерброд -----------------------------------------
-    @include media("<tab") {
+    @include media('<tab') {
       opacity: 1;
       $translate: 0, 0;
       transform: translate($translate);
@@ -357,7 +354,7 @@
   display: none;
 
   // ------ бутерброд -----------------------------------------
-  @include media("<tab") {
+  @include media('<tab') {
     display: block;
   }
 }
@@ -382,7 +379,7 @@
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     left: 50%;
@@ -395,10 +392,10 @@
   &::before {
     height: 3.7rem;
     width: 4.6rem;
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItbWVudSI+PGxpbmUgeDE9IjMiIHkxPSIxMiIgeDI9IjIxIiB5Mj0iMTIiPjwvbGluZT48bGluZSB4MT0iMyIgeTE9IjYiIHgyPSIyMSIgeTI9IjYiPjwvbGluZT48bGluZSB4MT0iMyIgeTE9IjE4IiB4Mj0iMjEiIHkyPSIxOCI+PC9saW5lPjwvc3ZnPg0KDQo=");
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItbWVudSI+PGxpbmUgeDE9IjMiIHkxPSIxMiIgeDI9IjIxIiB5Mj0iMTIiPjwvbGluZT48bGluZSB4MT0iMyIgeTE9IjYiIHgyPSIyMSIgeTI9IjYiPjwvbGluZT48bGluZSB4MT0iMyIgeTE9IjE4IiB4Mj0iMjEiIHkyPSIxOCI+PC9saW5lPjwvc3ZnPg0KDQo=');
     color: #000;
 
-    @include media("<mob") {
+    @include media('<mob') {
       height: 6.5rem;
       width: 7.6rem;
     }
@@ -463,9 +460,14 @@
   background-position: 50%;
   background-size: 85%;
 
-  @include media("<mob") {
+  @include media('<tab') {
+    margin-left: 1rem;
+  }
+
+  @include media('<mob') {
     height: 33rem;
     width: 33rem;
+    margin-left: 6rem;
   }
 }
 
@@ -481,7 +483,7 @@
   text-indent: -999rem;
 
   &::before {
-    content: "";
+    content: '';
     display: block;
     $size: 2.2rem;
     height: $size;
@@ -492,16 +494,16 @@
     transform: translate(-50%, -50%);
     background-repeat: no-repeat;
     background-position: 50%;
-    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyLjAwMSA1MTIuMDAxIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIuMDAxIDUxMi4wMDE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNMjg0LjI4NiwyNTYuMDAyTDUwNi4xNDMsMzQuMTQ0YzcuODExLTcuODExLDcuODExLTIwLjQ3NSwwLTI4LjI4NWMtNy44MTEtNy44MS0yMC40NzUtNy44MTEtMjguMjg1LDBMMjU2LDIyNy43MTcNCgkJCUwzNC4xNDMsNS44NTljLTcuODExLTcuODExLTIwLjQ3NS03LjgxMS0yOC4yODUsMGMtNy44MSw3LjgxMS03LjgxMSwyMC40NzUsMCwyOC4yODVsMjIxLjg1NywyMjEuODU3TDUuODU4LDQ3Ny44NTkNCgkJCWMtNy44MTEsNy44MTEtNy44MTEsMjAuNDc1LDAsMjguMjg1YzMuOTA1LDMuOTA1LDkuMDI0LDUuODU3LDE0LjE0Myw1Ljg1N2M1LjExOSwwLDEwLjIzNy0xLjk1MiwxNC4xNDMtNS44NTdMMjU2LDI4NC4yODcNCgkJCWwyMjEuODU3LDIyMS44NTdjMy45MDUsMy45MDUsOS4wMjQsNS44NTcsMTQuMTQzLDUuODU3czEwLjIzNy0xLjk1MiwxNC4xNDMtNS44NTdjNy44MTEtNy44MTEsNy44MTEtMjAuNDc1LDAtMjguMjg1DQoJCQlMMjg0LjI4NiwyNTYuMDAyeiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K");
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyLjAwMSA1MTIuMDAxIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIuMDAxIDUxMi4wMDE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNMjg0LjI4NiwyNTYuMDAyTDUwNi4xNDMsMzQuMTQ0YzcuODExLTcuODExLDcuODExLTIwLjQ3NSwwLTI4LjI4NWMtNy44MTEtNy44MS0yMC40NzUtNy44MTEtMjguMjg1LDBMMjU2LDIyNy43MTcNCgkJCUwzNC4xNDMsNS44NTljLTcuODExLTcuODExLTIwLjQ3NS03LjgxMS0yOC4yODUsMGMtNy44MSw3LjgxMS03LjgxMSwyMC40NzUsMCwyOC4yODVsMjIxLjg1NywyMjEuODU3TDUuODU4LDQ3Ny44NTkNCgkJCWMtNy44MTEsNy44MTEtNy44MTEsMjAuNDc1LDAsMjguMjg1YzMuOTA1LDMuOTA1LDkuMDI0LDUuODU3LDE0LjE0Myw1Ljg1N2M1LjExOSwwLDEwLjIzNy0xLjk1MiwxNC4xNDMtNS44NTdMMjU2LDI4NC4yODcNCgkJCWwyMjEuODU3LDIyMS44NTdjMy45MDUsMy45MDUsOS4wMjQsNS44NTcsMTQuMTQzLDUuODU3czEwLjIzNy0xLjk1MiwxNC4xNDMtNS44NTdjNy44MTEtNy44MTEsNy44MTEtMjAuNDc1LDAtMjguMjg1DQoJCQlMMjg0LjI4NiwyNTYuMDAyeiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K');
     background-size: contain;
 
-    @include media("<mob") {
+    @include media('<mob') {
       height: 6.2rem;
       width: 6.2rem;
     }
   }
 
-  @include media("<mob") {
+  @include media('<mob') {
     height: 15rem;
     width: 15rem;
   }
@@ -514,7 +516,7 @@
   vertical-align: top;
 
   // ------ бутерброд -----------------------------------------
-  @include media("<tab") {
+  @include media('<tab') {
     display: block;
     padding: 0;
     height: 100%;
@@ -576,7 +578,7 @@
   }
 
   // ------ бутерброд -----------------------------------------
-  @include media("<tab") {
+  @include media('<tab') {
     display: block;
   }
 
@@ -586,7 +588,7 @@
     position: relative;
 
     // ------ бутерброд -----------------------------------------
-    @include media("<tab") {
+    @include media('<tab') {
       // Слева текст, справа стрелка
       display: flex;
       flex-wrap: wrap;
@@ -609,7 +611,7 @@
     -webkit-tap-highlight-color: transparent;
 
     // ------ бутерброд -----------------------------------------
-    @include media("<tab") {
+    @include media('<tab') {
       padding: 0 1rem 0 0;
       overflow: visible;
     }
@@ -636,7 +638,7 @@
       padding-right: $nav-arrow-size;
 
       // ------ бутерброд -----------------------------------------
-      @include media("<tab") {
+      @include media('<tab') {
         padding-right: 1rem;
 
         // Если в пункте есть стрелка,
@@ -659,7 +661,7 @@
 
     // Important!
     // Для разрешений выше планшетных
-    @include media(">=tab") {
+    @include media('>=tab') {
       display: block !important; // Важно! Перебить инлайновые стили установленные скпиптом
       position: absolute;
       right: 0;
@@ -673,7 +675,7 @@
 
     &::before {
       $intend: 1rem -0.5rem;
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       top: #{nth($intend, 1)};
@@ -687,7 +689,7 @@
       z-index: -1;
 
       // ------ бутерброд -----------------------------------------
-      @include media("<tab") {
+      @include media('<tab') {
         content: none;
       }
     }
@@ -700,7 +702,7 @@
       text-transform: none;
 
       // ------ бутерброд -----------------------------------------
-      @include media("<tab") {
+      @include media('<tab') {
         left: auto;
         top: auto;
       }
@@ -711,7 +713,7 @@
       margin: 0.5rem 0 0;
 
       // ------ бутерброд -----------------------------------------
-      @include media("<tab") {
+      @include media('<tab') {
         margin: 0;
         padding: #{nth($nav-item-space, 1)} 0 0 #{nth($nav-item-space, 2)};
       }
@@ -773,7 +775,7 @@
   .no-js & li:hover>ul {
 
     // Для разрешений выше планшетных
-    @include media(">=tab") {
+    @include media('>=tab') {
       opacity: 1;
       visibility: visible;
       pointer-events: auto;
@@ -811,7 +813,7 @@
     }
 
     &::before {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       left: 50%;
@@ -828,12 +830,12 @@
 
     &:hover {
       &::after {
-        @include linear-gradient(to bottom, lighten($base-color, 10%) 0%, $base-color 100%)
+        @include linear-gradient(to bottom, lighten($base-color, 10%) 0%, $base-color 100%);
       }
     }
 
     @at-root {
-      @include media("<tab") {
+      @include media('<tab') {
         li.is-open>em {
           transform: rotate(180deg);
         }
@@ -841,7 +843,7 @@
     }
 
     // ------ бутерброд -----------------------------------------
-    @include media("<tab") {
+    @include media('<tab') {
       position: relative;
       top: auto;
       right: auto;
@@ -856,7 +858,7 @@
         transform: rotate(90deg);
       }
 
-      @include media("<tab") {
+      @include media('<tab') {
         li.is-open>em {
           transform: rotate(180deg);
         }
@@ -872,16 +874,20 @@
     text-transform: uppercase;
 
     // ------ бутерброд -----------------------------------------
-    @include media("<tab") {
-      padding: $nav-item-space;
+    @include media('<tab') {
+      padding: 1em 2rem;
       border-top: 1px solid rgba($text-color, 0.5);
       margin: 0;
+    }
+
+    @include media('<mob') {
+      padding: 1em 7.5rem;
     }
 
     &:first-child {
 
       // ------ бутерброд -----------------------------------------
-      @include media("<tab") {
+      @include media('<tab') {
         border-top: none;
       }
     }
@@ -890,7 +896,7 @@
       //margin-right: 0;
 
       // ------ бутерброд -----------------------------------------
-      @include media("<tab") {
+      @include media('<tab') {
         // no styles
       }
     }
@@ -900,7 +906,7 @@
     &>a,
     &>span {
       &::before {
-        content: "";
+        content: '';
         display: block;
         position: absolute;
         bottom: 0;
@@ -927,7 +933,7 @@
         }
 
         // ------ бутерброд -----------------------------------------
-        @include media("<tab") {
+        @include media('<tab') {
           content: none;
         }
       }
@@ -939,7 +945,7 @@
       display: none;
 
       // ------ бутерброд -----------------------------------------
-      @include media("<tab") {
+      @include media('<tab') {
         display: block;
       }
     }
@@ -973,12 +979,12 @@
         color: $text-color-muted;
 
         // ------ бутерброд -----------------------------------------
-        @include media("<tab") {
+        @include media('<tab') {
           color: $text-color-muted;
         }
 
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           top: -2.1rem;
           left: 0.5rem;
@@ -1005,7 +1011,7 @@
           }
 
           // ------ бутерброд -----------------------------------------
-          @include media("<tab") {
+          @include media('<tab') {
             content: none;
           }
         }
@@ -1013,8 +1019,6 @@
     }
   }
 }
-
-
 
 /* ==================================== */
 /* ============== MAIN ================ */
@@ -1034,7 +1038,6 @@
   }
 
   &__footer {
-
     &-site {
       @include font-alt-normal;
       font-size: 0.816rem;
@@ -1042,23 +1045,22 @@
       text-decoration: none;
       letter-spacing: 0.256rem;
       text-transform: uppercase;
-      color: #BBBBBB;
+      color: #bbbbbb;
 
-      @include media("<tab") {
+      @include media('<tab') {
         font-size: 1.816rem;
       }
 
-      @include media("<mob") {
+      @include media('<mob') {
         font-size: 3.896rem;
         line-height: 5.844rem;
         letter-spacing: 1.224rem;
         margin-bottom: 3.506rem;
       }
-
     }
 
     &-privacy {
-      @include media("<mob") {
+      @include media('<mob') {
         order: 3;
         margin-bottom: 0;
       }
@@ -1110,7 +1112,7 @@
     position: relative;
     height: 100%;
 
-    @include media("<mob") {
+    @include media('<mob') {
       // height: auto;
       // margin-top: 36.234rem;
     }
@@ -1126,31 +1128,30 @@
     opacity: 0;
 
     & div {
-      color: #BBBBBB;
+      color: #bbbbbb;
     }
 
     & .dop_col {
-      color: #BBBBBB;
+      color: #bbbbbb;
     }
 
     & a {
       margin-right: 0;
     }
 
-    @include media("<mob") {
+    @include media('<mob') {
       flex-wrap: wrap;
       bottom: 15px;
     }
   }
 
-  @include media("<mob") {
+  @include media('<mob') {
     padding: 0;
   }
 }
 
 .editColorFooter div {
   color: rgba(255, 255, 255, 0.312773);
-  ;
 }
 
 /* main section end */
@@ -1173,7 +1174,6 @@
 
 /* menu */
 .menu {
-
   &__item {
     position: static;
     $width: 19.2rem;
@@ -1228,14 +1228,14 @@
       opacity: 0;
       pointer-events: none;
 
-      @include media("<mob") {
+      @include media('<mob') {
         font-size: 6.678rem;
         line-height: 8.961rem;
         margin: 0 0 10.091rem 0;
       }
 
       &::before {
-        content: "01";
+        content: '01';
         display: block;
         position: relative;
         @include antialiased;
@@ -1273,11 +1273,11 @@
       display: flex;
       align-items: flex-start;
 
-      @include media("<tab") {
+      @include media('<tab') {
         align-items: center;
       }
 
-      @include media("<mob") {
+      @include media('<mob') {
         display: block;
       }
     }
@@ -1289,7 +1289,7 @@
       // padding-right: 2rem;
       // padding-left: 3rem;
 
-      @include media("<mob") {
+      @include media('<mob') {
         $width: 100%;
         flex: 1 0 $width;
         max-width: $width;
@@ -1309,14 +1309,14 @@
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
-      color: #1D3743;
+      color: #1d3743;
 
-      @include media("<tab") {
+      @include media('<tab') {
         font-size: 6.5rem;
         line-height: 5.6rem;
       }
 
-      @include media("<mob") {
+      @include media('<mob') {
         font-size: 18.701rem;
         line-height: 18.701rem;
         padding: 30.571rem 10.13rem 30.571rem 0;
@@ -1353,7 +1353,7 @@
       margin: 0;
       transition: opacity 0.7s;
       opacity: 0;
-      color: #4B6977;
+      color: #4b6977;
 
       p {
         @include font-normal;
@@ -1362,23 +1362,23 @@
         padding: 3.019rem 1.632rem;
         margin-top: -2.2rem;
 
-        @include media("<tab") {
+        @include media('<tab') {
           font-size: 2rem;
           line-height: 3.121rem;
         }
 
-        @include media("<mob") {
+        @include media('<mob') {
           display: none;
         }
       }
 
-      @include media("<tab") {
+      @include media('<tab') {
         $width: 48%;
         flex: 1 0 $width;
         max-width: $width;
       }
 
-      @include media("<mob") {
+      @include media('<mob') {
         max-width: 97.013rem;
       }
 
@@ -1390,17 +1390,17 @@
     &-rect {
       width: 0.33rem;
       height: 16.9rem;
-      background-color: #D8D8D8;
+      background-color: #d8d8d8;
       border-radius: 5px;
       align-self: center;
       margin-left: auto;
 
-      @include media("<tab") {
+      @include media('<tab') {
         width: 0.53rem;
         height: 31.9rem;
       }
 
-      @include media("<mob") {
+      @include media('<mob') {
         display: none;
       }
     }
@@ -1419,7 +1419,7 @@
 
       &::before {
         display: block;
-        content: "0"counter(item);
+        content: '0'counter(item);
         @include antialiased;
         $prop: transform;
         will-change: $prop;
@@ -1471,7 +1471,7 @@
 
 // white border
 .logo-theme-light .nav-opener::before {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItbWVudSI+PGxpbmUgeDE9IjMiIHkxPSIxMiIgeDI9IjIxIiB5Mj0iMTIiPjwvbGluZT48bGluZSB4MT0iMyIgeTE9IjYiIHgyPSIyMSIgeTI9IjYiPjwvbGluZT48bGluZSB4MT0iMyIgeTE9IjE4IiB4Mj0iMjEiIHkyPSIxOCI+PC9saW5lPjwvc3ZnPg0KDQo=");
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItbWVudSI+PGxpbmUgeDE9IjMiIHkxPSIxMiIgeDI9IjIxIiB5Mj0iMTIiPjwvbGluZT48bGluZSB4MT0iMyIgeTE9IjYiIHgyPSIyMSIgeTI9IjYiPjwvbGluZT48bGluZSB4MT0iMyIgeTE9IjE4IiB4Mj0iMjEiIHkyPSIxOCI+PC9saW5lPjwvc3ZnPg0KDQo=');
 }
 
 .logo-theme-dark .menu-el__full-description p {
@@ -1520,7 +1520,7 @@
 
   transition: {
     property: $prop;
-    duration: 1.0s;
+    duration: 1s;
     delay: 1.2s;
     timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
   }
@@ -1552,7 +1552,7 @@
   }
 
   &::before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     left: 0;
@@ -1622,7 +1622,7 @@
   opacity: 0;
   transition: opacity 0.6s;
 
-  @include media("<mob") {
+  @include media('<mob') {
     align-items: flex-start;
     overflow: hidden;
   }
@@ -1637,7 +1637,7 @@
     max-width: 100%;
     height: 100%;
 
-    @include media("<mob") {
+    @include media('<mob') {
       height: auto;
     }
 
@@ -1651,7 +1651,7 @@
     align-items: center;
     height: 100%;
 
-    @include media("<mob") {
+    @include media('<mob') {
       display: block;
       margin-top: 50rem;
     }
@@ -1665,13 +1665,13 @@
     padding: 0 2rem 0.8rem 0;
     margin: 0 0 0 -0.2rem;
 
-    @include media("<tab") {
+    @include media('<tab') {
       $width: 100%;
       flex: 1 0 width;
       max-width: $width;
     }
 
-    @include media("<mob") {
+    @include media('<mob') {
       display: none;
     }
   }
@@ -1689,7 +1689,7 @@
     transition: opacity 0.6s 1.5s;
     opacity: 0;
 
-    @include media("<mob") {
+    @include media('<mob') {
       font-size: 4.675rem;
       line-height: 7.013rem;
       // margin: 37.013rem 0 0 0.779rem;
@@ -1720,19 +1720,18 @@
     }
   }
 
-
   &__title {
     @include font-gilroy-bold;
     font-size: 7.3rem;
     line-height: 7.5rem;
     color: white;
 
-    @include media("<tab") {
+    @include media('<tab') {
       font-size: 11.3rem;
       line-height: 11.5rem;
     }
 
-    @include media("<mob") {
+    @include media('<mob') {
       display: none;
     }
 
@@ -1753,13 +1752,13 @@
     padding: 0 2rem 0 0;
     margin-top: 1.632rem;
 
-    @include media("<tab") {
+    @include media('<tab') {
       $width: 28.4%;
       flex: 1 0 $width;
       max-width: $width;
     }
 
-    @include media("<mob") {
+    @include media('<mob') {
       $width: 100%;
       flex: 1 0 $width;
       max-width: $width;
@@ -1774,13 +1773,13 @@
     @include font-gilroy-bold;
     text-decoration: none;
     font-size: 13px;
-    color: #1F1F1F;
+    color: #1f1f1f;
     line-height: 46px;
     padding: 1.224rem 5.467rem;
-    background: #39FF98;
+    background: #39ff98;
     border-radius: 0.245rem;
 
-    @include media("<mob") {
+    @include media('<mob') {
       border-radius: 1.33rem;
     }
   }
@@ -1792,12 +1791,12 @@
     font-size: 1.469rem;
     line-height: 2.203rem;
 
-    @include media("<tab") {
+    @include media('<tab') {
       font-size: 3.469rem;
       line-height: 5.203rem;
     }
 
-    @include media("<mob") {
+    @include media('<mob') {
       font-size: 7.013rem;
       line-height: 10.519rem;
     }
@@ -1810,12 +1809,12 @@
     line-height: 3.75rem;
     color: white;
 
-    @include media("<tab") {
+    @include media('<tab') {
       font-size: 5rem;
       line-height: 6.75rem;
     }
 
-    @include media("<mob") {
+    @include media('<mob') {
       font-size: 14.026rem;
       line-height: 17.922rem;
     }
@@ -1835,13 +1834,13 @@
     color: #fff;
     opacity: 0.7;
 
-    @include media("<tab") {
+    @include media('<tab') {
       width: 30.48rem;
       font-size: 2.05rem;
       line-height: 2.2rem;
     }
 
-    @include media("<mob") {
+    @include media('<mob') {
       display: none !important;
     }
   }
@@ -1857,7 +1856,7 @@
     justify-content: flex-end;
     z-index: 1;
 
-    @include media("<mob") {
+    @include media('<mob') {
       height: auto;
       $width: 100%;
       flex: 1 0 $width;
@@ -1893,7 +1892,7 @@
       transform: translate($translate) scale($scale);
       transform: translate3d($translate, 0) scale3d($scale, 1);
 
-      @include media("<mob") {
+      @include media('<mob') {
         left: 50%;
         width: 100%;
         align-items: flex-end;
@@ -1916,29 +1915,29 @@
         width: 100%;
         align-items: center;
 
-        @include media("<mob") {
+        @include media('<mob') {
           align-items: flex-end;
           top: 33%;
           left: 48%;
         }
 
-        @include media("<mob-xs") {
+        @include media('<mob-xs') {
           top: 31%;
         }
       }
 
       &_social1 img {
-        @include media("<mob") {
+        @include media('<mob') {
           width: 114.026rem;
           height: 106.234rem;
         }
 
-        @include media("<mob-s") {
+        @include media('<mob-s') {
           width: 104.026rem;
           height: 96.234rem;
         }
 
-        @include media("<mob-xs") {
+        @include media('<mob-xs') {
           width: 76.026rem;
           height: 72.234rem;
         }
@@ -1950,11 +1949,11 @@
         align-items: flex-start;
         justify-content: flex-end;
 
-        @include media("<tab") {
+        @include media('<tab') {
           align-items: center;
         }
 
-        @include media("<mob") {
+        @include media('<mob') {
           align-items: center;
           left: 50%;
           top: 55%;
@@ -1965,12 +1964,12 @@
         width: 46.589rem;
         height: 46.589rem;
 
-        @include media("<mob") {
+        @include media('<mob') {
           width: 112.013rem;
           height: 105.779rem;
         }
 
-        @include media("<mob-xxs") {
+        @include media('<mob-xxs') {
           width: 92.013rem;
           height: 85.779rem;
         }
@@ -1981,10 +1980,10 @@
   &__rectangle {
     width: 0.33rem;
     height: 17rem;
-    background: #D8D8D8;
+    background: #d8d8d8;
     border-radius: 0.41rem;
 
-    @include media("<mob") {
+    @include media('<mob') {
       display: none;
     }
   }
@@ -1997,7 +1996,7 @@
   padding: 0 0 0.7rem;
   margin: 0 0 -1rem;
 
-  @include media("<mob") {
+  @include media('<mob') {
     display: inline;
   }
 }
@@ -2012,7 +2011,7 @@
 
   transition: {
     property: $prop;
-    duration: 1.0s;
+    duration: 1s;
     delay: 0.8s;
     timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
   }
@@ -2052,13 +2051,13 @@
     margin-right: 1.469rem;
   }
 
-  @include media("<tab") {
+  @include media('<tab') {
     display: flex;
     right: 10%;
     // bottom: 30%;
   }
 
-  @include media("<mob") {
+  @include media('<mob') {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -2067,11 +2066,10 @@
     right: 0;
   }
 
-  @include media("<mob-xxs") {
+  @include media('<mob-xxs') {
     bottom: 13%;
   }
 }
-
 
 // wbg
 
@@ -2089,7 +2087,7 @@
   position: absolute;
   right: 25%;
 
-  @include media("<mob") {
+  @include media('<mob') {
     right: 35%;
     top: -3%;
   }
@@ -2100,7 +2098,7 @@
   bottom: -2%;
   left: 2.6%;
 
-  @include media("<mob") {
+  @include media('<mob') {
     display: none;
   }
 }
@@ -2110,7 +2108,7 @@
   bottom: 0;
   right: 0;
 
-  @include media("<mob") {
+  @include media('<mob') {
     bottom: -25%;
   }
 }
@@ -2121,20 +2119,20 @@
 
 .tanks {
   overflow: hidden;
-  background-color: #7250EC;
+  background-color: #7250ec;
 
   &_rectangle {
     visibility: hidden;
     opacity: 0.3;
     width: 0.326rem;
     height: 16.563rem;
-    background: #D8D8D8;
+    background: #d8d8d8;
     border-radius: 0.408rem;
     position: relative;
     right: 0;
     top: 1.142rem;
 
-    @include media("<tab") {
+    @include media('<tab') {
       display: none;
     }
   }
@@ -2146,65 +2144,25 @@
     &:first-child {
       // margin-bottom: 1.224rem;
 
-      @include media("<tab") {
+      @include media('<tab') {
         margin-bottom: 0;
         margin-right: 2.353rem;
       }
     }
 
-    @include media("<tab") {
+    @include media('<tab') {
       height: 100%;
     }
   }
 
   &__menu {
-    visibility: hidden;
     position: relative;
-    left: -3.04rem;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 30px #4B2DB9;
-    border-radius: 1.224rem;
-    width: 14.605rem;
-    height: 14.034rem;
-    padding: 0.816rem;
-    z-index: 10;
+    top: 0;
+    left: -90px;
+    opacity: 1;
+    transition: opacity 200ms;
 
-    & nav {
-      display: flex;
-      flex-direction: column;
-    }
-
-    &_item {
-      @include font-bold;
-      text-transform: uppercase;
-      font-size: 0.979rem;
-      line-height: 2.774rem;
-      padding-left: 1.387rem;
-      opacity: 0.4;
-      color: #0E0E0E;
-      text-decoration: none;
-      margin-bottom: 0.514rem;
-      cursor: pointer;
-      border-radius: 0.816rem;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      &:hover {
-        color: #0E0E0E;
-        opacity: 1;
-        background: #3AFF98;
-      }
-
-      &.active_game {
-        color: #0E0E0E;
-        opacity: 1;
-        background: #3AFF98;
-      }
-    }
-
-    @include media("<tab") {
+    @include media('<tab') {
       display: none !important;
     }
   }
@@ -2212,12 +2170,6 @@
   &__awards {
     padding-top: 5.793rem;
   }
-}
-
-.f-menu {
-  // transition: opacity 0.1s;
-  position: fixed;
-  top: 100px;
 }
 
 .tanks__header {
@@ -2233,20 +2185,19 @@
       right: 10%;
       z-index: 2;
 
-      @include media("<tab") {
+      @include media('<tab') {
         width: 32.745rem;
         right: 28%;
       }
     }
 
     & img:last-child {
-
       position: absolute;
       bottom: 18%;
       right: 20%;
       z-index: 2;
 
-      @include media("<tab") {
+      @include media('<tab') {
         display: none;
       }
     }
@@ -2259,14 +2210,13 @@
     line-height: 100%;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.067936);
-    ;
     position: absolute;
     top: 48%;
     left: 48%;
     transform: translate(-50%, -50%);
     z-index: -2;
 
-    @include media("<mob") {
+    @include media('<mob') {
       font-size: 58.441rem;
       top: 43%;
       left: 81%;
@@ -2311,23 +2261,23 @@
       width: 49.282rem;
       height: 55.809rem;
 
-      @include media("<tab") {
+      @include media('<tab') {
         width: 65.529rem;
         height: 69.02rem;
       }
 
-      @include media("<mob") {
+      @include media('<mob') {
         width: 100%;
         height: 100%;
       }
     }
 
-    @include media("<tab") {
+    @include media('<tab') {
       left: 0;
       top: -17rem;
     }
 
-    @include media("<mob") {
+    @include media('<mob') {
       left: 0;
       top: -29rem;
     }
@@ -2345,7 +2295,7 @@
       width: 2.203rem;
       visibility: hidden;
 
-      @include media("<tab") {
+      @include media('<tab') {
         display: none;
       }
     }
@@ -2361,16 +2311,16 @@
       @include font-alt-normal;
       font-size: 1.469rem;
       line-height: 2.203rem;
-      color: #FFFFFF;
+      color: #ffffff;
       mix-blend-mode: normal;
       opacity: 0.3;
 
-      @include media("<tab") {
+      @include media('<tab') {
         font-size: 3.529rem;
         line-height: 5.294rem;
       }
 
-      @include media("<mob") {
+      @include media('<mob') {
         font-size: 6.243rem;
         line-height: 9.365rem;
       }
@@ -2381,16 +2331,16 @@
       @include font-gilroy-bold;
       font-size: 5.875rem;
       line-height: 5.222rem;
-      color: #FFFFFF;
+      color: #ffffff;
       margin-bottom: 4.808rem;
       margin-top: 2.448rem;
 
-      @include media("<tab") {
+      @include media('<tab') {
         font-size: 9.536rem;
         line-height: 8.477rem;
       }
 
-      @include media("<mob") {
+      @include media('<mob') {
         font-size: 24.974rem;
         line-height: 22.199rem;
       }
@@ -2405,43 +2355,43 @@
         margin-top: 1.324rem;
 
         &:last-child {
-          @include media("<net") {
+          @include media('<net') {
             margin-top: 2.3rem;
           }
 
-          @include media("<tab") {
+          @include media('<tab') {
             margin-top: 0;
           }
         }
 
-        @include media("<tab") {
+        @include media('<tab') {
           margin-top: 0;
         }
       }
 
-      @include media("<tab") {
+      @include media('<tab') {
         flex-direction: row;
         position: relative;
         top: 57rem;
         z-index: 10;
       }
 
-      @include media("<mob") {
+      @include media('<mob') {
         top: 89rem;
       }
     }
 
-    @include media("<tab") {
+    @include media('<tab') {
       align-items: flex-start;
       margin-top: 24.118rem;
     }
 
-    @include media("<mob") {
+    @include media('<mob') {
       margin-top: 38.818rem;
     }
   }
 
-  @include media("<tab") {
+  @include media('<tab') {
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -2457,13 +2407,13 @@
     text-align: left;
   }
 
-  @include media("<tab") {
+  @include media('<tab') {
     justify-content: flex-start;
     margin-bottom: 3.137rem;
     margin-top: 2.142rem;
   }
 
-  @include media("<mob") {
+  @include media('<mob') {
     margin-top: 6.142rem;
   }
 }
@@ -2480,7 +2430,7 @@
   &_info {
     flex-basis: 60.52rem;
 
-    @include media("<tab") {
+    @include media('<tab') {
       flex-basis: 100%;
     }
   }
@@ -2490,17 +2440,17 @@
     @include font-bold;
     font-size: 2.774rem;
     line-height: 1.795rem;
-    color: #FFFFFF;
+    color: #ffffff;
     text-align: left;
     margin: 0;
     margin-bottom: 1.224rem;
 
-    @include media("<tab") {
+    @include media('<tab') {
       font-size: 7.059rem;
       line-height: 6.275rem;
     }
 
-    @include media("<mob") {
+    @include media('<mob') {
       font-size: 11.793rem;
       line-height: 15.583rem;
     }
@@ -2510,16 +2460,16 @@
     visibility: hidden;
     font-size: 1.305rem;
     line-height: 1.795rem;
-    color: #BCACF6;
+    color: #bcacf6;
     width: 38.267rem;
 
-    @include media("<tab") {
+    @include media('<tab') {
       font-size: 3.137rem;
       line-height: 4.314rem;
       width: 100%;
     }
 
-    @include media("<mob") {
+    @include media('<mob') {
       font-size: 5.55rem;
       line-height: 7.631rem;
     }
@@ -2530,7 +2480,7 @@
   background: url(../../img/tanks_bg.png) no-repeat center center/cover;
   padding-top: 16.482rem;
 
-  @include media("<tab") {
+  @include media('<tab') {
     padding-top: 0;
   }
 }
@@ -2548,13 +2498,13 @@
     box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.25);
     border-radius: 0.408rem;
 
-    @include media("<tab") {
+    @include media('<tab') {
       width: 65.098rem;
       height: 36.275rem;
       border: 3px solid rgb(255, 255, 255);
     }
 
-    @include media("<mob") {
+    @include media('<mob') {
       width: 115.158rem;
       height: 64.169rem;
     }
@@ -2570,19 +2520,19 @@
     border-radius: 0.408rem;
     object-fit: cover;
 
-    @include media("<tab") {
+    @include media('<tab') {
       width: 65.098rem;
       height: 36.275rem;
       border: 3px solid rgb(255, 255, 255);
     }
 
-    @include media("<mob") {
+    @include media('<mob') {
       width: 115.158rem;
       height: 64.169rem;
     }
   }
 
-  @include media("<tab") {
+  @include media('<tab') {
     margin-top: 28.482rem;
   }
 }
@@ -2590,7 +2540,6 @@
 .hoop__video_item {
   visibility: hidden;
   outline: none;
-
 
   & img {
     width: 21.051rem;
@@ -2601,12 +2550,12 @@
     box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.25);
     border-radius: 1.224rem;
 
-    @include media("<tab") {
+    @include media('<tab') {
       width: 45.62rem;
       height: 98.723rem;
     }
 
-    @include media("<mob") {
+    @include media('<mob') {
       width: 62.5rem;
       height: 135.25rem;
     }
@@ -2624,12 +2573,12 @@
     border-radius: 1.224rem;
     object-fit: cover;
 
-    @include media("<tab") {
+    @include media('<tab') {
       width: 45.62rem;
       height: 98.723rem;
     }
 
-    @include media("<mob") {
+    @include media('<mob') {
       width: 62.5rem;
       height: 135.25rem;
     }
@@ -2653,12 +2602,12 @@
     opacity: 0;
   }
 
-  @include media("<tab") {
+  @include media('<tab') {
     width: 45.62rem;
     height: 98.723rem;
   }
 
-  @include media("<mob") {
+  @include media('<mob') {
     width: 62.5rem;
     height: 135.25rem;
   }
@@ -2677,14 +2626,13 @@
   &_figurine {
     visibility: hidden;
 
-
     & img:nth-child(1) {
       position: absolute;
       top: -33%;
       left: 29%;
       z-index: 1;
 
-      @include media("<tab") {
+      @include media('<tab') {
         display: none;
       }
     }
@@ -2695,7 +2643,7 @@
       right: 0%;
       z-index: 1;
 
-      @include media("<tab") {
+      @include media('<tab') {
         width: 4.765rem;
         height: 14.725rem;
       }
@@ -2707,7 +2655,7 @@
       left: 0;
       z-index: 1;
 
-      @include media("<tab") {
+      @include media('<tab') {
         display: none;
       }
     }
@@ -2718,7 +2666,7 @@
       left: 11%;
       z-index: 1;
 
-      @include media("<tab") {
+      @include media('<tab') {
         display: none;
       }
     }
@@ -2738,7 +2686,7 @@
       height: 28.068rem;
     }
 
-    @include media("<tab") {
+    @include media('<tab') {
       display: none;
     }
   }
@@ -2756,7 +2704,7 @@
       height: 28.068rem;
     }
 
-    @include media("<tab") {
+    @include media('<tab') {
       display: none;
     }
   }
@@ -2764,7 +2712,7 @@
   &_slider {
     display: none;
 
-    @include media("<tab") {
+    @include media('<tab') {
       position: relative;
       display: block;
     }
@@ -2778,7 +2726,7 @@
         margin: 0 4.902rem;
         opacity: 1;
 
-        @include media("<mob") {
+        @include media('<mob') {
           width: 124.176rem !important;
           height: 108.221rem;
         }
@@ -2788,7 +2736,7 @@
         width: 47.417rem;
         height: 41.325rem;
 
-        @include media("<mob") {
+        @include media('<mob') {
           width: 124.176rem;
           height: 108.221rem;
         }
@@ -2800,7 +2748,7 @@
     display: flex;
     justify-content: flex-end;
 
-    @include media("<tab") {
+    @include media('<tab') {
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -2815,16 +2763,16 @@
       @include font-bold;
       font-size: 2.937rem;
       line-height: 1.795rem;
-      color: #FFFFFF;
+      color: #ffffff;
       margin: 0;
 
-      @include media("<tab") {
+      @include media('<tab') {
         margin-top: 4.902rem;
         font-size: 7.059rem;
         line-height: 4.314rem;
       }
 
-      @include media("<mob") {
+      @include media('<mob') {
         font-size: 11.487rem;
         line-height: 16.314rem;
         margin-top: 10.142rem;
@@ -2833,7 +2781,7 @@
 
     & p {
       visibility: hidden;
-      color: #DDD3FF;
+      color: #ddd3ff;
       width: 40.062rem;
       font-size: 1.305rem;
       line-height: 1.795rem;
@@ -2843,20 +2791,20 @@
         color: #fff;
       }
 
-      @include media("<tab") {
+      @include media('<tab') {
         margin-top: 2.902rem;
         font-size: 3.137rem;
         line-height: 4.314rem;
         width: auto;
       }
 
-      @include media("<mob") {
+      @include media('<mob') {
         font-size: 5.55rem;
         line-height: 7.631rem;
       }
     }
 
-    @include media("<tab") {
+    @include media('<tab') {
       margin-right: 0;
       flex-basis: auto;
     }
@@ -2870,10 +2818,9 @@
     & h4 {
       font-size: 1.469rem;
       line-height: 1.795rem;
-      color: #FFFFFF;
+      color: #ffffff;
       margin: 0;
       margin-bottom: 1.7rem;
-
     }
 
     & p {
@@ -2894,8 +2841,8 @@
       text-align: center;
       width: 13.136rem;
       padding: 3.427rem 2.529rem;
-      border-top: 4px solid #F35D58;
-      background: #7B58F7;
+      border-top: 4px solid #f35d58;
+      background: #7b58f7;
       margin-bottom: 1.958rem;
 
       &_number {
@@ -2904,12 +2851,12 @@
         line-height: 5rem;
         color: #fff;
 
-        @include media("<tab") {
+        @include media('<tab') {
           font-size: 18.824rem;
           line-height: 16.667rem;
         }
 
-        @include media("<mob") {
+        @include media('<mob') {
           font-size: 33.299rem;
           line-height: 31rem;
         }
@@ -2920,21 +2867,21 @@
         text-align: center;
         font-size: 1.061rem;
         line-height: 1.469rem;
-        color: #FFFFFF;
+        color: #ffffff;
         opacity: 0.6;
 
-        @include media("<tab") {
+        @include media('<tab') {
           font-size: 2.549rem;
           line-height: 3.529rem;
         }
 
-        @include media("<mob") {
+        @include media('<mob') {
           font-size: 4.509rem;
           line-height: 6.243rem;
         }
       }
 
-      @include media("<tab") {
+      @include media('<tab') {
         width: 30.98rem;
         height: 46.667rem;
         padding: 8.235rem 5.882rem;
@@ -2942,7 +2889,7 @@
         margin-right: 1px;
       }
 
-      @include media("<mob") {
+      @include media('<mob') {
         width: 55.151rem;
         height: 82.553rem;
         padding: 11rem 11.568rem;
@@ -2954,8 +2901,8 @@
       text-align: center;
       width: 13.136rem;
       padding: 3.427rem 2.529rem;
-      border-top: 4px solid #F35D58;
-      background: #7B58F7;
+      border-top: 4px solid #f35d58;
+      background: #7b58f7;
 
       & span {
         @include font-gilroy-bold;
@@ -2963,12 +2910,12 @@
         line-height: 2.693rem;
         color: #fff;
 
-        @include media("<tab") {
+        @include media('<tab') {
           font-size: 7.647rem;
           line-height: 6.471rem;
         }
 
-        @include media("<mob") {
+        @include media('<mob') {
           font-size: 13.528rem;
           line-height: 11.446rem;
         }
@@ -2978,34 +2925,34 @@
         text-align: center;
         font-size: 1.061rem;
         line-height: 1.469rem;
-        color: #FFFFFF;
+        color: #ffffff;
         opacity: 0.6;
 
-        @include media("<tab") {
+        @include media('<tab') {
           font-size: 2.549rem;
           line-height: 3.529rem;
         }
 
-        @include media("<mob") {
+        @include media('<mob') {
           font-size: 4.509rem;
           line-height: 6.243rem;
         }
       }
 
-      @include media("<tab") {
+      @include media('<tab') {
         width: 30.98rem;
         height: 46.667rem;
         padding: 6.235rem 5.882rem;
       }
 
-      @include media("<mob") {
+      @include media('<mob') {
         width: 55.151rem;
         height: 82.553rem;
         padding: 11rem 11.568rem;
       }
     }
 
-    @include media("<tab") {
+    @include media('<tab') {
       display: flex;
       margin: 6.667rem 0 12.745rem 0;
     }
@@ -3030,12 +2977,12 @@
     & img {
       visibility: hidden;
 
-      @include media("<tab") {
+      @include media('<tab') {
         width: 16.078rem;
         height: 14.706rem;
       }
 
-      @include media("<mob") {
+      @include media('<mob') {
         width: 28.443rem;
         height: 26.015rem;
       }
@@ -3047,15 +2994,15 @@
     @include font-gilroy-bold;
     font-size: 5.875rem;
     line-height: 5.222rem;
-    color: #FFFFFF;
+    color: #ffffff;
     text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.51);
 
-    @include media("<tab") {
+    @include media('<tab') {
       font-size: 8.627rem;
       line-height: 7.647rem;
     }
 
-    @include media("<mob") {
+    @include media('<mob') {
       font-size: 15.262rem;
       line-height: 13.528rem;
     }
@@ -3066,7 +3013,7 @@
     margin-bottom: 22.846rem;
     z-index: 99;
 
-    @include media("<tab") {
+    @include media('<tab') {
       display: none;
     }
   }
@@ -3082,12 +3029,12 @@
       color: rgba(255, 255, 255, 0.312773);
     }
 
-    @include media("<tab") {
+    @include media('<tab') {
       display: none;
     }
   }
 
-  @include media("<tab") {
+  @include media('<tab') {
     padding: 2.781rem 0 80.623rem 0;
   }
 
@@ -3101,7 +3048,7 @@
   display: none;
   justify-content: center;
 
-  @include media("<tab") {
+  @include media('<tab') {
     display: flex;
   }
 }
@@ -3109,7 +3056,7 @@
 // hoopstars
 
 .hoopstars {
-  background: #FF8A5F;
+  background: #ff8a5f;
   overflow-x: hidden;
 
   &_paragraph {
@@ -3117,14 +3064,14 @@
   }
 
   &_menu {
-    box-shadow: 0px 4px 30px #9F4D2E;
+    box-shadow: 0px 4px 30px #9f4d2e;
   }
 
   &_videoBg {
     background: url(../img/hoop_stars_bg.png) no-repeat center center/100% 100%;
     padding-top: 5rem;
 
-    @include media("<tab") {
+    @include media('<tab') {
       background-size: cover;
     }
   }
@@ -3166,10 +3113,10 @@
 }
 
 .locacion_block_more .hoopstars_prg {
-  color: #FFFFFF;
+  color: #ffffff;
   margin-top: 0;
 
-  @include media("<tab") {
+  @include media('<tab') {
     margin-top: 9rem;
   }
 }
@@ -3185,7 +3132,7 @@
   height: 97rem;
   margin: 0 4.4rem;
 
-  @include media("<tab") {
+  @include media('<tab') {
     width: 67rem !important;
     height: 67rem;
   }
@@ -3195,7 +3142,7 @@
   width: 97rem;
   height: 97rem;
 
-  @include media("<tab") {
+  @include media('<tab') {
     width: 67rem;
     height: 67rem;
   }
@@ -3208,14 +3155,13 @@
   position: relative;
 
   .tanks__footer_blk img {
-
-    @include media("<mob") {
+    @include media('<mob') {
       width: 33.778rem;
       height: 22.444rem;
     }
   }
 
-  @include media("<tab") {
+  @include media('<tab') {
     padding: 12.825rem 0 63.423rem 0;
   }
 }
@@ -3229,7 +3175,7 @@
   top: -37%;
   left: 45%;
 
-  @include media("<tab") {
+  @include media('<tab') {
     display: none;
   }
 }
@@ -3238,12 +3184,12 @@
   margin-bottom: -23rem;
   top: 0;
 
-  @include media("<tab") {
+  @include media('<tab') {
     top: 30rem;
     margin-bottom: 7rem;
   }
 
-  @include media("<mob") {
+  @include media('<mob') {
     top: 47rem;
     margin-bottom: 27rem;
   }
@@ -3259,13 +3205,13 @@
     z-index: 20;
     width: 48.711rem;
 
-    @include media("<tab") {
+    @include media('<tab') {
       width: 61rem;
       top: 13%;
       z-index: 1;
     }
 
-    @include media("<mob") {
+    @include media('<mob') {
       width: 76rem;
       top: 26%;
       z-index: 1;
@@ -3276,19 +3222,18 @@
 .first_part_hoop {
   height: 46.834rem;
 
-  @include media("<tab") {
+  @include media('<tab') {
     height: auto;
   }
 }
 
 .hoop_button_download {
-
-  @include media("<tab") {
+  @include media('<tab') {
     top: 26rem;
     z-index: 67;
   }
 
-  @include media("<mob") {
+  @include media('<mob') {
     top: 40rem;
   }
 }
@@ -3299,24 +3244,24 @@
 }
 
 .privacy {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   overflow: visible;
 
   &_title {
     @include font-bold;
     font-size: 5.956rem;
     line-height: 6.119rem;
-    color: #1D3743;
+    color: #1d3743;
     margin: 11.831rem 0 6.527rem 0;
     position: relative;
     z-index: 20;
 
-    @include media("<tab") {
+    @include media('<tab') {
       margin-bottom: 5.711rem;
       margin-top: 21rem;
     }
 
-    @include media("<mob") {
+    @include media('<mob') {
       font-size: 11.956rem;
       line-height: 12.119rem;
       margin-top: 40rem;
@@ -3329,10 +3274,10 @@
     justify-content: center;
 
     .privacy_content {
-      color: #3F3F3F;
+      color: #3f3f3f;
       max-width: 781px;
       margin: 0 auto;
-      background: #FFFFFF;
+      background: #ffffff;
       padding: 4.488rem;
       position: relative;
       z-index: 19;
@@ -3342,13 +3287,13 @@
       ul {
         margin-left: 4rem;
 
-        @include media("<tab") {
+        @include media('<tab') {
           margin-left: 6rem;
           font-size: 2.469rem;
           line-height: 4.121rem;
         }
 
-        @include media("<mob") {
+        @include media('<mob') {
           margin-left: 11rem;
           font-size: 6.469rem;
           line-height: 8.427rem;
@@ -3359,12 +3304,12 @@
         padding: 0;
 
         // margin-left: 1.5rem;
-        @include media("<tab") {
+        @include media('<tab') {
           font-size: 2.469rem;
           line-height: 4.121rem;
         }
 
-        @include media("<mob") {
+        @include media('<mob') {
           font-size: 6.469rem;
           line-height: 8.427rem;
         }
@@ -3375,7 +3320,7 @@
       }
 
       a {
-        color: #3F3F3F;
+        color: #3f3f3f;
       }
 
       & p {
@@ -3383,12 +3328,12 @@
 
         // font-size: 1.469rem;
         // line-height: 2.121rem;
-        @include media("<tab") {
+        @include media('<tab') {
           font-size: 2.469rem;
           line-height: 4.121rem;
         }
 
-        @include media("<mob") {
+        @include media('<mob') {
           font-size: 6.469rem;
           line-height: 8.427rem;
         }
@@ -3405,87 +3350,87 @@
       }
 
       & h1 {
-        @include media("<tab") {
+        @include media('<tab') {
           font-size: 6rem;
           line-height: 9.6rem;
         }
 
-        @include media("<mob") {
+        @include media('<mob') {
           font-size: 13rem;
           line-height: 13.6rem;
         }
       }
 
       & h2 {
-        @include media("<tab") {
+        @include media('<tab') {
           font-size: 5.5rem;
           line-height: 8.6rem;
         }
 
-        @include media("<mob") {
+        @include media('<mob') {
           font-size: 12.5rem;
           line-height: 12.6rem;
         }
       }
 
       & h3 {
-        @include media("<tab") {
+        @include media('<tab') {
           font-size: 5rem;
           line-height: 7.6rem;
         }
 
-        @include media("<mob") {
+        @include media('<mob') {
           font-size: 11rem;
           line-height: 11.6rem;
         }
       }
 
       & h4 {
-        @include media("<tab") {
+        @include media('<tab') {
           font-size: 4.5rem;
           line-height: 7rem;
         }
 
-        @include media("<mob") {
+        @include media('<mob') {
           font-size: 9rem;
           line-height: 9.6rem;
         }
       }
 
       & h5 {
-        @include media("<tab") {
+        @include media('<tab') {
           font-size: 4.2rem;
           line-height: 7.3rem;
         }
 
-        @include media("<mob") {
+        @include media('<mob') {
           font-size: 7rem;
           line-height: 7.6rem;
         }
       }
 
       & h6 {
-        @include media("<tab") {
+        @include media('<tab') {
           font-size: 4rem;
           line-height: 6.8rem;
         }
 
-        @include media("<mob") {
+        @include media('<mob') {
           font-size: 5rem;
           line-height: 5.6rem;
         }
       }
 
-      @include media("<tab") {
+      @include media('<tab') {
         max-width: 87.7rem;
       }
 
-      @include media("<mob") {
+      @include media('<mob') {
         max-width: 100%;
       }
     }
 
-    @include media("<tab") {
+    @include media('<tab') {
       justify-content: center;
     }
   }
@@ -3498,11 +3443,11 @@
     flex-wrap: wrap;
 
     & div {
-      color: #BBBBBB;
+      color: #bbbbbb;
     }
 
     & a {
-      color: #BBBBBB;
+      color: #bbbbbb;
     }
   }
 }
@@ -3539,7 +3484,7 @@
     cursor: pointer;
   }
 
-  @include media("<tab") {
+  @include media('<tab') {
     display: none;
   }
 }
@@ -3561,7 +3506,7 @@
 /* ==================================== */
 .vacancies {
   &-top {
-    background-color: #27EB85;
+    background-color: #27eb85;
     padding: 18.6667rem 0 9.3333rem;
     position: relative;
     overflow: hidden;
@@ -3571,15 +3516,15 @@
       font-size: 6.0833rem;
       line-height: 6.25rem;
       margin: 0;
-      color: #1D3743;
+      color: #1d3743;
       position: relative;
       z-index: 2;
 
-      @include media("<tab") {
+      @include media('<tab') {
         font-size: 9.083rem;
       }
 
-      @include media("<mob") {
+      @include media('<mob') {
         font-size: 13.083rem;
       }
     }
@@ -3594,16 +3539,16 @@
       left: -13rem;
       bottom: 0;
 
-      @include media("<mob") {
+      @include media('<mob') {
         font-size: 40.333rem;
       }
     }
 
-    @include media("<tab") {
+    @include media('<tab') {
       padding-top: 27.667rem;
     }
 
-    @include media("<mob") {
+    @include media('<mob') {
       padding-top: 44.667rem;
     }
   }
@@ -3615,7 +3560,6 @@
   position: sticky;
   z-index: 20;
   height: 0;
-
 
   & a {
     display: inline-block;
@@ -3629,13 +3573,13 @@
       height: 2rem;
       width: 2rem;
 
-      @include media("<tab") {
+      @include media('<tab') {
         height: 4rem;
         width: 4rem;
       }
     }
 
-    @include media("<tab") {
+    @include media('<tab') {
       height: 4rem;
       width: 4rem;
     }
@@ -3643,7 +3587,6 @@
 }
 
 .vacancies-point {
-
   &__info {
     display: inline-flex;
     flex-direction: column;
@@ -3656,7 +3599,7 @@
     // flex-direction: column;
 
     span {
-      color: #CDD0D1;
+      color: #cdd0d1;
       text-align: right;
       margin-right: 10px;
     }
@@ -3664,13 +3607,13 @@
     h3 {
       font-size: 2.8333rem;
       line-height: 2.0833rem;
-      color: #1D3743;
+      color: #1d3743;
       text-transform: capitalize;
       margin-bottom: 1.8333rem;
       position: relative;
 
       &:after {
-        content: "";
+        content: '';
         display: block;
         background: #000000;
         height: 0.08333rem;
@@ -3679,23 +3622,23 @@
         right: -8rem;
         top: calc(52% - 0.04rem);
 
-        @include media("<tab") {
+        @include media('<tab') {
           width: 15.75rem;
           right: -17rem;
         }
 
-        @include media("<mob") {
+        @include media('<mob') {
           display: none;
         }
       }
 
-      @include media("<tab") {
+      @include media('<tab') {
         font-size: 4.833rem;
         line-height: 4.083rem;
         margin-right: 20rem;
       }
 
-      @include media("<mob") {
+      @include media('<mob') {
         font-size: 9.833rem;
         line-height: 10.083rem;
         margin-right: 0;
@@ -3705,25 +3648,25 @@
     p {
       width: 12.5833rem;
       @include font-normal;
-      color: #3F3F3F;
+      color: #3f3f3f;
       opacity: 0.4;
 
-      @include media("<tab") {
+      @include media('<tab') {
         width: 41.583rem;
       }
 
-      @include media("<mob") {
+      @include media('<mob') {
         width: 100%;
       }
     }
 
-    @include media("<tab") {
+    @include media('<tab') {
       font-size: 2.67rem;
       line-height: 3.833rem;
     }
 
-    @include media("<mob") {
-      font-size: 6.67rem;
+    @include media('<mob') {
+      font-size: 6rem;
       line-height: 7.833rem;
       margin-right: 0;
       margin-bottom: 10px;
@@ -3735,7 +3678,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    @include media("<tab") {
+    @include media('<tab') {
       margin-top: 0;
     }
   }
@@ -3744,16 +3687,15 @@
 .vacancies-bottom {
   padding: 2.75rem 0 2.08rem 0;
 
-
   &__icon {
     margin-top: 2.4rem;
     top: 12rem;
 
-    @include media("<tab") {
+    @include media('<tab') {
       top: 26rem;
     }
 
-    @include media("<mob") {
+    @include media('<mob') {
       display: none;
     }
   }
@@ -3761,7 +3703,7 @@
   &__inner {
     width: 91%;
 
-    @include media("<mob") {
+    @include media('<mob') {
       width: 100%;
     }
   }
@@ -3781,13 +3723,13 @@
     margin-bottom: 0;
   }
 
-  @include media("<mob") {
+  @include media('<mob') {
     flex-wrap: wrap;
   }
 }
 
 .vacancies-item {
-  color: #1D3743;
+  color: #1d3743;
   max-width: 35.3333rem;
   padding: 32px 54px 54px 24px;
   margin-bottom: 1.5rem;
@@ -3795,10 +3737,10 @@
   cursor: pointer;
 
   &::before {
-    content: "";
+    content: '';
     width: 0%;
     height: 100%;
-    background: #EBEBEB;
+    background: #ebebeb;
     opacity: 0.5;
     position: absolute;
     top: 0;
@@ -3819,12 +3761,12 @@
     font-size: 2rem;
     line-height: 3.8333rem;
 
-    @include media("<tab") {
+    @include media('<tab') {
       font-size: 4rem;
     }
 
-    @include media("<mob") {
-      font-size: 8rem;
+    @include media('<mob') {
+      font-size: 7rem;
     }
   }
 
@@ -3834,40 +3776,41 @@
     line-height: 2.1667rem;
     text-transform: uppercase;
 
-    @include media("<tab") {
+    @include media('<tab') {
       font-size: 1.833rem;
       line-height: 6.167rem;
     }
 
-    @include media("<mob") {
-      font-size: 5.1rem;
+    @include media('<mob') {
+      font-size: 4.5rem;
       line-height: 18.167rem;
     }
   }
 
   p {
-    color: #3F3F3F;
+    color: #3f3f3f;
     font-size: 1.5rem;
     line-height: 2.1667rem;
     margin-top: 1.8rem;
 
-    @include media("<tab") {
+    @include media('<tab') {
       font-size: 3.3rem;
       line-height: 4.167rem;
     }
 
-    @include media("<mob") {
-      font-size: 7.3rem;
+    @include media('<mob') {
+      font-size: 6.3rem;
       line-height: 9.167rem;
     }
   }
 
-  @include media("<tab") {
+  @include media('<tab') {
     padding: 25px;
     max-width: 46.333rem;
   }
 
-  @include media("<mob") {
+  @include media('<mob') {
     max-width: 100%;
+    margin-bottom: 7.5rem;
   }
 }

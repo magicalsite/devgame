@@ -836,7 +836,7 @@ body {
 }
 
 .logo::before {
-  content: "";
+  content: '';
   display: block;
   padding-top: 25.21%;
 }
@@ -956,7 +956,7 @@ body {
 }
 
 .lang__inner::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   left: 50%;
@@ -983,7 +983,7 @@ body {
 
 @media (max-width: 639px) {
   .lang__inner::before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     left: 50%;
@@ -1127,7 +1127,7 @@ body {
 }
 
 .nav-opener::before, .nav-opener::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   left: 50%;
@@ -1205,10 +1205,17 @@ body {
   background-size: 85%;
 }
 
+@media (max-width: 991px) {
+  .logo-nav {
+    margin-left: 1rem;
+  }
+}
+
 @media (max-width: 639px) {
   .logo-nav {
     height: 33rem;
     width: 33rem;
+    margin-left: 6rem;
   }
 }
 
@@ -1223,7 +1230,7 @@ body {
 }
 
 .nav-close-btn::before {
-  content: "";
+  content: '';
   display: block;
   height: 2.2rem;
   width: 2.2rem;
@@ -1424,7 +1431,7 @@ body {
 }
 
 .nav__list ul::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 1rem;
@@ -1550,7 +1557,7 @@ body {
 }
 
 .nav__list li > em::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   left: 50%;
@@ -1608,9 +1615,15 @@ li.hover > em {
 
 @media (max-width: 991px) {
   .nav__list > li {
-    padding: 1em 1.5rem;
+    padding: 1em 2rem;
     border-top: 1px solid rgba(63, 63, 63, 0.5);
     margin: 0;
+  }
+}
+
+@media (max-width: 639px) {
+  .nav__list > li {
+    padding: 1em 7.5rem;
   }
 }
 
@@ -1622,7 +1635,7 @@ li.hover > em {
 
 .nav__list > li > a::before,
 .nav__list > li > span::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   bottom: 0;
@@ -1687,7 +1700,7 @@ li.hover > em {
 
 .nav__list > li.current > a::after,
 .nav__list > li.current > span::after {
-  content: "";
+  content: '';
   position: absolute;
   top: -2.1rem;
   left: 0.5rem;
@@ -1747,7 +1760,7 @@ html.no-js
   text-decoration: none;
   letter-spacing: 0.256rem;
   text-transform: uppercase;
-  color: #BBBBBB;
+  color: #bbbbbb;
 }
 
 @media (max-width: 991px) {
@@ -1834,11 +1847,11 @@ html.no-js
 }
 
 .main-section__footer div {
-  color: #BBBBBB;
+  color: #bbbbbb;
 }
 
 .main-section__footer .dop_col {
-  color: #BBBBBB;
+  color: #bbbbbb;
 }
 
 .main-section__footer a {
@@ -1949,7 +1962,7 @@ html.no-js
 }
 
 .menu-el__full-count::before {
-  content: "01";
+  content: '01';
   display: block;
   position: relative;
   -webkit-font-smoothing: antialiased;
@@ -2028,7 +2041,7 @@ html.no-js
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  color: #1D3743;
+  color: #1d3743;
 }
 
 @media (max-width: 991px) {
@@ -2076,7 +2089,7 @@ html.no-js
   margin: 0;
   transition: opacity 0.7s;
   opacity: 0;
-  color: #4B6977;
+  color: #4b6977;
 }
 
 .menu-el__full-description p {
@@ -2122,7 +2135,7 @@ html.no-js
 .menu-el__full-rect {
   width: 0.33rem;
   height: 16.9rem;
-  background-color: #D8D8D8;
+  background-color: #d8d8d8;
   border-radius: 5px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -2248,7 +2261,7 @@ html.no-js
           user-select: none;
   will-change: transform;
   transition-property: transform;
-  transition-duration: 1.0s;
+  transition-duration: 1s;
   transition-delay: 1.2s;
   transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
   -ms-transform: translate(0, 102%);
@@ -2278,7 +2291,7 @@ html.no-js
 }
 
 .menu-el__short-line::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   left: 0;
@@ -2514,10 +2527,10 @@ html.no-js
   font-weight: normal;
   text-decoration: none;
   font-size: 13px;
-  color: #1F1F1F;
+  color: #1f1f1f;
   line-height: 46px;
   padding: 1.224rem 5.467rem;
-  background: #39FF98;
+  background: #39ff98;
   border-radius: 0.245rem;
 }
 
@@ -2759,7 +2772,7 @@ html.no-js
 .case-section__rectangle {
   width: 0.33rem;
   height: 17rem;
-  background: #D8D8D8;
+  background: #d8d8d8;
   border-radius: 0.41rem;
 }
 
@@ -2797,7 +2810,7 @@ html.no-js
           user-select: none;
   will-change: transform, opacity;
   transition-property: transform, opacity;
-  transition-duration: 1.0s;
+  transition-duration: 1s;
   transition-delay: 0.8s;
   transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
   -ms-transform: translate(0, 120%);
@@ -2913,7 +2926,7 @@ html.no-js
 /* ==================================== */
 .tanks {
   overflow: hidden;
-  background-color: #7250EC;
+  background-color: #7250ec;
 }
 
 .tanks_rectangle {
@@ -2921,7 +2934,7 @@ html.no-js
   opacity: 0.3;
   width: 0.326rem;
   height: 16.563rem;
-  background: #D8D8D8;
+  background: #d8d8d8;
   border-radius: 0.408rem;
   position: relative;
   right: 0;
@@ -2953,54 +2966,11 @@ html.no-js
 }
 
 .tanks__menu {
-  visibility: hidden;
   position: relative;
-  left: -3.04rem;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 30px #4B2DB9;
-  border-radius: 1.224rem;
-  width: 14.605rem;
-  height: 14.034rem;
-  padding: 0.816rem;
-  z-index: 10;
-}
-
-.tanks__menu nav {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-}
-
-.tanks__menu_item {
-  font-family: "avenir-next-cyr-bold", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.979rem;
-  line-height: 2.774rem;
-  padding-left: 1.387rem;
-  opacity: 0.4;
-  color: #0E0E0E;
-  text-decoration: none;
-  margin-bottom: 0.514rem;
-  cursor: pointer;
-  border-radius: 0.816rem;
-}
-
-.tanks__menu_item:last-child {
-  margin-bottom: 0;
-}
-
-.tanks__menu_item:hover {
-  color: #0E0E0E;
+  top: 0;
+  left: -90px;
   opacity: 1;
-  background: #3AFF98;
-}
-
-.tanks__menu_item.active_game {
-  color: #0E0E0E;
-  opacity: 1;
-  background: #3AFF98;
+  transition: opacity 200ms;
 }
 
 @media (max-width: 991px) {
@@ -3011,11 +2981,6 @@ html.no-js
 
 .tanks__awards {
   padding-top: 5.793rem;
-}
-
-.f-menu {
-  position: fixed;
-  top: 100px;
 }
 
 .tanks__header {
@@ -3184,7 +3149,7 @@ html.no-js
   font-family: "circe-regular", Helvetica, Arial, sans-serif;
   font-size: 1.469rem;
   line-height: 2.203rem;
-  color: #FFFFFF;
+  color: #ffffff;
   mix-blend-mode: normal;
   opacity: 0.3;
 }
@@ -3209,7 +3174,7 @@ html.no-js
   font-weight: normal;
   font-size: 5.875rem;
   line-height: 5.222rem;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 4.808rem;
   margin-top: 2.448rem;
 }
@@ -3355,7 +3320,7 @@ html.no-js
   font-weight: 700;
   font-size: 2.774rem;
   line-height: 1.795rem;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: left;
   margin: 0;
   margin-bottom: 1.224rem;
@@ -3379,7 +3344,7 @@ html.no-js
   visibility: hidden;
   font-size: 1.305rem;
   line-height: 1.795rem;
-  color: #BCACF6;
+  color: #bcacf6;
   width: 38.267rem;
 }
 
@@ -3740,7 +3705,7 @@ html.no-js
   font-weight: 700;
   font-size: 2.937rem;
   line-height: 1.795rem;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0;
 }
 
@@ -3762,7 +3727,7 @@ html.no-js
 
 .locacion_block_more p {
   visibility: hidden;
-  color: #DDD3FF;
+  color: #ddd3ff;
   width: 40.062rem;
   font-size: 1.305rem;
   line-height: 1.795rem;
@@ -3810,7 +3775,7 @@ html.no-js
 .locacion_block_info h4 {
   font-size: 1.469rem;
   line-height: 1.795rem;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0;
   margin-bottom: 1.7rem;
 }
@@ -3834,8 +3799,8 @@ html.no-js
   text-align: center;
   width: 13.136rem;
   padding: 3.427rem 2.529rem;
-  border-top: 4px solid #F35D58;
-  background: #7B58F7;
+  border-top: 4px solid #f35d58;
+  background: #7b58f7;
   margin-bottom: 1.958rem;
 }
 
@@ -3865,7 +3830,7 @@ html.no-js
   text-align: center;
   font-size: 1.061rem;
   line-height: 1.469rem;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.6;
 }
 
@@ -3906,8 +3871,8 @@ html.no-js
   text-align: center;
   width: 13.136rem;
   padding: 3.427rem 2.529rem;
-  border-top: 4px solid #F35D58;
-  background: #7B58F7;
+  border-top: 4px solid #f35d58;
+  background: #7b58f7;
 }
 
 .locacion_block_card .second_card span {
@@ -3936,7 +3901,7 @@ html.no-js
   text-align: center;
   font-size: 1.061rem;
   line-height: 1.469rem;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.6;
 }
 
@@ -4024,7 +3989,7 @@ html.no-js
   font-weight: normal;
   font-size: 5.875rem;
   line-height: 5.222rem;
-  color: #FFFFFF;
+  color: #ffffff;
   text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.51);
 }
 
@@ -4093,7 +4058,7 @@ html.no-js
 }
 
 .hoopstars {
-  background: #FF8A5F;
+  background: #ff8a5f;
   overflow-x: hidden;
 }
 
@@ -4102,7 +4067,7 @@ html.no-js
 }
 
 .hoopstars_menu {
-  box-shadow: 0px 4px 30px #9F4D2E;
+  box-shadow: 0px 4px 30px #9f4d2e;
 }
 
 .hoopstars_videoBg {
@@ -4154,7 +4119,7 @@ html.no-js
 }
 
 .locacion_block_more .hoopstars_prg {
-  color: #FFFFFF;
+  color: #ffffff;
   margin-top: 0;
 }
 
@@ -4306,7 +4271,7 @@ html.no-js
 }
 
 .privacy {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   overflow: visible;
 }
 
@@ -4315,7 +4280,7 @@ html.no-js
   font-weight: 700;
   font-size: 5.956rem;
   line-height: 6.119rem;
-  color: #1D3743;
+  color: #1d3743;
   margin: 11.831rem 0 6.527rem 0;
   position: relative;
   z-index: 20;
@@ -4345,10 +4310,10 @@ html.no-js
 }
 
 .privacy_center .privacy_content {
-  color: #3F3F3F;
+  color: #3f3f3f;
   max-width: 781px;
   margin: 0 auto;
-  background: #FFFFFF;
+  background: #ffffff;
   padding: 4.488rem;
   position: relative;
   z-index: 19;
@@ -4399,7 +4364,7 @@ html.no-js
 }
 
 .privacy_center .privacy_content a {
-  color: #3F3F3F;
+  color: #3f3f3f;
 }
 
 .privacy_center .privacy_content p {
@@ -4547,11 +4512,11 @@ html.no-js
 }
 
 .privacy_footer div {
-  color: #BBBBBB;
+  color: #bbbbbb;
 }
 
 .privacy_footer a {
-  color: #BBBBBB;
+  color: #bbbbbb;
 }
 
 .about__menu {
@@ -4613,7 +4578,7 @@ html.no-js
 /* ============== Vacancies ============== */
 /* ==================================== */
 .vacancies-top {
-  background-color: #27EB85;
+  background-color: #27eb85;
   padding: 18.6667rem 0 9.3333rem;
   position: relative;
   overflow: hidden;
@@ -4625,7 +4590,7 @@ html.no-js
   font-size: 6.0833rem;
   line-height: 6.25rem;
   margin: 0;
-  color: #1D3743;
+  color: #1d3743;
   position: relative;
   z-index: 2;
 }
@@ -4724,7 +4689,7 @@ html.no-js
 }
 
 .vacancies-point__info span {
-  color: #CDD0D1;
+  color: #cdd0d1;
   text-align: right;
   margin-right: 10px;
 }
@@ -4732,14 +4697,14 @@ html.no-js
 .vacancies-point__info h3 {
   font-size: 2.8333rem;
   line-height: 2.0833rem;
-  color: #1D3743;
+  color: #1d3743;
   text-transform: capitalize;
   margin-bottom: 1.8333rem;
   position: relative;
 }
 
 .vacancies-point__info h3:after {
-  content: "";
+  content: '';
   display: block;
   background: #000000;
   height: 0.08333rem;
@@ -4782,7 +4747,7 @@ html.no-js
   width: 12.5833rem;
   font-family: "avenir-next-cyr-medium", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  color: #3F3F3F;
+  color: #3f3f3f;
   opacity: 0.4;
 }
 
@@ -4807,7 +4772,7 @@ html.no-js
 
 @media (max-width: 639px) {
   .vacancies-point__info {
-    font-size: 6.67rem;
+    font-size: 6rem;
     line-height: 7.833rem;
     margin-right: 0;
     margin-bottom: 10px;
@@ -4886,7 +4851,7 @@ html.no-js
 }
 
 .vacancies-item {
-  color: #1D3743;
+  color: #1d3743;
   max-width: 35.3333rem;
   padding: 32px 54px 54px 24px;
   margin-bottom: 1.5rem;
@@ -4895,10 +4860,10 @@ html.no-js
 }
 
 .vacancies-item::before {
-  content: "";
+  content: '';
   width: 0%;
   height: 100%;
-  background: #EBEBEB;
+  background: #ebebeb;
   opacity: 0.5;
   position: absolute;
   top: 0;
@@ -4929,7 +4894,7 @@ html.no-js
 
 @media (max-width: 639px) {
   .vacancies-item h3 {
-    font-size: 8rem;
+    font-size: 7rem;
   }
 }
 
@@ -4949,13 +4914,13 @@ html.no-js
 
 @media (max-width: 639px) {
   .vacancies-item span {
-    font-size: 5.1rem;
+    font-size: 4.5rem;
     line-height: 18.167rem;
   }
 }
 
 .vacancies-item p {
-  color: #3F3F3F;
+  color: #3f3f3f;
   font-size: 1.5rem;
   line-height: 2.1667rem;
   margin-top: 1.8rem;
@@ -4970,7 +4935,7 @@ html.no-js
 
 @media (max-width: 639px) {
   .vacancies-item p {
-    font-size: 7.3rem;
+    font-size: 6.3rem;
     line-height: 9.167rem;
   }
 }
@@ -4985,6 +4950,7 @@ html.no-js
 @media (max-width: 639px) {
   .vacancies-item {
     max-width: 100%;
+    margin-bottom: 7.5rem;
   }
 }
 
