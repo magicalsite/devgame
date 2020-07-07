@@ -2138,8 +2138,8 @@
   }
 
   &_download {
-    height: 3.753rem;
-    line-height: 3.753rem;
+    // height: 3.753rem;
+    // line-height: 3.753rem;
 
     &:first-child {
       // margin-bottom: 1.224rem;
@@ -3057,7 +3057,7 @@
 
 .hoopstars {
   background: #ff8a5f;
-  overflow-x: hidden;
+  overflow: hidden;
 
   &_paragraph {
     color: #fff;

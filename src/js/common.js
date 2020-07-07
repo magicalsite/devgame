@@ -287,8 +287,7 @@ if ($BODY.hasClass('hoopstars') || $BODY.hasClass('tanks')) {
   var h_video = $('.tanks__video').offset().top - menu.outerHeight();
   var b_video = $('.tanks__video').offset().top + 905;
   var h_footer = b_video + $('.tanks__locacion').outerHeight() + $('.tanks__awards').outerHeight();
-  console.log(l_z)
-  console.log(l_m)
+
   $('.locacion_block_slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -358,14 +357,6 @@ if ($BODY.hasClass('hoopstars') || $BODY.hasClass('tanks')) {
       }
     })
   });
-
-  // $("a[href^='#']").click(function () {
-  //   var _href = $(this).attr("href");
-  //   $("html, body").animate({
-  //     scrollTop: $(_href).offset().top + "px"
-  //   }, 800);
-  //   return false;
-  // });
 
   // button play video
   $('.play_button').on('click', function (e) {

@@ -2947,11 +2947,6 @@ html.no-js
   }
 }
 
-.tanks_download {
-  height: 3.753rem;
-  line-height: 3.753rem;
-}
-
 @media (max-width: 991px) {
   .tanks_download:first-child {
     margin-bottom: 0;
@@ -4059,7 +4054,7 @@ html.no-js
 
 .hoopstars {
   background: #ff8a5f;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .hoopstars_paragraph {
