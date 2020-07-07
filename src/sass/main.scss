@@ -18,7 +18,7 @@
 
 ///* normalize end
 //=== meyer css reset ===
-//@import "base/_reset-meyer.scss";
+@import "base/_reset-meyer.scss";
 //=== additional reset ===
 @import "base/reset";
 @import "base/reset-for-normalize";
@@ -35,7 +35,7 @@
 /* ==================================== */
 /* ============ TYPOGRAPHY ============ */
 /* ==================================== */
-//@import "base/typography";
+// @import "base/typography";
 
 /* ==================================== */
 /* ======= NON CONTENT ELEMENTS ======= */

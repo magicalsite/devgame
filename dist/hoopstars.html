@@ -27,14 +27,14 @@
   <meta property="og:description" content="We make beautiful games">
   <meta property="og:site_name" content="HIGH CORE games">
   <!--Favicon-->
-  <link rel="shortcut icon" href="favicon.ico?rev=3be1c537aab99263387281a41acbe031">
-  <link rel="icon" sizes="16x16 32x32 64x64" href="favicon.ico?rev=877981c4b722f163f7adac6daadb02ed">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png?rev=9979187bd60645b1a53dd83b23dca3f5">
+  <link rel="shortcut icon" href="favicon.ico?rev=2891db42b002d36ffd396d9ef74c21c8">
+  <link rel="icon" sizes="16x16 32x32 64x64" href="favicon.ico?rev=e3d1a159194de8c4a0e3d63241b11e69">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?rev=f7f28f835e8c994de686265b554c1ac9">
   <!--manifest-->
   <link rel="manifest" href="manifest.webmanifest">
   <!--Style-->
-  <link rel="stylesheet" href="css/libs.min.css?rev=dc9bfc2765fd0fb8894becd52f812c6f">
-  <link rel="stylesheet" href="css/main.css?rev=48bfe4b4aab505ad9bb3b2e7784f2149">
+  <link rel="stylesheet" href="css/libs.min.css?rev=f626fef47e09b57e8c2dbbf31ce2ee09">
+  <link rel="stylesheet" href="css/main.css?rev=a129e1db2c8d40e5ef109695396fb50e">
   <!--Modernizr-->
   <script src="js/modernizr.min.js"></script>
 </head>
@@ -46,7 +46,7 @@
   <!--[if lte IE 9]>
 <div class="browserupgrade"><p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p></div> <![endif]-->
   <!--HEADER-->
-  <header class="header header_fixed">
+  <header class="header header_fixed header_privacy_fixed">
     <div class="layout-page layout-page-spaces">
       <div class="header-container">
         <div class="header-container__left">
@@ -58,25 +58,27 @@
             <img style="display: none;" src="img/logo.svg" alt="Print version logotype">
           </div>
         </div>
-        <div class="header-container__right">
-          <a href="#mainNav" class="nav-opener nav-opener-js">Open menu</a>
-          <div class="nav-wrap" id="mainNav">
-            <div class="nav-header">
-              <a href="index.html" class="logo-nav" title="HIGH CORE games">HIGH CORE games</a>
-              <a href="#" class="nav-close-btn nav-close-btn-js">Close menu</a>
+        <div class="header-container__wrapper">
+          <div class="header-container__right">
+            <a href="#mainNav" class="nav-opener nav-opener-js">Open menu</a>
+            <div class="nav-wrap" id="mainNav">
+              <div class="nav-header">
+                <a href="index.html" class="logo-nav" title="HIGH CORE games">HIGH CORE games</a>
+                <a href="#" class="nav-close-btn nav-close-btn-js">Close menu</a>
+              </div>
+              <nav class="nav">
+                <ul class="nav__list nav-js">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Carier</a></li>
+                </ul>
+              </nav>
             </div>
-            <nav class="nav">
-              <ul class="nav__list nav-js">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Carier</a></li>
-              </ul>
-            </nav>
+            <div class="nav-overlay"></div>
           </div>
-          <div class="nav-overlay"></div>
-        </div>
-        <div class="lang">
-          <a class="lang__inner" href="#"><span>Ru</span></a>
+          <div class="lang">
+            <a class="lang__inner" href="#"><span>Ru</span></a>
+          </div>
         </div>
       </div>
     </div>
@@ -245,7 +247,7 @@
   </main>
   <script src="js/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
-  <script src="js/common.js?rev=8e72e2ac4de7c15818aa6fc07c5b83f8"></script>
+  <script src="js/common.js?rev=6c6f9869227fe3d37ccdc9c13f347b32"></script>
 </body>
 
 </html>

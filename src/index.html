@@ -46,7 +46,7 @@
   <!--[if lte IE 9]>
 <div class="browserupgrade"><p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p></div> <![endif]-->
   <!--HEADER-->
-  <header class="header header_fixed">
+  <header class="header header_fixed ">
     <div class="layout-page layout-page-spaces">
       <div class="header-container">
         <div class="header-container__left">
@@ -58,24 +58,26 @@
             <img style="display: none;" src="img/logo.svg" alt="Print version logotype">
           </div>
         </div>
-        <div class="header-container__right">
-          <a href="#mainNav" class="nav-opener nav-opener-js">Open menu</a>
-          <div class="nav-wrap" id="mainNav">
-            <div class="nav-header">
-              <span class="logo-nav">HIGH CORE games</span>
-              <a href="#" class="nav-close-btn nav-close-btn-js">Close menu</a>
+        <div class="header-container__wrapper">
+          <div class="header-container__right">
+            <a href="#mainNav" class="nav-opener nav-opener-js">Open menu</a>
+            <div class="nav-wrap" id="mainNav">
+              <div class="nav-header">
+                <span class="logo-nav">HIGH CORE games</span>
+                <a href="#" class="nav-close-btn nav-close-btn-js">Close menu</a>
+              </div>
+              <nav class="nav">
+                <ul class="nav__list nav-js">
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Carier</a></li>
+                </ul>
+              </nav>
             </div>
-            <nav class="nav">
-              <ul class="nav__list nav-js">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Carier</a></li>
-              </ul>
-            </nav>
+            <div class="nav-overlay"></div>
           </div>
-          <div class="nav-overlay"></div>
-        </div>
-        <div class="lang">
-          <a class="lang__inner" href="#"><span>Ru</span></a>
+          <div class="lang">
+            <a class="lang__inner" href="#"><span>Ru</span></a>
+          </div>
         </div>
       </div>
     </div>

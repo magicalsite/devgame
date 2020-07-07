@@ -1,41 +1,41 @@
 var $WINDOW = $(window),
-    $HTML = $('html'),
-    $BODY = $('body');
-    
+  $HTML = $('html'),
+  $BODY = $('body');
 
-  /**
-  * Change font size on resize
-  */
-  function changeFontSize() {
-    var step = 0.0499;
-    var fontSize = Math.round(window.innerWidth * step * 10) / 10;
-    $HTML.css('font-size', fontSize + '%');
+
+/**
+ * Change font size on resize
+ */
+function changeFontSize() {
+  var step = 0.0499;
+  var fontSize = Math.round(window.innerWidth * step * 10) / 10;
+  $HTML.css('font-size', fontSize + '%');
+}
+changeFontSize();
+
+/**
+ * !Detects overlay scrollbars (when scrollbars on overflowed blocks are visible).
+ * This is found most commonly on mobile and OS X.
+ * */
+var HIDDEN_SCROLL = Modernizr.hiddenscroll;
+var NO_HIDDEN_SCROLL = !HIDDEN_SCROLL;
+var TOUCHEVENTS = ("ontouchstart" in document.documentElement);
+
+/**
+ * !Add touchscreen classes
+ * */
+function addTouchClasses() {
+  if (TOUCHEVENTS) {
+    document.documentElement.className += " touchevents";
+  } else {
+    document.documentElement.className += " no-touchevents";
   }
-  changeFontSize();
+}
 
-  /**
-   * !Detects overlay scrollbars (when scrollbars on overflowed blocks are visible).
-   * This is found most commonly on mobile and OS X.
-   * */
-  var HIDDEN_SCROLL = Modernizr.hiddenscroll;
-  var NO_HIDDEN_SCROLL = !HIDDEN_SCROLL;
-  var TOUCHEVENTS = ("ontouchstart" in document.documentElement);
-
-  /**
-   * !Add touchscreen classes
-   * */
-  function addTouchClasses() {
-    if (TOUCHEVENTS) {
-      document.documentElement.className += " touchevents";
-    } else {
-      document.documentElement.className += " no-touchevents";
-    }
-  }
-
-  /**
-   * !Initial full page scroll plugin
-   * */
-  function fullPageInitial() {
+/**
+ * !Initial full page scroll plugin
+ * */
+function fullPageInitial() {
   var $fpSections = $('.fp-sections-js');
 
   // if (!DEVICE && window.innerWidth >= 992) {
@@ -63,7 +63,7 @@ var $WINDOW = $(window),
     function sectionReady(destination) {
       var $section = $(destination.item);
       $section.addClass('s-ready');
-      if(destination.isLast) {
+      if (destination.isLast) {
         $section.prev().addClass('s-ready');
       }
     }
@@ -72,7 +72,7 @@ var $WINDOW = $(window),
       var $section = $(destination.item);
       $fpSections.removeClass('s-visible');
       $section.addClass('s-visible');
-      if(destination.isLast) {
+      if (destination.isLast) {
         $section.prev().addClass('s-visible');
       }
     }
@@ -90,15 +90,15 @@ var $WINDOW = $(window),
         $BODY.removeClass('logo-theme-dark');
       }
 
-      if($section.attr('data-item') === "second") {
+      if ($section.attr('data-item') === "second") {
         $BODY.removeClass('third_item');
         $BODY.addClass('second_item');
       }
-      if($section.attr('data-item') === "third") {
+      if ($section.attr('data-item') === "third") {
         $BODY.removeClass('second_item');
         $BODY.addClass('third_item');
       }
-      
+
     }
 
     $fpSections.fullpage({
@@ -109,7 +109,7 @@ var $WINDOW = $(window),
       recordHistory: false,
       scrollingSpeed: duration,
       sectionSelector: fpSectionSelector,
-      
+
       // responsiveWidth: breakpointWidth, // and add css rule .fp-enabled
       // responsiveHeight: breakpointHeight, // and add css rule .fp-enabled
       navigation: false,
@@ -140,7 +140,7 @@ var $WINDOW = $(window),
         }
 
       },
-      afterLoad: function(origin, destination, direction){
+      afterLoad: function (origin, destination, direction) {
         sectionReady(destination);
         $('.logo-js').on('click', function (e) {
           fullpage_api.moveTo(1);
@@ -150,7 +150,7 @@ var $WINDOW = $(window),
     });
 
     $('.btn-next-section-js').on('click', function (e) {
-      if($fpSections.length) {
+      if ($fpSections.length) {
         fullpage_api.moveSectionDown();
       }
       e.preventDefault();
@@ -158,7 +158,7 @@ var $WINDOW = $(window),
 
     $('.btn-to-section-js').on('click', function (e) {
       var $thisBtn = $(this);
-      if($fpSections.length) {
+      if ($fpSections.length) {
         fullpage_api.moveTo($($thisBtn.attr('href')).index() + 1);
       }
       e.preventDefault();
@@ -176,46 +176,46 @@ var $WINDOW = $(window),
 /**
  * !Main navigation
  */
-// function mainNavigation() {
-//   var $nav = $('.nav-js');
-//   if ($nav.length) {
+function mainNavigation() {
+  var $nav = $('.nav-js');
+  if ($nav.length) {
 
-//     $nav.nav({
-//       submenuPosition: false,
-//     });
-//   }
-// }
+    $nav.nav({
+      submenuPosition: false,
+    });
+  }
+}
 
-// $('.nav-opener-js').on('click', function (e) {
-//   var $curBtn = $(this);
+$('.nav-opener-js').on('click', function (e) {
+  var $curBtn = $(this);
 
-//   $curBtn.add($($curBtn.attr('href'))).addClass('is-open');
+  $curBtn.add($($curBtn.attr('href'))).addClass('is-open');
 
-//   $HTML.addClass('css-scroll-fixed open-only-mob');
+  $HTML.addClass('css-scroll-fixed open-only-mob');
 
-//   e.preventDefault();
-// });
+  e.preventDefault();
+});
 
-// function hideNav() {
-//   $('.is-open').removeClass('is-open');
-//   $HTML.removeClass('css-scroll-fixed open-only-mob');
-// }
+function hideNav() {
+  $('.is-open').removeClass('is-open');
+  $HTML.removeClass('css-scroll-fixed open-only-mob');
+}
 
-// $('.nav-close-btn-js').on('click', function (e) {
-//   hideNav();
+$('.nav-close-btn-js').on('click', function (e) {
+  hideNav();
 
-//   e.preventDefault();
-// });
+  e.preventDefault();
+});
 
-// $('.nav-overlay').on('click', function () {
-//   hideNav();
-// });
+$('.nav-overlay').on('click', function () {
+  hideNav();
+});
 
-// $HTML.keyup(function (event) {
-//   if (event.keyCode === 27) {
-//     hideNav();
-//   }
-// });
+$HTML.keyup(function (event) {
+  if (event.keyCode === 27) {
+    hideNav();
+  }
+});
 
 
 /**
@@ -223,7 +223,7 @@ var $WINDOW = $(window),
  * */
 function formValidation() {
   $.validator.setDefaults({
-    submitHandler: function() {
+    submitHandler: function () {
       alert('Форма находится в тестовом режиме. Чтобы закрыть окно, нажмите ОК.');
       return false;
     }
@@ -235,13 +235,13 @@ function formValidation() {
     var changeClasses = function (elem, remove, add) {
       // console.log('changeClasses');
       elem
-          .removeClass(remove).addClass(add);
+        .removeClass(remove).addClass(add);
       elem
-          .closest('form').find('label[for="' + elem.attr('id') + '"]')
-          .removeClass(remove).addClass(add);
+        .closest('form').find('label[for="' + elem.attr('id') + '"]')
+        .removeClass(remove).addClass(add);
       elem
-          .closest('.input-wrap')
-          .removeClass(remove).addClass(add);
+        .closest('.input-wrap')
+        .removeClass(remove).addClass(add);
     };
 
     $.each($form, function (index, element) {
@@ -263,171 +263,200 @@ function formValidation() {
   }
 }
 
-  // Parallax
-  var rellax = new Rellax('.rellax');
+// Parallax
+var rellax = new Rellax('.rellax');
 
-  // WOW + animate
-  new WOW().init();
+// WOW + animate
+new WOW().init();
 
-  $WINDOW.on('resize', function () {
-    changeFontSize();
+$WINDOW.on('resize', function () {
+  changeFontSize();
+});
+
+$WINDOW.on('load', function () {
+  changeFontSize();
+});
+
+// game sticky const
+if ($BODY.hasClass('hoopstars') || $BODY.hasClass('tanks')) {
+  var menu = $('.tanks__menu');
+  var t_m = menu.offset().top - 100;
+  var t_n_m = menu.offset().top;
+  var l_m = menu.offset().left;
+  var h_video = $('.tanks__video').offset().top - menu.outerHeight();
+  var b_video = $('.tanks__video').offset().top + 905;
+  var h_footer = b_video + $('.tanks__locacion').outerHeight() + $('.tanks__awards').outerHeight();
+
+  $('.locacion_block_slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    infinite: true,
+    centerMode: true,
+    variableWidth: true,
+    arrows: false
   });
 
-  $WINDOW.on('load', function () {
-    changeFontSize();
+  //game sticky menu
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > t_m) {
+      menu.addClass("f-menu");
+      $('.f-menu').css("left", l_m);
+    } else if ($(this).scrollTop() < t_n_m) {
+      menu.removeClass("f-menu");
+      menu.css("left", "-3.04rem");
+    }
+    if ($(this).scrollTop() > h_video) {
+      menu.css({
+        "display": "none"
+      });
+    }
+    if ($(this).scrollTop() > b_video) {
+      menu.css({
+        "display": "block"
+      });
+    }
+    if ($(this).scrollTop() > h_footer) {
+      menu.css({
+        "display": "none"
+      });
+    }
+    if ($(this).scrollTop() < h_footer) {
+      menu.css({
+        "display": "block"
+      });
+    }
+    if ($(this).scrollTop() < b_video) {
+      menu.css({
+        "display": "none"
+      });
+    }
+    if ($(this).scrollTop() < h_video) {
+      menu.css({
+        "display": "block"
+      });
+    }
+
+    // menu active
+    var $sections = $('.anchor_game');
+    $sections.each(function (i, el) {
+      var top = $(el).offset().top - 100;
+      var bottom = top + $(el).height();
+      var scroll = $(window).scrollTop();
+      var id = $(el).attr('id');
+      if (scroll > top && scroll < bottom) {
+        $('a.active_game').removeClass('active_game');
+        $('a[href="#' + id + '"]').addClass('active_game');
+      }
+    })
   });
 
-  // game sticky const
-    if ($BODY.hasClass('hoopstars') || $BODY.hasClass('tanks')) {
-    var menu = $('.tanks__menu');
-    var t_m = menu.offset().top - 100;
-    var t_n_m = menu.offset().top;
-    var l_m = menu.offset().left;
-    var h_video = $('.tanks__video').offset().top - menu.outerHeight();
-    var b_video = $('.tanks__video').offset().top + 905;
-    var h_footer = b_video + $('.tanks__locacion').outerHeight() + $('.tanks__awards').outerHeight();
-
-        $('.locacion_block_slider').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true,
-            infinite: true,
-            centerMode: true,
-            variableWidth: true,
-            arrows: false
-        });
-
-        //game sticky menu
-        $(window).scroll(function () {
-        if ($(this).scrollTop() > t_m) {
-          menu.addClass("f-menu");
-          $('.f-menu').css("left", l_m);
-        } else if ($(this).scrollTop() < t_n_m) {
-          menu.removeClass("f-menu");
-          menu.css("left", "-3.04rem");
-        } 
-        if ($(this).scrollTop() > h_video) {
-          menu.css({"display": "none"});
-        } 
-        if ($(this).scrollTop() > b_video) {
-          menu.css({"display": "block"});
-        }
-        if($(this).scrollTop() > h_footer) {
-          menu.css({"display": "none"});
-        }
-        if($(this).scrollTop() < h_footer) {
-          menu.css({"display": "block"});
-        }
-        if($(this).scrollTop() < b_video) {
-          menu.css({"display": "none"});
-        }
-        if($(this).scrollTop() < h_video) {
-          menu.css({"display": "block"});
-        }
-
-        // menu active
-        var $sections = $('.anchor_game');
-        $sections.each(function(i,el){
-            var top  = $(el).offset().top-100;
-            var bottom = top +$(el).height();
-            var scroll = $(window).scrollTop();
-            var id = $(el).attr('id');
-          if( scroll > top && scroll < bottom){
-                $('a.active_game').removeClass('active_game');
-          $('a[href="#'+id+'"]').addClass('active_game');
-            }
-          })
-        });
-
-        $("a[href^='#']").click(function(){
-          var _href = $(this).attr("href");
-          $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 800);
-          return false;
-        });
-
-        // button play video
-        $('.play_button').on('click', function (e) {
-          let video = $('.tanks_video');
-          if (video.get(0).paused === true) {
-            video.get(0).volume = 0.3;
-            video.get(0).play();
-            $('.play_button').css('display', 'none');
-          }
-          return false;
-        });
-        $('.tanks_video').on('click', function (e) {
-          let video = $('.tanks_video');
-          if (video.get(0).paused === false) {
-              video.get(0).pause();
-              $('.play_button').css('display', 'block');
-          }
-          return false;
-        });        
-    }
-
-    if($BODY.hasClass('privacy')) {
-      // custom scroll for privacy page
-      $("html").niceScroll({
-        cursorcolor:"#D8D8D8",
-        cursorwidth:"4px",
-        cursormaxheight: 203,
-        cursorminheight: 203,
-        cursorborder: 0,
-        cursorborderradius:'5px'
-      });
-    }
-    // delete home item with menu on home page
-    if ($BODY.hasClass('index_page')) {
-      $('.menu-item-home').css('display', 'none');
-    }
-
-    // game slider and custom scroll
-    if ($BODY.hasClass('tanks')) {
-      $('.tanks-slider__video').slick({
-        centerMode: true,
-        slidesToShow: 1,
-        dots: true,
-        infinite: false,
-        variableWidth: true,
-        arrows: false
-      });
-      $(".tanks-scroll").niceScroll({
-        cursorcolor:"#9179e6",
-        cursorwidth:"4px",
-        cursorminheight: 203,
-        cursorborder: 0,
-        cursorborderradius:'5px'
-      });
-    }
-    if($BODY.hasClass('hoopstars')) {
-      $('.hoop-slider__video').slick({
-        centerMode: true,
-        slidesToShow: 3,
-        dots: true,
-        infinite: false,
-        variableWidth: true,
-        arrows: false
-      });
-      $(".hoopstars-scroll").niceScroll({
-        cursorcolor:"#f1a083",
-        cursorwidth:"4px",
-        cursorminheight: 203,
-        cursorborder: 0,
-        cursorborderradius:'5px'
-      });
-    }
-
-  $(document).ready(function () {
-    fullPageInitial();
-    $BODY.addClass('logo-theme-dark');
-    changeFontSize();
-    // Base
-    addTouchClasses();
-    //placeholderInit();
-    //objectFitImages(); // object-fit-images initial
-    // Common
-    // mainNavigation();
-    // toggleActiveMenuItem();
-
-    // formValidation();
+  $("a[href^='#']").click(function () {
+    var _href = $(this).attr("href");
+    $("html, body").animate({
+      scrollTop: $(_href).offset().top + "px"
+    }, 800);
+    return false;
   });
+
+  // button play video
+  $('.play_button').on('click', function (e) {
+    let video = $('.tanks_video');
+    if (video.get(0).paused === true) {
+      video.get(0).volume = 0.3;
+      video.get(0).play();
+      $('.play_button').css('display', 'none');
+    }
+    return false;
+  });
+  $('.tanks_video').on('click', function (e) {
+    let video = $('.tanks_video');
+    if (video.get(0).paused === false) {
+      video.get(0).pause();
+      $('.play_button').css('display', 'block');
+    }
+    return false;
+  });
+}
+
+if ($BODY.hasClass('privacy')) {
+  // custom scroll for privacy page
+  $("html").niceScroll({
+    cursorcolor: "#D8D8D8",
+    cursorwidth: "4px",
+    cursormaxheight: 203,
+    cursorminheight: 203,
+    cursorborder: 0,
+    cursorborderradius: '5px',
+    horizrailenabled: false
+  });
+}
+if ($BODY.hasClass('vacancies')) {
+  // custom scroll for privacy page
+  $("html").niceScroll({
+    cursorcolor: "#D8D8D8",
+    cursorwidth: "4px",
+    cursormaxheight: 203,
+    cursorminheight: 203,
+    cursorborder: 0,
+    cursorborderradius: '5px',
+    horizrailenabled: false
+  });
+}
+// delete home item with menu on home page
+if ($BODY.hasClass('index_page')) {
+  $('.menu-item-home').css('display', 'none');
+}
+
+// game slider and custom scroll
+if ($BODY.hasClass('tanks')) {
+  $('.tanks-slider__video').slick({
+    centerMode: true,
+    slidesToShow: 1,
+    dots: true,
+    infinite: false,
+    variableWidth: true,
+    arrows: false
+  });
+  $(".tanks-scroll").niceScroll({
+    cursorcolor: "#9179e6",
+    cursorwidth: "4px",
+    cursorminheight: 203,
+    cursorborder: 0,
+    cursorborderradius: '5px',
+    horizrailenabled: false
+  });
+}
+if ($BODY.hasClass('hoopstars')) {
+  $('.hoop-slider__video').slick({
+    centerMode: true,
+    slidesToShow: 3,
+    dots: true,
+    infinite: false,
+    variableWidth: true,
+    arrows: false
+  });
+  $(".hoopstars-scroll").niceScroll({
+    cursorcolor: "#f1a083",
+    cursorwidth: "4px",
+    cursorminheight: 203,
+    cursorborder: 0,
+    cursorborderradius: '5px',
+    horizrailenabled: false
+  });
+}
+
+$(document).ready(function () {
+  fullPageInitial();
+  $BODY.addClass('logo-theme-dark');
+  changeFontSize();
+  // Base
+  addTouchClasses();
+  //placeholderInit();
+  //objectFitImages(); // object-fit-images initial
+  // Common
+  // mainNavigation();
+  // toggleActiveMenuItem();
+
+  // formValidation();
+});

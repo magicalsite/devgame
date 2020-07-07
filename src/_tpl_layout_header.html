@@ -1,6 +1,5 @@
-
 <!--HEADER-->
-<header class="header header_fixed">
+<header class="header header_fixed ">
   <div class="layout-page layout-page-spaces">
     <div class="header-container">
       <div class="header-container__left">
@@ -14,30 +13,34 @@
         </div>
       </div>
 
-      <div class="header-container__right">
-        <a href="#mainNav" class="nav-opener nav-opener-js">Open menu</a>
-        <div class="nav-wrap" id="mainNav">
-          <div class="nav-header">
-            @@if(context.currentItem != 'Home'){<a href="index.html" class="logo-nav" title="HIGH CORE games">HIGH CORE games</a>}
-            @@if(context.currentItem == 'Home'){<span class="logo-nav">HIGH CORE games</span>}
-            <a href="#" class="nav-close-btn nav-close-btn-js">Close menu</a>
+      <div class="header-container__wrapper">
+        <div class="header-container__right">
+          <a href="#mainNav" class="nav-opener nav-opener-js">Open menu</a>
+          <div class="nav-wrap" id="mainNav">
+            <div class="nav-header">
+              @@if(context.currentItem != 'Home'){<a href="index.html" class="logo-nav" title="HIGH CORE games">HIGH
+                CORE games</a>}
+              @@if(context.currentItem == 'Home'){<span class="logo-nav">HIGH CORE games</span>}
+              <a href="#" class="nav-close-btn nav-close-btn-js">Close menu</a>
+            </div>
+            <nav class="nav">
+              <ul class="nav__list nav-js">
+                @@if(context.currentItem != 'Home'){<li><a href="index.html">Home</a></li>}
+
+                @@if(context.currentItem == 'About'){<li class="current"><span>About</span></li>}
+                @@if(context.currentItem != 'About'){<li><a href="#">About</a></li>}
+
+                @@if(context.currentItem == 'Carier'){<li class="current"><span>Carier</span>}
+                  @@if(context.currentItem != 'Carier'){
+                <li><a href="#">Carier</a></li>}
+              </ul>
+            </nav>
           </div>
-          <nav class="nav">
-            <ul class="nav__list nav-js">
-              @@if(context.currentItem != 'Home'){<li><a href="index.html">Home</a></li>}
-
-              @@if(context.currentItem == 'About'){<li class="current"><span>About</span></li>}
-              @@if(context.currentItem != 'About'){<li><a href="#">About</a></li>}
-
-              @@if(context.currentItem == 'Carier'){<li class="current"><span>Carier</span>}
-              @@if(context.currentItem != 'Carier'){<li><a href="#">Carier</a></li>}
-            </ul>
-          </nav>
+          <div class="nav-overlay"></div>
         </div>
-        <div class="nav-overlay"></div>
-      </div>
-      <div class="lang">
-        <a class="lang__inner" href="#"><span>Ru</span></a>
+        <div class="lang">
+          <a class="lang__inner" href="#"><span>Ru</span></a>
+        </div>
       </div>
     </div>
   </div>

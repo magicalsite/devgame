@@ -38,6 +38,7 @@ $font-demi: "avenir-next-cyr-demi", Helvetica, Arial, sans-serif !default;
 
 @mixin font-normal {
   font-family: $font-norm;
+  font-weight: 400;
 }
 
 @mixin font-bold {

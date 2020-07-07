@@ -2,10 +2,12 @@
 @import "../utils/mixins";
 @import "../../libs/include-media/dist/include-media";
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     content: none;
   }
 }
@@ -18,7 +20,9 @@ del {
   text-decoration: line-through;
 }
 
-fieldset, table, ul {
+fieldset,
+table,
+ul {
   margin: 0;
   padding: 0;
   border: 0;
@@ -29,7 +33,37 @@ table {
 }
 
 ul {
-  list-style: none;
+  list-style-type: square;
+}
+
+ol {
+  list-style-type: none;
+  counter-reset: item;
+}
+
+ol>li:before {
+  font-size: 10px;
+  color: #fff;
+  content: counter(item);
+  counter-increment: item;
+  background-color: #3F3F3F;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  line-height: 2.6rem;
+  margin-right: 10px;
+  vertical-align: 0.3rem;
+
+  @include media("<mob") {
+    vertical-align: 1rem;
+  }
+}
+
+ol+p+ol {
+  counter-reset: tem;
 }
 
 /* reset end */

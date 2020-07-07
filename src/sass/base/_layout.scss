@@ -5,6 +5,7 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+
   // Блокировать скролла
   &.css-scroll-fixed:not(.open-only-mob) {
     @include scroll-blocked;
@@ -24,7 +25,7 @@ body {
   font-size: $font-size;
   line-height: $line-height;
   color: $text-color;
-  overflow: hidden;
+  // overflow: hidden;
   background: $bg-color url(../../img/empty.png) no-repeat left top fixed;
   transition: color 0.7s, background-color 0.7s;
 
@@ -42,10 +43,13 @@ body {
 // Отступы по бокам основных элементов на странице
 .layout-page-spaces {
   $intend: nth($layout-page-space, 2);
+
   padding: {
     left: $intend;
     right: $intend;
-  };
+  }
+
+  ;
 
   // ------ tab -----------------------------------------
   //@include media('<tab') {
@@ -71,10 +75,13 @@ body {
 .layout-page {
   box-sizing: content-box;
   max-width: $layout-page-max-width;
+
   margin: {
     left: auto;
     right: auto;
-  };
+  }
+
+  ;
 }
 
 
@@ -83,10 +90,13 @@ body {
 // Отступы по бокам текстовых элементов
 .layout-text-spaces {
   $intend: nth($layout-text-space, 2);
+
   padding: {
     left: $intend;
     right: $intend;
-  };
+  }
+
+  ;
 
   // ------ tab -----------------------------------------
   //@include media('<tab') {
@@ -111,10 +121,13 @@ body {
 .layout-text {
   box-sizing: content-box;
   max-width: $layout-text-width;
+
   margin: {
     left: auto;
     right: auto;
-  };
+  }
+
+  ;
 }
 
 
@@ -124,10 +137,13 @@ body {
 .layout-flood {
   box-sizing: content-box;
   max-width: $layout-flood-width;
+
   margin: {
     left: auto;
     right: auto;
-  };
+  }
+
+  ;
 }
 
 

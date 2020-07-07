@@ -18,19 +18,29 @@
   }
 }
 
+.header_privacy_fixed {
+  background: #fff;
+  box-shadow: 0 5px 5px 0px rgba(255, 255, 255, 0.47);
+}
+
 .header-container {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 2rem 0 0 0;
+  padding: 2rem 0 2rem 0;
   line-height: 1;
+
   @include media("<tab") {
-    padding-top: 5rem;
-    padding-right: 4.9rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    // padding-right: 4.9rem;
+    align-items: stretch;
   }
+
   @include media("<mob") {
-    padding-top: 8.571rem;
-    padding-right: 4.9rem;
+    padding-top: 7.571rem;
+    padding-bottom: 7.571rem;
+    // padding-right: 4.9rem;
   }
 
   &__left {
@@ -44,9 +54,24 @@
     justify-content: space-between;
 
     @include media("<tab") {
-      display: none;
+      // display: none;
     }
   }
+
+  &__wrapper {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: space-between;
+
+    @include media("<tab") {
+      flex-basis: auto;
+      // flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: end;
+    }
+  }
+
 }
 
 /* logo */
@@ -57,11 +82,14 @@
   width: 23.8rem;
   flex-shrink: 0;
   z-index: 5;
+
   @include media("<tab") {
-    width: 38.8rem;
+    width: 13.8rem;
+    height: 10.48rem;
   }
+
   @include media("<mob") {
-    width: 63.506rem;
+    width: 26.506rem;
     height: 19.48rem;
   }
 
@@ -101,9 +129,9 @@
     transition: opacity 0.8s;
   }
 
-  .logo_dark {
-    // background-image: url(../../img/logo.svg);
-  }
+  // .logo_dark {
+  //   background-image: url(../../img/logo.svg);
+  // }
 
   .logo_light {
     // background-image: url(../../img/logo-alt.svg);
@@ -120,10 +148,12 @@
     }
   }
 }
+
 .header-container__right .jsNav__item {
   background: transparent;
   border-radius: 6px;
 }
+
 .logo-theme-dark .header-container__right .jsNav__item {
   background: #fff;
   border-radius: 6px;
@@ -140,10 +170,13 @@
   line-height: 2.6rem;
   text-align: center;
   text-transform: uppercase;
+
   // margin: 0 0 0 auto;
   @include media("<tab") {
     font-size: 2.7rem;
+    order: -1;
   }
+
   @include media('<mob') {
     font-size: 5.455rem;
     line-height: 8.182rem;
@@ -176,12 +209,14 @@
       transition: opacity 0.35s, transform 0.35s, background-color 0.35s;
       transform: translateZ(0) scale3d(0.5, 0.5, 1);
       z-index: -1;
+
       @include media("<tab") {
         height: 6rem;
         width: 6rem;
         border-radius: 6rem;
-        margin: -3.2rem 0 0 -2.4rem;
+        margin: -3.1rem 0 0 -2.9rem;
       }
+
       @include media('<mob') {
         content: "";
         display: block;
@@ -191,7 +226,7 @@
         height: 11rem;
         width: 11rem;
         border-radius: 10rem;
-        margin: -3.2rem 0 0 -3rem;
+        margin: -3.2rem 0 0 -4.7rem;
       }
     }
 
@@ -208,6 +243,14 @@
       &::before {
         background-color: white;
       }
+    }
+
+    @include media("<tab") {
+      width: 4.6rem;
+    }
+
+    @include media("<mob") {
+      width: 6.6rem;
     }
   }
 }
@@ -228,6 +271,7 @@
   outline: none;
   border: none;
 }
+
 .play_button.o {
   opacity: 0;
 }
@@ -251,7 +295,8 @@
     width: 48rem;
     max-width: 100%;
     text-align: left;
-    background-color: rgba($base-color, 0.9);
+    // background-color: rgba($base-color, 0.9);
+    background-color: #fff;
     z-index: 999;
 
     transition: {
@@ -320,7 +365,7 @@
 .nav-opener {
   display: block;
   position: relative;
-  $size: 4rem;
+  $size: 5rem;
   height: $size;
   width: $size;
   font-size: 0;
@@ -342,20 +387,28 @@
   }
 
   &::before {
-    height: 1.7rem;
-    width: 2.6rem;
-    background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB3aWR0aD0iMjYiIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAyNiAxNyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjYiIGhlaWdodD0iMyIgcng9IjEuNSI+PC9yZWN0PjxyZWN0IHk9IjciIHdpZHRoPSIyNiIgaGVpZ2h0PSIzIiByeD0iMS41Ij48L3JlY3Q+PHJlY3QgeT0iMTQiIHdpZHRoPSIyNiIgaGVpZ2h0PSIzIiByeD0iMS41Ij48L3JlY3Q+PC9zdmc+);
+    height: 3.7rem;
+    width: 4.6rem;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItbWVudSI+PGxpbmUgeDE9IjMiIHkxPSIxMiIgeDI9IjIxIiB5Mj0iMTIiPjwvbGluZT48bGluZSB4MT0iMyIgeTE9IjYiIHgyPSIyMSIgeTI9IjYiPjwvbGluZT48bGluZSB4MT0iMyIgeTE9IjE4IiB4Mj0iMjEiIHkyPSIxOCI+PC9saW5lPjwvc3ZnPg0KDQo=");
+    color: #000;
+
+    @include media("<mob") {
+      height: 6.5rem;
+      width: 7.6rem;
+    }
   }
 
-  &::after {
-    height: 2.5rem;
-    width: 2.7rem;
-    background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB3aWR0aD0iMjciIGhlaWdodD0iMjUiIHZpZXdCb3g9IjAgMCAyNyAyNSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB4PSIwLjQ0NjUzMyIgeT0iMTIuNCIgd2lkdGg9IjE3IiBoZWlnaHQ9IjMiIHJ4PSIxLjUiIHRyYW5zZm9ybT0icm90YXRlKC00NCAwLjQ0NjUzMyAxMi40KSI+PC9yZWN0PjxyZWN0IHg9IjEiIHk9IjExIiB3aWR0aD0iMjYiIGhlaWdodD0iMyIgcng9IjEuNSI+PC9yZWN0PjxyZWN0IHg9IjIuNTgwMzIiIHk9IjEwLjQyODUiIHdpZHRoPSIxNyIgaGVpZ2h0PSIzIiByeD0iMS41IiB0cmFuc2Zvcm09InJvdGF0ZSg0NSAyLjU4MDMyIDEwLjQyODUpIj48L3JlY3Q+PC9zdmc+);
-    display: none;
-  }
+  // &::after {
+  //   height: 2.5rem;
+  //   width: 4.7rem;
+  //   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjQgNmgtMjR2LTRoMjR2NHptMCA0aC0yNHY0aDI0di00em0wIDhoLTI0djRoMjR2LTR6Ij48L3BhdGg+PC9zdmc+");
+  //   display: none;
+  // }
 
   @include media('<tab') {
     display: block;
+    height: 4rem;
+    width: 4rem;
   }
 
   &.is-open {
@@ -366,6 +419,12 @@
     &::after {
       display: block;
     }
+  }
+
+  @include media('<mob') {
+    $size: 7rem;
+    height: $size;
+    width: 8rem;
   }
 }
 
@@ -389,14 +448,19 @@
 .logo-nav {
   display: block;
   position: relative;
-  height: 4rem;
+  height: 15rem;
   width: 16rem;
   font-size: 0;
   line-height: 0;
-  background-image: url(../../img/logo-alt.svg);
+  background-image: url(../../img/logo.svg);
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 85%;
+
+  @include media("<mob") {
+    height: 33rem;
+    width: 33rem;
+  }
 }
 
 // Navigation close button
@@ -413,17 +477,27 @@
   &::before {
     content: "";
     display: block;
-    $size: 1.8rem;
+    $size: 2.2rem;
     height: $size;
     width: $size;
     position: absolute;
-    left: 50%;
+    left: 35%;
     top: 50%;
     transform: translate(-50%, -50%);
     background-repeat: no-repeat;
     background-position: 50%;
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjZmZmIj48cGF0aCBkPSJNMjMuOTU0IDIxLjAzbC05LjE4NC05LjA5NSA5LjA5Mi05LjE3NC0yLjgzMi0yLjgwNy05LjA5IDkuMTc5LTkuMTc2LTkuMDg4LTIuODEgMi44MSA5LjE4NiA5LjEwNS05LjA5NSA5LjE4NCAyLjgxIDIuODEgOS4xMTItOS4xOTIgOS4xOCA5LjF6Ii8+PC9zdmc+);
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyLjAwMSA1MTIuMDAxIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIuMDAxIDUxMi4wMDE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNMjg0LjI4NiwyNTYuMDAyTDUwNi4xNDMsMzQuMTQ0YzcuODExLTcuODExLDcuODExLTIwLjQ3NSwwLTI4LjI4NWMtNy44MTEtNy44MS0yMC40NzUtNy44MTEtMjguMjg1LDBMMjU2LDIyNy43MTcNCgkJCUwzNC4xNDMsNS44NTljLTcuODExLTcuODExLTIwLjQ3NS03LjgxMS0yOC4yODUsMGMtNy44MSw3LjgxMS03LjgxMSwyMC40NzUsMCwyOC4yODVsMjIxLjg1NywyMjEuODU3TDUuODU4LDQ3Ny44NTkNCgkJCWMtNy44MTEsNy44MTEtNy44MTEsMjAuNDc1LDAsMjguMjg1YzMuOTA1LDMuOTA1LDkuMDI0LDUuODU3LDE0LjE0Myw1Ljg1N2M1LjExOSwwLDEwLjIzNy0xLjk1MiwxNC4xNDMtNS44NTdMMjU2LDI4NC4yODcNCgkJCWwyMjEuODU3LDIyMS44NTdjMy45MDUsMy45MDUsOS4wMjQsNS44NTcsMTQuMTQzLDUuODU3czEwLjIzNy0xLjk1MiwxNC4xNDMtNS44NTdjNy44MTEtNy44MTEsNy44MTEtMjAuNDc1LDAtMjguMjg1DQoJCQlMMjg0LjI4NiwyNTYuMDAyeiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K");
     background-size: contain;
+
+    @include media("<mob") {
+      height: 6.2rem;
+      width: 6.2rem;
+    }
+  }
+
+  @include media("<mob") {
+    height: 15rem;
+    width: 15rem;
   }
 }
 
@@ -462,6 +536,14 @@
 
   .logo-theme-light & {
     color: #fff;
+
+    @include media('<tab') {
+      color: #000;
+    }
+
+    @include media('<mob') {
+      color: #000;
+    }
   }
 
   @include media('<net') {
@@ -472,6 +554,11 @@
   @include media('<tab') {
     font-size: 1.4rem;
     line-height: 1.8rem;
+  }
+
+  @include media('<mob') {
+    font-size: 4.4rem;
+    line-height: 4.8rem;
   }
 
   // Все ul
@@ -941,7 +1028,7 @@
   }
 
   &__footer {
-    
+
     &-site {
       @include font-alt-normal;
       font-size: 0.816rem;
@@ -950,23 +1037,27 @@
       letter-spacing: 0.256rem;
       text-transform: uppercase;
       color: #BBBBBB;
+
       @include media("<tab") {
         font-size: 1.816rem;
       }
+
       @include media("<mob") {
         font-size: 3.896rem;
         line-height: 5.844rem;
         letter-spacing: 1.224rem;
         margin-bottom: 3.506rem;
       }
-      
+
     }
+
     &-privacy {
       @include media("<mob") {
         order: 3;
         margin-bottom: 0;
       }
     }
+
     &-clover {
       text-decoration: none;
       color: rgba(255, 255, 255, 0.312773);
@@ -1012,7 +1103,7 @@
     align-items: center;
     position: relative;
     height: 100%;
-    
+
     @include media("<mob") {
       // height: auto;
       // margin-top: 36.234rem;
@@ -1031,9 +1122,11 @@
     & div {
       color: #BBBBBB;
     }
+
     & .dop_col {
       color: #BBBBBB;
     }
+
     & a {
       margin-right: 0;
     }
@@ -1050,7 +1143,8 @@
 }
 
 .editColorFooter div {
-  color: rgba(255, 255, 255, 0.312773);;
+  color: rgba(255, 255, 255, 0.312773);
+  ;
 }
 
 /* main section end */
@@ -1060,10 +1154,12 @@
   opacity: 1;
   transition: opacity 0.5s 0.6s;
 }
+
 .second_item .second_footer {
   opacity: 1;
   transition: opacity 0.5s 0.6s;
 }
+
 .third_item .third_footer {
   opacity: 1;
   transition: opacity 0.5s 0.6s;
@@ -1071,7 +1167,7 @@
 
 /* menu */
 .menu {
-  
+
   &__item {
     position: static;
     $width: 19.2rem;
@@ -1170,9 +1266,11 @@
     &-content {
       display: flex;
       align-items: flex-start;
+
       @include media("<tab") {
         align-items: center;
       }
+
       @include media("<mob") {
         display: block;
       }
@@ -1211,6 +1309,7 @@
         font-size: 6.5rem;
         line-height: 5.6rem;
       }
+
       @include media("<mob") {
         font-size: 18.701rem;
         line-height: 18.701rem;
@@ -1261,19 +1360,22 @@
           font-size: 2rem;
           line-height: 3.121rem;
         }
+
         @include media("<mob") {
           display: none;
         }
       }
+
       @include media("<tab") {
         $width: 48%;
         flex: 1 0 $width;
         max-width: $width;
       }
+
       @include media("<mob") {
         max-width: 97.013rem;
       }
-      
+
       .s-ready .m-active & {
         opacity: 1;
       }
@@ -1286,11 +1388,12 @@
       border-radius: 5px;
       align-self: center;
       margin-left: auto;
-    
+
       @include media("<tab") {
         width: 0.53rem;
         height: 31.9rem;
       }
+
       @include media("<mob") {
         display: none;
       }
@@ -1361,11 +1464,15 @@
 }
 
 // white border
+.logo-theme-light .nav-opener::before {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItbWVudSI+PGxpbmUgeDE9IjMiIHkxPSIxMiIgeDI9IjIxIiB5Mj0iMTIiPjwvbGluZT48bGluZSB4MT0iMyIgeTE9IjYiIHgyPSIyMSIgeTI9IjYiPjwvbGluZT48bGluZSB4MT0iMyIgeTE9IjE4IiB4Mj0iMjEiIHkyPSIxOCI+PC9saW5lPjwvc3ZnPg0KDQo=");
+}
 
 .logo-theme-dark .menu-el__full-description p {
   background: #fff;
   transition: background 1.3s;
 }
+
 .logo-theme-light .menu-el__full-description p {
   background-color: transparent;
 }
@@ -1373,6 +1480,7 @@
 .logo-theme-dark .wbg {
   opacity: 0;
 }
+
 .logo-theme-light .wbg {
   transition: opacity 3s;
   opacity: 1;
@@ -1382,6 +1490,7 @@
   transition: background-color 2s;
   background-color: #fff;
 }
+
 .logo-theme-light .menu-el__full-title {
   background-color: transparent;
 }
@@ -1555,6 +1664,7 @@
       flex: 1 0 width;
       max-width: $width;
     }
+
     @include media("<mob") {
       display: none;
     }
@@ -1590,6 +1700,7 @@
     &_whiteone {
       color: rgba(255, 255, 255, 0.3);
     }
+
     &_whitetwo {
       color: rgba(255, 255, 255, 0.44);
     }
@@ -1612,8 +1723,9 @@
 
     @include media("<tab") {
       font-size: 11.3rem;
-    line-height: 11.5rem;
+      line-height: 11.5rem;
     }
+
     @include media("<mob") {
       display: none;
     }
@@ -1634,11 +1746,13 @@
     max-width: $width;
     padding: 0 2rem 0 0;
     margin-top: 1.632rem;
+
     @include media("<tab") {
       $width: 28.4%;
       flex: 1 0 $width;
       max-width: $width;
     }
+
     @include media("<mob") {
       $width: 100%;
       flex: 1 0 $width;
@@ -1649,6 +1763,7 @@
       color: #919191;
     }
   }
+
   &__button {
     @include font-gilroy-bold;
     text-decoration: none;
@@ -1658,7 +1773,7 @@
     padding: 1.224rem 5.467rem;
     background: #39FF98;
     border-radius: 0.245rem;
-    
+
     @include media("<mob") {
       border-radius: 1.33rem;
     }
@@ -1675,6 +1790,7 @@
       font-size: 3.469rem;
       line-height: 5.203rem;
     }
+
     @include media("<mob") {
       font-size: 7.013rem;
       line-height: 10.519rem;
@@ -1687,10 +1803,12 @@
     font-size: 3rem;
     line-height: 3.75rem;
     color: white;
+
     @include media("<tab") {
       font-size: 5rem;
       line-height: 6.75rem;
     }
+
     @include media("<mob") {
       font-size: 14.026rem;
       line-height: 17.922rem;
@@ -1716,6 +1834,7 @@
       font-size: 2.05rem;
       line-height: 2.2rem;
     }
+
     @include media("<mob") {
       display: none !important;
     }
@@ -1760,7 +1879,7 @@
         delay: 1.3s;
         timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
       }
-      
+
       $translate: -50%,
       -50%;
       $scale: 0.85,
@@ -1786,27 +1905,33 @@
         max-height: 100%;
         max-width: 100%;
       }
+
       &_social1 {
         width: 100%;
         align-items: center;
+
         @include media("<mob") {
           align-items: flex-end;
           top: 33%;
           left: 48%;
         }
+
         @include media("<mob-xs") {
           top: 31%;
         }
       }
+
       &_social1 img {
         @include media("<mob") {
           width: 114.026rem;
           height: 106.234rem;
         }
+
         @include media("<mob-s") {
           width: 104.026rem;
           height: 96.234rem;
         }
+
         @include media("<mob-xs") {
           width: 76.026rem;
           height: 72.234rem;
@@ -1822,19 +1947,23 @@
         @include media("<tab") {
           align-items: center;
         }
+
         @include media("<mob") {
           align-items: center;
           left: 50%;
           top: 55%;
         }
       }
+
       &_social2 img {
         width: 46.589rem;
         height: 46.589rem;
+
         @include media("<mob") {
           width: 112.013rem;
           height: 105.779rem;
         }
+
         @include media("<mob-xxs") {
           width: 92.013rem;
           height: 85.779rem;
@@ -1906,7 +2035,7 @@
   right: 8%;
   z-index: 10;
   align-self: flex-end;
-  
+
   & a {
     text-decoration: none;
   }
@@ -1916,11 +2045,13 @@
     // height: 3.753rem;
     margin-right: 1.469rem;
   }
+
   @include media("<tab") {
     display: flex;
     right: 10%;
     // bottom: 30%;
   }
+
   @include media("<mob") {
     width: 100%;
     display: flex;
@@ -1929,6 +2060,7 @@
     bottom: 11%;
     right: 0;
   }
+
   @include media("<mob-xxs") {
     bottom: 13%;
   }
@@ -1946,26 +2078,32 @@
   z-index: -1;
   // opacity: 0.5;
 }
+
 .first_bg {
   position: absolute;
   right: 25%;
+
   @include media("<mob") {
     right: 35%;
     top: -3%;
   }
 }
+
 .second_bg {
   position: absolute;
   bottom: -2%;
   left: 2.6%;
+
   @include media("<mob") {
     display: none;
   }
 }
+
 .third_bg {
   position: absolute;
   bottom: 0;
   right: 0;
+
   @include media("<mob") {
     bottom: -25%;
   }
@@ -1976,6 +2114,7 @@
 /* ==================================== */
 
 .tanks {
+  overflow: hidden;
   background-color: #7250EC;
 
   &_rectangle {
@@ -1989,13 +2128,15 @@
     right: 0;
     top: 1.142rem;
 
-      @include media("<tab") {
-        display: none;
-      }    
+    @include media("<tab") {
+      display: none;
+    }
   }
+
   &_download {
     height: 3.753rem;
     line-height: 3.753rem;
+
     &:first-child {
       // margin-bottom: 1.224rem;
 
@@ -2009,6 +2150,7 @@
       height: 100%;
     }
   }
+
   &__menu {
     visibility: hidden;
     position: relative;
@@ -2020,31 +2162,35 @@
     height: 14.034rem;
     padding: 0.816rem;
     z-index: 10;
+
     & nav {
       display: flex;
       flex-direction: column;
     }
+
     &_item {
-        @include font-bold;
-        text-transform: uppercase;
-        font-size: 0.979rem;
-        line-height: 2.774rem;
-        padding-left: 1.387rem;
-        opacity: 0.4;
-        color: #0E0E0E;
-        text-decoration: none;
-        margin-bottom: 0.514rem;
-        cursor: pointer;
-        border-radius: 0.816rem;
+      @include font-bold;
+      text-transform: uppercase;
+      font-size: 0.979rem;
+      line-height: 2.774rem;
+      padding-left: 1.387rem;
+      opacity: 0.4;
+      color: #0E0E0E;
+      text-decoration: none;
+      margin-bottom: 0.514rem;
+      cursor: pointer;
+      border-radius: 0.816rem;
 
       &:last-child {
         margin-bottom: 0;
       }
+
       &:hover {
         color: #0E0E0E;
         opacity: 1;
         background: #3AFF98;
       }
+
       &.active_game {
         color: #0E0E0E;
         opacity: 1;
@@ -2056,6 +2202,7 @@
       display: none !important;
     }
   }
+
   &__awards {
     padding-top: 5.793rem;
   }
@@ -2066,6 +2213,7 @@
   position: fixed;
   top: 100px;
 }
+
 .tanks__header {
   background-image: url(../../img/pentagon_bg.png) no-repeat center center;
   position: relative;
@@ -2075,7 +2223,7 @@
 
     & img:first-child {
       position: absolute;
-      top:0;
+      top: 0;
       right: 10%;
       z-index: 2;
 
@@ -2084,12 +2232,14 @@
         right: 28%;
       }
     }
+
     & img:last-child {
-      
+
       position: absolute;
       bottom: 18%;
       right: 20%;
       z-index: 2;
+
       @include media("<tab") {
         display: none;
       }
@@ -2102,7 +2252,8 @@
     font-size: 27.742rem;
     line-height: 100%;
     text-transform: uppercase;
-    color:rgba(255, 255, 255, 0.067936);;
+    color: rgba(255, 255, 255, 0.067936);
+    ;
     position: absolute;
     top: 48%;
     left: 48%;
@@ -2127,9 +2278,9 @@
 
   &__title {
     position: absolute;
-    
+
     margin-top: 28rem;
-    
+
     @include font-alt-extra-bold;
     font-size: 27.742rem;
     text-transform: uppercase;
@@ -2158,6 +2309,7 @@
         width: 65.529rem;
         height: 69.02rem;
       }
+
       @include media("<mob") {
         width: 100%;
         height: 100%;
@@ -2168,18 +2320,20 @@
       left: 0;
       top: -17rem;
     }
+
     @include media("<mob") {
       left: 0;
-top: -29rem;
+      top: -29rem;
     }
   }
+
   &__block {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 29.129rem;
     width: 29.129rem;
-    
+
     & img {
       height: 0.734rem;
       width: 2.203rem;
@@ -2209,12 +2363,13 @@ top: -29rem;
         font-size: 3.529rem;
         line-height: 5.294rem;
       }
+
       @include media("<mob") {
         font-size: 6.243rem;
         line-height: 9.365rem;
       }
     }
-    
+
     & h2 {
       visibility: hidden;
       @include font-gilroy-bold;
@@ -2228,11 +2383,13 @@ top: -29rem;
         font-size: 9.536rem;
         line-height: 8.477rem;
       }
+
       @include media("<mob") {
         font-size: 24.974rem;
         line-height: 22.199rem;
       }
     }
+
     &_button {
       display: flex;
       flex-direction: column;
@@ -2245,10 +2402,12 @@ top: -29rem;
           @include media("<net") {
             margin-top: 2.3rem;
           }
+
           @include media("<tab") {
             margin-top: 0;
           }
         }
+
         @include media("<tab") {
           margin-top: 0;
         }
@@ -2260,6 +2419,7 @@ top: -29rem;
         top: 57rem;
         z-index: 10;
       }
+
       @include media("<mob") {
         top: 89rem;
       }
@@ -2269,6 +2429,7 @@ top: -29rem;
       align-items: flex-start;
       margin-top: 24.118rem;
     }
+
     @include media("<mob") {
       margin-top: 38.818rem;
     }
@@ -2279,6 +2440,7 @@ top: -29rem;
     justify-content: center;
   }
 }
+
 .wrapper_second_title {
   display: flex;
   justify-content: flex-end;
@@ -2288,15 +2450,18 @@ top: -29rem;
     flex-basis: 60.52rem;
     text-align: left;
   }
+
   @include media("<tab") {
     justify-content: flex-start;
     margin-bottom: 3.137rem;
     margin-top: 2.142rem;
   }
+
   @include media("<mob") {
     margin-top: 6.142rem;
   }
 }
+
 .second_part {
   display: flex;
   // left: -3rem;
@@ -2308,11 +2473,12 @@ top: -29rem;
 
   &_info {
     flex-basis: 60.52rem;
-    
+
     @include media("<tab") {
       flex-basis: 100%;
     }
   }
+
   &__title {
     visibility: hidden;
     @include font-bold;
@@ -2327,11 +2493,13 @@ top: -29rem;
       font-size: 7.059rem;
       line-height: 6.275rem;
     }
+
     @include media("<mob") {
       font-size: 11.793rem;
       line-height: 15.583rem;
     }
   }
+
   &__paragraph {
     visibility: hidden;
     font-size: 1.305rem;
@@ -2344,6 +2512,7 @@ top: -29rem;
       line-height: 4.314rem;
       width: 100%;
     }
+
     @include media("<mob") {
       font-size: 5.55rem;
       line-height: 7.631rem;
@@ -2369,26 +2538,28 @@ top: -29rem;
   & img {
     width: 64.213rem;
     height: 36.227rem;
-    border: 8px solid rgb(255,255,255);
+    border: 8px solid rgb(255, 255, 255);
     box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.25);
     border-radius: 0.408rem;
 
     @include media("<tab") {
       width: 65.098rem;
       height: 36.275rem;
-      border: 3px solid rgb(255,255,255);
+      border: 3px solid rgb(255, 255, 255);
     }
+
     @include media("<mob") {
       width: 115.158rem;
       height: 64.169rem;
     }
   }
+
   & .tanks_video {
     outline: none;
     display: block;
     width: 64.213rem;
     height: 36.227rem;
-    border: 8px solid rgb(255,255,255);
+    border: 8px solid rgb(255, 255, 255);
     box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.25);
     border-radius: 0.408rem;
     object-fit: cover;
@@ -2396,8 +2567,9 @@ top: -29rem;
     @include media("<tab") {
       width: 65.098rem;
       height: 36.275rem;
-      border: 3px solid rgb(255,255,255);
+      border: 3px solid rgb(255, 255, 255);
     }
+
     @include media("<mob") {
       width: 115.158rem;
       height: 64.169rem;
@@ -2412,14 +2584,14 @@ top: -29rem;
 .hoop__video_item {
   visibility: hidden;
   outline: none;
-  
+
 
   & img {
     width: 21.051rem;
     height: 45.61rem;
     margin-top: 28rem;
     margin-bottom: 4.488rem;
-    border: 5px solid rgb(255,255,255);
+    border: 5px solid rgb(255, 255, 255);
     box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.25);
     border-radius: 1.224rem;
 
@@ -2427,11 +2599,13 @@ top: -29rem;
       width: 45.62rem;
       height: 98.723rem;
     }
+
     @include media("<mob") {
       width: 62.5rem;
       height: 135.25rem;
     }
   }
+
   & .hoop_video {
     outline: none;
     display: block;
@@ -2439,7 +2613,7 @@ top: -29rem;
     height: 45.61rem;
     margin-top: 28rem;
     margin-bottom: 4.488rem;
-    border: 5px solid rgb(255,255,255);
+    border: 5px solid rgb(255, 255, 255);
     box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.25);
     border-radius: 1.224rem;
     object-fit: cover;
@@ -2448,6 +2622,7 @@ top: -29rem;
       width: 45.62rem;
       height: 98.723rem;
     }
+
     @include media("<mob") {
       width: 62.5rem;
       height: 135.25rem;
@@ -2467,7 +2642,7 @@ top: -29rem;
   background: url(../../img/play_video_on_slider.svg) no-repeat center center;
   outline: none;
   border: none;
-  
+
   &.o {
     opacity: 0;
   }
@@ -2476,6 +2651,7 @@ top: -29rem;
     width: 45.62rem;
     height: 98.723rem;
   }
+
   @include media("<mob") {
     width: 62.5rem;
     height: 135.25rem;
@@ -2495,40 +2671,47 @@ top: -29rem;
   &_figurine {
     visibility: hidden;
 
-    
+
     & img:nth-child(1) {
-    position: absolute;
-    top: -33%;
-    left: 29%;
-    z-index: 1;
-    @include media("<tab") {
-      display: none;
+      position: absolute;
+      top: -33%;
+      left: 29%;
+      z-index: 1;
+
+      @include media("<tab") {
+        display: none;
+      }
     }
-    }
+
     & img:nth-child(2) {
       position: absolute;
       top: -14%;
       right: 0%;
       z-index: 1;
+
       @include media("<tab") {
         width: 4.765rem;
         height: 14.725rem;
       }
     }
+
     & img:nth-child(3) {
       position: absolute;
       top: 0%;
       left: 0;
       z-index: 1;
+
       @include media("<tab") {
         display: none;
       }
     }
+
     & img:nth-child(4) {
       position: absolute;
       bottom: 59%;
       left: 11%;
       z-index: 1;
+
       @include media("<tab") {
         display: none;
       }
@@ -2540,6 +2723,7 @@ top: -29rem;
   &_top {
     display: flex;
     justify-content: flex-end;
+
     & img {
       visibility: hidden;
       // margin-right: 6.875rem;
@@ -2552,10 +2736,12 @@ top: -29rem;
       display: none;
     }
   }
+
   &_center {
     display: flex;
     justify-content: flex-end;
     margin-top: 2.611rem;
+
     // margin-bottom: 5.793rem;
     & img {
       visibility: hidden;
@@ -2568,17 +2754,19 @@ top: -29rem;
       display: none;
     }
   }
+
   &_slider {
     display: none;
-    
+
     @include media("<tab") {
       position: relative;
       display: block;
     }
+
     & .slick-list {
       overflow: visible;
 
-      & .slick-slide  {
+      & .slick-slide {
         width: 47.417rem !important;
         height: 41.325rem;
         margin: 0 4.902rem;
@@ -2589,7 +2777,8 @@ top: -29rem;
           height: 108.221rem;
         }
       }
-      & img  {
+
+      & img {
         width: 47.417rem;
         height: 41.325rem;
 
@@ -2600,6 +2789,7 @@ top: -29rem;
       }
     }
   }
+
   &_bottom {
     display: flex;
     justify-content: flex-end;
@@ -2610,59 +2800,63 @@ top: -29rem;
     }
   }
 
-    &_more {
-      margin-right: 3.727rem;
-      flex-basis: 40.062rem;
+  &_more {
+    margin-right: 3.727rem;
+    flex-basis: 40.062rem;
 
-      & h4 {
-        visibility: hidden;
-        @include font-bold;
-        font-size: 2.937rem;
-        line-height: 1.795rem;
-        color: #FFFFFF;
-        margin: 0;
-
-        @include media("<tab") {
-          margin-top: 4.902rem;
-          font-size: 7.059rem;
-          line-height: 4.314rem;
-        }
-        @include media("<mob") {
-          font-size: 11.487rem;
-          line-height: 16.314rem;
-          margin-top: 10.142rem;
-        }
-      }
-      & p {
-        visibility: hidden;
-        color: #DDD3FF;
-        width: 40.062rem;
-        font-size: 1.305rem;
-        line-height: 1.795rem;
-         & span {
-          @include font-bold;
-          color: #fff;
-        }
-
-        @include media("<tab") {
-          margin-top: 2.902rem;
-          font-size: 3.137rem;
-          line-height: 4.314rem;
-          width: auto;
-        }
-        @include media("<mob") {
-          font-size: 5.55rem;
-          line-height: 7.631rem;
-        }
-      }
+    & h4 {
+      visibility: hidden;
+      @include font-bold;
+      font-size: 2.937rem;
+      line-height: 1.795rem;
+      color: #FFFFFF;
+      margin: 0;
 
       @include media("<tab") {
-        margin-right: 0;
-        flex-basis: auto;
+        margin-top: 4.902rem;
+        font-size: 7.059rem;
+        line-height: 4.314rem;
+      }
+
+      @include media("<mob") {
+        font-size: 11.487rem;
+        line-height: 16.314rem;
+        margin-top: 10.142rem;
       }
     }
 
-    &_info {
+    & p {
+      visibility: hidden;
+      color: #DDD3FF;
+      width: 40.062rem;
+      font-size: 1.305rem;
+      line-height: 1.795rem;
+
+      & span {
+        @include font-bold;
+        color: #fff;
+      }
+
+      @include media("<tab") {
+        margin-top: 2.902rem;
+        font-size: 3.137rem;
+        line-height: 4.314rem;
+        width: auto;
+      }
+
+      @include media("<mob") {
+        font-size: 5.55rem;
+        line-height: 7.631rem;
+      }
+    }
+
+    @include media("<tab") {
+      margin-right: 0;
+      flex-basis: auto;
+    }
+  }
+
+  &_info {
     padding-left: 5.875rem;
     flex-basis: 32.148rem;
     align-self: center;
@@ -2673,8 +2867,9 @@ top: -29rem;
       color: #FFFFFF;
       margin: 0;
       margin-bottom: 1.7rem;
-      
+
     }
+
     & p {
       font-size: 1.305rem;
       line-height: 1.795rem;
@@ -2707,11 +2902,13 @@ top: -29rem;
           font-size: 18.824rem;
           line-height: 16.667rem;
         }
+
         @include media("<mob") {
           font-size: 33.299rem;
           line-height: 31rem;
         }
       }
+
       & p {
         // @include font-gilroy-medium;
         text-align: center;
@@ -2719,16 +2916,18 @@ top: -29rem;
         line-height: 1.469rem;
         color: #FFFFFF;
         opacity: 0.6;
-        
+
         @include media("<tab") {
           font-size: 2.549rem;
           line-height: 3.529rem;
         }
+
         @include media("<mob") {
           font-size: 4.509rem;
           line-height: 6.243rem;
         }
       }
+
       @include media("<tab") {
         width: 30.98rem;
         height: 46.667rem;
@@ -2736,12 +2935,14 @@ top: -29rem;
         margin: 0;
         margin-right: 1px;
       }
+
       @include media("<mob") {
         width: 55.151rem;
         height: 82.553rem;
         padding: 11rem 11.568rem;
       }
     }
+
     & .second_card {
       visibility: hidden;
       text-align: center;
@@ -2760,11 +2961,13 @@ top: -29rem;
           font-size: 7.647rem;
           line-height: 6.471rem;
         }
+
         @include media("<mob") {
           font-size: 13.528rem;
           line-height: 11.446rem;
         }
       }
+
       & p {
         text-align: center;
         font-size: 1.061rem;
@@ -2776,6 +2979,7 @@ top: -29rem;
           font-size: 2.549rem;
           line-height: 3.529rem;
         }
+
         @include media("<mob") {
           font-size: 4.509rem;
           line-height: 6.243rem;
@@ -2787,6 +2991,7 @@ top: -29rem;
         height: 46.667rem;
         padding: 6.235rem 5.882rem;
       }
+
       @include media("<mob") {
         width: 55.151rem;
         height: 82.553rem;
@@ -2802,7 +3007,7 @@ top: -29rem;
 }
 
 .tanks__footer {
-  background: url(../../img/tanks_footer_bg.png) no-repeat center center/cover; 
+  background: url(../../img/tanks_footer_bg.png) no-repeat center center/cover;
   padding: 23.825rem 0 11.423rem 0;
   overflow-wrap: hidden;
 
@@ -2811,21 +3016,26 @@ top: -29rem;
     flex-direction: column;
     justify-content: space-between;
   }
+
   &_blk {
     display: flex;
     justify-content: space-between;
+
     & img {
       visibility: hidden;
-        @include media("<tab") {
-          width: 16.078rem;
-          height: 14.706rem;
-        }
-        @include media("<mob") {
-          width: 28.443rem;
-          height: 26.015rem;
-        }
+
+      @include media("<tab") {
+        width: 16.078rem;
+        height: 14.706rem;
+      }
+
+      @include media("<mob") {
+        width: 28.443rem;
+        height: 26.015rem;
+      }
     }
   }
+
   &_inscription {
     visibility: hidden;
     @include font-gilroy-bold;
@@ -2838,29 +3048,34 @@ top: -29rem;
       font-size: 8.627rem;
       line-height: 7.647rem;
     }
+
     @include media("<mob") {
       font-size: 15.262rem;
       line-height: 13.528rem;
     }
   }
+
   &_download {
     margin-left: 14rem;
     margin-bottom: 22.846rem;
     z-index: 99;
-    
+
     @include media("<tab") {
       display: none;
     }
   }
+
   &_dop {
     visibility: hidden;
     position: relative;
     bottom: -9.159rem;
     width: 100%;
-    
-    & div, .tnk_footer {
+
+    & div,
+    .tnk_footer {
       color: rgba(255, 255, 255, 0.312773);
     }
+
     @include media("<tab") {
       display: none;
     }
@@ -2869,29 +3084,36 @@ top: -29rem;
   @include media("<tab") {
     padding: 2.781rem 0 80.623rem 0;
   }
+
   // @include media("<mob") {
   //   margin-bottom: 10rem;
   // }
 }
+
 .mobile_footer_btn {
   margin: 1.662rem 0 0.7rem 0;
   display: none;
   justify-content: center;
+
   @include media("<tab") {
     display: flex;
   }
 }
+
 // hoopstars
 
 .hoopstars {
   background: #FF8A5F;
+  overflow-x: hidden;
 
   &_paragraph {
     color: #fff;
   }
+
   &_menu {
     box-shadow: 0px 4px 30px #9F4D2E;
   }
+
   &_videoBg {
     background: url(../img/hoop_stars_bg.png) no-repeat center center/100% 100%;
     padding-top: 5rem;
@@ -2900,6 +3122,7 @@ top: -29rem;
       background-size: cover;
     }
   }
+
   .locacion_block_top &_loc_img {
     flex-basis: 28.557rem;
     width: 28.557rem;
@@ -2907,24 +3130,30 @@ top: -29rem;
     margin-right: 3.727rem;
     // margin-right: 3.51rem;
   }
+
   .hoopstars_loc_center {
     margin-top: 0.816rem;
     margin-right: 2.694rem;
   }
+
   .hoopstars_loc_info {
     flex-basis: 28.557rem;
   }
+
   .hoopstars_loc_firimg {
     margin-right: 0;
   }
+
   .hoopstars_loc_center &_loc_img {
     flex-basis: 28.557rem;
     width: 28.557rem;
     height: 28.557rem;
+
     &:first-child {
       margin-right: 0.816rem;
     }
   }
+
   .hoopstars_loc_top {
     margin-right: 3.51rem;
   }
@@ -2938,6 +3167,7 @@ top: -29rem;
     margin-top: 9rem;
   }
 }
+
 .locacion_block_card .hoopstars_card {
   background: #ff966f;
   position: relative;
@@ -2954,7 +3184,8 @@ top: -29rem;
     height: 67rem;
   }
 }
-.hoopstars_slide_img .slick-list img  {
+
+.hoopstars_slide_img .slick-list img {
   width: 97rem;
   height: 97rem;
 
@@ -2971,7 +3202,7 @@ top: -29rem;
   position: relative;
 
   .tanks__footer_blk img {
-    
+
     @include media("<mob") {
       width: 33.778rem;
       height: 22.444rem;
@@ -2986,6 +3217,7 @@ top: -29rem;
 .hoopstars_footer_title {
   margin-bottom: 5.222rem;
 }
+
 .hoopstars_bugle {
   position: absolute;
   top: -37%;
@@ -3004,11 +3236,13 @@ top: -29rem;
     top: 30rem;
     margin-bottom: 7rem;
   }
+
   @include media("<mob") {
     top: 47rem;
     margin-bottom: 27rem;
   }
 }
+
 .hoopstars__img {
   visibility: hidden;
 
@@ -3024,6 +3258,7 @@ top: -29rem;
       top: 13%;
       z-index: 1;
     }
+
     @include media("<mob") {
       width: 76rem;
       top: 26%;
@@ -3031,6 +3266,7 @@ top: -29rem;
     }
   }
 }
+
 .first_part_hoop {
   height: 46.834rem;
 
@@ -3040,22 +3276,24 @@ top: -29rem;
 }
 
 .hoop_button_download {
-  
+
   @include media("<tab") {
     top: 26rem;
     z-index: 67;
   }
+
   @include media("<mob") {
     top: 40rem;
   }
 }
 
-
 // privacy page
+.privacyPage {
+  padding-bottom: 2.04rem;
+}
 
 .privacy {
   background-color: #FFFFFF;
-  padding-bottom: 2.04rem;
   overflow: visible;
 
   &_title {
@@ -3071,109 +3309,171 @@ top: -29rem;
       margin-bottom: 5.711rem;
       margin-top: 21rem;
     }
+
     @include media("<mob") {
-      font-size: 10.956rem;
+      font-size: 11.956rem;
       line-height: 12.119rem;
       margin-top: 40rem;
       margin-bottom: 10rem;
     }
   }
- 
+
   &_center {
     display: flex;
-    justify-content: flex-start;
-    
+    justify-content: center;
+
     .privacy_content {
-      max-width: 83.6rem;
+      color: #3F3F3F;
+      max-width: 781px;
+      margin: 0 auto;
       background: #FFFFFF;
       padding: 4.488rem;
       position: relative;
       z-index: 19;
       box-shadow: 0px 2.448rem 5.711rem rgba(164, 164, 164, 0.25);
+      word-wrap: break-word;
 
-        & p {
-          @include font-normal;
-          font-size: 1.469rem;
-          line-height: 2.121rem;
-          color: #3F3F3F;
-          @include media("<tab") {
-            font-size: 2.469rem;
-            line-height: 4.121rem;
-          }
-          @include media("<mob") {
-            font-size: 6.469rem;
-            line-height: 7.427rem;
-          }
+      ul {
+        margin-left: 4rem;
+
+        @include media("<tab") {
+          margin-left: 6rem;
+          font-size: 2.469rem;
+          line-height: 4.121rem;
         }
-        & h1, & h2, & h3, & h4, & h5, & h6 {
-          @include font-bold;
-          color: #3F3F3F;
-          word-wrap: break-word;
+
+        @include media("<mob") {
+          margin-left: 11rem;
+          font-size: 6.469rem;
+          line-height: 8.427rem;
         }
-        & h1 {
-          @include media("<tab") {
-            font-size: 6rem;
-            line-height: 9.6rem;
-          }
-          @include media("<mob") {
-            font-size: 13rem;
-            line-height: 13.6rem;
-          }
-        }     
-        & h2 {
-          @include media("<tab") {
-            font-size: 5.5rem;
-            line-height: 8.6rem;
-          }
-          @include media("<mob") {
-            font-size: 12.5rem;
-            line-height: 12.6rem;
-          }
-        }      
-        & h3 {
-          @include media("<tab") {
-            font-size: 5rem;
-            line-height: 7.6rem;
-          }
-          @include media("<mob") {
-            font-size: 11rem;
-            line-height: 11.6rem;
-          }
-        }       
-        & h4 {
-          @include media("<tab") {
-            font-size: 4.5rem;
-            line-height: 7rem;
-          }
-          @include media("<mob") {
-            font-size: 9rem;
-             line-height: 9.6rem;
-          }
-        }     
-        & h5 {
-          @include media("<tab") {
-            font-size: 4.2rem;
-            line-height: 7.3rem;
-          }
-          @include media("<mob") {
-            font-size: 7rem;
-            line-height: 7.6rem;
-          }
-        }    
-        & h6 {
-          @include media("<tab") {
-            font-size: 4rem;
-            line-height: 6.8rem;
-          }
-          @include media("<mob") {
-            font-size: 5rem;
-            line-height: 5.6rem;
-          }
+      }
+
+      ol {
+        padding: 0;
+
+        // margin-left: 1.5rem;
+        @include media("<tab") {
+          font-size: 2.469rem;
+          line-height: 4.121rem;
         }
-      
+
+        @include media("<mob") {
+          font-size: 6.469rem;
+          line-height: 8.427rem;
+        }
+
+        & li ol {
+          padding-left: 30px;
+        }
+      }
+
+      a {
+        color: #3F3F3F;
+      }
+
+      & p {
+        @include font-normal;
+
+        // font-size: 1.469rem;
+        // line-height: 2.121rem;
+        @include media("<tab") {
+          font-size: 2.469rem;
+          line-height: 4.121rem;
+        }
+
+        @include media("<mob") {
+          font-size: 6.469rem;
+          line-height: 8.427rem;
+        }
+      }
+
+      & h1,
+      & h2,
+      & h3,
+      & h4,
+      & h5,
+      & h6 {
+        @include font-bold;
+        word-wrap: break-word;
+      }
+
+      & h1 {
+        @include media("<tab") {
+          font-size: 6rem;
+          line-height: 9.6rem;
+        }
+
+        @include media("<mob") {
+          font-size: 13rem;
+          line-height: 13.6rem;
+        }
+      }
+
+      & h2 {
+        @include media("<tab") {
+          font-size: 5.5rem;
+          line-height: 8.6rem;
+        }
+
+        @include media("<mob") {
+          font-size: 12.5rem;
+          line-height: 12.6rem;
+        }
+      }
+
+      & h3 {
+        @include media("<tab") {
+          font-size: 5rem;
+          line-height: 7.6rem;
+        }
+
+        @include media("<mob") {
+          font-size: 11rem;
+          line-height: 11.6rem;
+        }
+      }
+
+      & h4 {
+        @include media("<tab") {
+          font-size: 4.5rem;
+          line-height: 7rem;
+        }
+
+        @include media("<mob") {
+          font-size: 9rem;
+          line-height: 9.6rem;
+        }
+      }
+
+      & h5 {
+        @include media("<tab") {
+          font-size: 4.2rem;
+          line-height: 7.3rem;
+        }
+
+        @include media("<mob") {
+          font-size: 7rem;
+          line-height: 7.6rem;
+        }
+      }
+
+      & h6 {
+        @include media("<tab") {
+          font-size: 4rem;
+          line-height: 6.8rem;
+        }
+
+        @include media("<mob") {
+          font-size: 5rem;
+          line-height: 5.6rem;
+        }
+      }
+
       @include media("<tab") {
         max-width: 87.7rem;
       }
+
       @include media("<mob") {
         max-width: 100%;
       }
@@ -3183,6 +3483,7 @@ top: -29rem;
       justify-content: center;
     }
   }
+
   &_footer {
     z-index: 9;
     display: flex;
@@ -3193,6 +3494,7 @@ top: -29rem;
     & div {
       color: #BBBBBB;
     }
+
     & a {
       color: #BBBBBB;
     }
@@ -3203,16 +3505,22 @@ top: -29rem;
   position: absolute;
   position: sticky;
   top: 12rem;
-  height: 3.753rem;
+  height: 7.406rem;
   background-color: #fff;
   width: 14.367rem;
   z-index: 22;
-  margin-right: 0rem;    
+  margin-right: 0rem;
 
   & ul a:hover {
     background-color: black;
     color: #fff;
   }
+
+  & ul .active_privacy_point {
+    background-color: black;
+    color: #fff;
+  }
+
   & ul a {
     @include font-important-bold;
     text-decoration: none;
@@ -3230,71 +3538,199 @@ top: -29rem;
   }
 }
 
-.privacy_bg {
-  &__first {
-    display: block;
-    width: 1px;
-    height: 582px;
-    opacity: 0.1;
-    background: #979797;
-    position: absolute;
-    left: 16.5%;
-    top: 24%;
-
-    @include media("<tab") {
-      left: 14.8%;
-      top: 15%;
-    }
-    @include media("<mob") {
-      left: 4.5%;
-    }
-  }
-  &__second {
-    display: block;
-    width: 1px;
-    height: 582px;
-    opacity: 0.1;
-    background: #979797;
-    position: absolute;
-    left: 29%;
-    top: 0%;
-  }
-  &__third {
-    display: block;
-    width: 1px;
-    height: 582px;
-    opacity: 0.1;
-    background: #979797;
-    position: absolute;
-    right: 16.5%;
-    top: 24%;
-
-    @include media("<tab") {
-      right: 14.8%;
-      top: 15%;
-    }
-    @include media("<mob") {
-      right: 4.5%;
-    }
-  }
-  &__fourth {
-    display: block;
-    width: 1px;
-    height: 582px;
-    opacity: 0.4;
-    background: #979797;
-    position: absolute;
-    right: 29%;
-    top: 0%;
-  }
-}
 .animate_button {
   opacity: 0;
   position: relative;
   z-index: 30;
 }
+
 .s-ready .animate_button {
   opacity: 1;
   will-change: opacity;
   transition: opacity 0.5s 1.8s;
+}
+
+/* ==================================== */
+/* ============== Vacancies ============== */
+/* ==================================== */
+.vacancies {
+  &-top {
+    background-color: #27EB85;
+    padding: 18.6667rem 0 9.3333rem;
+    position: relative;
+
+    &__title {
+      @include font-bold;
+      font-size: 6.0833rem;
+      line-height: 6.25rem;
+      margin: 0;
+      color: #1D3743;
+      position: relative;
+      z-index: 2;
+    }
+
+    &__bg {
+      @include font-alt-extra-bold;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.17);
+      font-size: 28.3333rem;
+      line-height: 16rem;
+      position: absolute;
+      left: -13rem;
+      bottom: 0;
+    }
+  }
+}
+
+.social-icon {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  z-index: 20;
+  top: 12rem;
+  height: 160px;
+
+
+  & a {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 2.75rem;
+    cursor: pointer;
+
+    & svg {
+      display: block;
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+}
+
+.vacancies-point {
+
+  &__info {
+    display: inline-flex;
+    flex-direction: column;
+    // max-width: 12.5833rem;
+    @include font-bold;
+    font-size: 1.1667rem;
+    line-height: 1.8333rem;
+    // display: flex;
+    // flex-direction: column;
+
+    span {
+      color: #CDD0D1;
+      text-align: right;
+      margin-right: 10px;
+    }
+
+    h3 {
+      font-size: 2.8333rem;
+      line-height: 2.0833rem;
+      color: #1D3743;
+      text-transform: capitalize;
+      margin-bottom: 1.8333rem;
+      position: relative;
+
+      &:after {
+        content: "";
+        display: block;
+        background: #000000;
+        height: 0.08333rem;
+        width: 7.75rem;
+        position: absolute;
+        right: -8rem;
+        top: calc(52% - 0.04rem);
+      }
+    }
+
+    p {
+      max-width: 12.5833rem;
+      @include font-normal;
+      color: #3F3F3F;
+      opacity: 0.4;
+    }
+  }
+
+  &__items {
+    margin-top: -20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.vacancies-bottom {
+  padding: 2.75rem 0 2.08rem 0;
+
+
+  &__icon {
+    margin-top: 2.4rem;
+    margin-right: 4.4167rem;
+  }
+
+  &__outer {
+    display: flex;
+  }
+}
+
+.vacancies-point {
+  display: flex;
+  margin-bottom: 121px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__info {
+    margin-right: 9rem;
+  }
+}
+
+.vacancies-item {
+  color: #1D3743;
+  max-width: 35.3333rem;
+  padding: 32px 54px 54px 24px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #EBEBEB;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transition-timing-function: linear;
+    transition-duration: 250ms;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+
+  h3 {
+    @include font-gilroy-bold;
+    font-size: 2rem;
+    line-height: 3.8333rem;
+  }
+
+  span {
+    letter-spacing: 0.25rem;
+    font-size: 0.8333rem;
+    line-height: 2.1667rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: #3F3F3F;
+    font-size: 1.5rem;
+    line-height: 2.1667rem;
+    margin-top: 1.8rem;
+  }
 }
