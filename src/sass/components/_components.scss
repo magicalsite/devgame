@@ -2,6 +2,12 @@
 @import "../utils/mixins";
 @import "../../libs/include-media/dist/include-media";
 
+.nicescroll-rails {
+  @include media("<tab") {
+    display: none !important;
+  }
+}
+
 /* ==================================== */
 /* ============== HEADER ============== */
 /* ==================================== */
@@ -3558,6 +3564,7 @@
     background-color: #27EB85;
     padding: 18.6667rem 0 9.3333rem;
     position: relative;
+    overflow: hidden;
 
     &__title {
       @include font-bold;
@@ -3567,6 +3574,14 @@
       color: #1D3743;
       position: relative;
       z-index: 2;
+
+      @include media("<tab") {
+        font-size: 9.083rem;
+      }
+
+      @include media("<mob") {
+        font-size: 13.083rem;
+      }
     }
 
     &__bg {
@@ -3578,6 +3593,18 @@
       position: absolute;
       left: -13rem;
       bottom: 0;
+
+      @include media("<mob") {
+        font-size: 40.333rem;
+      }
+    }
+
+    @include media("<tab") {
+      padding-top: 27.667rem;
+    }
+
+    @include media("<mob") {
+      padding-top: 44.667rem;
     }
   }
 }
@@ -3587,8 +3614,7 @@
   flex-direction: column;
   position: sticky;
   z-index: 20;
-  top: 12rem;
-  height: 160px;
+  height: 0;
 
 
   & a {
@@ -3602,6 +3628,16 @@
       display: block;
       height: 2rem;
       width: 2rem;
+
+      @include media("<tab") {
+        height: 4rem;
+        width: 4rem;
+      }
+    }
+
+    @include media("<tab") {
+      height: 4rem;
+      width: 4rem;
     }
   }
 }
@@ -3615,6 +3651,7 @@
     @include font-bold;
     font-size: 1.1667rem;
     line-height: 1.8333rem;
+    margin-right: 9rem;
     // display: flex;
     // flex-direction: column;
 
@@ -3641,14 +3678,55 @@
         position: absolute;
         right: -8rem;
         top: calc(52% - 0.04rem);
+
+        @include media("<tab") {
+          width: 15.75rem;
+          right: -17rem;
+        }
+
+        @include media("<mob") {
+          display: none;
+        }
+      }
+
+      @include media("<tab") {
+        font-size: 4.833rem;
+        line-height: 4.083rem;
+        margin-right: 20rem;
+      }
+
+      @include media("<mob") {
+        font-size: 9.833rem;
+        line-height: 10.083rem;
+        margin-right: 0;
       }
     }
 
     p {
-      max-width: 12.5833rem;
+      width: 12.5833rem;
       @include font-normal;
       color: #3F3F3F;
       opacity: 0.4;
+
+      @include media("<tab") {
+        width: 41.583rem;
+      }
+
+      @include media("<mob") {
+        width: 100%;
+      }
+    }
+
+    @include media("<tab") {
+      font-size: 2.67rem;
+      line-height: 3.833rem;
+    }
+
+    @include media("<mob") {
+      font-size: 6.67rem;
+      line-height: 7.833rem;
+      margin-right: 0;
+      margin-bottom: 10px;
     }
   }
 
@@ -3656,6 +3734,10 @@
     margin-top: -20px;
     display: flex;
     flex-wrap: wrap;
+
+    @include media("<tab") {
+      margin-top: 0;
+    }
   }
 }
 
@@ -3665,24 +3747,42 @@
 
   &__icon {
     margin-top: 2.4rem;
-    margin-right: 4.4167rem;
+    top: 12rem;
+
+    @include media("<tab") {
+      top: 26rem;
+    }
+
+    @include media("<mob") {
+      display: none;
+    }
+  }
+
+  &__inner {
+    width: 91%;
+
+    @include media("<mob") {
+      width: 100%;
+    }
   }
 
   &__outer {
     display: flex;
+    justify-content: space-between;
   }
 }
 
 .vacancies-point {
   display: flex;
-  margin-bottom: 121px;
+  justify-content: flex-start;
+  margin-bottom: 10.0833rem;
 
   &:last-child {
     margin-bottom: 0;
   }
 
-  &__info {
-    margin-right: 9rem;
+  @include media("<mob") {
+    flex-wrap: wrap;
   }
 }
 
@@ -3718,6 +3818,14 @@
     @include font-gilroy-bold;
     font-size: 2rem;
     line-height: 3.8333rem;
+
+    @include media("<tab") {
+      font-size: 4rem;
+    }
+
+    @include media("<mob") {
+      font-size: 8rem;
+    }
   }
 
   span {
@@ -3725,6 +3833,16 @@
     font-size: 0.8333rem;
     line-height: 2.1667rem;
     text-transform: uppercase;
+
+    @include media("<tab") {
+      font-size: 1.833rem;
+      line-height: 6.167rem;
+    }
+
+    @include media("<mob") {
+      font-size: 5.1rem;
+      line-height: 18.167rem;
+    }
   }
 
   p {
@@ -3732,5 +3850,24 @@
     font-size: 1.5rem;
     line-height: 2.1667rem;
     margin-top: 1.8rem;
+
+    @include media("<tab") {
+      font-size: 3.3rem;
+      line-height: 4.167rem;
+    }
+
+    @include media("<mob") {
+      font-size: 7.3rem;
+      line-height: 9.167rem;
+    }
+  }
+
+  @include media("<tab") {
+    padding: 25px;
+    max-width: 46.333rem;
+  }
+
+  @include media("<mob") {
+    max-width: 100%;
   }
 }
