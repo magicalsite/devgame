@@ -1,9 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
 @font-face {
+  font-family: "avenir-next-cyr-regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/AvenirNextCyr/AvenirNextCyr-Regular.eot?") format("eot"), url("../fonts/AvenirNextCyr/AvenirNextCyr-Regular.ttf") format("truetype"), url("../fonts/AvenirNextCyr/AvenirNextCyr-Regular.woff") format("woff");
+}
+
+@font-face {
   font-family: "avenir-next-cyr-medium";
   font-style: normal;
   font-weight: normal;
   src: url("../fonts/AvenirNextCyr/AvenirNextCyr-Medium.eot?") format("eot"), url("../fonts/AvenirNextCyr/AvenirNextCyr-Medium.ttf") format("truetype"), url("../fonts/AvenirNextCyr/AvenirNextCyr-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "avenir-next-cyr-bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/AvenirNextCyr/AvenirNextCyr-Bold.eot?") format("eot"), url("../fonts/AvenirNextCyr/AvenirNextCyr-Bold.ttf") format("truetype"), url("../fonts/AvenirNextCyr/AvenirNextCyr-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "avenir-next-cyr-demi";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/AvenirNextCyr/AvenirNextCyr-Demi.eot?") format("eot"), url("../fonts/AvenirNextCyr/AvenirNextCyr-Demi.ttf") format("truetype"), url("../fonts/AvenirNextCyr/AvenirNextCyr-Demi.woff") format("woff");
 }
 
 @font-face {

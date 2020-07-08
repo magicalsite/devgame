@@ -376,7 +376,9 @@ if ($BODY.hasClass('privacy')) {
     cursorminheight: 203,
     cursorborder: 0,
     cursorborderradius: '5px',
-    horizrailenabled: false
+    horizrailenabled: false,
+    scrollspeed: 160,
+    mousescrollstep: 40
   });
 }
 if ($BODY.hasClass('vacancies')) {
@@ -388,7 +390,9 @@ if ($BODY.hasClass('vacancies')) {
     cursorminheight: 203,
     cursorborder: 0,
     cursorborderradius: '5px',
-    horizrailenabled: false
+    horizrailenabled: false,
+    scrollspeed: 160,
+    mousescrollstep: 40
   });
 }
 // delete home item with menu on home page
@@ -412,7 +416,9 @@ if ($BODY.hasClass('tanks')) {
     cursorminheight: 203,
     cursorborder: 0,
     cursorborderradius: '5px',
-    horizrailenabled: false
+    horizrailenabled: false,
+    scrollspeed: 160,
+    mousescrollstep: 40
   });
 }
 if ($BODY.hasClass('hoopstars')) {
@@ -430,7 +436,9 @@ if ($BODY.hasClass('hoopstars')) {
     cursorminheight: 203,
     cursorborder: 0,
     cursorborderradius: '5px',
-    horizrailenabled: false
+    horizrailenabled: false,
+    scrollspeed: 160,
+    mousescrollstep: 40
   });
 }
 

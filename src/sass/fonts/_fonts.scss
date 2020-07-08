@@ -11,7 +11,10 @@
 
 // Avenir Next
 // ----------------------------------------------------
+@include font-face("avenir-next-cyr-regular", "../fonts/AvenirNextCyr/AvenirNextCyr-Regular", normal, normal, eot ttf woff);
 @include font-face("avenir-next-cyr-medium", "../fonts/AvenirNextCyr/AvenirNextCyr-Medium", normal, normal, eot ttf woff);
+@include font-face("avenir-next-cyr-bold", "../fonts/AvenirNextCyr/AvenirNextCyr-Bold", normal, normal, eot ttf woff);
+@include font-face("avenir-next-cyr-demi", "../fonts/AvenirNextCyr/AvenirNextCyr-Demi", normal, normal, eot ttf woff);
 
 // Circe
 // ----------------------------------------------------
