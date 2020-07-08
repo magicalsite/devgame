@@ -3541,6 +3541,10 @@
       left: -13rem;
       bottom: 0;
 
+      @include media(">desk") {
+        left: 0;
+      }
+
       @include media('<mob') {
         font-size: 40.333rem;
       }
@@ -3596,8 +3600,8 @@
     @include font-bold;
     font-size: 1.1667rem;
     line-height: 1.8333rem;
-    margin-right: 9rem;
-    margin-top: 1rem;
+    margin-right: 11rem;
+    margin-top: 0.4rem;
     // display: flex;
     // flex-direction: column;
 
@@ -3636,8 +3640,8 @@
         height: 0.08333rem;
         width: 7.75rem;
         position: absolute;
-        right: -8rem;
-        top: calc(52% - 0.04rem);
+        right: -9rem;
+        top: calc(69% - 0.04rem);
 
         @include media('<tab') {
           width: 15.75rem;
@@ -3680,6 +3684,7 @@
     @include media('<tab') {
       font-size: 2.67rem;
       line-height: 3.833rem;
+      margin-top: 2rem;
     }
 
     @include media('<mob') {
@@ -3702,7 +3707,7 @@
 }
 
 .vacancies-bottom {
-  padding: 2.75rem 0 2.08rem 0;
+  padding: 3.75rem 0 2.08rem 0;
 
   &__icon {
     margin-top: 2.4rem;
@@ -3749,7 +3754,8 @@
   color: #1d3743;
   max-width: 35.3333rem;
   padding: 32px 54px 54px 24px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.75rem;
+  margin-right: 2.75rem;
   position: relative;
   cursor: pointer;
 

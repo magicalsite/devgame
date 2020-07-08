@@ -655,6 +655,12 @@ html.css-scroll-fixed:not(.open-only-mob) {
   }
 }
 
+@media (min-width: 1921px) {
+  html {
+    font-size: 100% !important;
+  }
+}
+
 body {
   min-width: 32rem;
   font-family: "avenir-next-cyr-medium", Helvetica, Arial, sans-serif;
@@ -4637,6 +4643,12 @@ html.no-js
   bottom: 0;
 }
 
+@media (min-width: 1921px) {
+  .vacancies-top__bg {
+    left: 0;
+  }
+}
+
 @media (max-width: 639px) {
   .vacancies-top__bg {
     font-size: 40.333rem;
@@ -4703,8 +4715,8 @@ html.no-js
   font-weight: 700;
   font-size: 1.1667rem;
   line-height: 1.8333rem;
-  margin-right: 9rem;
-  margin-top: 1rem;
+  margin-right: 11rem;
+  margin-top: 0.4rem;
 }
 
 .vacancies-point__info-title {
@@ -4744,8 +4756,8 @@ html.no-js
   height: 0.08333rem;
   width: 7.75rem;
   position: absolute;
-  right: -8rem;
-  top: calc(52% - 0.04rem);
+  right: -9rem;
+  top: calc(69% - 0.04rem);
 }
 
 @media (max-width: 991px) {
@@ -4801,6 +4813,7 @@ html.no-js
   .vacancies-point__info {
     font-size: 2.67rem;
     line-height: 3.833rem;
+    margin-top: 2rem;
   }
 }
 
@@ -4828,7 +4841,7 @@ html.no-js
 }
 
 .vacancies-bottom {
-  padding: 2.75rem 0 2.08rem 0;
+  padding: 3.75rem 0 2.08rem 0;
 }
 
 .vacancies-bottom__icon {
@@ -4888,7 +4901,8 @@ html.no-js
   color: #1d3743;
   max-width: 35.3333rem;
   padding: 32px 54px 54px 24px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.75rem;
+  margin-right: 2.75rem;
   position: relative;
   cursor: pointer;
 }

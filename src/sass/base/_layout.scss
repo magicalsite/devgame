@@ -17,7 +17,26 @@ html {
       @include scroll-blocked;
     }
   }
+
+  @include media(">desk") {
+    font-size: 100% !important;
+  }
+
+  // @include media(">desk-l") {
+  //   font-size: 100% !important;
+  // }
 }
+
+// @media (min-width: 1921px) and (min-height: 1081px) {
+//   html {
+//     font-size: 75%;
+//   }
+// }
+// @media (min-width: 2561px) {
+//   html {
+//     font-size: 100%;
+//   }
+// }
 
 body {
   min-width: $layout-page-min-width;
