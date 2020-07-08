@@ -22,12 +22,13 @@
     width: 100%;
     min-width: $layout-page-min-width;
   }
+
+  &_not_fixed {
+    position: absolute;
+    width: 100%;
+  }
 }
 
-.header_privacy_fixed {
-  background: #fff;
-  box-shadow: 0 5px 5px 0px rgba(255, 255, 255, 0.47);
-}
 
 .header-container {
   display: flex;

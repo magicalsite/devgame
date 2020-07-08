@@ -769,9 +769,9 @@ body {
   min-width: 32rem;
 }
 
-.header_privacy_fixed {
-  background: #fff;
-  box-shadow: 0 5px 5px 0px rgba(255, 255, 255, 0.47);
+.header_not_fixed {
+  position: absolute;
+  width: 100%;
 }
 
 .header-container {
