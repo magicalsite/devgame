@@ -3006,6 +3006,10 @@ html.no-js
   padding-top: 5.793rem;
 }
 
+.tanks__icon a {
+  opacity: 0.5;
+}
+
 .tanks__header {
   background-image: url(../img/pentagon_bg.png) no-repeat center center;
   position: relative;
@@ -4923,6 +4927,11 @@ html.no-js
   transition-duration: 250ms;
 }
 
+.vacancies-item:hover p {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
 .vacancies-item:hover::before {
   width: 100%;
 }
@@ -4968,7 +4977,7 @@ html.no-js
 }
 
 .vacancies-item p {
-  color: #3f3f3f;
+  color: #7B7B7B;
   font-size: 1.5rem;
   line-height: 2.1667rem;
   margin-top: 1.8rem;
