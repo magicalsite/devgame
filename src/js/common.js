@@ -271,32 +271,21 @@ new WOW().init();
 
 $WINDOW.on('resize', function () {
   changeFontSize();
+  getSizeForSocIcon();
 });
 
 $WINDOW.on('load', function () {
   changeFontSize();
 });
 
-// game sticky const
-if ($BODY.hasClass('hoopstars') || $BODY.hasClass('tanks')) {
+function getSizeForSocIcon() {
   var menu = $('.tanks__menu');
   var t_m = menu.offset().top - 100;
   var t_n_m = menu.offset().top;
-  var l_z = menu.offset().left;
   var l_m = menu.offset().left + 8.4;
   var h_video = $('.tanks__video').offset().top - menu.outerHeight();
-  var b_video = $('.tanks__video').offset().top + 905;
+  var b_video = $('.tanks__video').offset().top + $('.anchor_game').outerHeight();
   var h_footer = b_video + $('.tanks__locacion').outerHeight() + $('.tanks__awards').outerHeight();
-
-  $('.locacion_block_slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true,
-    infinite: true,
-    centerMode: true,
-    variableWidth: true,
-    arrows: false
-  });
 
   //game sticky menu
   $(window).scroll(function () {
@@ -343,19 +332,19 @@ if ($BODY.hasClass('hoopstars') || $BODY.hasClass('tanks')) {
         "opacity": "1"
       });
     }
-
-    // menu active
-    var $sections = $('.anchor_game');
-    $sections.each(function (i, el) {
-      var top = $(el).offset().top - 100;
-      var bottom = top + $(el).height();
-      var scroll = $(window).scrollTop();
-      var id = $(el).attr('id');
-      if (scroll > top && scroll < bottom) {
-        $('a.active_game').removeClass('active_game');
-        $('a[href="#' + id + '"]').addClass('active_game');
-      }
-    })
+  });
+}
+// game sticky const
+if ($BODY.hasClass('hoopstars') || $BODY.hasClass('tanks')) {
+  getSizeForSocIcon();
+  $('.locacion_block_slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    infinite: true,
+    centerMode: true,
+    variableWidth: true,
+    arrows: false
   });
 
   // button play video
