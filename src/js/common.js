@@ -292,7 +292,7 @@ function getSizeForSocIcon() {
     if ($(this).scrollTop() > t_m) {
       menu.css({
         "position": 'fixed',
-        "top": '150px',
+        "top": '140px',
         "left": l_m + 'px'
       });
     } else if ($(this).scrollTop() < t_n_m) {
