@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <!--[if lte IE 9]><html class="no-js old-ie" lang="ru"><![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js @@if(context.pageClass == 'tanks'){ tanks-scroll } @@if(context.pageClass == 'hoopstars'){ hoopstars-scroll } @@if(context.pageClass == 'privacy'){ privacy-scroll }" lang="ru"><!--<![endif]-->
+<!--[if gt IE 9]><!-->
+<html
+  class="no-js @@if(context.pageClass == 'tanks'){ tanks-scroll } @@if(context.pageClass == 'hoopstars'){ hoopstars-scroll } @@if(context.pageClass == 'privacy'){ privacy-scroll }"
+  lang="ru">
+<!--<![endif]-->
+
 <head>
   <meta charset="UTF-8">
   <title>@@title</title>
@@ -9,8 +14,10 @@
   <!--Theme color-->
   <meta name="theme-color" content="#fff">
   <!--SEO-->
-  <meta name="description" content="Команда, которая хочет, чтобы GameDev сфера становилась еще круче. Мы стремимся делать качественные мобильные игры, которые способны увлечь миллионы игроков по всему миру. Наша команда находится в Беларуси, и мы готовы показать, что беларусы могут делать высококлассные геймдев продукты.">
-  <meta name="keywords" content="programming, Tanks a lot, Hoop stars, games, create game, game development, responsibility, professionalism">
+  <meta name="description"
+    content="Команда, которая хочет, чтобы GameDev сфера становилась еще круче. Мы стремимся делать качественные мобильные игры, которые способны увлечь миллионы игроков по всему миру. Наша команда находится в Беларуси, и мы готовы показать, что беларусы могут делать высококлассные геймдев продукты.">
+  <meta name="keywords"
+    content="programming, Tanks a lot, Hoop stars, games, create game, game development, responsibility, professionalism">
   <meta name="yandex-verification" content="XXXXXXXXXXXXXX">
   <meta name="google-site-verification" content="XXXXXXXXXXXXXX">
   <!--The Open Graph protocol-->
@@ -35,7 +42,11 @@
   <!--Modernizr-->
   <script src="js/modernizr.min.js"></script>
 </head>
-<body class="@@if(context.pageClass == 'privacy'){ logo-theme-dark } @@if(context.pageClass){ @@pageClass } @@if(context.dataItem == 'tanks'){ logo-theme-light}">
-<noscript><div class="no-js-warning">Для корректной работы сайта <b>включите JavaScript</b> в браузере</div></noscript>
-<!--[if lte IE 9]>
+
+<body
+  class="@@if(context.pageClass == 'privacy'){ logo-theme-dark } @@if(context.pageClass){ @@pageClass } @@if(context.dataItem == 'tanks'){ logo-theme-light}">
+  <noscript>
+    <div class="no-js-warning">Для корректной работы сайта <b>включите JavaScript</b> в браузере</div>
+  </noscript>
+  <!--[if lte IE 9]>
 <div class="browserupgrade"><p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p></div> <![endif]-->

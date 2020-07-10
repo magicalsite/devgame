@@ -2,7 +2,6 @@ var $WINDOW = $(window),
   $HTML = $('html'),
   $BODY = $('body');
 
-
 /**
  * Change font size on resize
  */
@@ -19,16 +18,16 @@ changeFontSize();
  * */
 var HIDDEN_SCROLL = Modernizr.hiddenscroll;
 var NO_HIDDEN_SCROLL = !HIDDEN_SCROLL;
-var TOUCHEVENTS = ("ontouchstart" in document.documentElement);
+var TOUCHEVENTS = 'ontouchstart' in document.documentElement;
 
 /**
  * !Add touchscreen classes
  * */
 function addTouchClasses() {
   if (TOUCHEVENTS) {
-    document.documentElement.className += " touchevents";
+    document.documentElement.className += ' touchevents';
   } else {
-    document.documentElement.className += " no-touchevents";
+    document.documentElement.className += ' no-touchevents';
   }
 }
 
@@ -84,21 +83,19 @@ function fullPageInitial() {
       $BODY.addClass('logo-theme-dark');
       $BODY.removeClass('second_item');
 
-
-      if (!$HTML.hasClass('logo-theme-light') && $section.attr('data-logo-theme') === "light") {
+      if (!$HTML.hasClass('logo-theme-light') && $section.attr('data-logo-theme') === 'light') {
         $HTML.addClass('logo-theme-light');
         $BODY.removeClass('logo-theme-dark');
       }
 
-      if ($section.attr('data-item') === "second") {
+      if ($section.attr('data-item') === 'second') {
         $BODY.removeClass('third_item');
         $BODY.addClass('second_item');
       }
-      if ($section.attr('data-item') === "third") {
+      if ($section.attr('data-item') === 'third') {
         $BODY.removeClass('second_item');
         $BODY.addClass('third_item');
       }
-
     }
 
     $fpSections.fullpage({
@@ -118,13 +115,14 @@ function fullPageInitial() {
 
         sectionVisible(destination);
 
-        var $spaceTop = destination.item.offsetTop + destination.item.clientHeight - window.innerHeight;
+        var $spaceTop =
+          destination.item.offsetTop + destination.item.clientHeight - window.innerHeight;
         var scrollValue = -$spaceTop * parallaxValue;
 
         if ($word.length) {
           $word.css({
-            'transform': 'translate3d(' + scrollValue + 'px, 0px, 0px)',
-            'transition': 'all ' + duration / 1000 + 's'
+            transform: 'translate3d(' + scrollValue + 'px, 0px, 0px)',
+            transition: 'all ' + duration / 1000 + 's',
           });
         }
 
@@ -138,14 +136,13 @@ function fullPageInitial() {
         } else {
           $BODY.css('background-color', '');
         }
-
       },
       afterLoad: function (origin, destination, direction) {
         sectionReady(destination);
         $('.logo-js').on('click', function (e) {
           fullpage_api.moveTo(1);
           e.preventDefault();
-        })
+        });
       },
     });
 
@@ -179,7 +176,6 @@ function fullPageInitial() {
 function mainNavigation() {
   var $nav = $('.nav-js');
   if ($nav.length) {
-
     $nav.nav({
       submenuPosition: false,
     });
@@ -217,7 +213,6 @@ $HTML.keyup(function (event) {
   }
 });
 
-
 /**
  * !Form validation
  * */
@@ -226,7 +221,7 @@ function formValidation() {
     submitHandler: function () {
       alert('Форма находится в тестовом режиме. Чтобы закрыть окно, нажмите ОК.');
       return false;
-    }
+    },
   });
 
   var $form = $('.validate-js');
@@ -234,20 +229,19 @@ function formValidation() {
   if ($form.length) {
     var changeClasses = function (elem, remove, add) {
       // console.log('changeClasses');
+      elem.removeClass(remove).addClass(add);
       elem
-        .removeClass(remove).addClass(add);
-      elem
-        .closest('form').find('label[for="' + elem.attr('id') + '"]')
-        .removeClass(remove).addClass(add);
-      elem
-        .closest('.input-wrap')
-        .removeClass(remove).addClass(add);
+        .closest('form')
+        .find('label[for="' + elem.attr('id') + '"]')
+        .removeClass(remove)
+        .addClass(add);
+      elem.closest('.input-wrap').removeClass(remove).addClass(add);
     };
 
     $.each($form, function (index, element) {
       $(element).validate({
-        errorClass: "error",
-        validClass: "success",
+        errorClass: 'error',
+        validClass: 'success',
         errorElement: false,
         errorPlacement: function (error, element) {
           return true;
@@ -257,7 +251,7 @@ function formValidation() {
         },
         unhighlight: function (element, errorClass, successClass) {
           changeClasses($(element), errorClass, successClass);
-        }
+        },
       });
     });
   }
@@ -291,45 +285,45 @@ function getSizeForSocIcon() {
   $(window).scroll(function () {
     if ($(this).scrollTop() > t_m) {
       menu.css({
-        "position": 'fixed',
-        "top": '140px',
-        "left": l_m + 'px'
+        position: 'fixed',
+        top: '140px',
+        left: l_m + 'px',
       });
     } else if ($(this).scrollTop() < t_n_m) {
       menu.css({
-        "position": "relative",
-        "top": "0",
-        "left": "-90px"
+        position: 'relative',
+        top: '0',
+        left: '-90px',
       });
     }
     if ($(this).scrollTop() > h_video) {
       menu.css({
-        "opacity": "0"
+        opacity: '0',
       });
     }
     if ($(this).scrollTop() > b_video) {
       menu.css({
-        "opacity": "1"
+        opacity: '1',
       });
     }
     if ($(this).scrollTop() > h_footer) {
       menu.css({
-        "opacity": "0"
+        opacity: '0',
       });
     }
     if ($(this).scrollTop() < h_footer) {
       menu.css({
-        "opacity": "1"
+        opacity: '1',
       });
     }
     if ($(this).scrollTop() < b_video) {
       menu.css({
-        "opacity": "0"
+        opacity: '0',
       });
     }
     if ($(this).scrollTop() < h_video) {
       menu.css({
-        "opacity": "1"
+        opacity: '1',
       });
     }
   });
@@ -344,7 +338,7 @@ if ($BODY.hasClass('hoopstars') || $BODY.hasClass('tanks')) {
     infinite: true,
     centerMode: true,
     variableWidth: true,
-    arrows: false
+    arrows: false,
   });
 
   // button play video
@@ -369,30 +363,30 @@ if ($BODY.hasClass('hoopstars') || $BODY.hasClass('tanks')) {
 
 if ($BODY.hasClass('privacy')) {
   // custom scroll for privacy page
-  $("html").niceScroll({
-    cursorcolor: "#D8D8D8",
-    cursorwidth: "4px",
+  $('html').niceScroll({
+    cursorcolor: '#D8D8D8',
+    cursorwidth: '4px',
     cursormaxheight: 203,
     cursorminheight: 203,
     cursorborder: 0,
     cursorborderradius: '5px',
     horizrailenabled: false,
-    scrollspeed: 160,
-    mousescrollstep: 40
+    scrollspeed: 100,
+    mousescrollstep: 40,
   });
 }
 if ($BODY.hasClass('vacancies')) {
   // custom scroll for privacy page
-  $("html").niceScroll({
-    cursorcolor: "#D8D8D8",
-    cursorwidth: "4px",
+  $('html').niceScroll({
+    cursorcolor: '#D8D8D8',
+    cursorwidth: '4px',
     cursormaxheight: 203,
     cursorminheight: 203,
     cursorborder: 0,
     cursorborderradius: '5px',
     horizrailenabled: false,
-    scrollspeed: 160,
-    mousescrollstep: 40
+    scrollspeed: 100,
+    mousescrollstep: 40,
   });
 }
 // delete home item with menu on home page
@@ -408,17 +402,17 @@ if ($BODY.hasClass('tanks')) {
     dots: true,
     infinite: false,
     variableWidth: true,
-    arrows: false
+    arrows: false,
   });
-  $(".tanks-scroll").niceScroll({
-    cursorcolor: "#9179e6",
-    cursorwidth: "4px",
+  $('.tanks-scroll').niceScroll({
+    cursorcolor: '#9179e6',
+    cursorwidth: '4px',
     cursorminheight: 203,
     cursorborder: 0,
     cursorborderradius: '5px',
     horizrailenabled: false,
-    scrollspeed: 160,
-    mousescrollstep: 40
+    scrollspeed: 100,
+    mousescrollstep: 40,
   });
 }
 if ($BODY.hasClass('hoopstars')) {
@@ -428,17 +422,17 @@ if ($BODY.hasClass('hoopstars')) {
     dots: true,
     infinite: false,
     variableWidth: true,
-    arrows: false
+    arrows: false,
   });
-  $(".hoopstars-scroll").niceScroll({
-    cursorcolor: "#f1a083",
-    cursorwidth: "4px",
+  $('.hoopstars-scroll').niceScroll({
+    cursorcolor: '#f1a083',
+    cursorwidth: '4px',
     cursorminheight: 203,
     cursorborder: 0,
     cursorborderradius: '5px',
     horizrailenabled: false,
-    scrollspeed: 160,
-    mousescrollstep: 40
+    scrollspeed: 100,
+    mousescrollstep: 40,
   });
 }
 

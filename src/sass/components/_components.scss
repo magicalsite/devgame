@@ -29,7 +29,6 @@
   }
 }
 
-
 .header-container {
   display: flex;
   align-items: flex-start;
@@ -2139,8 +2138,8 @@
   }
 
   &_download {
-    // height: 3.753rem;
-    // line-height: 3.753rem;
+    height: 3.753rem;
+    line-height: 3.753rem;
 
     &:first-child {
       // margin-bottom: 1.224rem;
@@ -3070,10 +3069,6 @@
     color: #fff;
   }
 
-  &_menu {
-    box-shadow: 0px 4px 30px #9f4d2e;
-  }
-
   &_videoBg {
     background: url(../img/hoop_stars_bg.png) no-repeat center center/100% 100%;
     padding-top: 5rem;
@@ -3292,33 +3287,37 @@
       word-wrap: break-word;
 
       ul {
+        font-size: 18px;
+        line-height: 27px;
         margin-left: 4rem;
 
         @include media('<tab') {
           margin-left: 6rem;
-          font-size: 2.469rem;
-          line-height: 4.121rem;
+          // font-size: 2.469rem;
+          // line-height: 4.121rem;
         }
 
         @include media('<mob') {
           margin-left: 11rem;
-          font-size: 6.469rem;
-          line-height: 8.427rem;
+          // font-size: 6.469rem;
+          // line-height: 8.427rem;
         }
       }
 
       ol {
+        font-size: 18px;
+        line-height: 27px;
         padding: 0;
 
         // margin-left: 1.5rem;
         @include media('<tab') {
-          font-size: 2.469rem;
-          line-height: 4.121rem;
+          // font-size: 2.469rem;
+          // line-height: 4.121rem;
         }
 
         @include media('<mob') {
-          font-size: 6.469rem;
-          line-height: 8.427rem;
+          // font-size: 6.469rem;
+          // line-height: 8.427rem;
         }
 
         & li ol {
@@ -3327,22 +3326,26 @@
       }
 
       a {
+        font-size: 18px;
+        line-height: 27px;
         color: #3f3f3f;
       }
 
       & p {
+        font-size: 18px;
+        line-height: 27px;
         @include font-normal;
 
         // font-size: 1.469rem;
         // line-height: 2.121rem;
         @include media('<tab') {
-          font-size: 2.469rem;
-          line-height: 4.121rem;
+          // font-size: 2.469rem;
+          // line-height: 4.121rem;
         }
 
         @include media('<mob') {
-          font-size: 6.469rem;
-          line-height: 8.427rem;
+          // font-size: 6.469rem;
+          // line-height: 8.427rem;
         }
       }
 
@@ -3354,79 +3357,92 @@
       & h6 {
         @include font-bold;
         word-wrap: break-word;
+        margin: 18px 0;
       }
 
       & h1 {
+        font-size: 48px;
+        line-height: 60px;
+
         @include media('<tab') {
-          font-size: 6rem;
-          line-height: 9.6rem;
+          font-size: 32px;
+          line-height: 37.5px;
         }
 
         @include media('<mob') {
-          font-size: 13rem;
-          line-height: 13.6rem;
+          // font-size: 13rem;
+          // line-height: 13.6rem;
         }
       }
 
       & h2 {
+        font-size: 40px;
+        line-height: 50px;
+
         @include media('<tab') {
-          font-size: 5.5rem;
-          line-height: 8.6rem;
+          font-size: 28px;
+          line-height: 36px;
         }
 
         @include media('<mob') {
-          font-size: 12.5rem;
-          line-height: 12.6rem;
+          // font-size: 12.5rem;
+          // line-height: 12.6rem;
         }
       }
 
       & h3 {
+        font-size: 32px;
+        line-height: 40px;
+
         @include media('<tab') {
-          font-size: 5rem;
-          line-height: 7.6rem;
+          font-size: 24px;
+          line-height: 30px;
         }
 
         @include media('<mob') {
-          font-size: 11rem;
-          line-height: 11.6rem;
+          // font-size: 11rem;
+          // line-height: 11.6rem;
         }
       }
 
       & h4 {
+        font-size: 24px;
+        line-height: 30px;
+
         @include media('<tab') {
-          font-size: 4.5rem;
-          line-height: 7rem;
+          font-size: 20px;
+          line-height: 25px;
         }
 
         @include media('<mob') {
-          font-size: 9rem;
-          line-height: 9.6rem;
+          // font-size: 9rem;
+          // line-height: 9.6rem;
         }
       }
 
-      & h5 {
-        @include media('<tab') {
-          font-size: 4.2rem;
-          line-height: 7.3rem;
-        }
+      // & h5 {
+      //   @include media('<tab') {
+      //     font-size: 4.2rem;
+      //     line-height: 7.3rem;
+      //   }
 
-        @include media('<mob') {
-          font-size: 7rem;
-          line-height: 7.6rem;
-        }
-      }
+      //   @include media('<mob') {
+      //     font-size: 7rem;
+      //     line-height: 7.6rem;
+      //   }
+      // }
 
-      & h6 {
-        @include media('<tab') {
-          font-size: 4rem;
-          line-height: 6.8rem;
-        }
+      // & h6 {
+      //   @include media('<tab') {
+      //     font-size: 4rem;
+      //     line-height: 6.8rem;
+      //   }
 
-        @include media('<mob') {
-          font-size: 5rem;
-          line-height: 5.6rem;
-        }
-      }
+      //   @include media('<mob') {
+      //     font-size: 5rem;
+      //     line-height: 5.6rem;
+      //   }
+      // }
 
       @include media('<tab') {
         max-width: 87.7rem;
@@ -3546,7 +3562,7 @@
       left: -13rem;
       bottom: 0;
 
-      @include media(">desk") {
+      @include media('>desk') {
         left: 0;
       }
 
@@ -3605,12 +3621,11 @@
     @include font-bold;
     font-size: 1.1667rem;
     line-height: 1.8333rem;
-    margin-right: 11rem;
-    margin-top: 0.4rem;
+    margin-right: 111px;
+    // margin-right: 11rem;
+    // margin-top: 0.4rem;
     // display: flex;
     // flex-direction: column;
-
-
 
     &-title {
       // display: inline-block;
@@ -3618,7 +3633,7 @@
       line-height: 2.0833rem;
       color: #1d3743;
       text-transform: capitalize;
-      margin-bottom: 1.8333rem;
+      margin-bottom: 10px;
       position: relative;
 
       span {
@@ -3642,10 +3657,10 @@
         content: '';
         display: block;
         background: #000000;
-        height: 0.08333rem;
-        width: 7.75rem;
+        height: 1px;
+        width: 93px;
         position: absolute;
-        right: -9rem;
+        right: -100px;
         top: calc(69% - 0.04rem);
 
         @include media('<tab') {
@@ -3689,33 +3704,30 @@
     @include media('<tab') {
       font-size: 2.67rem;
       line-height: 3.833rem;
-      margin-top: 2rem;
+      margin-right: 3rem;
+      // margin-top: 2rem;
     }
 
     @include media('<mob') {
       font-size: 6rem;
       line-height: 7.833rem;
       margin-right: 0;
-      margin-bottom: 10px;
+      margin-bottom: 35px;
     }
   }
 
   &__items {
-    margin-top: -20px;
     display: flex;
     flex-wrap: wrap;
-
-    @include media('<tab') {
-      margin-top: 0;
-    }
   }
 }
 
 .vacancies-bottom {
-  padding: 3.75rem 0 2.08rem 0;
+  padding: 64px 0 21px 0;
 
   &__icon {
-    margin-top: 2.4rem;
+    margin-top: 31px;
+    margin-right: 35px;
     top: 12rem;
 
     @include media('<tab') {
@@ -3737,14 +3749,18 @@
 
   &__outer {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
+  }
+
+  @include media("<mob") {
+    padding: 30px 0 16px 0;
   }
 }
 
 .vacancies-point {
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 10.0833rem;
+  margin-bottom: 52px;
 
   &:last-child {
     margin-bottom: 0;
@@ -3755,13 +3771,63 @@
   }
 }
 
+.vacancies-info {
+  font-size: 1.5rem;
+  line-height: 2.1667rem;
+  color: #3f3f3f;
+  max-width: 58.6667rem;
+  margin-top: 2.3rem;
+
+  h3 {
+    @include font-gilroy-bold;
+    font-size: 2rem;
+    line-height: 3.8333rem;
+
+    @include media('<tab') {
+      font-size: 4rem;
+    }
+
+    @include media('<mob') {
+      font-size: 7rem;
+    }
+  }
+
+  p {
+    color: #3f3f3f;
+    font-size: 1.5rem;
+    line-height: 2.1667rem;
+    margin-top: 0.4rem;
+
+    @include media('<tab') {
+      font-size: 3.3rem;
+      line-height: 4.167rem;
+      margin-top: 4rem;
+    }
+
+    @include media('<mob') {
+      font-size: 6.3rem;
+      line-height: 9.167rem;
+      margin-top: 4rem;
+    }
+  }
+
+  @include media('<tab') {
+    margin-top: 5.3rem;
+  }
+
+  @include media('<mob') {
+    max-width: 100%;
+  }
+}
+
 .vacancies-item {
-  color: #1d3743;
-  max-width: 35.3333rem;
-  padding: 32px 54px 54px 24px;
-  margin-bottom: 2.75rem;
-  margin-right: 2.75rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #1d3743;
+  max-width: 372.37px;
+  padding: 26px 19px;
+  margin: -12px 28px 28px 0;
   cursor: pointer;
 
   &::before {
@@ -3791,7 +3857,8 @@
   h3 {
     @include font-gilroy-bold;
     font-size: 2rem;
-    line-height: 3.8333rem;
+    line-height: 2.3rem;
+    margin-bottom: 19px;
 
     @include media('<tab') {
       font-size: 4rem;
@@ -3805,26 +3872,26 @@
   span {
     letter-spacing: 0.25rem;
     font-size: 0.8333rem;
-    line-height: 2.1667rem;
+    line-height: 1.167rem;
     text-transform: uppercase;
+    margin-bottom: 26px;
 
     @include media('<tab') {
       font-size: 1.833rem;
-      line-height: 6.167rem;
+      line-height: 1.167rem;
     }
 
     @include media('<mob') {
       font-size: 4.5rem;
-      line-height: 18.167rem;
+      line-height: 4.167rem;
     }
   }
 
   p {
-    color: #7B7B7B;
+    color: #7b7b7b;
     font-size: 1.5rem;
     line-height: 2.1667rem;
-    margin-top: 1.8rem;
-
+    // margin-top: 1.8rem;
 
     @include media('<tab') {
       font-size: 3.3rem;
@@ -3838,12 +3905,11 @@
   }
 
   @include media('<tab') {
-    padding: 25px;
-    max-width: 46.333rem;
+    margin-right: 0;
+    max-width: 100%;
   }
 
   @include media('<mob') {
-    max-width: 100%;
     margin-bottom: 7.5rem;
   }
 }
