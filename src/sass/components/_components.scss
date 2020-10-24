@@ -3141,58 +3141,6 @@
   transition: opacity 0.5s 1.8s;
 }
 
-/* ==================================== */
-/* ============== Vacancies ============== */
-/* ==================================== */
-.vacancies {
-  &-top {
-    background-color: #27eb85;
-    padding: 18.6667rem 0 9.3333rem;
-    position: relative;
-    overflow: hidden;
-
-    &__title {
-      @include font-bold;
-      font-size: 6.0833rem;
-      line-height: 6.25rem;
-      margin: 0;
-      color: #1d3743;
-      position: relative;
-      z-index: 2;
-
-      @include media("<mob") {
-        font-size: 4rem;
-      }
-    }
-
-    &__bg {
-      @include font-alt-extra-bold;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.17);
-      font-size: 28.3333rem;
-      line-height: 16rem;
-      position: absolute;
-      left: -13rem;
-      bottom: 0;
-
-      @include media('>desk') {
-        left: 0;
-      }
-
-      @include media('<mob') {
-        left: -5rem;
-        line-height: 7.5rem;
-        font-size: 12.5rem;
-      }
-    }
-
-    @include media("<mob") {
-      padding-top: 12rem;
-      padding-bottom: 3.3333rem;
-    }
-  }
-}
-
 .social-icon {
   display: flex;
   flex-direction: column;
@@ -3224,202 +3172,6 @@
     }
   }
 }
-
-.vacancies-point {
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 52px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  &__info {
-    display: flex;
-    flex-direction: column;
-    @include font-bold;
-    font-size: 1.1667rem;
-    line-height: 1.8333rem;
-    margin-right: 111px;
-
-    &-title {
-      font-size: 2.8333rem;
-      line-height: 2.0833rem;
-      color: #1d3743;
-      text-transform: capitalize;
-      margin-bottom: 10px;
-      position: relative;
-
-      span {
-        font-size: 1.1667rem;
-        line-height: 1.8333rem;
-        color: #cdd0d1;
-        vertical-align: 100%;
-      }
-
-      &:after {
-        content: '';
-        display: block;
-        background: #000000;
-        height: 1px;
-        width: 93px;
-        position: absolute;
-        right: -100px;
-        top: calc(69% - 0.04rem);
-
-        @include media('<tab') {
-          display: none;
-        }
-      }
-    }
-
-    p {
-      width: 13.5833rem;
-      @include font-normal;
-      color: #3f3f3f;
-      opacity: 0.4;
-
-      @include media('<tab') {
-        width: 100%;
-      }
-    }
-
-    @include media("<tab") {
-      margin-right: 0;
-      margin-bottom: 2rem;
-    }
-  }
-
-  &__items {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  @include media("<tab") {
-    flex-wrap: wrap;
-  }
-}
-
-.vacancies-bottom {
-  padding: 64px 0 21px 0;
-
-  &__icon {
-    margin-top: 31px;
-    margin-right: 35px;
-    top: 12rem;
-
-    @include media('<tab') {
-      top: 26rem;
-    }
-
-    @include media('<mob') {
-      display: none;
-    }
-  }
-
-  &__inner {
-    width: 91%;
-
-    @include media('<mob') {
-      width: 100%;
-    }
-  }
-
-  &__outer {
-    display: flex;
-  }
-
-  @include media('<mob') {
-    padding: 30px 0 16px 0;
-  }
-}
-
-.vacancies-info {
-  font-size: 1.5rem;
-  line-height: 2.1667rem;
-  color: #3f3f3f;
-  max-width: 58.6667rem;
-
-  h3 {
-    @include font-gilroy-bold;
-    font-size: 2rem;
-    line-height: 3.8333rem;
-  }
-
-  p {
-    color: #3f3f3f;
-    font-size: 1.5rem;
-    line-height: 2.1667rem;
-    margin-top: 0.4rem;
-  }
-
-  @include media('<mob') {
-    margin-top: 0;
-    max-width: 100%;
-  }
-}
-
-.vacancies-item {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  color: #1d3743;
-  max-width: 372.37px;
-  padding: 26px 19px;
-  margin: -12px 28px 28px 0;
-  cursor: pointer;
-
-  &::before {
-    content: '';
-    width: 0%;
-    height: 100%;
-    background: #ebebeb;
-    opacity: 0.5;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    transition-timing-function: linear;
-    transition-duration: 250ms;
-  }
-
-  &:hover p {
-    text-decoration-line: underline;
-  }
-
-  &:hover::before {
-    width: 100%;
-  }
-
-  h3 {
-    @include font-gilroy-bold;
-    font-size: 2rem;
-    line-height: 2.3rem;
-    margin-bottom: 19px;
-  }
-
-  span {
-    letter-spacing: 0.25rem;
-    font-size: 0.8333rem;
-    line-height: 1.167rem;
-    text-transform: uppercase;
-    margin-bottom: 26px;
-  }
-
-  p {
-    color: #7b7b7b;
-    font-size: 1.5rem;
-    line-height: 2.1667rem;
-  }
-
-  @include media('<tab') {
-    margin-right: 0;
-    max-width: 100%;
-  }
-}
-
 // special media
 
 @media (max-width: 639px) {
@@ -3465,7 +3217,6 @@
     height: 13.5rem;
   }
 }
-
 
 /* ==================================== */
 /* ============== Steals master ============== */
@@ -3544,4 +3295,355 @@
 .stealsmaster_videoBg {
     background: url(../img/steals_bg.png) no-repeat top center;
     background-size: cover;
+}
+
+
+
+/* ==================================== */
+/* ============== CAREER ============== */
+/* ==================================== */
+.layout-page-career {
+  box-sizing: content-box;
+  max-width: 103rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.career {
+  background-color: #000;
+  padding-top: 17rem;
+}
+.careerHeader__bgTitle {
+  @include font-alt-extra-bold;
+  text-shadow: 1px 1px 0 #373737, 1px -1px 0 #373737, -1px 1px 0 #373737, -1px -1px 0 #373737, 1px 0px 0 #373737, 0px 1px 0 #373737, -1px 0px 0 #373737, 0px -1px 0 #373737;
+  font-size: 28.3333rem;
+  line-height: 10.3333rem;
+  text-transform: uppercase;
+  color: #000;
+}
+.careerHeader__title {
+  @include font-bold;
+  font-size: 6.0833rem;
+  line-height: 6.25rem;
+  color: #F2F2F2;
+  position: relative;
+  z-index: 9;
+}
+.careerContainer {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+// careerMenu
+.careerLinks {
+  margin-left: auto;
+}
+.careerMenu {
+  width: 14.75rem;
+  display: flex;
+  flex-direction: column;
+
+  .careerMenu__item {
+    @include font-bold;
+    font-size: 1.1667rem;
+    line-height: 1;
+    color: #FFFFFF;
+    padding: 1.3rem 0 1.3rem 1.1667rem;
+  }
+  .careerMenu__item-active {
+    color: #000;
+    background: #FFFFFF;
+  }
+}
+.careerSubMenu {
+  font-size: 1.1667rem;
+  line-height: 1.6667rem;
+  color: rgba(#DBDBDB, 0.4);
+  width: 11.9167rem;
+  margin-top: 3.8rem;
+}
+
+.careerContent {
+  background-color: #fff;
+  max-width: 66.3rem;
+  width: 100%;
+  padding: 0 0 7.1667rem 1.45rem;
+
+  .careerContent__first {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8.3rem;
+  }
+}
+.careerContent__title {
+  @include font-bold;
+  font-size: 3rem;
+  line-height: 6.25rem;
+  color: #000000;
+  margin-top: 1.0833rem;
+  margin-bottom: 1.6rem;
+}
+
+.careerContent__paragraph {
+  font-size: 1.5rem;
+  line-height: 2.08rem;
+  color: #8C8C8C;
+  margin-right: 4.25rem;
+}
+
+.careerCard {
+  width: 22.75rem;
+  height: 19.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(#DEDEDE, 0.32);
+
+  &:not(:last-child) {
+    margin-bottom: 1px;
+  }
+  .careerCard__num {
+    display: block;
+    @include font-gilroy-bold;
+    font-size: 8rem;
+    line-height: 1;
+    color: #000000;
+  }
+
+  .careerCard__paragraph {
+    display: block;
+    @include font-gilroy-medium;
+    font-size: 1.08rem;
+    line-height: 1.5rem;
+    color: rgba(#000000, 0.6);
+  }
+}
+
+.careerContent__additions {
+  margin-bottom: 7.5rem;
+}
+.additionsWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.additions__paragraph {
+  margin-bottom: 2.5rem;
+}
+.additions {
+  width: 21.5833rem;
+  height: 21.5833rem;
+  background: #FFFFFF;
+  border: 1px solid rgba(#898989, 0.2);
+  padding: 1.3rem 2rem;
+
+  .additions__num {
+    @include font-gilroy-bold;
+    font-size: 2rem;
+    line-height: 2.8333rem;
+    color: #000000;
+    margin-bottom: 6.6667rem;
+  }
+  .additions__text {
+    @include font-roboto-normal;
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    color: #000000;
+  }
+
+  &:first-child {
+    background: url(../../img/career_triangle.svg) no-repeat left bottom;
+  }
+  &:nth-child(2) {
+    background: url(../../img/career_circle.svg) no-repeat center;
+  }
+  &:nth-child(3) {
+    background: url(../../img/career_close.svg) no-repeat center;
+  }
+  &:nth-child(4) {
+    background: url(../../img/career_like.svg) no-repeat center;
+  }
+  &:nth-child(5) {
+    background: url(../../img/career_triangle.svg) no-repeat left bottom;
+  }
+  &:nth-child(6) {
+    background: url(../../img/career_pentagon.svg) no-repeat center;
+  }
+  &:nth-child(7) {
+    background: url(../../img/career_triangle.svg) no-repeat left bottom;
+  }
+}
+
+
+
+// vacancies
+.careerVacancies {
+  margin-bottom: 3.9167rem;
+}
+.vacancies {
+  &:not(:last-child) {
+    padding-bottom: 5.75rem;
+    margin-bottom: 1.0833rem;
+    border-bottom: 0.25rem solid rgba(#000, 0.2);
+  }
+}
+.vacancies__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+.vacancies__title {
+  @include font-bold;
+  font-size: 2.8333rem;
+  line-height: 2.0833rem;
+  color: #1d3743;
+  text-transform: capitalize;
+  position: relative;
+  margin-bottom: 0.8333rem;
+
+  & span {
+    font-size: 1.1667rem;
+    line-height: 1.8333rem;
+    color: #cdd0d1;
+    vertical-align: 100%;
+  }
+}
+
+.vacancies__description {
+  font-size: 1.1667rem;
+  line-height: 1.6667rem;
+  color: rgba(#3F3F3F, 0.4);
+  max-width: 21.5rem;
+  margin-left: 9.5rem;
+}
+
+.vacancies__items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.vacancies__item {
+  cursor: pointer;
+  padding: 1.2rem 0 1.2rem 1.0833rem;
+  width: 21.5833rem;
+  height: 21.5833rem;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(#898989, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 99;
+
+  &:after {
+    content: '';
+    width: 0%;
+    height: 100%;
+    background: #ebebeb;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transition-timing-function: linear;
+    transition-duration: 250ms;
+  }
+  &:hover:after {
+    width: 100%;
+  }
+  .vacancies__item-title {
+    @include font-gilroy-bold;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: #000;
+  }
+  .vacancies__item-place {
+    font-size: 0.8333rem;
+    line-height: 2.1667rem;
+    letter-spacing: 3px;
+    color: #000000;
+    text-transform: uppercase;
+  }
+}
+
+// team
+.teamContainer {
+  margin-top: -10.9167rem;
+}
+.teamContent {
+  max-width: 66.3rem;
+  width: 100%;
+}
+.team__title {
+  display: flex;
+  margin-left: auto;
+  max-width: 66.3rem;
+  width: 100%;
+  @include font-bold;
+  font-size: 3rem;
+  line-height: 1;
+  color: #F2F2F2;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 99;
+}
+.team__bgTitle {
+  z-index: -1;
+  line-height: 10.6667rem;
+}
+
+.team__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.team__item-large {
+  position: relative;
+  width: 43.1rem;
+  height: 43.1rem;
+
+  & > img {
+    max-width: 100%;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .team__item-large-vacancies {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.team__item-small {
+  height: 43.1rem;
+
+  .team__item-small-img-wrap {
+    width: 21.5833rem;
+    height: 21.5833rem;
+
+      & > img {
+        max-width: 100%;
+        max-height: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        vertical-align: bottom;
+      }
+  }
+  & .team__item-large-vacancies {
+    margin-left: 1px;
+  }
+
+}
+
+.career_footer {
+  padding: 2rem 0;
+  .main__footer-site, .main__footer-site, .main__footer-clover {
+    color: rgba(255, 255, 255, 0.312773);
+  }
 }
