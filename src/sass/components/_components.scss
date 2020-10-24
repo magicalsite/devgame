@@ -37,16 +37,9 @@
   line-height: 1;
 
   @include media('<tab') {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    // padding-right: 4.9rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     align-items: stretch;
-  }
-
-  @include media('<mob') {
-    padding-top: 7.571rem;
-    padding-bottom: 7.571rem;
-    // padding-right: 4.9rem;
   }
 
   &__left {
@@ -58,10 +51,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    @include media('<tab') {
-      // display: none;
-    }
   }
 
   &__wrapper {
@@ -71,7 +60,6 @@
 
     @include media('<tab') {
       flex-basis: auto;
-      // flex-wrap: wrap;
       flex-direction: column;
       justify-content: space-between;
       align-items: end;
@@ -87,16 +75,6 @@
   width: 23.8rem;
   flex-shrink: 0;
   z-index: 5;
-
-  @include media('<tab') {
-    width: 13.8rem;
-    height: 10.48rem;
-  }
-
-  @include media('<mob') {
-    width: 26.506rem;
-    height: 19.48rem;
-  }
 
   &::before {
     content: '';
@@ -126,7 +104,6 @@
     left: 0;
     top: 0;
     height: 100%;
-    /* width: 100%; */
     pointer-events: none;
     background-repeat: no-repeat;
     background-size: contain;
@@ -134,12 +111,7 @@
     transition: opacity 0.8s;
   }
 
-  // .logo_dark {
-  //   background-image: url(../../img/logo.svg);
-  // }
-
   .logo_light {
-    // background-image: url(../../img/logo-alt.svg);
     opacity: 0;
   }
 
@@ -151,6 +123,11 @@
     .logo_light {
       opacity: 1;
     }
+  }
+
+  @include media('<tab') {
+    width: 8rem;
+    height: 5.083rem;
   }
 }
 
@@ -176,15 +153,8 @@
   text-align: center;
   text-transform: uppercase;
 
-  // margin: 0 0 0 auto;
   @include media('<tab') {
-    font-size: 2.7rem;
     order: -1;
-  }
-
-  @include media('<mob') {
-    font-size: 5.455rem;
-    line-height: 8.182rem;
   }
 
   &__inner {
@@ -214,25 +184,6 @@
       transition: opacity 0.35s, transform 0.35s, background-color 0.35s;
       transform: translateZ(0) scale3d(0.5, 0.5, 1);
       z-index: -1;
-
-      @include media('<tab') {
-        height: 6rem;
-        width: 6rem;
-        border-radius: 6rem;
-        margin: -3.1rem 0 0 -2.9rem;
-      }
-
-      @include media('<mob') {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        height: 11rem;
-        width: 11rem;
-        border-radius: 10rem;
-        margin: -3.2rem 0 0 -4.7rem;
-      }
     }
 
     &:hover {
@@ -249,14 +200,6 @@
         background-color: white;
       }
     }
-
-    @include media('<tab') {
-      width: 4.6rem;
-    }
-
-    @include media('<mob') {
-      width: 6.6rem;
-    }
   }
 }
 
@@ -271,8 +214,6 @@
   z-index: 10;
   opacity: 1;
   background: url(../../img/play_video_on_slider.svg) no-repeat center center;
-  // height: 10.607rem;
-  // width: 10.607rem;
   outline: none;
   border: none;
 }
@@ -300,7 +241,6 @@
     width: 48rem;
     max-width: 100%;
     text-align: left;
-    // background-color: rgba($base-color, 0.9);
     background-color: #fff;
     z-index: 999;
 
@@ -366,11 +306,9 @@
 
 // Navigation opener
 .nav-opener {
-  display: block;
   position: relative;
-  $size: 5rem;
-  height: $size;
-  width: $size;
+  height: 4rem;
+  width: 2.5rem;
   font-size: 0;
   line-height: 0;
   cursor: pointer;
@@ -394,24 +332,10 @@
     width: 4.6rem;
     background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItbWVudSI+PGxpbmUgeDE9IjMiIHkxPSIxMiIgeDI9IjIxIiB5Mj0iMTIiPjwvbGluZT48bGluZSB4MT0iMyIgeTE9IjYiIHgyPSIyMSIgeTI9IjYiPjwvbGluZT48bGluZSB4MT0iMyIgeTE9IjE4IiB4Mj0iMjEiIHkyPSIxOCI+PC9saW5lPjwvc3ZnPg0KDQo=');
     color: #000;
-
-    @include media('<mob') {
-      height: 6.5rem;
-      width: 7.6rem;
-    }
   }
-
-  // &::after {
-  //   height: 2.5rem;
-  //   width: 4.7rem;
-  //   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjQgNmgtMjR2LTRoMjR2NHptMCA0aC0yNHY0aDI0di00em0wIDhoLTI0djRoMjR2LTR6Ij48L3BhdGg+PC9zdmc+");
-  //   display: none;
-  // }
 
   @include media('<tab') {
     display: block;
-    height: 4rem;
-    width: 4rem;
   }
 
   &.is-open {
@@ -423,23 +347,15 @@
       display: block;
     }
   }
-
-  @include media('<mob') {
-    $size: 7rem;
-    height: $size;
-    width: 8rem;
-  }
 }
 
 // Navigation header (for mobile)
 .nav-header {
   position: relative;
-  //display: flex;
   align-items: center;
   justify-content: space-between;
-  //padding: 0 0 0 1.5rem;
   border-bottom: 0.1rem solid rgba(white, 0.5);
-
+  padding: 1rem;
   display: none;
 
   @include media('<tab') {
@@ -451,24 +367,14 @@
 .logo-nav {
   display: block;
   position: relative;
-  height: 15rem;
-  width: 16rem;
+  width: 8rem;
+  height: 6.0833rem;
   font-size: 0;
   line-height: 0;
   background-image: url(../../img/logo.svg);
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 85%;
-
-  @include media('<tab') {
-    margin-left: 1rem;
-  }
-
-  @include media('<mob') {
-    height: 33rem;
-    width: 33rem;
-    margin-left: 6rem;
-  }
 }
 
 // Navigation close button
@@ -477,9 +383,8 @@
   display: block;
   $size: 4rem;
   height: $size;
-  width: $size;
+  width: 3rem;
   margin-left: auto;
-  overflow: hidden;
   text-indent: -999rem;
 
   &::before {
@@ -496,16 +401,6 @@
     background-position: 50%;
     background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyLjAwMSA1MTIuMDAxIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIuMDAxIDUxMi4wMDE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNMjg0LjI4NiwyNTYuMDAyTDUwNi4xNDMsMzQuMTQ0YzcuODExLTcuODExLDcuODExLTIwLjQ3NSwwLTI4LjI4NWMtNy44MTEtNy44MS0yMC40NzUtNy44MTEtMjguMjg1LDBMMjU2LDIyNy43MTcNCgkJCUwzNC4xNDMsNS44NTljLTcuODExLTcuODExLTIwLjQ3NS03LjgxMS0yOC4yODUsMGMtNy44MSw3LjgxMS03LjgxMSwyMC40NzUsMCwyOC4yODVsMjIxLjg1NywyMjEuODU3TDUuODU4LDQ3Ny44NTkNCgkJCWMtNy44MTEsNy44MTEtNy44MTEsMjAuNDc1LDAsMjguMjg1YzMuOTA1LDMuOTA1LDkuMDI0LDUuODU3LDE0LjE0Myw1Ljg1N2M1LjExOSwwLDEwLjIzNy0xLjk1MiwxNC4xNDMtNS44NTdMMjU2LDI4NC4yODcNCgkJCWwyMjEuODU3LDIyMS44NTdjMy45MDUsMy45MDUsOS4wMjQsNS44NTcsMTQuMTQzLDUuODU3czEwLjIzNy0xLjk1MiwxNC4xNDMtNS44NTdjNy44MTEtNy44MTEsNy44MTEtMjAuNDc1LDAtMjguMjg1DQoJCQlMMjg0LjI4NiwyNTYuMDAyeiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K');
     background-size: contain;
-
-    @include media('<mob') {
-      height: 6.2rem;
-      width: 6.2rem;
-    }
-  }
-
-  @include media('<mob') {
-    height: 15rem;
-    width: 15rem;
   }
 }
 
@@ -552,21 +447,6 @@
     @include media('<mob') {
       color: #000;
     }
-  }
-
-  @include media('<net') {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-  }
-
-  @include media('<tab') {
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-  }
-
-  @include media('<mob') {
-    font-size: 4.4rem;
-    line-height: 4.8rem;
   }
 
   // Все ul
@@ -683,8 +563,6 @@
       height: calc(100% - #{nth($intend, 1)} * 2);
       width: calc(100% - #{nth($intend, 2)} * 2);
       background-color: $bg-color-alt;
-      //@include linear-gradient(180deg, #3c3c3c 0%, #6a6a6a 100%);
-      //box-shadow: 0 0.2rem 3.3rem rgba(0, 0, 0, 0.5);
       border-radius: 0.2rem;
       z-index: -1;
 
@@ -880,24 +758,11 @@
       margin: 0;
     }
 
-    @include media('<mob') {
-      padding: 1em 7.5rem;
-    }
-
     &:first-child {
 
       // ------ бутерброд -----------------------------------------
       @include media('<tab') {
         border-top: none;
-      }
-    }
-
-    &:last-child {
-      //margin-right: 0;
-
-      // ------ бутерброд -----------------------------------------
-      @include media('<tab') {
-        // no styles
       }
     }
 
@@ -1046,17 +911,6 @@
       letter-spacing: 0.256rem;
       text-transform: uppercase;
       color: #bbbbbb;
-
-      @include media('<tab') {
-        font-size: 1.816rem;
-      }
-
-      @include media('<mob') {
-        font-size: 3.896rem;
-        line-height: 5.844rem;
-        letter-spacing: 1.224rem;
-        margin-bottom: 3.506rem;
-      }
     }
 
     &-privacy {
@@ -1111,17 +965,11 @@
     align-items: center;
     position: relative;
     height: 100%;
-
-    @include media('<mob') {
-      // height: auto;
-      // margin-top: 36.234rem;
-    }
   }
 
   &__footer {
-    width: 89.7%;
-    position: absolute;
-    bottom: 28px;
+    position: relative;
+    bottom: 40px;
     z-index: 999;
     display: flex;
     justify-content: space-between;
@@ -1129,6 +977,11 @@
 
     & div {
       color: #bbbbbb;
+
+      @include media('<mob') {
+        margin-bottom: 9px;
+        margin-right: 14px;
+      }
     }
 
     & .dop_col {
@@ -1137,11 +990,17 @@
 
     & a {
       margin-right: 0;
+
+      @include media('<mob') {
+        margin-right: 14px;
+      }
     }
 
     @include media('<mob') {
       flex-wrap: wrap;
-      bottom: 15px;
+      position: absolute;
+      bottom: 1.4rem;
+      width: 98%;
     }
   }
 
@@ -1168,6 +1027,10 @@
 }
 
 .third_item .third_footer {
+  opacity: 1;
+  transition: opacity 0.5s 0.6s;
+}
+.fourth_item .fourth_footer {
   opacity: 1;
   transition: opacity 0.5s 0.6s;
 }
@@ -1218,7 +1081,6 @@
     &-count {
       display: block;
       overflow: hidden;
-      //pointer-events: none;
       margin: 0 0 0.83rem 0.6rem;
       @include font-norm-reg;
       font-size: 2.3rem;
@@ -1271,11 +1133,7 @@
 
     &-content {
       display: flex;
-      align-items: flex-start;
-
-      @include media('<tab') {
-        align-items: center;
-      }
+      align-items: center;
 
       @include media('<mob') {
         display: block;
@@ -1286,8 +1144,6 @@
       $width: 48.5%;
       flex: 1 0 $width;
       max-width: $width;
-      // padding-right: 2rem;
-      // padding-left: 3rem;
 
       @include media('<mob') {
         $width: 100%;
@@ -1300,8 +1156,8 @@
 
     &-title {
       @include font-gilroy-bold;
-      font-size: 7.119rem;
-      line-height: 7.119rem;
+      font-size: 6.25rem;
+      line-height: 6.25rem;
       margin-bottom: 1rem;
       padding-bottom: 1rem;
       will-change: opacity;
@@ -1312,14 +1168,14 @@
       color: #1d3743;
 
       @include media('<tab') {
-        font-size: 6.5rem;
-        line-height: 5.6rem;
+        font-size: 5.25rem;
+        line-height: 5.25rem;
       }
 
-      @include media('<mob') {
-        font-size: 18.701rem;
-        line-height: 18.701rem;
-        padding: 30.571rem 10.13rem 30.571rem 0;
+      @include media('<tab-s') {
+        font-size: 4rem;
+        line-height: 4rem;
+        padding: 7rem 3rem 7rem 0;
       }
 
       .m-active & {
@@ -1363,11 +1219,12 @@
         margin-top: -2.2rem;
 
         @include media('<tab') {
-          font-size: 2rem;
-          line-height: 3.121rem;
+          font-size: 1.3rem;
+          line-height: 2rem;
+          padding: 2.019rem 1.32rem;
         }
 
-        @include media('<mob') {
+        @include media('<tab-s') {
           display: none;
         }
       }
@@ -1388,6 +1245,7 @@
     }
 
     &-rect {
+      display: none;
       width: 0.33rem;
       height: 16.9rem;
       background-color: #d8d8d8;
@@ -1398,10 +1256,6 @@
       @include media('<tab') {
         width: 0.53rem;
         height: 31.9rem;
-      }
-
-      @include media('<mob') {
-        display: none;
       }
     }
   }
@@ -1651,28 +1505,29 @@
     align-items: center;
     height: 100%;
 
+    @include media('<tab') {
+      justify-content: space-around;
+    }
+
     @include media('<mob') {
       display: block;
-      margin-top: 50rem;
+      margin-top: 13.083rem;
     }
   }
 
   &__caption {
     position: relative;
-    $width: 30.8%;
+    $width: 34.8%;
     flex: 1 0 $width;
     max-width: $width;
     padding: 0 2rem 0.8rem 0;
     margin: 0 0 0 -0.2rem;
 
     @include media('<tab') {
+      display: none;
       $width: 100%;
       flex: 1 0 width;
       max-width: $width;
-    }
-
-    @include media('<mob') {
-      display: none;
     }
   }
 
@@ -1692,7 +1547,6 @@
     @include media('<mob') {
       font-size: 4.675rem;
       line-height: 7.013rem;
-      // margin: 37.013rem 0 0 0.779rem;
     }
 
     &_dark-gray {
@@ -1725,15 +1579,6 @@
     font-size: 7.3rem;
     line-height: 7.5rem;
     color: white;
-
-    @include media('<tab') {
-      font-size: 11.3rem;
-      line-height: 11.5rem;
-    }
-
-    @include media('<mob') {
-      display: none;
-    }
 
     &_dark-gray {
       color: #333;
@@ -1772,16 +1617,11 @@
   &__button {
     @include font-gilroy-bold;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 1.0833rem;
     color: #1f1f1f;
-    line-height: 46px;
     padding: 1.224rem 5.467rem;
     background: #39ff98;
     border-radius: 0.245rem;
-
-    @include media('<mob') {
-      border-radius: 1.33rem;
-    }
   }
 
   &__numberGame {
@@ -1790,16 +1630,6 @@
     color: #fff;
     font-size: 1.469rem;
     line-height: 2.203rem;
-
-    @include media('<tab') {
-      font-size: 3.469rem;
-      line-height: 5.203rem;
-    }
-
-    @include media('<mob') {
-      font-size: 7.013rem;
-      line-height: 10.519rem;
-    }
   }
 
   &__sub-title {
@@ -1809,18 +1639,12 @@
     line-height: 3.75rem;
     color: white;
 
-    @include media('<tab') {
-      font-size: 5rem;
-      line-height: 6.75rem;
+    &_gray {
+      color: #919191;
     }
 
     @include media('<mob') {
-      font-size: 14.026rem;
-      line-height: 17.922rem;
-    }
-
-    &_gray {
-      color: #919191;
+      margin-bottom: 1rem;
     }
   }
 
@@ -1835,9 +1659,7 @@
     opacity: 0.7;
 
     @include media('<tab') {
-      width: 30.48rem;
-      font-size: 2.05rem;
-      line-height: 2.2rem;
+      max-width: 20.48rem;
     }
 
     @include media('<mob') {
@@ -1847,7 +1669,7 @@
 
   &__figure {
     position: relative;
-    $width: 42.9%;
+    $width: 38.9%;
     flex: 1 0 $width;
     max-width: $width;
     height: 100%;
@@ -1917,40 +1739,20 @@
 
         @include media('<mob') {
           align-items: flex-end;
-          top: 33%;
-          left: 48%;
-        }
-
-        @include media('<mob-xs') {
           top: 31%;
-        }
-      }
-
-      &_social1 img {
-        @include media('<mob') {
-          width: 114.026rem;
-          height: 106.234rem;
-        }
-
-        @include media('<mob-s') {
-          width: 104.026rem;
-          height: 96.234rem;
-        }
-
-        @include media('<mob-xs') {
-          width: 76.026rem;
-          height: 72.234rem;
+          left: 48%;
         }
       }
 
       &_social2 {
-        left: 55%;
+        left: 66%;
         top: 50%;
         align-items: flex-start;
         justify-content: flex-end;
 
         @include media('<tab') {
           align-items: center;
+          left: 70%;
         }
 
         @include media('<mob') {
@@ -1960,18 +1762,15 @@
         }
       }
 
-      &_social2 img {
-        width: 46.589rem;
-        height: 46.589rem;
-
-        @include media('<mob') {
-          width: 112.013rem;
-          height: 105.779rem;
+      &_social3 {
+        @include media("<mob") {
+          top: 28%;
         }
-
-        @include media('<mob-xxs') {
-          width: 92.013rem;
-          height: 85.779rem;
+        img {
+          @include media("<mob") {
+            width: 140px;
+            height: 218px;
+          }
         }
       }
     }
@@ -1982,10 +1781,7 @@
     height: 17rem;
     background: #d8d8d8;
     border-radius: 0.41rem;
-
-    @include media('<mob') {
-      display: none;
-    }
+    display: none;
   }
 }
 
@@ -2046,14 +1842,12 @@
   }
 
   &__google {
-    // width: 11.831rem;
-    // height: 3.753rem;
     margin-right: 1.469rem;
   }
 
   @include media('<tab') {
     display: flex;
-    right: 10%;
+    right: 50%;
     // bottom: 30%;
   }
 
@@ -2080,7 +1874,6 @@
   width: 100%;
   visibility: visible; // fix for safari
   z-index: -1;
-  // opacity: 0.5;
 }
 
 .first_bg {
@@ -2142,11 +1935,10 @@
     line-height: 3.753rem;
 
     &:first-child {
-      // margin-bottom: 1.224rem;
 
       @include media('<tab') {
         margin-bottom: 0;
-        margin-right: 2.353rem;
+        margin-right: 1rem;
       }
     }
 
@@ -2191,8 +1983,8 @@
       z-index: 2;
 
       @include media('<tab') {
-        width: 32.745rem;
-        right: 28%;
+        width: 13.9167rem;
+        right: 18%;
       }
     }
 
@@ -2221,11 +2013,26 @@
     transform: translate(-50%, -50%);
     z-index: -2;
 
-    @include media('<mob') {
-      font-size: 58.441rem;
-      top: 43%;
-      left: 81%;
+    @include media("<tab") {
+      top: 50%;
     }
+
+    @include media('<mob') {
+      font-size: 12.5rem;
+      top: 47%;
+    }
+  }
+}
+
+.hoopstars__header_wbg {
+  @include media("<tab") {
+    top: 84%;
+    left: 77%;
+  }
+
+  @include media("<mob") {
+    top: 64%;
+    left: 46%;
   }
 }
 
@@ -2266,25 +2073,22 @@
       width: 49.282rem;
       height: 55.809rem;
 
-      @include media('<tab') {
-        width: 65.529rem;
-        height: 69.02rem;
-      }
-
       @include media('<mob') {
-        width: 100%;
-        height: 100%;
+        width: 24.282rem;
+        height: 30.809rem;
       }
     }
 
-    @include media('<tab') {
+    @include media('<1200px') {
       left: 0;
+    }
+
+    @include media('<tab') {
       top: -17rem;
     }
 
     @include media('<mob') {
-      left: 0;
-      top: -29rem;
+      top: -12rem;
     }
   }
 
@@ -2304,6 +2108,10 @@
         display: none;
       }
     }
+
+    @include media("<tab") {
+      width: auto;
+    }
   }
 
   &__left {
@@ -2319,16 +2127,6 @@
       color: #ffffff;
       mix-blend-mode: normal;
       opacity: 0.3;
-
-      @include media('<tab') {
-        font-size: 3.529rem;
-        line-height: 5.294rem;
-      }
-
-      @include media('<mob') {
-        font-size: 6.243rem;
-        line-height: 9.365rem;
-      }
     }
 
     & h2 {
@@ -2339,16 +2137,6 @@
       color: #ffffff;
       margin-bottom: 4.808rem;
       margin-top: 2.448rem;
-
-      @include media('<tab') {
-        font-size: 9.536rem;
-        line-height: 8.477rem;
-      }
-
-      @include media('<mob') {
-        font-size: 24.974rem;
-        line-height: 22.199rem;
-      }
     }
 
     &_button {
@@ -2377,22 +2165,19 @@
       @include media('<tab') {
         flex-direction: row;
         position: relative;
-        top: 57rem;
+        margin: 0 auto;
+        top: 40rem;
         z-index: 10;
       }
 
       @include media('<mob') {
-        top: 89rem;
+        top: 22rem;
       }
     }
 
     @include media('<tab') {
       align-items: flex-start;
-      margin-top: 24.118rem;
-    }
-
-    @include media('<mob') {
-      margin-top: 38.818rem;
+      margin-top: 11.0833rem;
     }
   }
 
@@ -2419,7 +2204,7 @@
   }
 
   @include media('<mob') {
-    margin-top: 6.142rem;
+    margin-top: 1rem;
   }
 }
 
@@ -2449,16 +2234,6 @@
     text-align: left;
     margin: 0;
     margin-bottom: 1.224rem;
-
-    @include media('<tab') {
-      font-size: 7.059rem;
-      line-height: 6.275rem;
-    }
-
-    @include media('<mob') {
-      font-size: 11.793rem;
-      line-height: 15.583rem;
-    }
   }
 
   &__paragraph {
@@ -2469,21 +2244,14 @@
     width: 38.267rem;
 
     @include media('<tab') {
-      font-size: 3.137rem;
-      line-height: 4.314rem;
       width: 100%;
-    }
-
-    @include media('<mob') {
-      font-size: 5.55rem;
-      line-height: 7.631rem;
     }
   }
 }
 
 .tanks__video {
-  background: url(../../img/tanks_bg.png) no-repeat center center/cover;
-  padding-top: 16.482rem;
+  background: url(../img/tanks_bg.png) no-repeat center top;
+  background-size: 100% 100%;
 
   @include media('<tab') {
     padding-top: 0;
@@ -2504,14 +2272,14 @@
     border-radius: 0.408rem;
 
     @include media('<tab') {
-      width: 65.098rem;
-      height: 36.275rem;
+      width: 50rem;
+      height: 27.75rem;
       border: 3px solid rgb(255, 255, 255);
     }
 
     @include media('<mob') {
-      width: 115.158rem;
-      height: 64.169rem;
+      width: 24.0833rem;
+      height: 13.3333rem;
     }
   }
 
@@ -2526,19 +2294,19 @@
     object-fit: cover;
 
     @include media('<tab') {
-      width: 65.098rem;
-      height: 36.275rem;
+      width: 50rem;
+      height: 27.75rem;
       border: 3px solid rgb(255, 255, 255);
     }
 
     @include media('<mob') {
-      width: 115.158rem;
-      height: 64.169rem;
+      width: 24.0833rem;
+      height: 13.3333rem;
     }
   }
 
   @include media('<tab') {
-    margin-top: 28.482rem;
+    margin-top: 6.82rem;
   }
 }
 
@@ -2551,18 +2319,15 @@
     height: 45.61rem;
     margin-top: 28rem;
     margin-bottom: 4.488rem;
+    margin-left: 0.5833rem;
+    margin-right: 0.5833rem;
     border: 5px solid rgb(255, 255, 255);
     box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.25);
     border-radius: 1.224rem;
 
-    @include media('<tab') {
-      width: 45.62rem;
-      height: 98.723rem;
-    }
-
     @include media('<mob') {
-      width: 62.5rem;
-      height: 135.25rem;
+      width: 18.3333rem;
+      height: 39.75rem;
     }
   }
 
@@ -2573,19 +2338,16 @@
     height: 45.61rem;
     margin-top: 28rem;
     margin-bottom: 4.488rem;
+    margin-left: 0.5833rem;
+    margin-right: 0.5833rem;
     border: 5px solid rgb(255, 255, 255);
     box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.25);
     border-radius: 1.224rem;
     object-fit: cover;
 
-    @include media('<tab') {
-      width: 45.62rem;
-      height: 98.723rem;
-    }
-
     @include media('<mob') {
-      width: 62.5rem;
-      height: 135.25rem;
+      width: 18.3333rem;
+      height: 39.75rem;
     }
   }
 }
@@ -2596,7 +2358,7 @@
   width: 21.051rem;
   height: 45.61rem;
   top: 0;
-  left: 0;
+  left: 15px;
   z-index: 10;
   opacity: 1;
   background: url(../../img/play_video_on_slider.svg) no-repeat center center;
@@ -2607,14 +2369,10 @@
     opacity: 0;
   }
 
-  @include media('<tab') {
-    width: 45.62rem;
-    height: 98.723rem;
-  }
-
   @include media('<mob') {
-    width: 62.5rem;
-    height: 135.25rem;
+    width: 18.3333rem;
+    height: 39.75rem;
+    left: 9px;
   }
 }
 
@@ -2623,7 +2381,6 @@
   position: relative;
 
   &_title {
-    // @include font-normal;
     text-align: center;
     margin-top: 1.142rem;
   }
@@ -2649,8 +2406,7 @@
       z-index: 1;
 
       @include media('<tab') {
-        width: 4.765rem;
-        height: 14.725rem;
+        height: 5.8333rem;
       }
     }
 
@@ -2675,6 +2431,10 @@
         display: none;
       }
     }
+  }
+
+  @include media("<mob") {
+    padding-top: 4.833rem;
   }
 }
 
@@ -2726,24 +2486,17 @@
       overflow: visible;
 
       & .slick-slide {
-        width: 47.417rem !important;
-        height: 41.325rem;
         margin: 0 4.902rem;
         opacity: 1;
-
-        @include media('<mob') {
-          width: 124.176rem !important;
-          height: 108.221rem;
-        }
       }
 
       & img {
         width: 47.417rem;
         height: 41.325rem;
 
-        @include media('<mob') {
-          width: 124.176rem;
-          height: 108.221rem;
+        @include media("<mob") {
+          width: 26.6667rem;
+          height: 23.3333rem;
         }
       }
     }
@@ -2773,14 +2526,6 @@
 
       @include media('<tab') {
         margin-top: 4.902rem;
-        font-size: 7.059rem;
-        line-height: 4.314rem;
-      }
-
-      @include media('<mob') {
-        font-size: 11.487rem;
-        line-height: 16.314rem;
-        margin-top: 10.142rem;
       }
     }
 
@@ -2798,15 +2543,7 @@
       }
 
       @include media('<tab') {
-        margin-top: 2.902rem;
-        font-size: 3.137rem;
-        line-height: 4.314rem;
         width: auto;
-      }
-
-      @include media('<mob') {
-        font-size: 5.55rem;
-        line-height: 7.631rem;
       }
     }
 
@@ -2856,49 +2593,19 @@
         font-size: 7.833rem;
         line-height: 5rem;
         color: #fff;
-
-        @include media('<tab') {
-          font-size: 18.824rem;
-          line-height: 16.667rem;
-        }
-
-        @include media('<mob') {
-          font-size: 33.299rem;
-          line-height: 31rem;
-        }
       }
 
       & p {
-        // @include font-gilroy-medium;
         text-align: center;
         font-size: 1.061rem;
         line-height: 1.469rem;
         color: #ffffff;
         opacity: 0.6;
-
-        @include media('<tab') {
-          font-size: 2.549rem;
-          line-height: 3.529rem;
-        }
-
-        @include media('<mob') {
-          font-size: 4.509rem;
-          line-height: 6.243rem;
-        }
       }
 
-      @include media('<tab') {
-        width: 30.98rem;
-        height: 46.667rem;
-        padding: 8.235rem 5.882rem;
-        margin: 0;
+      @include media("<tab") {
+        margin-bottom: 0;
         margin-right: 1px;
-      }
-
-      @include media('<mob') {
-        width: 55.151rem;
-        height: 82.553rem;
-        padding: 11rem 11.568rem;
       }
     }
 
@@ -2915,16 +2622,6 @@
         font-size: 3.101rem;
         line-height: 2.693rem;
         color: #fff;
-
-        @include media('<tab') {
-          font-size: 7.647rem;
-          line-height: 6.471rem;
-        }
-
-        @include media('<mob') {
-          font-size: 13.528rem;
-          line-height: 11.446rem;
-        }
       }
 
       & p {
@@ -2933,42 +2630,19 @@
         line-height: 1.469rem;
         color: #ffffff;
         opacity: 0.6;
-
-        @include media('<tab') {
-          font-size: 2.549rem;
-          line-height: 3.529rem;
-        }
-
-        @include media('<mob') {
-          font-size: 4.509rem;
-          line-height: 6.243rem;
-        }
-      }
-
-      @include media('<tab') {
-        width: 30.98rem;
-        height: 46.667rem;
-        padding: 6.235rem 5.882rem;
-      }
-
-      @include media('<mob') {
-        width: 55.151rem;
-        height: 82.553rem;
-        padding: 11rem 11.568rem;
       }
     }
 
     @include media('<tab') {
       display: flex;
-      margin: 6.667rem 0 12.745rem 0;
+      margin: 6.667rem 0 2rem 0;
     }
   }
 }
 
 .tanks__footer {
-  background: url(../../img/tanks_footer_bg.png) no-repeat center center/cover;
-  padding: 23.825rem 0 11.423rem 0;
-  overflow-wrap: hidden;
+  background: url(../img/tanks_footer_bg.png) no-repeat center top/cover;
+  padding: 25.825rem 0 13.423rem 0;
 
   &_flex {
     display: flex;
@@ -2983,14 +2657,9 @@
     & img {
       visibility: hidden;
 
-      @include media('<tab') {
-        width: 16.078rem;
-        height: 14.706rem;
-      }
-
-      @include media('<mob') {
-        width: 28.443rem;
-        height: 26.015rem;
+      @include media("<mob") {
+        width: 6.8333rem;
+        height: 6.25rem;
       }
     }
   }
@@ -3003,14 +2672,9 @@
     color: #ffffff;
     text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.51);
 
-    @include media('<tab') {
-      font-size: 8.627rem;
-      line-height: 7.647rem;
-    }
-
-    @include media('<mob') {
-      font-size: 15.262rem;
-      line-height: 13.528rem;
+    @include media("<mob") {
+      font-size: 3.6667rem;
+      line-height: 3.25rem;
     }
   }
 
@@ -3040,13 +2704,19 @@
     }
   }
 
-  @include media('<tab') {
-    padding: 2.781rem 0 80.623rem 0;
+  @include media(">1500px") {
+    background: url(../img/tanks_footer_bg.png) no-repeat center top;
+    background-size: 100% 100%;
+    padding: 53.825rem 0 11.423rem 0;
   }
 
-  // @include media("<mob") {
-  //   margin-bottom: 10rem;
-  // }
+  @include media("<tab") {
+    padding: 5.75rem 0 26.75rem 0;
+  }
+
+  @include media("<mob") {
+    padding: 5.75rem 0 26.75rem 0;
+  }
 }
 
 .mobile_footer_btn {
@@ -3083,7 +2753,6 @@
     width: 28.557rem;
     height: 28.557rem;
     margin-right: 3.727rem;
-    // margin-right: 3.51rem;
   }
 
   .hoopstars_loc_center {
@@ -3117,10 +2786,6 @@
 .locacion_block_more .hoopstars_prg {
   color: #ffffff;
   margin-top: 0;
-
-  @include media('<tab') {
-    margin-top: 9rem;
-  }
 }
 
 .locacion_block_card .hoopstars_card {
@@ -3130,23 +2795,23 @@
 }
 
 .hoopstars_slide_img .slick-list .slick-slide {
-  width: 97rem !important;
-  height: 97rem;
+  width: 29.1667rem;
+  height: 29.1667rem;
   margin: 0 4.4rem;
 
-  @include media('<tab') {
-    width: 67rem !important;
-    height: 67rem;
+  @include media('<mob') {
+    width: 25rem;
+    height: 25rem;
   }
 }
 
 .hoopstars_slide_img .slick-list img {
-  width: 97rem;
-  height: 97rem;
+  width: 29.1667rem;
+  height: 29.1667rem;
 
-  @include media('<tab') {
-    width: 67rem;
-    height: 67rem;
+  @include media('<mob') {
+    width: 25rem;
+    height: 25rem;
   }
 }
 
@@ -3158,13 +2823,18 @@
 
   .tanks__footer_blk img {
     @include media('<mob') {
-      width: 33.778rem;
-      height: 22.444rem;
+      width: 6.8333rem;
+      height: 4.5833rem;
     }
   }
 
   @include media('<tab') {
-    padding: 12.825rem 0 63.423rem 0;
+    margin-top: 0;
+    padding: 12.825rem 0 27.423rem 0;
+  }
+
+  @include media("<mob") {
+    padding: 2.825rem 0 8.423rem 0;
   }
 }
 
@@ -3191,9 +2861,8 @@
     margin-bottom: 7rem;
   }
 
-  @include media('<mob') {
-    top: 47rem;
-    margin-bottom: 27rem;
+  @include media("<mob") {
+    top: 23rem;
   }
 }
 
@@ -3208,15 +2877,14 @@
     width: 48.711rem;
 
     @include media('<tab') {
-      width: 61rem;
-      top: 13%;
+      width: 33rem;
+      top: 49%;
       z-index: 1;
     }
 
     @include media('<mob') {
-      width: 76rem;
-      top: 26%;
-      z-index: 1;
+      top: 37%;
+      width: 27rem;
     }
   }
 }
@@ -3236,7 +2904,7 @@
   }
 
   @include media('<mob') {
-    top: 40rem;
+    top: 21rem;
   }
 }
 
@@ -3258,16 +2926,9 @@
     position: relative;
     z-index: 20;
 
-    @include media('<tab') {
-      margin-bottom: 5.711rem;
-      margin-top: 21rem;
-    }
-
-    @include media('<mob') {
-      font-size: 11.956rem;
-      line-height: 12.119rem;
-      margin-top: 40rem;
-      margin-bottom: 10rem;
+    @include media("<mob") {
+      font-size: 3.1667rem;
+      line-height: 3.3333rem;
     }
   }
 
@@ -3287,38 +2948,17 @@
       word-wrap: break-word;
 
       ul {
-        font-size: 18px;
-        line-height: 27px;
-        margin-left: 4rem;
-
-        @include media('<tab') {
-          margin-left: 6rem;
-          // font-size: 2.469rem;
-          // line-height: 4.121rem;
-        }
-
-        @include media('<mob') {
-          margin-left: 11rem;
-          // font-size: 6.469rem;
-          // line-height: 8.427rem;
-        }
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        margin-left: 3rem;
       }
 
       ol {
-        font-size: 18px;
-        line-height: 27px;
+        font-size: 1.5rem;
+        line-height: 2.25rem;
         padding: 0;
 
-        // margin-left: 1.5rem;
-        @include media('<tab') {
-          // font-size: 2.469rem;
-          // line-height: 4.121rem;
-        }
-
-        @include media('<mob') {
-          // font-size: 6.469rem;
-          // line-height: 8.427rem;
-        }
+        @include media('<tab') {}
 
         & li ol {
           padding-left: 30px;
@@ -3326,27 +2966,15 @@
       }
 
       a {
-        font-size: 18px;
-        line-height: 27px;
+        font-size: 1.5rem;
+        line-height: 2.25rem;
         color: #3f3f3f;
       }
 
       & p {
-        font-size: 18px;
-        line-height: 27px;
+        font-size: 1.5rem;
+        line-height: 2.25rem;
         @include font-normal;
-
-        // font-size: 1.469rem;
-        // line-height: 2.121rem;
-        @include media('<tab') {
-          // font-size: 2.469rem;
-          // line-height: 4.121rem;
-        }
-
-        @include media('<mob') {
-          // font-size: 6.469rem;
-          // line-height: 8.427rem;
-        }
       }
 
       & h1,
@@ -3357,66 +2985,46 @@
       & h6 {
         @include font-bold;
         word-wrap: break-word;
-        margin: 18px 0;
+        margin: 1.5rem 0;
       }
 
       & h1 {
-        font-size: 48px;
-        line-height: 60px;
+        font-size: 4rem;
+        line-height: 5rem;
 
         @include media('<tab') {
-          font-size: 32px;
-          line-height: 37.5px;
-        }
-
-        @include media('<mob') {
-          // font-size: 13rem;
-          // line-height: 13.6rem;
+          font-size: 2.6667rem;
+          line-height: 3.0833rem;
         }
       }
 
       & h2 {
-        font-size: 40px;
-        line-height: 50px;
+        font-size: 3.3333rem;
+        line-height: 4.1667rem;
 
         @include media('<tab') {
-          font-size: 28px;
-          line-height: 36px;
-        }
-
-        @include media('<mob') {
-          // font-size: 12.5rem;
-          // line-height: 12.6rem;
+          font-size: 2.3333rem;
+          line-height: 3rem;
         }
       }
 
       & h3 {
-        font-size: 32px;
-        line-height: 40px;
+        font-size: 2.6667rem;
+        line-height: 3.3333rem;
 
         @include media('<tab') {
-          font-size: 24px;
-          line-height: 30px;
-        }
-
-        @include media('<mob') {
-          // font-size: 11rem;
-          // line-height: 11.6rem;
+          font-size: 2rem;
+          line-height: 2.5rem;
         }
       }
 
       & h4 {
-        font-size: 24px;
-        line-height: 30px;
+        font-size: 2rem;
+        line-height: 2.5rem;
 
         @include media('<tab') {
-          font-size: 20px;
-          line-height: 25px;
-        }
-
-        @include media('<mob') {
-          // font-size: 9rem;
-          // line-height: 9.6rem;
+          font-size: 1.6667rem;
+          line-height: 2.0833rem;
         }
       }
 
@@ -3450,6 +3058,7 @@
 
       @include media('<mob') {
         max-width: 100%;
+        padding: 1.488rem;
       }
     }
 
@@ -3467,10 +3076,18 @@
 
     & div {
       color: #bbbbbb;
+
+      @include media("<mob") {
+        margin-bottom: 9px;
+      }
     }
 
     & a {
       color: #bbbbbb;
+    }
+
+    @include media("<tab") {
+      margin-top: 3rem;
     }
   }
 }
@@ -3543,12 +3160,8 @@
       position: relative;
       z-index: 2;
 
-      @include media('<tab') {
-        font-size: 9.083rem;
-      }
-
-      @include media('<mob') {
-        font-size: 13.083rem;
+      @include media("<mob") {
+        font-size: 4rem;
       }
     }
 
@@ -3567,16 +3180,15 @@
       }
 
       @include media('<mob') {
-        font-size: 40.333rem;
+        left: -5rem;
+        line-height: 7.5rem;
+        font-size: 12.5rem;
       }
     }
 
-    @include media('<tab') {
-      padding-top: 27.667rem;
-    }
-
-    @include media('<mob') {
-      padding-top: 44.667rem;
+    @include media("<mob") {
+      padding-top: 12rem;
+      padding-bottom: 3.3333rem;
     }
   }
 }
@@ -3614,21 +3226,23 @@
 }
 
 .vacancies-point {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 52px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   &__info {
     display: flex;
     flex-direction: column;
-    // max-width: 12.5833rem;
     @include font-bold;
     font-size: 1.1667rem;
     line-height: 1.8333rem;
     margin-right: 111px;
-    // margin-right: 11rem;
-    // margin-top: 0.4rem;
-    // display: flex;
-    // flex-direction: column;
 
     &-title {
-      // display: inline-block;
       font-size: 2.8333rem;
       line-height: 2.0833rem;
       color: #1d3743;
@@ -3641,16 +3255,6 @@
         line-height: 1.8333rem;
         color: #cdd0d1;
         vertical-align: 100%;
-
-        @include media('<tab') {
-          font-size: 2.67rem;
-          line-height: 3.833rem;
-        }
-
-        @include media('<mob') {
-          font-size: 6rem;
-          line-height: 7.833rem;
-        }
       }
 
       &:after {
@@ -3664,25 +3268,8 @@
         top: calc(69% - 0.04rem);
 
         @include media('<tab') {
-          width: 15.75rem;
-          right: -17rem;
-        }
-
-        @include media('<mob') {
           display: none;
         }
-      }
-
-      @include media('<tab') {
-        font-size: 4.833rem;
-        line-height: 4.083rem;
-        margin-right: 20rem;
-      }
-
-      @include media('<mob') {
-        font-size: 9.833rem;
-        line-height: 10.083rem;
-        margin-right: 0;
       }
     }
 
@@ -3693,31 +3280,22 @@
       opacity: 0.4;
 
       @include media('<tab') {
-        min-width: 45.583rem;
-      }
-
-      @include media('<mob') {
         width: 100%;
       }
     }
 
-    @include media('<tab') {
-      font-size: 2.67rem;
-      line-height: 3.833rem;
-      margin-right: 3rem;
-      // margin-top: 2rem;
-    }
-
-    @include media('<mob') {
-      font-size: 6rem;
-      line-height: 7.833rem;
+    @include media("<tab") {
       margin-right: 0;
-      margin-bottom: 35px;
+      margin-bottom: 2rem;
     }
   }
 
   &__items {
     display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include media("<tab") {
     flex-wrap: wrap;
   }
 }
@@ -3749,25 +3327,10 @@
 
   &__outer {
     display: flex;
-    // justify-content: space-between;
-  }
-
-  @include media("<mob") {
-    padding: 30px 0 16px 0;
-  }
-}
-
-.vacancies-point {
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 52px;
-
-  &:last-child {
-    margin-bottom: 0;
   }
 
   @include media('<mob') {
-    flex-wrap: wrap;
+    padding: 30px 0 16px 0;
   }
 }
 
@@ -3776,20 +3339,11 @@
   line-height: 2.1667rem;
   color: #3f3f3f;
   max-width: 58.6667rem;
-  margin-top: 2.3rem;
 
   h3 {
     @include font-gilroy-bold;
     font-size: 2rem;
     line-height: 3.8333rem;
-
-    @include media('<tab') {
-      font-size: 4rem;
-    }
-
-    @include media('<mob') {
-      font-size: 7rem;
-    }
   }
 
   p {
@@ -3797,25 +3351,10 @@
     font-size: 1.5rem;
     line-height: 2.1667rem;
     margin-top: 0.4rem;
-
-    @include media('<tab') {
-      font-size: 3.3rem;
-      line-height: 4.167rem;
-      margin-top: 4rem;
-    }
-
-    @include media('<mob') {
-      font-size: 6.3rem;
-      line-height: 9.167rem;
-      margin-top: 4rem;
-    }
-  }
-
-  @include media('<tab') {
-    margin-top: 5.3rem;
   }
 
   @include media('<mob') {
+    margin-top: 0;
     max-width: 100%;
   }
 }
@@ -3859,14 +3398,6 @@
     font-size: 2rem;
     line-height: 2.3rem;
     margin-bottom: 19px;
-
-    @include media('<tab') {
-      font-size: 4rem;
-    }
-
-    @include media('<mob') {
-      font-size: 7rem;
-    }
   }
 
   span {
@@ -3875,41 +3406,142 @@
     line-height: 1.167rem;
     text-transform: uppercase;
     margin-bottom: 26px;
-
-    @include media('<tab') {
-      font-size: 1.833rem;
-      line-height: 1.167rem;
-    }
-
-    @include media('<mob') {
-      font-size: 4.5rem;
-      line-height: 4.167rem;
-    }
   }
 
   p {
     color: #7b7b7b;
     font-size: 1.5rem;
     line-height: 2.1667rem;
-    // margin-top: 1.8rem;
-
-    @include media('<tab') {
-      font-size: 3.3rem;
-      line-height: 4.167rem;
-    }
-
-    @include media('<mob') {
-      font-size: 6.3rem;
-      line-height: 9.167rem;
-    }
   }
 
   @include media('<tab') {
     margin-right: 0;
     max-width: 100%;
   }
+}
 
-  @include media('<mob') {
-    margin-bottom: 7.5rem;
+// special media
+
+@media (max-width: 639px) {
+  .case-section__figure-img_social1 img {
+    width: 28.6667rem;
+    height: 27rem;
   }
+
+  .case-section__figure-img_social2 img {
+    width: 27.1667rem;
+    height: 25.8333rem;
+  }
+}
+
+@media (max-width: 390px) and (max-height: 720px) {
+  .case-section__figure-img_social1 img {
+    width: 18.3333rem;
+    height: 17.25rem;
+  }
+
+  .case-section__figure-img_social2 {
+    top: 59%;
+  }
+
+  .case-section__figure-img_social2 img {
+    width: 18.4167rem;
+    height: 17.5rem;
+  }
+}
+
+@media (max-width: 540px) and (max-height: 570px) {
+  .case-section__figure-img_social1 {
+    top: 29%;
+  }
+
+  .case-section__figure-img_social1 img {
+    width: 11.333rem;
+    height: 10.25rem;
+  }
+
+  .case-section__figure-img_social2 img {
+    width: 14.4167rem;
+    height: 13.5rem;
+  }
+}
+
+
+/* ==================================== */
+/* ============== Steals master ============== */
+/* ==================================== */
+.stealsmaster  {
+  overflow: hidden;
+  background-color: #423182;
+}
+
+.stealsmaster_footer {
+  background: url(../img/stealth_footer_bg.png) no-repeat center top/cover;
+  padding: 390px 0 140px 0;
+  margin-top: -238px;
+  @include media("<tab") {
+    padding: 273px 0 61px 0;
+    margin-top: 0;
+  }
+  @include media("<mob") {
+    padding: 100px 0 18px 0;
+  }
+}
+
+.stealsmaster .hoopstars_loc_firimg {
+  margin-right: 0;
+}
+.stealsmaster .hoopstars_loc_info {
+  flex-basis: 28.557rem;
+}
+.stealsmaster .hoopstars_loc_center {
+  margin-top: 0.816rem;
+  margin-right: 2.694rem;
+}
+.stealsmaster .hoopstars_loc_top {
+  margin-right: 3.51rem;
+}
+
+.stealsmaster .tanks__footer_download {
+  margin-bottom: 0;
+}
+
+.stealsmaster .tanks__footer_blk {
+  align-items: center;
+}
+
+.stealsmaster_part__center {
+  @include media("<mob") {
+    position: relative;
+    top: -60px;
+  }
+  img {
+    @include media("<mob") {
+      width: 282px;
+      height: 229px;
+    }
+  }
+}
+
+.stealsmaster_footer_download a img {
+  visibility: visible;
+}
+.stealsmaster .tanks__footer_blk img {
+  @include media("<tab") {
+    margin: 0 auto;
+  }
+}
+
+.stealsmaster .first_part {
+  padding: 158px 0 40px 0;
+  align-items: flex-start;
+
+  @include media("<mob") {
+    padding: 0 0 128px 0;
+  }
+}
+
+.stealsmaster_videoBg {
+    background: url(../img/steals_bg.png) no-repeat top center;
+    background-size: cover;
 }

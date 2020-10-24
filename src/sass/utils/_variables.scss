@@ -3,21 +3,19 @@
 
 // Media query
 // ====================================================
-$breakpoints: (
-    "desk-l": 2560px,
-    "desk": 1920px,
-    "desk-s": 1600px,
-    "lap-l": 1440px,
-    "lap": 1366px,
-    "lap-s": 1280px,
-    "net": 1200px,
-    "tab": 992px,
-    "tab-s": 768px,
-    "mob": 640px,
-    "mob-s": 480px,
-    "mob-xs": 375px,
-    "mob-xxs": 360px
-);
+$breakpoints: ("desk-l": 2560px,
+  "desk": 1920px,
+  "desk-s": 1600px,
+  "lap-l": 1440px,
+  "lap": 1366px,
+  "lap-s": 1280px,
+  "net": 1200px,
+  "tab": 992px,
+  "tab-s": 768px,
+  "mob": 640px,
+  "mob-s": 480px,
+  "mob-xs": 375px,
+  "mob-xxs": 360px);
 
 
 // Fonts style
@@ -25,12 +23,30 @@ $breakpoints: (
 
 // Main font
 // ----------------------------------------------------
-$font-norm-reg: "avenir-next-cyr-regular", Helvetica, Arial, sans-serif !default;
-$font-norm: "avenir-next-cyr-medium", Helvetica, Arial, sans-serif !default;
-$font-italic: "avenir-next-cyr-medium-italic", Helvetica, Arial, sans-serif !default;
-$font-bold: "avenir-next-cyr-bold", Helvetica, Arial, sans-serif !default;
-$font-bold-italic: "avenir-next-cyr-bold-italic", Helvetica, Arial, sans-serif !default;
-$font-demi: "avenir-next-cyr-demi", Helvetica, Arial, sans-serif !default;
+$font-norm-reg: "avenir-next-cyr-regular",
+Helvetica,
+Arial,
+sans-serif !default;
+$font-norm: "avenir-next-cyr-medium",
+Helvetica,
+Arial,
+sans-serif !default;
+$font-italic: "avenir-next-cyr-medium-italic",
+Helvetica,
+Arial,
+sans-serif !default;
+$font-bold: "avenir-next-cyr-bold",
+Helvetica,
+Arial,
+sans-serif !default;
+$font-bold-italic: "avenir-next-cyr-bold-italic",
+Helvetica,
+Arial,
+sans-serif !default;
+$font-demi: "avenir-next-cyr-demi",
+Helvetica,
+Arial,
+sans-serif !default;
 
 @mixin font-norm-reg {
   font-family: $font-norm-reg;
@@ -66,7 +82,10 @@ $font-demi: "avenir-next-cyr-demi", Helvetica, Arial, sans-serif !default;
 
 // Alternative font
 // ----------------------------------------------------
-$font-roboto-norm: "Roboto", Helvetica, Arial, sans-serif !default;
+$font-roboto-norm: "Roboto",
+Helvetica,
+Arial,
+sans-serif !default;
 
 @mixin font-roboto-normal {
   font-family: $font-roboto-norm;
@@ -76,9 +95,18 @@ $font-roboto-norm: "Roboto", Helvetica, Arial, sans-serif !default;
 
 // Alternative font
 // ----------------------------------------------------
-$font-alt-normal: "circe-regular", Helvetica, Arial, sans-serif !default;
-$font-alt-bold: "circe-bold", Helvetica, Arial, sans-serif !default;
-$font-alt-extra-bold: "circe-extra-bold", Helvetica, Arial, sans-serif !default;
+$font-alt-normal: "circe-regular",
+Helvetica,
+Arial,
+sans-serif !default;
+$font-alt-bold: "circe-bold",
+Helvetica,
+Arial,
+sans-serif !default;
+$font-alt-extra-bold: "circe-extra-bold",
+Helvetica,
+Arial,
+sans-serif !default;
 
 @mixin font-alt-normal {
   font-family: $font-alt-normal;
@@ -96,7 +124,10 @@ $font-alt-extra-bold: "circe-extra-bold", Helvetica, Arial, sans-serif !default;
 
 // Important font
 // ----------------------------------------------------
-$font-important-normal: "Montserrat", Helvetica, Arial, sans-serif !default;
+$font-important-normal: "Montserrat",
+Helvetica,
+Arial,
+sans-serif !default;
 $font-important-semi-bold: $font-important-normal !default;
 $font-important-bold: $font-important-normal !default;
 
@@ -117,12 +148,20 @@ $font-important-bold: $font-important-normal !default;
 
 // Additional font
 // ----------------------------------------------------
-$font-girloy-bold: "gilroy-bold", Helvetica, Arial, sans-serif !default;
-$font-girloy-medium: "gilroy-medium", Helvetica, Arial, sans-serif !default;
+$font-girloy-bold: "gilroy-bold",
+Helvetica,
+Arial,
+sans-serif !default;
+$font-girloy-medium: "gilroy-medium",
+Helvetica,
+Arial,
+sans-serif !default;
+
 @mixin font-gilroy-bold {
   font-family: $font-girloy-bold;
   font-weight: normal;
 }
+
 @mixin font-gilroy-medium {
   font-family: $font-girloy-medium;
   font-weight: normal;
@@ -149,6 +188,7 @@ $line-height-h1--tab: round-float($font-size-h1--tab * $line-height-h1-kef, 1) !
 // ------ mob -----------------------------------------
 $font-size-h1--mob: 3.0rem !default;
 $line-height-h1--mob: round-float($font-size-h1--mob * $line-height-h1-kef, 1) !default; // Использовать рассчетное значение, если нет в дизайне
+
 // ----------------------------------------------------
 @mixin font-h1() {
   font-size: $font-size-h1;
@@ -177,6 +217,7 @@ $line-height-h2--tab: round-float($font-size-h2--tab * $line-height-h2-kef, 1) !
 // ------ mob -----------------------------------------
 $font-size-h2--mob: 2.4rem !default;
 $line-height-h2--mob: round-float($font-size-h2--mob * $line-height-h2-kef, 1) !default; // Использовать рассчетное значение, если нет в дизайне
+
 // ----------------------------------------------------
 @mixin font-h2() {
   font-size: $font-size-h2;
@@ -205,6 +246,7 @@ $line-height-h3--tab: round-float($font-size-h3--tab * $line-height-h3-kef, 1) !
 // ------ mob -----------------------------------------
 $font-size-h3--mob: 1.8rem !default;
 $line-height-h3--mob: round-float($font-size-h3--mob * $line-height-h3-kef, 1) !default; // Использовать рассчетное значение, если нет в дизайне
+
 // ----------------------------------------------------
 @mixin font-h3() {
   font-size: $font-size-h3;
@@ -229,6 +271,7 @@ $line-height-h4: 2.8rem !default;
 // ------ mob -----------------------------------------
 $font-size-h4--mob: $font-size--mob !default;
 $line-height-h4--mob: $line-height--mob !default;
+
 // ----------------------------------------------------
 @mixin font-h4() {
   font-size: $font-size-h4;
@@ -245,6 +288,7 @@ $line-height-h4--mob: $line-height--mob !default;
 // ====================================================
 $font-size-h5: $font-size !default;
 $line-height-h5: $line-height !default;
+
 // ----------------------------------------------------
 @mixin font-h5() {
   font-size: $font-size-h5;
@@ -286,9 +330,7 @@ $dark-color: #343a40 !default;
 $base-color: #ee6e73 !default;
 $base-color-alt: invert($base-color) !default;
 // ----------------------------------------------------
-$highlight-color: $base-color !default
-$highlight-color--hover: scale-color($highlight-color, $saturation: 100%) !default
-// ----------------------------------------------------
+$highlight-color: $base-color !default $highlight-color--hover: scale-color($highlight-color, $saturation: 100%) !default // ----------------------------------------------------
 $bg-color: #fff !default;
 $bg-color-alt: #e8e8e8 !default;
 // ----------------------------------------------------
@@ -307,7 +349,7 @@ $mark-color: $info-color !default;
 // Layout page
 // ====================================================
 // Минимальная ширина сайта
-$layout-page-min-width: 32rem !default;
+$layout-page-min-width: 26rem !default;
 // Максимальная ширина сайта
 $layout-page-max-width: 192rem !default;
 // Отступы для всего сайта
@@ -461,6 +503,7 @@ $form-def-border-radius--mob: 5px !default;
   padding: $form-def-space-vt $form-def-space-h $form-def-space-vb $form-def-space-h;
   background-color: $form-def-bg-color;
   box-shadow: none;
+
   @if $form-def-border-width {
     border: $form-def-border-width solid $form-def-border-color;
   }
@@ -471,6 +514,7 @@ $form-def-border-radius--mob: 5px !default;
   height: $form-def-height--mob;
   padding: $form-def-space-vt--mob $form-def-space-h--mob $form-def-space-vb--mob $form-def-space-h--mob;
   border-radius: $form-def-border-radius--mob;
+
   @if $form-def-border-width--mob {
     border-width: $form-def-border-width--mob;
   }
@@ -483,6 +527,7 @@ $form-def-border-radius--mob: 5px !default;
   font-size: $form-def-font-size;
   line-height: $form-def-line-height;
   color: $form-def-text-color;
+
   @if $form-def-letter-spacing {
     letter-spacing: $form-def-letter-spacing;
   }
@@ -492,6 +537,7 @@ $form-def-border-radius--mob: 5px !default;
 @mixin input-font--mob {
   font-size: $form-def-font-size--mob;
   line-height: $form-def-line-height--mob;
+
   @if $form-def-letter-spacing--mob {
     letter-spacing: $form-def-letter-spacing--mob;
   }

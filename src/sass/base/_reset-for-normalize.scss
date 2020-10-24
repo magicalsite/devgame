@@ -53,13 +53,9 @@ ol>li:before {
   height: 18px;
   width: 18px;
   border-radius: 50%;
-  line-height: 2.6rem;
+  line-height: 18px;
   margin-right: 10px;
   vertical-align: 0.3rem;
-
-  @include media("<mob") {
-    vertical-align: 1rem;
-  }
 }
 
 ol+p+ol {

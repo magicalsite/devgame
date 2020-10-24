@@ -5,12 +5,12 @@ var $WINDOW = $(window),
 /**
  * Change font size on resize
  */
-function changeFontSize() {
-  var step = 0.0499;
-  var fontSize = Math.round(window.innerWidth * step * 10) / 10;
-  $HTML.css('font-size', fontSize + '%');
-}
-changeFontSize();
+// function changeFontSize() {
+//   var step = 0.0499;
+//   var fontSize = Math.round(window.innerWidth * step * 10) / 10;
+//   $HTML.css('font-size', fontSize + '%');
+// }
+// changeFontSize();
 
 /**
  * !Detects overlay scrollbars (when scrollbars on overflowed blocks are visible).
@@ -90,11 +90,18 @@ function fullPageInitial() {
 
       if ($section.attr('data-item') === 'second') {
         $BODY.removeClass('third_item');
+        $BODY.removeClass('fourth_item');
         $BODY.addClass('second_item');
       }
       if ($section.attr('data-item') === 'third') {
         $BODY.removeClass('second_item');
+        $BODY.removeClass('fourth_item');
         $BODY.addClass('third_item');
+      }
+      if ($section.attr('data-item') === 'fourth') {
+        $BODY.removeClass('second_item');
+        $BODY.removeClass('third_item');
+        $BODY.addClass('fourth_item');
       }
     }
 
@@ -263,14 +270,7 @@ var rellax = new Rellax('.rellax');
 // WOW + animate
 new WOW().init();
 
-$WINDOW.on('resize', function () {
-  changeFontSize();
-  getSizeForSocIcon();
-});
 
-$WINDOW.on('load', function () {
-  changeFontSize();
-});
 
 function getSizeForSocIcon() {
   var menu = $('.tanks__menu');
@@ -329,7 +329,7 @@ function getSizeForSocIcon() {
   });
 }
 // game sticky const
-if ($BODY.hasClass('hoopstars') || $BODY.hasClass('tanks')) {
+if ($BODY.hasClass('hoopstars') || $BODY.hasClass('tanks') || $BODY.hasClass('stealsmaster')) {
   getSizeForSocIcon();
   $('.locacion_block_slider').slick({
     slidesToShow: 1,
@@ -435,11 +435,36 @@ if ($BODY.hasClass('hoopstars')) {
     mousescrollstep: 40,
   });
 }
+if ($BODY.hasClass('stealsmaster')) {
+  $('.hoop-slider__video').slick({
+    centerMode: true,
+    slidesToShow: 3,
+    dots: true,
+    infinite: false,
+    variableWidth: true,
+    arrows: false,
+  });
+  $('.stealsmaster-scroll').niceScroll({
+    cursorcolor: '#6f639c',
+    cursorwidth: '4px',
+    cursorminheight: 203,
+    cursorborder: 0,
+    cursorborderradius: '5px',
+    horizrailenabled: false,
+    scrollspeed: 100,
+    mousescrollstep: 40,
+  });
+}
+$WINDOW.on('resize', function () {
+  // getSizeForSocIcon();
+});
 
+$WINDOW.on('load', function () {
+
+});
 $(document).ready(function () {
   fullPageInitial();
   $BODY.addClass('logo-theme-dark');
-  changeFontSize();
   // Base
   addTouchClasses();
   //placeholderInit();
