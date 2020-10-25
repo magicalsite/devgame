@@ -266,7 +266,7 @@ function formValidation() {
 
 // Parallax
 var rellax = new Rellax('.rellax');
-
+var rellax = new Rellax('.career_bg');
 // WOW + animate
 new WOW().init();
 
