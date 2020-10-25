@@ -4173,6 +4173,7 @@ html.no-js
       flex-direction: column;
   position: -webkit-sticky;
   position: sticky;
+  top: 2rem;
   z-index: 20;
   height: 0;
 }
@@ -4349,6 +4350,13 @@ html.no-js
   margin-right: auto;
 }
 
+.career_bg {
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  z-index: -1;
+}
+
 .career {
   background-color: #000;
   padding-top: 17rem;
@@ -4383,6 +4391,11 @@ html.no-js
 
 .careerLinks {
   margin-left: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2rem;
+  left: 0;
+  height: 24.1667rem;
 }
 
 .careerMenu {
@@ -4552,6 +4565,7 @@ html.no-js
 }
 
 .careerVacancies {
+  position: relative;
   margin-bottom: 3.9167rem;
 }
 
@@ -4660,6 +4674,7 @@ html.no-js
 }
 
 .teamContent {
+  position: relative;
   max-width: 66.3rem;
   width: 100%;
 }
@@ -4683,6 +4698,10 @@ html.no-js
 .team__bgTitle {
   z-index: -1;
   line-height: 10.6667rem;
+}
+
+.team-icon {
+  height: 11.3rem;
 }
 
 .team__items {

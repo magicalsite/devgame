@@ -455,6 +455,30 @@ if ($BODY.hasClass('stealsmaster')) {
     mousescrollstep: 40,
   });
 }
+
+$(".careerMenu").on("click", "a", function (event) {
+  event.preventDefault();
+  let currentEl = $(this);
+  currentEl.addClass('careerMenu__item-active');
+  $('body,html').animate({
+    scrollTop: $(currentEl.attr('href')).offset().top
+  }, 800);
+});
+$WINDOW.on('scroll', function () {
+  var $sections = $('.scrollBlock');
+  $sections.each(function (i, el) {
+    var top = $(el).offset().top - 100;
+    var bottom = top + $(el).height();
+    var scroll = $(window).scrollTop();
+    var id = $(el).attr('id');
+    if (scroll > top && scroll < bottom) {
+      $('a.careerMenu__item-active').removeClass('careerMenu__item-active');
+      $('a[href="#' + id + '"]').addClass('careerMenu__item-active');
+    }
+  })
+});
+
+
 $WINDOW.on('resize', function () {
   // getSizeForSocIcon();
 });
