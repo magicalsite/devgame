@@ -507,6 +507,11 @@ html.fp-enabled {
   cursor: pointer;
 }
 
+.slick-dots li:not(:first-child) {
+  padding-top: 0.857rem;
+  padding-bottom: 0.857rem;
+}
+
 .slick-dots li button {
   font-size: 0;
   line-height: 0;
@@ -542,34 +547,6 @@ html.fp-enabled {
   outline: none;
 }
 
-.slick-dots li:first-child button {
-  width: 2.448rem;
-  height: 2.448rem;
-  opacity: 0.8;
-  background: url(../img/play_button.png) no-repeat center center;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
-  /*margin: 0 0.326rem; */
-}
-
-@media (max-width: 991px) {
-  .slick-dots li:first-child button {
-    width: 0.734rem;
-    height: 0.734rem;
-    font-size: 0;
-    line-height: 0;
-    display: block;
-    cursor: pointer;
-    color: transparent;
-    border: 0;
-    border-radius: 50%;
-    background: #C4C4C4;
-    opacity: 0.3;
-    padding: 0;
-    /*		width: 1.765rem;     
-    	height: 1.765rem;*/
-  }
-}
-
 /*@media (max-width: 640px) {
 	.slick-dots li:first-child button {
 		width: 3.122rem;     
@@ -587,6 +564,41 @@ html.fp-enabled {
 		margin-right: 5.061rem;
 	}
 }*/
+
+.slick-dots li.slick-active button {
+  width: 0.734rem;
+  height: 0.734rem;
+  background: #61e88d;
+  opacity: 0.8;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 991px) {
+  .slick-dots li.slick-active button {
+    width: 0.734rem;
+    height: 0.734rem;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    border-radius: 50%;
+    background: #C4C4C4;
+    opacity: 0.3;
+    padding: 0;
+  }
+}
+
+@media (min-width: 991px) {
+  .slick-dots li.slick-active:first-child button {
+    width: 2.448rem;
+    height: 2.448rem;
+    opacity: 0.8;
+    background: url(../img/play_button.png) no-repeat center center;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+  }
+}
 /*! * animate.css - https://animate.style/ * Version - 4.1.0 * Licensed under the MIT license - http://opensource.org/licenses/MIT * * Copyright (c) 2020 Animate.css */
 
 :root {

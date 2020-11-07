@@ -2,6 +2,8 @@ var $WINDOW = $(window),
   $HTML = $('html'),
   $BODY = $('body');
 
+$HTML.addClass('logo-theme-light');
+
 /**
  * Change font size on resize
  */
@@ -36,18 +38,12 @@ function addTouchClasses() {
  * */
 function fullPageInitial() {
   var $fpSections = $('.fp-sections-js');
-
-  // if (!DEVICE && window.innerWidth >= 992) {
-  //
-  // }
   if ($fpSections.length) {
     var fpSectionSelector = '.fp-section-js';
     var $fpSection = $(fpSectionSelector);
     var $word = $('.js-word-bg .wbg__word');
     var parallaxValue = 0.2;
     var duration = 750;
-    // var breakpointWidth = 992;
-    // var breakpointHeight = 400;
 
     function historyAnchors() {
       var anchors = [];
@@ -79,12 +75,12 @@ function fullPageInitial() {
     function toggleLogoTheme(destination) {
       var $section = $(destination.item);
 
-      $HTML.removeClass('logo-theme-light');
+      //$HTML.removeClass('logo-theme-light');
       $BODY.addClass('logo-theme-dark');
       $BODY.removeClass('second_item');
 
       if (!$HTML.hasClass('logo-theme-light') && $section.attr('data-logo-theme') === 'light') {
-        $HTML.addClass('logo-theme-light');
+        //$HTML.addClass('logo-theme-light');
         $BODY.removeClass('logo-theme-dark');
       }
 
@@ -137,11 +133,12 @@ function fullPageInitial() {
         toggleLogoTheme(destination);
 
         // Менять цвет фона
+        $BODY.css('background-color', '#000');
         var bgColor = $(destination.item).attr('data-bg-color');
         if (bgColor && bgColor.length) {
           $BODY.css('background-color', bgColor);
         } else {
-          $BODY.css('background-color', '');
+          $BODY.css('background-color', '#000');
         }
       },
       afterLoad: function (origin, destination, direction) {
@@ -371,7 +368,7 @@ if ($BODY.hasClass('privacy')) {
     cursorborder: 0,
     cursorborderradius: '5px',
     horizrailenabled: false,
-    scrollspeed: 100,
+    scrollspeed: 60,
     mousescrollstep: 40,
   });
 }
@@ -385,7 +382,7 @@ if ($BODY.hasClass('vacancies')) {
     cursorborder: 0,
     cursorborderradius: '5px',
     horizrailenabled: false,
-    scrollspeed: 100,
+    scrollspeed: 60,
     mousescrollstep: 40,
   });
 }
@@ -411,7 +408,7 @@ if ($BODY.hasClass('tanks')) {
     cursorborder: 0,
     cursorborderradius: '5px',
     horizrailenabled: false,
-    scrollspeed: 100,
+    scrollspeed: 60,
     mousescrollstep: 40,
   });
 }
@@ -431,7 +428,7 @@ if ($BODY.hasClass('hoopstars')) {
     cursorborder: 0,
     cursorborderradius: '5px',
     horizrailenabled: false,
-    scrollspeed: 100,
+    scrollspeed: 60,
     mousescrollstep: 40,
   });
 }
@@ -451,7 +448,7 @@ if ($BODY.hasClass('stealsmaster')) {
     cursorborder: 0,
     cursorborderradius: '5px',
     horizrailenabled: false,
-    scrollspeed: 100,
+    scrollspeed: 60,
     mousescrollstep: 40,
   });
 }
@@ -465,6 +462,7 @@ $(".careerMenu").on("click", "a", function (event) {
   }, 800);
 });
 $WINDOW.on('scroll', function () {
+  darkBody();
   var $sections = $('.scrollBlock');
   $sections.each(function (i, el) {
     var top = $(el).offset().top - 100;
@@ -484,7 +482,7 @@ $WINDOW.on('resize', function () {
 });
 
 $WINDOW.on('load', function () {
-
+  $BODY.css('background-color', '#000');
 });
 $(document).ready(function () {
   fullPageInitial();
